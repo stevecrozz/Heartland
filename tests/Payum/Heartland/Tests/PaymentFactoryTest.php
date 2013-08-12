@@ -1,5 +1,5 @@
 <?php
-namespace Payum\AuthorizeNet\Aim\Tests;
+namespace Payum\Heartland\Tests;
 
 use Payum\AuthorizeNet\Aim\Bridge\AuthorizeNet\AuthorizeNetAIM;
 use Payum\AuthorizeNet\Aim\PaymentFactory;

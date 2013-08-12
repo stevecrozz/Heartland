@@ -1,5 +1,5 @@
 <?php
-namespace Payum\AuthorizeNet\Aim\Tests\Functional;
+namespace Payum\Heartland\Tests\Functional;
 
 use Payum\Request\CaptureRequest;
 use Payum\Request\BinaryMaskStatusRequest;

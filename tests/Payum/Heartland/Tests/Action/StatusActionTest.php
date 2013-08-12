@@ -1,5 +1,5 @@
 <?php
-namespace Payum\AuthorizeNet\Aim\Tests\Action;
+namespace Payum\Heartland\Tests\Action;
 
 use Payum\AuthorizeNet\Aim\Action\StatusAction;
 use Payum\AuthorizeNet\Aim\Bridge\AuthorizeNet\AuthorizeNetAIM;

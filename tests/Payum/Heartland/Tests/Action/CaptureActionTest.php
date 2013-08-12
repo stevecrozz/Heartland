@@ -1,5 +1,5 @@
 <?php
-namespace Payum\AuthorizeNet\Aim\Tests\Action;
+namespace Payum\Heartland\Tests\Action;
 
 use Payum\Request\CaptureRequest;
 use Payum\AuthorizeNet\Aim\Action\CaptureAction;

@@ -1,5 +1,5 @@
 <?php
-namespace Payum\AuthorizeNet\Aim\Tests\Model;
+namespace Payum\Heartland\Tests\Model;
 
 use Payum\AuthorizeNet\Aim\Model\PaymentDetails;
 
