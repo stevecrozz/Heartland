@@ -1,0 +1,31 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Body>
+        <GetToken xmlns="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService">
+            <GetTokenRequest xmlns:a="http://schemas.datacontract.org/2004/07/BDMS.NewModel" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                <a:Credential>
+                    <a:ApplicationID>3</a:ApplicationID>
+                    <a:Password>{$RJ_PASSWORD}</a:Password>
+                    <a:UserName>{$RJ_USER}</a:UserName>
+                    <a:MerchantName>{$MERCHANT_ID}</a:MerchantName>
+                </a:Credential>
+                <a:ACHAccountType>Unassigned</a:ACHAccountType>
+                <a:ACHDepositType>Unassigned</a:ACHDepositType>
+                <a:AccountHolderData xmlns:b="http://schemas.datacontract.org/2004/07/POSGateway.Wrapper">
+                    <b:Address>{$T_ADDRESS}</b:Address>
+                    <b:City>{$T_CITY}</b:City>
+                    <b:Email>{$T_EMAIL}</b:Email>
+                    <b:FirstName>{$T_FIRST_NAME}</b:FirstName>
+                    <b:LastName>{$T_LAST_NAME}</b:LastName>
+                    <b:Phone>{$T_PHONE_NUMBER}</b:Phone>
+                    <b:State>{$T_STATE}</b:State>
+                    <b:Zip>{$T_ZIP}</b:Zip>
+                </a:AccountHolderData>
+                <a:AccountNumber>{$T_CREDIT_CARD_NUMBER}</a:AccountNumber>
+                <a:ExpirationMonth>{$T_CREDIT_CARD_EXPIRATION_MONTH}</a:ExpirationMonth>
+                <a:ExpirationYear>{$T_CREDIT_CARD_EXPIRATION_MONTH}</a:ExpirationYear>
+                <a:PaymentMethod>Credit</a:PaymentMethod>
+                <a:RoutingNumber i:nil="true"/>
+            </GetTokenRequest>
+        </GetToken>
+    </s:Body>
+</s:Envelope>

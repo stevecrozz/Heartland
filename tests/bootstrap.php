@@ -14,4 +14,4 @@ EOM;
     exit(1);
 }
 
-$loader->add('Payum\AuthorizeNet\Aim\Tests', __DIR__);
+$loader->add('Payum\Heartland\Tests', __DIR__);

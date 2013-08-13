@@ -11,9 +11,16 @@
             "email": "Forma-PRO@66ton99.org.ua"
         }
     ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:66Ton99/serializer.git"
+        }
+    ],
     "require": {
         "php": ">=5.3.3",
-        "payum/payum": "0.5.x-dev"
+        "payum/payum": "0.5.x-dev",
+        "jms/serializer": "dev-master"
     },
     "require-dev": {
         "ext-curl": "*"

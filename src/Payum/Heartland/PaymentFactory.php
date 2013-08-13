@@ -2,15 +2,16 @@
 namespace Payum\Heartland;
 
 use Payum\Payment;
+use Payum\Heartland\Api;
 
 abstract class PaymentFactory
 {
     /**
-     * @param AuthorizeNetAIM $api
+     * @param Api $api
      *
      * @return Payment
      */
-    public static function create(/*AuthorizeNetAIM $api*/)
+    public static function create(Api $api)
     {
         $payment = new Payment;
 
