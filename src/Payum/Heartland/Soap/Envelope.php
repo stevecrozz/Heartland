@@ -4,7 +4,7 @@ namespace Payum\Heartland\Soap;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * @Serializer\XmlRoot('s:Envelope')
+ * @Serializer\XmlRoot("s:Envelope")
  */
 class Envelope
 {
@@ -18,7 +18,7 @@ class Envelope
 
     /**
      * @var Object
-     * @Serializer\SerializedName('s:Body')
+     * @Serializer\SerializedName("s:Body")
      */
     protected $body;
 

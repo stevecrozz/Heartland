@@ -4,7 +4,7 @@ namespace Payum\Heartland\Soap;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * @Serializer\XmlRoot('GetToken')
+ * @Serializer\XmlRoot("GetToken")
  */
 class GetToken
 {
@@ -18,7 +18,7 @@ class GetToken
 
     /**
      * @var Object
-     * @Serializer\XmlValue
+     * @Serializer\SerializedName("GetTokenRequest")
      */
     protected $value;
 

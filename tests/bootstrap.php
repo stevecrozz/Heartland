@@ -1,4 +1,5 @@
 <?php
+
 ini_set('display_errors', 1);
 error_reporting(-1);
 
@@ -15,3 +16,5 @@ EOM;
 }
 
 $loader->add('Payum\Heartland\Tests', __DIR__);
+
+\Doctrine\Common\Annotations\AnnotationRegistry::registerLoader('class_exists');

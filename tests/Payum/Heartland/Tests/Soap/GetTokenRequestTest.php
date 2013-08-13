@@ -25,7 +25,7 @@ class GetTokenRequestTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(
             file_get_contents(__DIR__ . '/xml/GetTokenRequest.xml'),
-            $serializer->serialize($data, 'json')
+            $serializer->serialize($data, 'xml')
         );
     }
 }
