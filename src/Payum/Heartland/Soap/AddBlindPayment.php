@@ -6,15 +6,15 @@ namespace Payum\Heartland\Soap;
  * This class is generated from the following WSDL:
  * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
  */
-class GetToken
+class AddBlindPayment
 {
     /**
-     * GetTokenRequest
+     * AddBlindPaymentRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q33:GetTokenRequest
+     * - SchemaType: q1:AddBlindPaymentRequest
      *
-     * @var GetTokenRequest
+     * @var AddBlindPaymentRequest
      */
-    public $GetTokenRequest;
+    public $AddBlindPaymentRequest;
 }

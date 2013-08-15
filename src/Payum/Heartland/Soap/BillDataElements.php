@@ -6,95 +6,95 @@ namespace Payum\Heartland\Soap;
  * This class is generated from the following WSDL:
  * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd2
  */
-class GetTokenRequest extends MerchantRequest
+class BillDataElements
 {
     /**
-     * ACHAccountType
+     * DataElement1
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q7:ACHAccountType
+     * - SchemaType: tns:BillDataElement
      *
-     * @var ACHAccountType
+     * @var BillDataElement
      */
-    public $ACHAccountType;
+    public $DataElement1;
 
     /**
-     * ACHDepositType
+     * DataElement2
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q8:ACHDepositType
+     * - SchemaType: tns:BillDataElement
      *
-     * @var ACHDepositType
+     * @var BillDataElement
      */
-    public $ACHDepositType;
+    public $DataElement2;
 
     /**
-     * AccountHolderData
+     * DataElement3
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q9:CardHolderData
+     * - SchemaType: tns:BillDataElement
      *
-     * @var CardHolderData
+     * @var BillDataElement
      */
-    public $AccountHolderData;
+    public $DataElement3;
 
     /**
-     * AccountNumber
+     * DataElement4
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: xs:string
+     * - SchemaType: tns:BillDataElement
      *
-     * @var string
+     * @var BillDataElement
      */
-    public $AccountNumber;
+    public $DataElement4;
 
     /**
-     * ExpirationMonth
+     * DataElement5
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: xs:int
+     * - SchemaType: tns:BillDataElement
      *
-     * @var int
+     * @var BillDataElement
      */
-    public $ExpirationMonth;
+    public $DataElement5;
 
     /**
-     * ExpirationYear
+     * DataElement6
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: xs:int
+     * - SchemaType: tns:BillDataElement
      *
-     * @var int
+     * @var BillDataElement
      */
-    public $ExpirationYear;
+    public $DataElement6;
 
     /**
-     * PaymentMethod
+     * DataElement7
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: tns:TokenPaymentMethod
+     * - SchemaType: tns:BillDataElement
      *
-     * @var TokenPaymentMethod
+     * @var BillDataElement
      */
-    public $PaymentMethod;
+    public $DataElement7;
 
     /**
-     * RoutingNumber
+     * DataElement8
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: xs:string
+     * - SchemaType: tns:BillDataElement
      *
-     * @var string
+     * @var BillDataElement
      */
-    public $RoutingNumber;
+    public $DataElement8;
 
     /**
-     * SkipAccountVerify
+     * DataElement9
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: xs:boolean
+     * - SchemaType: tns:BillDataElement
      *
-     * @var boolean
+     * @var BillDataElement
      */
-    public $SkipAccountVerify;
+    public $DataElement9;
 }

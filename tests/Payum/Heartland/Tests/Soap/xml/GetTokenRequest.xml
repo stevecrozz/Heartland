@@ -1,12 +1,14 @@
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
     <s:Body>
-        <GetToken xmlns="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService">
-            <GetTokenRequest xmlns:a="http://schemas.datacontract.org/2004/07/BDMS.NewModel" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <GetToken
+                xmlns="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService">
+            <GetTokenRequest xmlns:a="http://schemas.datacontract.org/2004/07/BDMS.NewModel"
+                             xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
                 <a:Credential>
                     <a:ApplicationID>3</a:ApplicationID>
                     <a:Password>{$RJ_PASSWORD}</a:Password>
                     <a:UserName>{$RJ_USER}</a:UserName>
-                    <a:MerchantName>{$MERCHANT_ID}</a:MerchantName>
+                    <a:MerchantName>{$MERCHANT_NAME}</a:MerchantName>
                 </a:Credential>
                 <a:ACHAccountType>Unassigned</a:ACHAccountType>
                 <a:ACHDepositType>Unassigned</a:ACHDepositType>
@@ -29,3 +31,39 @@
         </GetToken>
     </s:Body>
 </s:Envelope>
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:ns1="http://schemas.datacontract.org/2004/07/BDMS.NewModel"
+                   xmlns:ns2="http://schemas.datacontract.org/2004/07/POSGateway.Wrapper"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:ns3="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService">
+    <SOAP-ENV:Body>
+        <ns3:GetToken>
+            <ns3:GetTokenRequest>
+                <ns1:Credential>
+                    <ns1:ApplicationID>3</ns1:ApplicationID>
+                    <ns1:Password>{$RJ_PASSWORD}</ns1:Password>
+                    <ns1:UserName>{$RJ_USER}</ns1:UserName>
+                    <ns1:MerchantName>{$MERCHANT_NAME}</ns1:MerchantName>
+                </ns1:Credential>
+                <ns1:ACHAccountType>Unassigned</ns1:ACHAccountType>
+                <ns1:ACHDepositType>Unassigned</ns1:ACHDepositType>
+                <ns1:AccountHolderData>
+                    <ns2:Address>{$T_ADDRESS}</ns2:Address>
+                    <ns2:City>{$T_CITY}</ns2:City>
+                    <ns2:Email xsi:nil="true"/>
+                    <ns2:FirstName>{$T_FIRST_NAME}</ns2:FirstName>
+                    <ns2:LastName>{$T_LAST_NAME}</ns2:LastName>
+                    <ns2:Phone xsi:nil="true"/>
+                    <ns2:State>{$T_STATE}</ns2:State>
+                    <ns2:Zip>{$T_ZIP}</ns2:Zip>
+                </ns1:AccountHolderData>
+                <ns1:AccountNumber>{$T_CREDIT_CARD_NUMBER}</ns1:AccountNumber>
+                <ns1:ExpirationMonth>0</ns1:ExpirationMonth>
+                <ns1:ExpirationYear>0</ns1:ExpirationYear>
+                <ns1:PaymentMethod>Credit</ns1:PaymentMethod>
+                <ns1:RoutingNumber xsi:nil="true"/>
+            </ns3:GetTokenRequest>
+        </ns3:GetToken>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Transmodus.Wrapper"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://schemas.datacontract.org/2004/07/Transmodus.Wrapper">
+    <xs:simpleType name="ACHAccountType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Unassigned"/>
+            <xs:enumeration value="Personal"/>
+            <xs:enumeration value="Business"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="ACHAccountType" nillable="true" type="tns:ACHAccountType"/>
+    <xs:simpleType name="ACHDepositType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Unassigned"/>
+            <xs:enumeration value="Checking"/>
+            <xs:enumeration value="Savings"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="ACHDepositType" nillable="true" type="tns:ACHDepositType"/>
+</xs:schema>

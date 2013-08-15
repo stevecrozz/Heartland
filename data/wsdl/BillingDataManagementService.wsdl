@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="BillingDataManagementService"
+                  targetNamespace="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex"
+                  xmlns:wsa10="http://www.w3.org/2005/08/addressing"
+                  xmlns:tns="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService"
+                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                  xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                  xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+                  xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy"
+                  xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract"
+                  xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+                  xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+                  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:i0="https://test.heartlandpaymentservices.net/BillingDataManagement/V3/BillingDataManagementService"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+    <wsdl:import
+            namespace="https://test.heartlandpaymentservices.net/BillingDataManagement/V3/BillingDataManagementService"
+            location="https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?wsdl=wsdl0"/>
+    <wsdl:types>
+        <xsd:schema
+                targetNamespace="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/Imports">
+            <xsd:import
+                    schemaLocation="https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0"
+                    namespace="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService"/>
+            <xsd:import
+                    schemaLocation="https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd1"
+                    namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+            <xsd:import
+                    schemaLocation="https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd2"
+                    namespace="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+            <xsd:import
+                    schemaLocation="https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd3"
+                    namespace="http://schemas.datacontract.org/2004/07/Transmodus.Wrapper"/>
+            <xsd:import
+                    schemaLocation="https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd4"
+                    namespace="http://schemas.datacontract.org/2004/07/POSGateway.Wrapper"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="IBillingDataManagementService_AddBlindPayment_InputMessage">
+        <wsdl:part name="parameters" element="tns:AddBlindPayment"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_AddBlindPayment_OutputMessage">
+        <wsdl:part name="parameters" element="tns:AddBlindPaymentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_AddPayment_InputMessage">
+        <wsdl:part name="parameters" element="tns:AddPayment"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_AddPayment_OutputMessage">
+        <wsdl:part name="parameters" element="tns:AddPaymentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_AddReversal_InputMessage">
+        <wsdl:part name="parameters" element="tns:AddReversal"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_AddReversal_OutputMessage">
+        <wsdl:part name="parameters" element="tns:AddReversalResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_ActivateMachine_InputMessage">
+        <wsdl:part name="parameters" element="tns:ActivateMachine"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_ActivateMachine_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ActivateMachineResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_ChangePassword_InputMessage">
+        <wsdl:part name="parameters" element="tns:ChangePassword"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_ChangePassword_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ChangePasswordResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_AddBill_InputMessage">
+        <wsdl:part name="parameters" element="tns:AddBill"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_AddBill_OutputMessage">
+        <wsdl:part name="parameters" element="tns:AddBillResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_UpdateBill_InputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateBill"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_UpdateBill_OutputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateBillResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_ActivateBill_InputMessage">
+        <wsdl:part name="parameters" element="tns:ActivateBill"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_ActivateBill_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ActivateBillResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_InactivateBill_InputMessage">
+        <wsdl:part name="parameters" element="tns:InactivateBill"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_InactivateBill_OutputMessage">
+        <wsdl:part name="parameters" element="tns:InactivateBillResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_EndOfDayReport_InputMessage">
+        <wsdl:part name="parameters" element="tns:EndOfDayReport"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_EndOfDayReport_OutputMessage">
+        <wsdl:part name="parameters" element="tns:EndOfDayReportResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_MakePayment_InputMessage">
+        <wsdl:part name="parameters" element="tns:MakePayment"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_MakePayment_OutputMessage">
+        <wsdl:part name="parameters" element="tns:MakePaymentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_MakeBlindPayment_InputMessage">
+        <wsdl:part name="parameters" element="tns:MakeBlindPayment"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_MakeBlindPayment_OutputMessage">
+        <wsdl:part name="parameters" element="tns:MakeBlindPaymentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_ReversePayment_InputMessage">
+        <wsdl:part name="parameters" element="tns:ReversePayment"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_ReversePayment_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ReversePaymentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_GetReceipt_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetReceipt"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_GetReceipt_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetReceiptResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_GetReversalType_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetReversalType"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_GetReversalType_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetReversalTypeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_GetConvenienceFee_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetConvenienceFee"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_GetConvenienceFee_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetConvenienceFeeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_GetToken_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetToken"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_GetToken_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetTokenResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_LoadSecurePayBillData_InputMessage">
+        <wsdl:part name="parameters" element="tns:LoadSecurePayBillData"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_LoadSecurePayBillData_OutputMessage">
+        <wsdl:part name="parameters" element="tns:LoadSecurePayBillDataResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_LoadSecurePayMerchantBillData_InputMessage">
+        <wsdl:part name="parameters" element="tns:LoadSecurePayMerchantBillData"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_LoadSecurePayMerchantBillData_OutputMessage">
+        <wsdl:part name="parameters" element="tns:LoadSecurePayMerchantBillDataResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_LoadSecurePayDataExtended_InputMessage">
+        <wsdl:part name="parameters" element="tns:LoadSecurePayDataExtended"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_LoadSecurePayDataExtended_OutputMessage">
+        <wsdl:part name="parameters" element="tns:LoadSecurePayDataExtendedResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_GetSecurePayBillData_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetSecurePayBillData"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_GetSecurePayBillData_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetSecurePayBillDataResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_UpdateSecurePayPayment_InputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateSecurePayPayment"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_UpdateSecurePayPayment_OutputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateSecurePayPaymentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_SetupFutureDatedPayment_InputMessage">
+        <wsdl:part name="parameters" element="tns:SetupFutureDatedPayment"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_SetupFutureDatedPayment_OutputMessage">
+        <wsdl:part name="parameters" element="tns:SetupFutureDatedPaymentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_PreAuthorizePayment_InputMessage">
+        <wsdl:part name="parameters" element="tns:PreAuthorizePayment"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_PreAuthorizePayment_OutputMessage">
+        <wsdl:part name="parameters" element="tns:PreAuthorizePaymentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_CapturePreAuthorizedPayment_InputMessage">
+        <wsdl:part name="parameters" element="tns:CapturePreAuthorizedPayment"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_CapturePreAuthorizedPayment_OutputMessage">
+        <wsdl:part name="parameters" element="tns:CapturePreAuthorizedPaymentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_AddSignature_InputMessage">
+        <wsdl:part name="parameters" element="tns:AddSignature"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_AddSignature_OutputMessage">
+        <wsdl:part name="parameters" element="tns:AddSignatureResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_LogTermsAcceptance_InputMessage">
+        <wsdl:part name="parameters" element="tns:LogTermsAcceptance"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_LogTermsAcceptance_OutputMessage">
+        <wsdl:part name="parameters" element="tns:LogTermsAcceptanceResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_DisburseFunds_InputMessage">
+        <wsdl:part name="parameters" element="tns:DisburseFunds"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_DisburseFunds_OutputMessage">
+        <wsdl:part name="parameters" element="tns:DisburseFundsResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="IBillingDataManagementService">
+        <wsdl:operation name="AddBlindPayment">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/AddBlindPayment"
+                    message="tns:IBillingDataManagementService_AddBlindPayment_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/AddBlindPaymentResponse"
+                    message="tns:IBillingDataManagementService_AddBlindPayment_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddPayment">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/AddPayment"
+                    message="tns:IBillingDataManagementService_AddPayment_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/AddPaymentResponse"
+                    message="tns:IBillingDataManagementService_AddPayment_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddReversal">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/AddReversal"
+                    message="tns:IBillingDataManagementService_AddReversal_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/AddReversalResponse"
+                    message="tns:IBillingDataManagementService_AddReversal_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ActivateMachine">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/ActivateMachine"
+                    message="tns:IBillingDataManagementService_ActivateMachine_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/ActivateMachineResponse"
+                    message="tns:IBillingDataManagementService_ActivateMachine_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ChangePassword">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/ChangePassword"
+                    message="tns:IBillingDataManagementService_ChangePassword_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/ChangePasswordResponse"
+                    message="tns:IBillingDataManagementService_ChangePassword_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddBill">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/AddBill"
+                    message="tns:IBillingDataManagementService_AddBill_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/AddBillResponse"
+                    message="tns:IBillingDataManagementService_AddBill_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateBill">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/UpdateBill"
+                    message="tns:IBillingDataManagementService_UpdateBill_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/UpdateBillResponse"
+                    message="tns:IBillingDataManagementService_UpdateBill_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ActivateBill">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/ActivateBill"
+                    message="tns:IBillingDataManagementService_ActivateBill_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/ActivateBillResponse"
+                    message="tns:IBillingDataManagementService_ActivateBill_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="InactivateBill">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/InactivateBill"
+                    message="tns:IBillingDataManagementService_InactivateBill_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/InactivateBillResponse"
+                    message="tns:IBillingDataManagementService_InactivateBill_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="EndOfDayReport">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/EndOfDayReport"
+                    message="tns:IBillingDataManagementService_EndOfDayReport_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/EndOfDayReportResponse"
+                    message="tns:IBillingDataManagementService_EndOfDayReport_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="MakePayment">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/MakePayment"
+                    message="tns:IBillingDataManagementService_MakePayment_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/MakePaymentResponse"
+                    message="tns:IBillingDataManagementService_MakePayment_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="MakeBlindPayment">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/MakeBlindPayment"
+                    message="tns:IBillingDataManagementService_MakeBlindPayment_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/MakeBlindPaymentResponse"
+                    message="tns:IBillingDataManagementService_MakeBlindPayment_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ReversePayment">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/ReversePayment"
+                    message="tns:IBillingDataManagementService_ReversePayment_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/ReversePaymentResponse"
+                    message="tns:IBillingDataManagementService_ReversePayment_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetReceipt">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/GetReceipt"
+                    message="tns:IBillingDataManagementService_GetReceipt_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/GetReceiptResponse"
+                    message="tns:IBillingDataManagementService_GetReceipt_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetReversalType">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/GetReversalType"
+                    message="tns:IBillingDataManagementService_GetReversalType_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/GetReversalTypeResponse"
+                    message="tns:IBillingDataManagementService_GetReversalType_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetConvenienceFee">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/GetConvenienceFee"
+                    message="tns:IBillingDataManagementService_GetConvenienceFee_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/GetConvenienceFeeResponse"
+                    message="tns:IBillingDataManagementService_GetConvenienceFee_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetToken">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/GetToken"
+                    message="tns:IBillingDataManagementService_GetToken_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/GetTokenResponse"
+                    message="tns:IBillingDataManagementService_GetToken_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="LoadSecurePayBillData">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/LoadSecurePayBillData"
+                    message="tns:IBillingDataManagementService_LoadSecurePayBillData_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/LoadSecurePayBillDataResponse"
+                    message="tns:IBillingDataManagementService_LoadSecurePayBillData_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="LoadSecurePayMerchantBillData">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/LoadSecurePayMerchantBillData"
+                    message="tns:IBillingDataManagementService_LoadSecurePayMerchantBillData_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/LoadSecurePayMerchantBillDataResponse"
+                    message="tns:IBillingDataManagementService_LoadSecurePayMerchantBillData_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="LoadSecurePayDataExtended">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/LoadSecurePayDataExtended"
+                    message="tns:IBillingDataManagementService_LoadSecurePayDataExtended_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/LoadSecurePayDataExtendedResponse"
+                    message="tns:IBillingDataManagementService_LoadSecurePayDataExtended_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetSecurePayBillData">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/GetSecurePayBillData"
+                    message="tns:IBillingDataManagementService_GetSecurePayBillData_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/GetSecurePayBillDataResponse"
+                    message="tns:IBillingDataManagementService_GetSecurePayBillData_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateSecurePayPayment">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/UpdateSecurePayPayment"
+                    message="tns:IBillingDataManagementService_UpdateSecurePayPayment_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/UpdateSecurePayPaymentResponse"
+                    message="tns:IBillingDataManagementService_UpdateSecurePayPayment_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SetupFutureDatedPayment">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/SetupFutureDatedPayment"
+                    message="tns:IBillingDataManagementService_SetupFutureDatedPayment_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/SetupFutureDatedPaymentResponse"
+                    message="tns:IBillingDataManagementService_SetupFutureDatedPayment_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="PreAuthorizePayment">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/PreAuthorizePayment"
+                    message="tns:IBillingDataManagementService_PreAuthorizePayment_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/PreAuthorizePaymentResponse"
+                    message="tns:IBillingDataManagementService_PreAuthorizePayment_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CapturePreAuthorizedPayment">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/CapturePreAuthorizedPayment"
+                    message="tns:IBillingDataManagementService_CapturePreAuthorizedPayment_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/CapturePreAuthorizedPaymentResponse"
+                    message="tns:IBillingDataManagementService_CapturePreAuthorizedPayment_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddSignature">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/AddSignature"
+                    message="tns:IBillingDataManagementService_AddSignature_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/AddSignatureResponse"
+                    message="tns:IBillingDataManagementService_AddSignature_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="LogTermsAcceptance">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/LogTermsAcceptance"
+                    message="tns:IBillingDataManagementService_LogTermsAcceptance_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/LogTermsAcceptanceResponse"
+                    message="tns:IBillingDataManagementService_LogTermsAcceptance_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="DisburseFunds">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/DisburseFunds"
+                    message="tns:IBillingDataManagementService_DisburseFunds_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/DisburseFundsResponse"
+                    message="tns:IBillingDataManagementService_DisburseFunds_OutputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:service name="BillingDataManagementService">
+        <wsdl:port name="BasicHttpBinding_IBillingDataManagementService"
+                   binding="i0:BasicHttpBinding_IBillingDataManagementService">
+            <soap:address
+                    location="https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

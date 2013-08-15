@@ -1,0 +1,1436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BDMS.NewModel"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://schemas.datacontract.org/2004/07/BDMS.NewModel">
+    <xs:import
+            schemaLocation="https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd1"
+            namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+    <xs:import
+            schemaLocation="https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd3"
+            namespace="http://schemas.datacontract.org/2004/07/Transmodus.Wrapper"/>
+    <xs:import
+            schemaLocation="https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd4"
+            namespace="http://schemas.datacontract.org/2004/07/POSGateway.Wrapper"/>
+    <xs:complexType name="AddBlindPaymentRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:AddPaymentRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="DuplicatesAllowed" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="AddBlindPaymentRequest" nillable="true" type="tns:AddBlindPaymentRequest"/>
+    <xs:complexType name="AddPaymentRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:AddTransactionRequest">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="AddPaymentRequest" nillable="true" type="tns:AddPaymentRequest"/>
+    <xs:complexType name="AddTransactionRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Authorizations" nillable="true" type="tns:ArrayOfAuthorization"/>
+                    <xs:element minOccurs="0" name="BillTransactions" nillable="true"
+                                type="tns:ArrayOfBillTransaction"/>
+                    <xs:element minOccurs="0" name="TimeZone" type="tns:Timezone"/>
+                    <xs:element minOccurs="0" name="Transaction" nillable="true" type="tns:Transaction"/>
+                    <xs:element minOccurs="0" name="UseSystemDateForTransactionDateTime" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="AddTransactionRequest" nillable="true" type="tns:AddTransactionRequest"/>
+    <xs:complexType name="MerchantRequest">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="Credential" nillable="true" type="tns:MerchantCredentials"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="MerchantRequest" nillable="true" type="tns:MerchantRequest"/>
+    <xs:complexType name="MerchantCredentials">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:Credentials">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="MerchantName" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="MerchantCredentials" nillable="true" type="tns:MerchantCredentials"/>
+    <xs:complexType name="Credentials">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="ApplicationID" nillable="true" type="xs:int"/>
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Credentials" nillable="true" type="tns:Credentials"/>
+    <xs:complexType name="ArrayOfAuthorization">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="Authorization" nillable="true"
+                        type="tns:Authorization"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfAuthorization" nillable="true" type="tns:ArrayOfAuthorization"/>
+    <xs:complexType name="Authorization">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="AddToBatchReferenceNumber" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Amount" type="xs:decimal"/>
+            <xs:element minOccurs="0" name="AuthCode" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="AuthorizationType" type="tns:AuthorizationType"/>
+            <xs:element minOccurs="0" name="Gateway" type="tns:Gateway"/>
+            <xs:element minOccurs="0" name="GatewayBatchID" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="GatewayDescription" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="MaskedAccountNumber" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="MaskedRoutingNumber" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PaymentMethod" type="tns:PaymentMethod"/>
+            <xs:element minOccurs="0" name="ReferenceAuthorizationID" nillable="true" type="xs:int"/>
+            <xs:element minOccurs="0" name="ReferenceNumber" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Authorization" nillable="true" type="tns:Authorization"/>
+    <xs:simpleType name="AuthorizationType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Base">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1
+                        </EnumerationValue>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="ConvenienceFee">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2
+                        </EnumerationValue>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="AuthorizationType" nillable="true" type="tns:AuthorizationType"/>
+    <xs:simpleType name="Gateway">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Unassigned"/>
+            <xs:enumeration value="POSGateway"/>
+            <xs:enumeration value="HPSConnect"/>
+            <xs:enumeration value="DirectToExchange"/>
+            <xs:enumeration value="Other"/>
+            <xs:enumeration value="Transmodus"/>
+            <xs:enumeration value="POSGatewayDebitSale"/>
+            <xs:enumeration value="ACHGateway"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="Gateway" nillable="true" type="tns:Gateway"/>
+    <xs:simpleType name="PaymentMethod">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Unassigned"/>
+            <xs:enumeration value="VisaCredit"/>
+            <xs:enumeration value="MastercardCredit"/>
+            <xs:enumeration value="DiscoverCredit"/>
+            <xs:enumeration value="AmericanExpressCredit"/>
+            <xs:enumeration value="JCB"/>
+            <xs:enumeration value="GSB"/>
+            <xs:enumeration value="ACH"/>
+            <xs:enumeration value="eCheck"/>
+            <xs:enumeration value="Debit"/>
+            <xs:enumeration value="Cash"/>
+            <xs:enumeration value="VisaDebit"/>
+            <xs:enumeration value="MastercardDebit"/>
+            <xs:enumeration value="DiscoverDebit"/>
+            <xs:enumeration value="AmericanExpressDebit"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="PaymentMethod" nillable="true" type="tns:PaymentMethod"/>
+    <xs:complexType name="ArrayOfBillTransaction">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="BillTransaction" nillable="true"
+                        type="tns:BillTransaction"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfBillTransaction" nillable="true" type="tns:ArrayOfBillTransaction"/>
+    <xs:complexType name="BillTransaction">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:BillIdentifier">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="AmountToApplyToBill" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="CustomerEnteredElement1" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="CustomerEnteredElement2" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="CustomerEnteredElement3" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="CustomerEnteredElement4" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="CustomerEnteredElement5" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="CustomerEnteredElement6" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="CustomerEnteredElement7" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="CustomerEnteredElement8" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="CustomerEnteredElement9" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="BillTransaction" nillable="true" type="tns:BillTransaction"/>
+    <xs:complexType name="BillIdentifier">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="BillType" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ID1" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ID2" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ID3" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ID4" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="BillIdentifier" nillable="true" type="tns:BillIdentifier"/>
+    <xs:simpleType name="Timezone">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Unassigned"/>
+            <xs:enumeration value="Pacific"/>
+            <xs:enumeration value="Mountain"/>
+            <xs:enumeration value="Central"/>
+            <xs:enumeration value="Eastern"/>
+            <xs:enumeration value="UTC"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="Timezone" nillable="true" type="tns:Timezone"/>
+    <xs:complexType name="Transaction">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="Amount" type="xs:decimal"/>
+            <xs:element minOccurs="0" name="FeeAmount" nillable="true" type="xs:decimal"/>
+            <xs:element minOccurs="0" name="MerchantInvoiceNumber" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="MerchantPONumber" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="MerchantTransactionDescription" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="MerchantTransactionID" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PayorAddress" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PayorCity" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PayorCountry" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PayorEmailAddress" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PayorFirstName" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PayorLastName" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PayorMiddleName" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PayorPhoneNumber" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PayorPostalCode" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PayorState" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ReferenceTransactionID" nillable="true" type="xs:int"/>
+            <xs:element minOccurs="0" name="TransactionDate" type="xs:dateTime"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Transaction" nillable="true" type="tns:Transaction"/>
+    <xs:complexType name="Response">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="Messages" nillable="true" type="tns:ArrayOfMessage"/>
+            <xs:element minOccurs="0" name="isSuccessful" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Response" nillable="true" type="tns:Response"/>
+    <xs:complexType name="ArrayOfMessage">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="Message" nillable="true" type="tns:Message"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfMessage" nillable="true" type="tns:ArrayOfMessage"/>
+    <xs:complexType name="Message">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="Code" type="xs:int"/>
+            <xs:element minOccurs="0" name="Level" type="tns:MessageLevels"/>
+            <xs:element minOccurs="0" name="MessageDescription" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Message" nillable="true" type="tns:Message"/>
+    <xs:simpleType name="MessageLevels">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Information"/>
+            <xs:enumeration value="Warning"/>
+            <xs:enumeration value="Error"/>
+            <xs:enumeration value="Unknown">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">999
+                        </EnumerationValue>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="MessageLevels" nillable="true" type="tns:MessageLevels"/>
+    <xs:complexType name="AddReversalRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:AddTransactionRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ReversalCode" type="tns:ReversalCode"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="AddReversalRequest" nillable="true" type="tns:AddReversalRequest"/>
+    <xs:simpleType name="ReversalCode">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Unassigned">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1
+                        </EnumerationValue>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="AmtEr"/>
+            <xs:enumeration value="Crdt"/>
+            <xs:enumeration value="DuBill"/>
+            <xs:enumeration value="DuPay"/>
+            <xs:enumeration value="ExAth"/>
+            <xs:enumeration value="Fraud"/>
+            <xs:enumeration value="NSF"/>
+            <xs:enumeration value="Othrc"/>
+            <xs:enumeration value="Othrr"/>
+            <xs:enumeration value="PrErr"/>
+            <xs:enumeration value="Qual"/>
+            <xs:enumeration value="R01"/>
+            <xs:enumeration value="R02"/>
+            <xs:enumeration value="R03"/>
+            <xs:enumeration value="R04"/>
+            <xs:enumeration value="R06"/>
+            <xs:enumeration value="R07"/>
+            <xs:enumeration value="R08"/>
+            <xs:enumeration value="R09"/>
+            <xs:enumeration value="R10"/>
+            <xs:enumeration value="R11"/>
+            <xs:enumeration value="R12"/>
+            <xs:enumeration value="R13"/>
+            <xs:enumeration value="R14"/>
+            <xs:enumeration value="R15"/>
+            <xs:enumeration value="R16"/>
+            <xs:enumeration value="R17"/>
+            <xs:enumeration value="R18"/>
+            <xs:enumeration value="R19"/>
+            <xs:enumeration value="R20"/>
+            <xs:enumeration value="R21"/>
+            <xs:enumeration value="R22"/>
+            <xs:enumeration value="R23"/>
+            <xs:enumeration value="R24"/>
+            <xs:enumeration value="R25"/>
+            <xs:enumeration value="R26"/>
+            <xs:enumeration value="R27"/>
+            <xs:enumeration value="R28"/>
+            <xs:enumeration value="R29"/>
+            <xs:enumeration value="R30"/>
+            <xs:enumeration value="R31"/>
+            <xs:enumeration value="R32"/>
+            <xs:enumeration value="R33"/>
+            <xs:enumeration value="R34"/>
+            <xs:enumeration value="R35"/>
+            <xs:enumeration value="R36"/>
+            <xs:enumeration value="R37"/>
+            <xs:enumeration value="R38"/>
+            <xs:enumeration value="R39"/>
+            <xs:enumeration value="R40"/>
+            <xs:enumeration value="R41"/>
+            <xs:enumeration value="R42"/>
+            <xs:enumeration value="R43"/>
+            <xs:enumeration value="R44"/>
+            <xs:enumeration value="R45"/>
+            <xs:enumeration value="R46"/>
+            <xs:enumeration value="R47"/>
+            <xs:enumeration value="R50"/>
+            <xs:enumeration value="R51"/>
+            <xs:enumeration value="R52"/>
+            <xs:enumeration value="R53"/>
+            <xs:enumeration value="R61"/>
+            <xs:enumeration value="R67"/>
+            <xs:enumeration value="R68"/>
+            <xs:enumeration value="R69"/>
+            <xs:enumeration value="R70"/>
+            <xs:enumeration value="R71"/>
+            <xs:enumeration value="R72"/>
+            <xs:enumeration value="R73"/>
+            <xs:enumeration value="R74"/>
+            <xs:enumeration value="R75"/>
+            <xs:enumeration value="R76"/>
+            <xs:enumeration value="R80"/>
+            <xs:enumeration value="R81"/>
+            <xs:enumeration value="R82"/>
+            <xs:enumeration value="R83"/>
+            <xs:enumeration value="R84"/>
+            <xs:enumeration value="Rnvls"/>
+            <xs:enumeration value="Void"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="ReversalCode" nillable="true" type="tns:ReversalCode"/>
+    <xs:complexType name="ActivateMachineRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:AuthenticateRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ActivationKey" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="MachineName" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="ActivateMachineRequest" nillable="true" type="tns:ActivateMachineRequest"/>
+    <xs:complexType name="AuthenticateRequest">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="ApplicationID" nillable="true" type="xs:int"/>
+            <xs:element minOccurs="0" name="MacAddress" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="AuthenticateRequest" nillable="true" type="tns:AuthenticateRequest"/>
+    <xs:complexType name="ChangePasswordRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:UserGroupRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="NewPassword" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="ChangePasswordRequest" nillable="true" type="tns:ChangePasswordRequest"/>
+    <xs:complexType name="UserGroupRequest">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="Credential" nillable="true" type="tns:UserGroupCredentials"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="UserGroupRequest" nillable="true" type="tns:UserGroupRequest"/>
+    <xs:complexType name="UserGroupCredentials">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:Credentials">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="UserGroupName" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="UserGroupCredentials" nillable="true" type="tns:UserGroupCredentials"/>
+    <xs:complexType name="AddBillRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Bill" nillable="true" type="tns:Bill"/>
+                    <xs:element minOccurs="0" name="TimeZone" type="tns:Timezone"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="AddBillRequest" nillable="true" type="tns:AddBillRequest"/>
+    <xs:complexType name="Bill">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:BillData">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="BillIsPayable" nillable="true" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="RequiredAmount" nillable="true" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="Bill" nillable="true" type="tns:Bill"/>
+    <xs:complexType name="BillData">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="BillIdentifier" nillable="true" type="tns:BillIdentifier"/>
+            <xs:element minOccurs="0" name="BillPresentment" type="tns:BillPresentment"/>
+            <xs:element minOccurs="0" name="CustomerAddress" nillable="true" type="tns:Address"/>
+            <xs:element minOccurs="0" name="DataElements" nillable="true" type="tns:BillDataElements"/>
+            <xs:element minOccurs="0" name="DueDate" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="ObligorEmailAddress" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ObligorFirstName" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ObligorLastName" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ObligorMiddleName" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ObligorPhoneNumber" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="OptionalAmounts" nillable="true" type="tns:OptionalBillAmounts"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="BillData" nillable="true" type="tns:BillData"/>
+    <xs:simpleType name="BillPresentment">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Unassigned"/>
+            <xs:enumeration value="Full"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="BillPresentment" nillable="true" type="tns:BillPresentment"/>
+    <xs:complexType name="Address">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="AddressLineOne" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="State" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Address" nillable="true" type="tns:Address"/>
+    <xs:complexType name="BillDataElements">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="DataElement1" nillable="true" type="tns:BillDataElement"/>
+            <xs:element minOccurs="0" name="DataElement2" nillable="true" type="tns:BillDataElement"/>
+            <xs:element minOccurs="0" name="DataElement3" nillable="true" type="tns:BillDataElement"/>
+            <xs:element minOccurs="0" name="DataElement4" nillable="true" type="tns:BillDataElement"/>
+            <xs:element minOccurs="0" name="DataElement5" nillable="true" type="tns:BillDataElement"/>
+            <xs:element minOccurs="0" name="DataElement6" nillable="true" type="tns:BillDataElement"/>
+            <xs:element minOccurs="0" name="DataElement7" nillable="true" type="tns:BillDataElement"/>
+            <xs:element minOccurs="0" name="DataElement8" nillable="true" type="tns:BillDataElement"/>
+            <xs:element minOccurs="0" name="DataElement9" nillable="true" type="tns:BillDataElement"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="BillDataElements" nillable="true" type="tns:BillDataElements"/>
+    <xs:complexType name="BillDataElement">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="IsVisible" type="xs:boolean"/>
+            <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="BillDataElement" nillable="true" type="tns:BillDataElement"/>
+    <xs:complexType name="OptionalBillAmounts">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="OptionalAmount1" nillable="true" type="tns:OptionalBillAmount"/>
+            <xs:element minOccurs="0" name="OptionalAmount2" nillable="true" type="tns:OptionalBillAmount"/>
+            <xs:element minOccurs="0" name="OptionalAmount3" nillable="true" type="tns:OptionalBillAmount"/>
+            <xs:element minOccurs="0" name="OptionalAmount4" nillable="true" type="tns:OptionalBillAmount"/>
+            <xs:element minOccurs="0" name="OptionalAmount5" nillable="true" type="tns:OptionalBillAmount"/>
+            <xs:element minOccurs="0" name="OptionalAmount6" nillable="true" type="tns:OptionalBillAmount"/>
+            <xs:element minOccurs="0" name="OptionalAmount7" nillable="true" type="tns:OptionalBillAmount"/>
+            <xs:element minOccurs="0" name="OptionalAmount8" nillable="true" type="tns:OptionalBillAmount"/>
+            <xs:element minOccurs="0" name="OptionalAmount9" nillable="true" type="tns:OptionalBillAmount"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="OptionalBillAmounts" nillable="true" type="tns:OptionalBillAmounts"/>
+    <xs:complexType name="OptionalBillAmount">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="IsPayable" type="xs:boolean"/>
+            <xs:element minOccurs="0" name="Value" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="OptionalBillAmount" nillable="true" type="tns:OptionalBillAmount"/>
+    <xs:complexType name="UpdateBillRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Bill" nillable="true" type="tns:Bill"/>
+                    <xs:element minOccurs="0" name="TimeZone" type="tns:Timezone"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="UpdateBillRequest" nillable="true" type="tns:UpdateBillRequest"/>
+    <xs:complexType name="ActivateBillRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="BillIdentifier" nillable="true" type="tns:BillIdentifier"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="ActivateBillRequest" nillable="true" type="tns:ActivateBillRequest"/>
+    <xs:complexType name="InactivateBillRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="BillIdentifier" nillable="true" type="tns:BillIdentifier"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="InactivateBillRequest" nillable="true" type="tns:InactivateBillRequest"/>
+    <xs:complexType name="EndOfDayReportRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Application" type="tns:Application"/>
+                    <xs:element minOccurs="0" name="EndDay" type="xs:int"/>
+                    <xs:element minOccurs="0" name="EndHour" type="xs:int"/>
+                    <xs:element minOccurs="0" name="EndMinute" type="xs:int"/>
+                    <xs:element minOccurs="0" name="EndMonth" type="xs:int"/>
+                    <xs:element minOccurs="0" name="EndYear" type="xs:int"/>
+                    <xs:element minOccurs="0" name="IncludePDFInResponse" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="SortBy" type="tns:Sortable"/>
+                    <xs:element minOccurs="0" name="StartDay" type="xs:int"/>
+                    <xs:element minOccurs="0" name="StartHour" type="xs:int"/>
+                    <xs:element minOccurs="0" name="StartMinute" type="xs:int"/>
+                    <xs:element minOccurs="0" name="StartMonth" type="xs:int"/>
+                    <xs:element minOccurs="0" name="StartYear" type="xs:int"/>
+                    <xs:element minOccurs="0" name="TimeZone" type="tns:Timezone"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="EndOfDayReportRequest" nillable="true" type="tns:EndOfDayReportRequest"/>
+    <xs:simpleType name="Application">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Unassigned"/>
+            <xs:enumeration value="WebCart"/>
+            <xs:enumeration value="WebCartPlus"/>
+            <xs:enumeration value="ExternalAPI"/>
+            <xs:enumeration value="Cashier"/>
+            <xs:enumeration value="WebConnect"/>
+            <xs:enumeration value="Admin"/>
+            <xs:enumeration value="CashierAdmin"/>
+            <xs:enumeration value="IVR"/>
+            <xs:enumeration value="MegabyteWeb"/>
+            <xs:enumeration value="WebPortal"/>
+            <xs:enumeration value="SecurePay"/>
+            <xs:enumeration value="ExternalIVR"/>
+            <xs:enumeration value="ExternalWeb"/>
+            <xs:enumeration value="ExternalBatch"/>
+            <xs:enumeration value="ExternalAPIMOTO"/>
+            <xs:enumeration value="SecurePayMOTO"/>
+            <xs:enumeration value="MerchantView"/>
+            <xs:enumeration value="MobileCashier"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="Application" nillable="true" type="tns:Application"/>
+    <xs:simpleType name="Sortable">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Unassigned"/>
+            <xs:enumeration value="DateTimeAdded"/>
+            <xs:enumeration value="Cashier"/>
+            <xs:enumeration value="Channel"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="Sortable" nillable="true" type="tns:Sortable"/>
+    <xs:complexType name="EndOfDayReportResponse">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:GetFileResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="CashierTotals" nillable="true"
+                                type="tns:ArrayOfEndOfDayReportTotalForCashier"/>
+                    <xs:element minOccurs="0" name="Header" nillable="true" type="tns:EndOfDayReportHeader"/>
+                    <xs:element minOccurs="0" name="SummaryTotal" nillable="true" type="tns:EndOfDayReportTotals"/>
+                    <xs:element minOccurs="0" name="Transactions" nillable="true" type="tns:ArrayOfTransactionRecord"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="EndOfDayReportResponse" nillable="true" type="tns:EndOfDayReportResponse"/>
+    <xs:complexType name="GetFileResponse">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:Response">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="FileContent" nillable="true" type="xs:base64Binary"/>
+                    <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="GetFileResponse" nillable="true" type="tns:GetFileResponse"/>
+    <xs:complexType name="ArrayOfEndOfDayReportTotalForCashier">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="EndOfDayReportTotalForCashier" nillable="true"
+                        type="tns:EndOfDayReportTotalForCashier"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfEndOfDayReportTotalForCashier" nillable="true"
+                type="tns:ArrayOfEndOfDayReportTotalForCashier"/>
+    <xs:complexType name="EndOfDayReportTotalForCashier">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="Firstname" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Lastname" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="RowID" type="xs:int"/>
+            <xs:element minOccurs="0" name="Totals" nillable="true" type="tns:EndOfDayReportTotals"/>
+            <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="EndOfDayReportTotalForCashier" nillable="true" type="tns:EndOfDayReportTotalForCashier"/>
+    <xs:complexType name="EndOfDayReportTotals">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="NumberOfPayments" type="xs:int"/>
+            <xs:element minOccurs="0" name="NumberOfReversals" type="xs:int"/>
+            <xs:element minOccurs="0" name="TotalPaymentAmount" type="xs:decimal"/>
+            <xs:element minOccurs="0" name="TotalReversalAmount" type="xs:decimal"/>
+            <xs:element minOccurs="0" name="UserGroupName" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="EndOfDayReportTotals" nillable="true" type="tns:EndOfDayReportTotals"/>
+    <xs:complexType name="EndOfDayReportHeader">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="EndDateTime" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="MerchantName" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="StartDateTime" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="EndOfDayReportHeader" nillable="true" type="tns:EndOfDayReportHeader"/>
+    <xs:complexType name="ArrayOfTransactionRecord">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="TransactionRecord" nillable="true"
+                        type="tns:TransactionRecord"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfTransactionRecord" nillable="true" type="tns:ArrayOfTransactionRecord"/>
+    <xs:complexType name="TransactionRecord">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:Transaction">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Application" type="tns:Application"/>
+                    <xs:element minOccurs="0" name="BillTransactions" nillable="true"
+                                type="tns:ArrayOfBillTransactionRecord"/>
+                    <xs:element minOccurs="0" name="NetAmount" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="NetFeeAmount" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="OriginalTransactionID" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ReversalCode" type="tns:ReversalCode"/>
+                    <xs:element minOccurs="0" name="TransactionID" type="xs:int"/>
+                    <xs:element minOccurs="0" name="TransactionType" type="tns:TransactionType"/>
+                    <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="TransactionRecord" nillable="true" type="tns:TransactionRecord"/>
+    <xs:complexType name="ArrayOfBillTransactionRecord">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="BillTransactionRecord" nillable="true"
+                        type="tns:BillTransactionRecord"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfBillTransactionRecord" nillable="true" type="tns:ArrayOfBillTransactionRecord"/>
+    <xs:complexType name="BillTransactionRecord">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:BillTransaction">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="BillTypeLabels" nillable="true" type="tns:BillTypeLabels"/>
+                    <xs:element minOccurs="0" name="DataElement1" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="DataElement2" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="DataElement3" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="DataElement4" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="DataElement5" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="DataElement6" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="DataElement7" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="DataElement8" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="DataElement9" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="NetAmountToApplyToBill" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="BillTransactionRecord" nillable="true" type="tns:BillTransactionRecord"/>
+    <xs:complexType name="BillTypeLabels">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="Identifier1Label" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Identifier2Label" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Identifier3Label" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Identifier4Label" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="BillTypeLabels" nillable="true" type="tns:BillTypeLabels"/>
+    <xs:simpleType name="TransactionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Payment">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1
+                        </EnumerationValue>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Reversal">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2
+                        </EnumerationValue>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Return">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3
+                        </EnumerationValue>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Disbursement">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4
+                        </EnumerationValue>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="DisbursementReversal">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5
+                        </EnumerationValue>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="DisbursementReturn">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6
+                        </EnumerationValue>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="TransactionType" nillable="true" type="tns:TransactionType"/>
+    <xs:complexType name="MakePaymentRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ACHAccountsToCharge" nillable="true"
+                                type="tns:ArrayOfACHAccountToCharge"/>
+                    <xs:element minOccurs="0" name="AESCreditCardsToCharge" nillable="true"
+                                type="tns:ArrayOfAESCardToCharge"/>
+                    <xs:element minOccurs="0" name="BillTransactions" nillable="true"
+                                type="tns:ArrayOfBillTransaction"/>
+                    <xs:element minOccurs="0" name="ClearTextCreditCardsToCharge" nillable="true"
+                                type="tns:ArrayOfClearTextCardToCharge"/>
+                    <xs:element minOccurs="0" name="E3CreditCardsToCharge" nillable="true"
+                                type="tns:ArrayOfE3CardToCharge"/>
+                    <xs:element minOccurs="0" name="E3DebitCardsWithPINToCharge" nillable="true"
+                                type="tns:ArrayOfE3DebitCardWithPINToCharge"/>
+                    <xs:element minOccurs="0" name="IncludeReceiptInResponse" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="TokensToCharge" nillable="true" type="tns:ArrayOfTokenToCharge"/>
+                    <xs:element minOccurs="0" name="Transaction" nillable="true" type="tns:Transaction"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="MakePaymentRequest" nillable="true" type="tns:MakePaymentRequest"/>
+    <xs:complexType name="ArrayOfACHAccountToCharge">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="ACHAccountToCharge" nillable="true"
+                        type="tns:ACHAccountToCharge"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfACHAccountToCharge" nillable="true" type="tns:ArrayOfACHAccountToCharge"/>
+    <xs:complexType name="ACHAccountToCharge">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:CardToCharge">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="AccountType" type="q1:ACHAccountType"
+                                xmlns:q1="http://schemas.datacontract.org/2004/07/Transmodus.Wrapper"/>
+                    <xs:element minOccurs="0" name="DepositType" type="q2:ACHDepositType"
+                                xmlns:q2="http://schemas.datacontract.org/2004/07/Transmodus.Wrapper"/>
+                    <xs:element minOccurs="0" name="DocumentID" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="InternalAccountNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="RoutingNumber" type="xs:long"/>
+                    <xs:element minOccurs="0" name="SubmitDate" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="TrackingNumber" type="xs:long"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="ACHAccountToCharge" nillable="true" type="tns:ACHAccountToCharge"/>
+    <xs:complexType name="CardToCharge">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="Amount" type="xs:decimal"/>
+            <xs:element minOccurs="0" name="CardProcessingMethod" type="tns:CardProcessingMethod"/>
+            <xs:element minOccurs="0" name="ExpectedFeeAmount" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="CardToCharge" nillable="true" type="tns:CardToCharge"/>
+    <xs:simpleType name="CardProcessingMethod">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Unassigned"/>
+            <xs:enumeration value="Credit"/>
+            <xs:enumeration value="Debit"/>
+            <xs:enumeration value="PINDebit"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="CardProcessingMethod" nillable="true" type="tns:CardProcessingMethod"/>
+    <xs:complexType name="ArrayOfAESCardToCharge">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="AESCardToCharge" nillable="true"
+                        type="tns:AESCardToCharge"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfAESCardToCharge" nillable="true" type="tns:ArrayOfAESCardToCharge"/>
+    <xs:complexType name="AESCardToCharge">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:CardToCharge">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="AESCreditCard" nillable="true" type="q3:AESCardData"
+                                xmlns:q3="http://schemas.datacontract.org/2004/07/POSGateway.Wrapper"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="AESCardToCharge" nillable="true" type="tns:AESCardToCharge"/>
+    <xs:complexType name="ArrayOfClearTextCardToCharge">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="ClearTextCardToCharge" nillable="true"
+                        type="tns:ClearTextCardToCharge"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfClearTextCardToCharge" nillable="true" type="tns:ArrayOfClearTextCardToCharge"/>
+    <xs:complexType name="ClearTextCardToCharge">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:CardToCharge">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ClearTextCreditCard" nillable="true" type="q4:ClearTextCardData"
+                                xmlns:q4="http://schemas.datacontract.org/2004/07/POSGateway.Wrapper"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="ClearTextCardToCharge" nillable="true" type="tns:ClearTextCardToCharge"/>
+    <xs:complexType name="ArrayOfE3CardToCharge">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="E3CardToCharge" nillable="true"
+                        type="tns:E3CardToCharge"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfE3CardToCharge" nillable="true" type="tns:ArrayOfE3CardToCharge"/>
+    <xs:complexType name="E3CardToCharge">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:CardToCharge">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="E3CreditCard" nillable="true" type="q5:E3CardData"
+                                xmlns:q5="http://schemas.datacontract.org/2004/07/POSGateway.Wrapper"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="E3CardToCharge" nillable="true" type="tns:E3CardToCharge"/>
+    <xs:complexType name="ArrayOfE3DebitCardWithPINToCharge">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="E3DebitCardWithPINToCharge" nillable="true"
+                        type="tns:E3DebitCardWithPINToCharge"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfE3DebitCardWithPINToCharge" nillable="true" type="tns:ArrayOfE3DebitCardWithPINToCharge"/>
+    <xs:complexType name="E3DebitCardWithPINToCharge">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:CardToCharge">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="E3DebitCardWithPIN" nillable="true" type="q6:E3DebitCardWithPINData"
+                                xmlns:q6="http://schemas.datacontract.org/2004/07/POSGateway.Wrapper"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="E3DebitCardWithPINToCharge" nillable="true" type="tns:E3DebitCardWithPINToCharge"/>
+    <xs:complexType name="ArrayOfTokenToCharge">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="TokenToCharge" nillable="true"
+                        type="tns:TokenToCharge"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfTokenToCharge" nillable="true" type="tns:ArrayOfTokenToCharge"/>
+    <xs:complexType name="TokenToCharge">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:CardToCharge">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="TokenToCharge" nillable="true" type="tns:TokenToCharge"/>
+    <xs:complexType name="MakePaymentResponse">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:GetFileResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Authorizations" nillable="true" type="tns:ArrayOfAuthorization"/>
+                    <xs:element minOccurs="0" name="Transaction" nillable="true" type="tns:Transaction"/>
+                    <xs:element minOccurs="0" name="Transaction_ID" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="MakePaymentResponse" nillable="true" type="tns:MakePaymentResponse"/>
+    <xs:complexType name="ReversePaymentRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="BaseAmountToRefund" nillable="true" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="E3DebitCardsWithPINToCharge" nillable="true"
+                                type="tns:ArrayOfE3DebitCardWithPINToCharge"/>
+                    <xs:element minOccurs="0" name="ExpectedFeeAmountToRefund" nillable="true" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="IncludeReceiptInResponse" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="Transaction_ID" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="ReversePaymentRequest" nillable="true" type="tns:ReversePaymentRequest"/>
+    <xs:complexType name="ReversePaymentResponse">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:GetFileResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ReversalTransactionWithReversalAuthorizations" nillable="true"
+                                type="tns:ReversalTransactionRecordWithReversalAuthorizations"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="ReversePaymentResponse" nillable="true" type="tns:ReversePaymentResponse"/>
+    <xs:complexType name="ReversalTransactionRecordWithReversalAuthorizations">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:TransactionRecord">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ReversalAuthorizations" nillable="true"
+                                type="tns:ArrayOfReversalAuthorizationRecord"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="ReversalTransactionRecordWithReversalAuthorizations" nillable="true"
+                type="tns:ReversalTransactionRecordWithReversalAuthorizations"/>
+    <xs:complexType name="ArrayOfReversalAuthorizationRecord">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="ReversalAuthorizationRecord" nillable="true"
+                        type="tns:ReversalAuthorizationRecord"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfReversalAuthorizationRecord" nillable="true"
+                type="tns:ArrayOfReversalAuthorizationRecord"/>
+    <xs:complexType name="ReversalAuthorizationRecord">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:AuthorizationRecord">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ReversalAmount" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="ReversalReferenceNumber" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="ReversalAuthorizationRecord" nillable="true" type="tns:ReversalAuthorizationRecord"/>
+    <xs:complexType name="AuthorizationRecord">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:Authorization">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="AuthorizationID" type="xs:int"/>
+                    <xs:element minOccurs="0" name="NetAmount" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="OriginalAuthorizationID" nillable="true" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="AuthorizationRecord" nillable="true" type="tns:AuthorizationRecord"/>
+    <xs:complexType name="GetReceiptRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ReceiptFileType" type="tns:ReceiptFileType"/>
+                    <xs:element minOccurs="0" name="Transaction_ID" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="GetReceiptRequest" nillable="true" type="tns:GetReceiptRequest"/>
+    <xs:simpleType name="ReceiptFileType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Unassigned"/>
+            <xs:enumeration value="PDF"/>
+            <xs:enumeration value="PNG"/>
+            <xs:enumeration value="TXT"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="ReceiptFileType" nillable="true" type="tns:ReceiptFileType"/>
+    <xs:complexType name="GetReceiptResponse">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:GetFileResponse">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="GetReceiptResponse" nillable="true" type="tns:GetReceiptResponse"/>
+    <xs:complexType name="GetReversalTypeRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Transaction_ID" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="GetReversalTypeRequest" nillable="true" type="tns:GetReversalTypeRequest"/>
+    <xs:complexType name="GetReversalTypeResponse">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:Response">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ReversalType" type="tns:ReversalType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="GetReversalTypeResponse" nillable="true" type="tns:GetReversalTypeResponse"/>
+    <xs:simpleType name="ReversalType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Void"/>
+            <xs:enumeration value="Return"/>
+            <xs:enumeration value="None"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="ReversalType" nillable="true" type="tns:ReversalType"/>
+    <xs:complexType name="GetConvenienceFeeRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="BaseAmount" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="CardNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="CardProcessingMethod" type="tns:CardProcessingMethod"/>
+                    <xs:element minOccurs="0" name="PaymentMethod" type="tns:PaymentMethod"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="GetConvenienceFeeRequest" nillable="true" type="tns:GetConvenienceFeeRequest"/>
+    <xs:complexType name="GetConvenienceFeeResponse">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:Response">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ConvenienceFee" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="PaymentMethod" type="tns:PaymentMethod"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="GetConvenienceFeeResponse" nillable="true" type="tns:GetConvenienceFeeResponse"/>
+    <xs:complexType name="GetTokenRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ACHAccountType" type="q7:ACHAccountType"
+                                xmlns:q7="http://schemas.datacontract.org/2004/07/Transmodus.Wrapper"/>
+                    <xs:element minOccurs="0" name="ACHDepositType" type="q8:ACHDepositType"
+                                xmlns:q8="http://schemas.datacontract.org/2004/07/Transmodus.Wrapper"/>
+                    <xs:element minOccurs="0" name="AccountHolderData" nillable="true" type="q9:CardHolderData"
+                                xmlns:q9="http://schemas.datacontract.org/2004/07/POSGateway.Wrapper"/>
+                    <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ExpirationMonth" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ExpirationYear" type="xs:int"/>
+                    <xs:element minOccurs="0" name="PaymentMethod" type="tns:TokenPaymentMethod"/>
+                    <xs:element minOccurs="0" name="RoutingNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="SkipAccountVerify" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="GetTokenRequest" nillable="true" type="tns:GetTokenRequest"/>
+    <xs:simpleType name="TokenPaymentMethod">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Unassigned"/>
+            <xs:enumeration value="Credit"/>
+            <xs:enumeration value="Debit"/>
+            <xs:enumeration value="ACH">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4
+                        </EnumerationValue>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="TokenPaymentMethod" nillable="true" type="tns:TokenPaymentMethod"/>
+    <xs:complexType name="GetTokenResponse">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:Response">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="GetTokenResponse" nillable="true" type="tns:GetTokenResponse"/>
+    <xs:complexType name="LoadSecurePayBillDataRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:Request">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="BillData" nillable="true" type="tns:ArrayOfSecurePayBill"/>
+                    <xs:element minOccurs="0" name="MaxFuturePaymentDays" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ReturnTokenWithResponse" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="LoadSecurePayBillDataRequest" nillable="true" type="tns:LoadSecurePayBillDataRequest"/>
+    <xs:complexType name="Request">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="Credential" nillable="true" type="tns:Credentials"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Request" nillable="true" type="tns:Request"/>
+    <xs:complexType name="ArrayOfSecurePayBill">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="SecurePayBill" nillable="true"
+                        type="tns:SecurePayBill"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ArrayOfSecurePayBill" nillable="true" type="tns:ArrayOfSecurePayBill"/>
+    <xs:complexType name="SecurePayBill">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="Amount" type="xs:decimal"/>
+            <xs:element minOccurs="0" name="BillTypeName" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Identifier1" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Identifier2" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Identifier3" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Identifier4" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="SecurePayBill" nillable="true" type="tns:SecurePayBill"/>
+    <xs:complexType name="LoadSecurePayBillDataResponse">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:Response">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="GUID" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="LoadSecurePayBillDataResponse" nillable="true" type="tns:LoadSecurePayBillDataResponse"/>
+    <xs:complexType name="LoadSecurePayMerchantBillDataRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="BillData" nillable="true" type="tns:ArrayOfSecurePayBill"/>
+                    <xs:element minOccurs="0" name="MaxFuturePaymentDays" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ReturnTokenWithResponse" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="LoadSecurePayMerchantBillDataRequest" nillable="true"
+                type="tns:LoadSecurePayMerchantBillDataRequest"/>
+    <xs:complexType name="LoadSecurePayDataExtendedRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="BINRangesToDeny" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="BillData" nillable="true" type="tns:ArrayOfSecurePayBill"/>
+                    <xs:element minOccurs="0" name="MaxFuturePaymentDays" type="xs:int"/>
+                    <xs:element minOccurs="0" name="PaymentMethodsToDeny" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorAddress" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorAddressIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorCity" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorCityIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorCountry" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorCountryIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorEmailAddress" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorEmailAddressIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorFirstName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorFirstNameIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorLastName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorLastNameIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorMiddleName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorMiddleNameIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorPhoneNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorPhoneNumberIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorPostalCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorPostalCodeIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorState" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorStateIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="SecurePayPaymentType_ID" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="LoadSecurePayDataExtendedRequest" nillable="true" type="tns:LoadSecurePayDataExtendedRequest"/>
+    <xs:complexType name="GetSecurePayBillDataRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="GUID" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="GetSecurePayBillDataRequest" nillable="true" type="tns:GetSecurePayBillDataRequest"/>
+    <xs:complexType name="GetSecurePayBillDataResponse">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:Response">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="AllowAmexCredit" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="AllowAmexDebit" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="AllowDiscoverCredit" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="AllowDiscoverDebit" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="AllowECheck" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="AllowMastercardCredit" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="AllowMastercardDebit" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="AllowVisaCredit" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="AllowVisaDebit" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="ApplicationID" type="xs:int"/>
+                    <xs:element minOccurs="0" name="BINRangesToDeny" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="BillData" nillable="true" type="tns:ArrayOfSecurePayBill"/>
+                    <xs:element minOccurs="0" name="MaxFuturePaymentDays" type="xs:int"/>
+                    <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorAddress" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorAddressIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorCity" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorCityIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorCountry" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorCountryIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorEmailAddress" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorEmailAddressIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorFirstName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorFirstNameIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorLastName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorLastNameIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorMiddleName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorMiddleNameIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorPhoneNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorPhoneNumberIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorPostalCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorPostalCodeIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="PayorState" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PayorStateIsEditable" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="SecurePayPaymentType" type="tns:SecurePayPaymentType"/>
+                    <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="GetSecurePayBillDataResponse" nillable="true" type="tns:GetSecurePayBillDataResponse"/>
+    <xs:simpleType name="SecurePayPaymentType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MakePayment">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1
+                        </EnumerationValue>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="MakePaymentReturnToken">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2
+                        </EnumerationValue>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="ReturnTokenOnly">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3
+                        </EnumerationValue>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="SecurePayPaymentType" nillable="true" type="tns:SecurePayPaymentType"/>
+    <xs:complexType name="UpdateSecurePayPaymentRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:Request">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="FutureDatedTransactionID" type="xs:int"/>
+                    <xs:element minOccurs="0" name="GUID" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="TransactionID" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="UpdateSecurePayPaymentRequest" nillable="true" type="tns:UpdateSecurePayPaymentRequest"/>
+    <xs:complexType name="SetupFutureDatedPaymentRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ACHAccountsToCharge" nillable="true"
+                                type="tns:ArrayOfACHAccountToCharge"/>
+                    <xs:element minOccurs="0" name="BillTransactions" nillable="true"
+                                type="tns:ArrayOfBillTransaction"/>
+                    <xs:element minOccurs="0" name="ClearTextCreditCardsToCharge" nillable="true"
+                                type="tns:ArrayOfClearTextCardToCharge"/>
+                    <xs:element minOccurs="0" name="TokensToCharge" nillable="true" type="tns:ArrayOfTokenToCharge"/>
+                    <xs:element minOccurs="0" name="Transaction" nillable="true" type="tns:Transaction"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="SetupFutureDatedPaymentRequest" nillable="true" type="tns:SetupFutureDatedPaymentRequest"/>
+    <xs:complexType name="SetupFutureDatedPaymentResponse">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:Response">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="FutureDatedPaymentID" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="SetupFutureDatedPaymentResponse" nillable="true" type="tns:SetupFutureDatedPaymentResponse"/>
+    <xs:complexType name="PreAuthorizePaymentRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="AESCreditCardToAuthorize" nillable="true"
+                                type="tns:AESCardToCharge"/>
+                    <xs:element minOccurs="0" name="Amount" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="ClearTextCreditCardToAuthorize" nillable="true"
+                                type="tns:ClearTextCardToCharge"/>
+                    <xs:element minOccurs="0" name="E3CreditCardToAuthorize" nillable="true" type="tns:E3CardToCharge"/>
+                    <xs:element minOccurs="0" name="FeeAmount" nillable="true" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="PreAuthorizePaymentRequest" nillable="true" type="tns:PreAuthorizePaymentRequest"/>
+    <xs:complexType name="PreAuthorizePaymentResponse">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:Response">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="PreAuthorizations" nillable="true" type="tns:ArrayOfAuthorization"/>
+                    <xs:element minOccurs="0" name="PreAuthorizedTransaction_ID" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="PreAuthorizePaymentResponse" nillable="true" type="tns:PreAuthorizePaymentResponse"/>
+    <xs:complexType name="CapturePreAuthorizedPaymentRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="BillTransactions" nillable="true"
+                                type="tns:ArrayOfBillTransaction"/>
+                    <xs:element minOccurs="0" name="IncludeReceiptInResponse" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="Transaction" nillable="true" type="tns:Transaction"/>
+                    <xs:element minOccurs="0" name="TransactionAuthorization_ID" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="CapturePreAuthorizedPaymentRequest" nillable="true"
+                type="tns:CapturePreAuthorizedPaymentRequest"/>
+    <xs:complexType name="AddSignatureRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="SignatureImageInBase64" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Transaction_ID" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="AddSignatureRequest" nillable="true" type="tns:AddSignatureRequest"/>
+    <xs:complexType name="LogTermsAcceptanceRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:Request">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="DeviceID" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="LogTermsAcceptanceRequest" nillable="true" type="tns:LogTermsAcceptanceRequest"/>
+    <xs:complexType name="DisburseFundsRequest">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:MerchantRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ACHAccountToDisburseTo" nillable="true"
+                                type="tns:ACHAccountToCharge"/>
+                    <xs:element minOccurs="0" name="BillTransactions" nillable="true"
+                                type="tns:ArrayOfBillTransaction"/>
+                    <xs:element minOccurs="0" name="Transaction" nillable="true" type="tns:Transaction"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="DisburseFundsRequest" nillable="true" type="tns:DisburseFundsRequest"/>
+    <xs:complexType name="DisburseFundsResponse">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:Response">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Authorizations" nillable="true" type="tns:ArrayOfAuthorization"/>
+                    <xs:element minOccurs="0" name="Transaction" nillable="true" type="tns:Transaction"/>
+                    <xs:element minOccurs="0" name="Transaction_ID" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="DisburseFundsResponse" nillable="true" type="tns:DisburseFundsResponse"/>
+</xs:schema>

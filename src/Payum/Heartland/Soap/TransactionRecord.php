@@ -6,95 +6,95 @@ namespace Payum\Heartland\Soap;
  * This class is generated from the following WSDL:
  * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd2
  */
-class GetTokenRequest extends MerchantRequest
+class TransactionRecord extends Transaction
 {
     /**
-     * ACHAccountType
+     * Application
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q7:ACHAccountType
+     * - SchemaType: tns:Application
      *
-     * @var ACHAccountType
+     * @var Application
      */
-    public $ACHAccountType;
+    public $Application;
 
     /**
-     * ACHDepositType
+     * BillTransactions
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q8:ACHDepositType
+     * - SchemaType: tns:ArrayOfBillTransactionRecord
      *
-     * @var ACHDepositType
+     * @var array<BillTransactionRecord>
      */
-    public $ACHDepositType;
+    public $BillTransactions;
 
     /**
-     * AccountHolderData
+     * NetAmount
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q9:CardHolderData
+     * - SchemaType: xs:decimal
      *
-     * @var CardHolderData
+     * @var float
      */
-    public $AccountHolderData;
+    public $NetAmount;
 
     /**
-     * AccountNumber
+     * NetFeeAmount
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: xs:string
+     * - SchemaType: xs:decimal
      *
-     * @var string
+     * @var float
      */
-    public $AccountNumber;
+    public $NetFeeAmount;
 
     /**
-     * ExpirationMonth
+     * OriginalTransactionID
      *
      * The property has the following characteristics/restrictions:
      * - SchemaType: xs:int
      *
      * @var int
      */
-    public $ExpirationMonth;
+    public $OriginalTransactionID;
 
     /**
-     * ExpirationYear
+     * ReversalCode
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: tns:ReversalCode
+     *
+     * @var ReversalCode
+     */
+    public $ReversalCode;
+
+    /**
+     * TransactionID
      *
      * The property has the following characteristics/restrictions:
      * - SchemaType: xs:int
      *
      * @var int
      */
-    public $ExpirationYear;
+    public $TransactionID;
 
     /**
-     * PaymentMethod
+     * TransactionType
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: tns:TokenPaymentMethod
+     * - SchemaType: tns:TransactionType
      *
-     * @var TokenPaymentMethod
+     * @var TransactionType
      */
-    public $PaymentMethod;
+    public $TransactionType;
 
     /**
-     * RoutingNumber
+     * UserName
      *
      * The property has the following characteristics/restrictions:
      * - SchemaType: xs:string
      *
      * @var string
      */
-    public $RoutingNumber;
-
-    /**
-     * SkipAccountVerify
-     *
-     * The property has the following characteristics/restrictions:
-     * - SchemaType: xs:boolean
-     *
-     * @var boolean
-     */
-    public $SkipAccountVerify;
+    public $UserName;
 }

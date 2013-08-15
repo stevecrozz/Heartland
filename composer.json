@@ -14,16 +14,27 @@
     "repositories": [
         {
             "type": "git",
-            "url": "git@github.com:66Ton99/serializer.git"
+            "url": "git@github.com:BeSimple/BeSimpleSoapClient.git"
+        },
+        {
+            "type": "git",
+            "url": "git@github.com:66Ton99/BeSimpleWsdlToPhp.git"
+        },
+        {
+            "type": "git",
+            "url": "git@github.com:BeSimple/BeSimpleSoapCommon.git"
         }
     ],
     "require": {
         "php": ">=5.3.3",
         "payum/payum": "0.5.x-dev",
-        "jms/serializer": "dev-master"
+        "besimple/soap-common": "dev-master",
+        "besimple/soap-client": "dev-master",
+        "ass/xmlsecurity": "dev-master"
     },
     "require-dev": {
-        "ext-curl": "*"
+        "ext-curl": "*",
+        "besimple/wsdl2php": "dev-master"
     },
     "config": {
         "bin-dir": "bin"

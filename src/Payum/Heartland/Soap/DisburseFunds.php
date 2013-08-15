@@ -6,15 +6,15 @@ namespace Payum\Heartland\Soap;
  * This class is generated from the following WSDL:
  * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
  */
-class GetToken
+class DisburseFunds
 {
     /**
-     * GetTokenRequest
+     * DisburseFundsRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q33:GetTokenRequest
+     * - SchemaType: q55:DisburseFundsRequest
      *
-     * @var GetTokenRequest
+     * @var DisburseFundsRequest
      */
-    public $GetTokenRequest;
+    public $DisburseFundsRequest;
 }

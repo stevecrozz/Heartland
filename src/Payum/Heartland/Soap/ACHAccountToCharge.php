@@ -6,38 +6,8 @@ namespace Payum\Heartland\Soap;
  * This class is generated from the following WSDL:
  * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd2
  */
-class GetTokenRequest extends MerchantRequest
+class ACHAccountToCharge extends CardToCharge
 {
-    /**
-     * ACHAccountType
-     *
-     * The property has the following characteristics/restrictions:
-     * - SchemaType: q7:ACHAccountType
-     *
-     * @var ACHAccountType
-     */
-    public $ACHAccountType;
-
-    /**
-     * ACHDepositType
-     *
-     * The property has the following characteristics/restrictions:
-     * - SchemaType: q8:ACHDepositType
-     *
-     * @var ACHDepositType
-     */
-    public $ACHDepositType;
-
-    /**
-     * AccountHolderData
-     *
-     * The property has the following characteristics/restrictions:
-     * - SchemaType: q9:CardHolderData
-     *
-     * @var CardHolderData
-     */
-    public $AccountHolderData;
-
     /**
      * AccountNumber
      *
@@ -49,52 +19,82 @@ class GetTokenRequest extends MerchantRequest
     public $AccountNumber;
 
     /**
-     * ExpirationMonth
+     * AccountType
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: xs:int
+     * - SchemaType: q1:ACHAccountType
      *
-     * @var int
+     * @var ACHAccountType
      */
-    public $ExpirationMonth;
+    public $AccountType;
 
     /**
-     * ExpirationYear
+     * DepositType
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: xs:int
+     * - SchemaType: q2:ACHDepositType
      *
-     * @var int
+     * @var ACHDepositType
      */
-    public $ExpirationYear;
+    public $DepositType;
 
     /**
-     * PaymentMethod
-     *
-     * The property has the following characteristics/restrictions:
-     * - SchemaType: tns:TokenPaymentMethod
-     *
-     * @var TokenPaymentMethod
-     */
-    public $PaymentMethod;
-
-    /**
-     * RoutingNumber
+     * DocumentID
      *
      * The property has the following characteristics/restrictions:
      * - SchemaType: xs:string
      *
      * @var string
      */
+    public $DocumentID;
+
+    /**
+     * InternalAccountNumber
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    public $InternalAccountNumber;
+
+    /**
+     * PayorName
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    public $PayorName;
+
+    /**
+     * RoutingNumber
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:long
+     *
+     * @var int
+     */
     public $RoutingNumber;
 
     /**
-     * SkipAccountVerify
+     * SubmitDate
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: xs:boolean
+     * - SchemaType: xs:dateTime
      *
-     * @var boolean
+     * @var string
      */
-    public $SkipAccountVerify;
+    public $SubmitDate;
+
+    /**
+     * TrackingNumber
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:long
+     *
+     * @var int
+     */
+    public $TrackingNumber;
 }

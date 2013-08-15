@@ -4,49 +4,39 @@ namespace Payum\Heartland\Soap;
 
 /**
  * This class is generated from the following WSDL:
- * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd2
+ * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd4
  */
-class GetTokenRequest extends MerchantRequest
+class E3CardData
 {
     /**
-     * ACHAccountType
+     * CardHolderData
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q7:ACHAccountType
-     *
-     * @var ACHAccountType
-     */
-    public $ACHAccountType;
-
-    /**
-     * ACHDepositType
-     *
-     * The property has the following characteristics/restrictions:
-     * - SchemaType: q8:ACHDepositType
-     *
-     * @var ACHDepositType
-     */
-    public $ACHDepositType;
-
-    /**
-     * AccountHolderData
-     *
-     * The property has the following characteristics/restrictions:
-     * - SchemaType: q9:CardHolderData
+     * - SchemaType: tns:CardHolderData
      *
      * @var CardHolderData
      */
-    public $AccountHolderData;
+    public $CardHolderData;
 
     /**
-     * AccountNumber
+     * EncryptedPanData
      *
      * The property has the following characteristics/restrictions:
      * - SchemaType: xs:string
      *
      * @var string
      */
-    public $AccountNumber;
+    public $EncryptedPanData;
+
+    /**
+     * EncryptedTrackData
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    public $EncryptedTrackData;
 
     /**
      * ExpirationMonth
@@ -69,32 +59,22 @@ class GetTokenRequest extends MerchantRequest
     public $ExpirationYear;
 
     /**
-     * PaymentMethod
-     *
-     * The property has the following characteristics/restrictions:
-     * - SchemaType: tns:TokenPaymentMethod
-     *
-     * @var TokenPaymentMethod
-     */
-    public $PaymentMethod;
-
-    /**
-     * RoutingNumber
+     * KeyTransmissionBlock
      *
      * The property has the following characteristics/restrictions:
      * - SchemaType: xs:string
      *
      * @var string
      */
-    public $RoutingNumber;
+    public $KeyTransmissionBlock;
 
     /**
-     * SkipAccountVerify
+     * ObfuscatedCardNumber
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: xs:boolean
+     * - SchemaType: xs:string
      *
-     * @var boolean
+     * @var string
      */
-    public $SkipAccountVerify;
+    public $ObfuscatedCardNumber;
 }

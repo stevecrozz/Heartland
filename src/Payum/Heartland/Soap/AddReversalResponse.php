@@ -6,15 +6,15 @@ namespace Payum\Heartland\Soap;
  * This class is generated from the following WSDL:
  * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
  */
-class GetToken
+class AddReversalResponse
 {
     /**
-     * GetTokenRequest
+     * AddReversalResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q33:GetTokenRequest
+     * - SchemaType: q6:Response
      *
-     * @var GetTokenRequest
+     * @var Response
      */
-    public $GetTokenRequest;
+    public $AddReversalResult;
 }
