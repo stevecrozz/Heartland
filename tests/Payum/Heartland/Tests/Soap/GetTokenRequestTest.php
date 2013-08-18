@@ -2,8 +2,7 @@
 namespace Payum\Heartland\Tests\Soap;
 
 use Payum\Heartland\Soap;
-use Payum\Heartland\Soap\SoapClient;
-use Payum\Heartland\Soap\test_heartlandpaymentservices_netBillingDataManagementv3BillingDataManagementService\GetToken;
+use Payum\Heartland\SoapClient as SoapClient;
 
 class GetTokenRequestTest extends \PHPUnit_Framework_TestCase
 {
@@ -16,8 +15,8 @@ class GetTokenRequestTest extends \PHPUnit_Framework_TestCase
             "https://testing.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?wsdl",
             array('trace' => true, 'cache_wsdl' => WSDL_CACHE_NONE, 'soap_version' => SOAP_1_1)
         );
-        $request = new GetToken();
-        $request->GetTokenRequest = new GetTokenRequest();
+        $request = new Soap\GetToken();
+        $request->GetTokenRequest = new Soap\GetTokenRequest();
         $request->GetTokenRequest->Credential = new Soap\MerchantCredentials();
         $request->GetTokenRequest->Credential->ApplicationID = 3;
         $request->GetTokenRequest->Credential->Password = '{$RJ_PASSWORD}';
@@ -38,14 +37,16 @@ class GetTokenRequestTest extends \PHPUnit_Framework_TestCase
         $request->GetTokenRequest->PaymentMethod = Soap\TokenPaymentMethod::CREDIT;
 
         try {
-            var_dump($client->GetToken($request));
+            $client->GetToken($request);
         } catch (\SoapFault $e) {
-            var_dump($e->__toString());
+            $this->fail($e->__toString());
         }
-
         $this->assertEquals(
             '<?xml version="1.0" encoding="UTF-8"?>' . "\n" .
-            str_replace(array("\n", ' '), '', file_get_contents(__DIR__ . '/xml/GetTokenRequest.xml')),
+            str_replace(
+                array("\n", '    ', '   ', '   ', '  ', '> <'),
+                array('', ' ', ' ', ' ', ' ', '><'),
+                file_get_contents(__DIR__ . '/xml/GetTokenRequest.xml')) . "\n",
             $client->__getLastRequest()
         );
     }

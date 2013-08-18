@@ -14,10 +14,6 @@
     "repositories": [
         {
             "type": "git",
-            "url": "git@github.com:BeSimple/BeSimpleSoapClient.git"
-        },
-        {
-            "type": "git",
             "url": "git@github.com:66Ton99/BeSimpleWsdlToPhp.git"
         },
         {
@@ -29,7 +25,6 @@
         "php": ">=5.3.3",
         "payum/payum": "0.5.x-dev",
         "besimple/soap-common": "dev-master",
-        "besimple/soap-client": "dev-master",
         "ass/xmlsecurity": "dev-master"
     },
     "require-dev": {
