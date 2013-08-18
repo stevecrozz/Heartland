@@ -16,5 +16,5 @@ class GetReversalTypeResponse
      *
      * @var GetReversalTypeResponse
      */
-    public $GetReversalTypeResult;
+    public $GetReversalTypeResult = null;
 }

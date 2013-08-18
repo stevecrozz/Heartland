@@ -16,5 +16,5 @@ class ReversalTransactionRecordWithReversalAuthorizations extends TransactionRec
      *
      * @var array<ReversalAuthorizationRecord>
      */
-    public $ReversalAuthorizations;
+    public $ReversalAuthorizations = null;
 }

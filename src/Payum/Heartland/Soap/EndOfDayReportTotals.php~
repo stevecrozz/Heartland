@@ -56,5 +56,5 @@ class EndOfDayReportTotals
      *
      * @var string
      */
-    public $UserGroupName;
+    public $UserGroupName = null;
 }

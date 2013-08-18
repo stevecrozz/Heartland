@@ -16,5 +16,5 @@ class SetupFutureDatedPayment
      *
      * @var SetupFutureDatedPaymentRequest
      */
-    public $SetupFutureDatedPaymentRequest;
+    public $SetupFutureDatedPaymentRequest = null;
 }

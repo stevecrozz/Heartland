@@ -16,5 +16,5 @@ class MakeBlindPaymentResponse
      *
      * @var MakePaymentResponse
      */
-    public $MakeBlindPaymentResult;
+    public $MakeBlindPaymentResult = null;
 }

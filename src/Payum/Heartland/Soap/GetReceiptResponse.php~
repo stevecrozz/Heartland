@@ -16,5 +16,5 @@ class GetReceiptResponse
      *
      * @var GetReceiptResponse
      */
-    public $GetReceiptResult;
+    public $GetReceiptResult = null;
 }

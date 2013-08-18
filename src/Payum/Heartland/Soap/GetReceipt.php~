@@ -16,5 +16,5 @@ class GetReceipt
      *
      * @var GetReceiptRequest
      */
-    public $GetReceiptRequest;
+    public $GetReceiptRequest = null;
 }

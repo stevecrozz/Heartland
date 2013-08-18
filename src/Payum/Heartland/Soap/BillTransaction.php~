@@ -26,7 +26,7 @@ class BillTransaction extends BillIdentifier
      *
      * @var string
      */
-    public $CustomerEnteredElement1;
+    public $CustomerEnteredElement1 = null;
 
     /**
      * CustomerEnteredElement2
@@ -36,7 +36,7 @@ class BillTransaction extends BillIdentifier
      *
      * @var string
      */
-    public $CustomerEnteredElement2;
+    public $CustomerEnteredElement2 = null;
 
     /**
      * CustomerEnteredElement3
@@ -46,7 +46,7 @@ class BillTransaction extends BillIdentifier
      *
      * @var string
      */
-    public $CustomerEnteredElement3;
+    public $CustomerEnteredElement3 = null;
 
     /**
      * CustomerEnteredElement4
@@ -56,7 +56,7 @@ class BillTransaction extends BillIdentifier
      *
      * @var string
      */
-    public $CustomerEnteredElement4;
+    public $CustomerEnteredElement4 = null;
 
     /**
      * CustomerEnteredElement5
@@ -66,7 +66,7 @@ class BillTransaction extends BillIdentifier
      *
      * @var string
      */
-    public $CustomerEnteredElement5;
+    public $CustomerEnteredElement5 = null;
 
     /**
      * CustomerEnteredElement6
@@ -76,7 +76,7 @@ class BillTransaction extends BillIdentifier
      *
      * @var string
      */
-    public $CustomerEnteredElement6;
+    public $CustomerEnteredElement6 = null;
 
     /**
      * CustomerEnteredElement7
@@ -86,7 +86,7 @@ class BillTransaction extends BillIdentifier
      *
      * @var string
      */
-    public $CustomerEnteredElement7;
+    public $CustomerEnteredElement7 = null;
 
     /**
      * CustomerEnteredElement8
@@ -96,7 +96,7 @@ class BillTransaction extends BillIdentifier
      *
      * @var string
      */
-    public $CustomerEnteredElement8;
+    public $CustomerEnteredElement8 = null;
 
     /**
      * CustomerEnteredElement9
@@ -106,5 +106,5 @@ class BillTransaction extends BillIdentifier
      *
      * @var string
      */
-    public $CustomerEnteredElement9;
+    public $CustomerEnteredElement9 = null;
 }

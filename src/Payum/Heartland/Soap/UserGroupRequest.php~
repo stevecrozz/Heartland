@@ -16,5 +16,5 @@ class UserGroupRequest
      *
      * @var UserGroupCredentials
      */
-    public $Credential;
+    public $Credential = null;
 }

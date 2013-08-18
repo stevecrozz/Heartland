@@ -16,7 +16,7 @@ class BillData
      *
      * @var BillIdentifier
      */
-    public $BillIdentifier;
+    public $BillIdentifier = null;
 
     /**
      * BillPresentment
@@ -36,7 +36,7 @@ class BillData
      *
      * @var Address
      */
-    public $CustomerAddress;
+    public $CustomerAddress = null;
 
     /**
      * DataElements
@@ -46,7 +46,7 @@ class BillData
      *
      * @var BillDataElements
      */
-    public $DataElements;
+    public $DataElements = null;
 
     /**
      * DueDate
@@ -66,7 +66,7 @@ class BillData
      *
      * @var string
      */
-    public $ObligorEmailAddress;
+    public $ObligorEmailAddress = null;
 
     /**
      * ObligorFirstName
@@ -76,7 +76,7 @@ class BillData
      *
      * @var string
      */
-    public $ObligorFirstName;
+    public $ObligorFirstName = null;
 
     /**
      * ObligorLastName
@@ -86,7 +86,7 @@ class BillData
      *
      * @var string
      */
-    public $ObligorLastName;
+    public $ObligorLastName = null;
 
     /**
      * ObligorMiddleName
@@ -96,7 +96,7 @@ class BillData
      *
      * @var string
      */
-    public $ObligorMiddleName;
+    public $ObligorMiddleName = null;
 
     /**
      * ObligorPhoneNumber
@@ -106,7 +106,7 @@ class BillData
      *
      * @var string
      */
-    public $ObligorPhoneNumber;
+    public $ObligorPhoneNumber = null;
 
     /**
      * OptionalAmounts
@@ -116,5 +116,5 @@ class BillData
      *
      * @var OptionalBillAmounts
      */
-    public $OptionalAmounts;
+    public $OptionalAmounts = null;
 }

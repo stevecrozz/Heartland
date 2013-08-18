@@ -36,5 +36,5 @@ class Message
      *
      * @var string
      */
-    public $MessageDescription;
+    public $MessageDescription = null;
 }

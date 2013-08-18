@@ -16,7 +16,7 @@ class OptionalBillAmounts
      *
      * @var OptionalBillAmount
      */
-    public $OptionalAmount1;
+    public $OptionalAmount1 = null;
 
     /**
      * OptionalAmount2
@@ -26,7 +26,7 @@ class OptionalBillAmounts
      *
      * @var OptionalBillAmount
      */
-    public $OptionalAmount2;
+    public $OptionalAmount2 = null;
 
     /**
      * OptionalAmount3
@@ -36,7 +36,7 @@ class OptionalBillAmounts
      *
      * @var OptionalBillAmount
      */
-    public $OptionalAmount3;
+    public $OptionalAmount3 = null;
 
     /**
      * OptionalAmount4
@@ -46,7 +46,7 @@ class OptionalBillAmounts
      *
      * @var OptionalBillAmount
      */
-    public $OptionalAmount4;
+    public $OptionalAmount4 = null;
 
     /**
      * OptionalAmount5
@@ -56,7 +56,7 @@ class OptionalBillAmounts
      *
      * @var OptionalBillAmount
      */
-    public $OptionalAmount5;
+    public $OptionalAmount5 = null;
 
     /**
      * OptionalAmount6
@@ -66,7 +66,7 @@ class OptionalBillAmounts
      *
      * @var OptionalBillAmount
      */
-    public $OptionalAmount6;
+    public $OptionalAmount6 = null;
 
     /**
      * OptionalAmount7
@@ -76,7 +76,7 @@ class OptionalBillAmounts
      *
      * @var OptionalBillAmount
      */
-    public $OptionalAmount7;
+    public $OptionalAmount7 = null;
 
     /**
      * OptionalAmount8
@@ -86,7 +86,7 @@ class OptionalBillAmounts
      *
      * @var OptionalBillAmount
      */
-    public $OptionalAmount8;
+    public $OptionalAmount8 = null;
 
     /**
      * OptionalAmount9
@@ -96,5 +96,5 @@ class OptionalBillAmounts
      *
      * @var OptionalBillAmount
      */
-    public $OptionalAmount9;
+    public $OptionalAmount9 = null;
 }

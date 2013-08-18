@@ -16,5 +16,5 @@ class AddBillResponse
      *
      * @var Response
      */
-    public $AddBillResult;
+    public $AddBillResult = null;
 }

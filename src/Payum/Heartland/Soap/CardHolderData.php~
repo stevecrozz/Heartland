@@ -16,7 +16,7 @@ class CardHolderData
      *
      * @var string
      */
-    public $Address;
+    public $Address = null;
 
     /**
      * City
@@ -26,7 +26,7 @@ class CardHolderData
      *
      * @var string
      */
-    public $City;
+    public $City = null;
 
     /**
      * Email
@@ -36,7 +36,7 @@ class CardHolderData
      *
      * @var string
      */
-    public $Email;
+    public $Email = null;
 
     /**
      * FirstName
@@ -46,7 +46,7 @@ class CardHolderData
      *
      * @var string
      */
-    public $FirstName;
+    public $FirstName = null;
 
     /**
      * LastName
@@ -56,7 +56,7 @@ class CardHolderData
      *
      * @var string
      */
-    public $LastName;
+    public $LastName = null;
 
     /**
      * Phone
@@ -66,7 +66,7 @@ class CardHolderData
      *
      * @var string
      */
-    public $Phone;
+    public $Phone = null;
 
     /**
      * State
@@ -76,7 +76,7 @@ class CardHolderData
      *
      * @var string
      */
-    public $State;
+    public $State = null;
 
     /**
      * Zip
@@ -86,5 +86,5 @@ class CardHolderData
      *
      * @var string
      */
-    public $Zip;
+    public $Zip = null;
 }

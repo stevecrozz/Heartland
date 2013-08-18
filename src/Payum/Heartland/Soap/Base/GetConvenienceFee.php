@@ -1,0 +1,52 @@
+<?php
+
+namespace Payum\Heartland\Soap\Base;
+
+/**
+ * This class is generated from the following WSDL:
+ * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
+ */
+class GetConvenienceFee
+{
+    /**
+     * GetConvenienceFeeRequest
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: q31:GetConvenienceFeeRequest
+     *
+     * @var GetConvenienceFeeRequest
+     */
+    protected $GetConvenienceFeeRequest = null;
+
+    /**
+     * Constructor.
+     *
+     * @param GetConvenienceFeeRequest $getConvenienceFeeRequest
+     */
+    public function __construct(GetConvenienceFeeRequest $getConvenienceFeeRequest = null)
+    {
+        $this->GetConvenienceFeeRequest = $getConvenienceFeeRequest;
+    }
+
+    /**
+     * @param GetConvenienceFeeRequest $getConvenienceFeeRequest
+     *
+     * @return GetConvenienceFee
+     */
+    public function setGetConvenienceFeeRequest(GetConvenienceFeeRequest $getConvenienceFeeRequest)
+    {
+        $this->GetConvenienceFeeRequest = $getConvenienceFeeRequest;
+        return $this;
+    }
+
+    /**
+     * @return GetConvenienceFeeRequest
+     */
+    public function getGetConvenienceFeeRequest()
+    {
+        if (null === $this->GetConvenienceFeeRequest) {
+            $this->GetConvenienceFeeRequest = new GetConvenienceFeeRequest();
+        }
+        return $this->GetConvenienceFeeRequest;
+    }
+}

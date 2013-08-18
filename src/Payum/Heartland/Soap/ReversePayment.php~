@@ -16,5 +16,5 @@ class ReversePayment
      *
      * @var ReversePaymentRequest
      */
-    public $ReversePaymentRequest;
+    public $ReversePaymentRequest = null;
 }

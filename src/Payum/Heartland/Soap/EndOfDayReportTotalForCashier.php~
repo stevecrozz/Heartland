@@ -16,7 +16,7 @@ class EndOfDayReportTotalForCashier
      *
      * @var string
      */
-    public $Firstname;
+    public $Firstname = null;
 
     /**
      * Lastname
@@ -26,7 +26,7 @@ class EndOfDayReportTotalForCashier
      *
      * @var string
      */
-    public $Lastname;
+    public $Lastname = null;
 
     /**
      * RowID
@@ -46,7 +46,7 @@ class EndOfDayReportTotalForCashier
      *
      * @var EndOfDayReportTotals
      */
-    public $Totals;
+    public $Totals = null;
 
     /**
      * Username
@@ -56,5 +56,5 @@ class EndOfDayReportTotalForCashier
      *
      * @var string
      */
-    public $Username;
+    public $Username = null;
 }

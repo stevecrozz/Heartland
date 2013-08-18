@@ -16,5 +16,5 @@ class AddPaymentResponse
      *
      * @var Response
      */
-    public $AddPaymentResult;
+    public $AddPaymentResult = null;
 }

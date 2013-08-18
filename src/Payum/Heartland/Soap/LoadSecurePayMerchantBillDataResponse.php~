@@ -16,5 +16,5 @@ class LoadSecurePayMerchantBillDataResponse
      *
      * @var LoadSecurePayBillDataResponse
      */
-    public $LoadSecurePayMerchantBillDataResult;
+    public $LoadSecurePayMerchantBillDataResult = null;
 }

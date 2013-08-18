@@ -16,5 +16,5 @@ class EndOfDayReport
      *
      * @var EndOfDayReportRequest
      */
-    public $EndOfDayReportRequest;
+    public $EndOfDayReportRequest = null;
 }

@@ -16,5 +16,5 @@ class AddBill
      *
      * @var AddBillRequest
      */
-    public $AddBillRequest;
+    public $AddBillRequest = null;
 }

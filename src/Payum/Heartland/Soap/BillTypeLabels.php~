@@ -16,7 +16,7 @@ class BillTypeLabels
      *
      * @var string
      */
-    public $Identifier1Label;
+    public $Identifier1Label = null;
 
     /**
      * Identifier2Label
@@ -26,7 +26,7 @@ class BillTypeLabels
      *
      * @var string
      */
-    public $Identifier2Label;
+    public $Identifier2Label = null;
 
     /**
      * Identifier3Label
@@ -36,7 +36,7 @@ class BillTypeLabels
      *
      * @var string
      */
-    public $Identifier3Label;
+    public $Identifier3Label = null;
 
     /**
      * Identifier4Label
@@ -46,5 +46,5 @@ class BillTypeLabels
      *
      * @var string
      */
-    public $Identifier4Label;
+    public $Identifier4Label = null;
 }

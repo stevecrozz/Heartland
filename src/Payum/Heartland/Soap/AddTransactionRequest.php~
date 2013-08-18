@@ -16,7 +16,7 @@ class AddTransactionRequest extends MerchantRequest
      *
      * @var array<Authorization>
      */
-    public $Authorizations;
+    public $Authorizations = null;
 
     /**
      * BillTransactions
@@ -26,7 +26,7 @@ class AddTransactionRequest extends MerchantRequest
      *
      * @var array<BillTransaction>
      */
-    public $BillTransactions;
+    public $BillTransactions = null;
 
     /**
      * TimeZone
@@ -46,7 +46,7 @@ class AddTransactionRequest extends MerchantRequest
      *
      * @var Transaction
      */
-    public $Transaction;
+    public $Transaction = null;
 
     /**
      * UseSystemDateForTransactionDateTime

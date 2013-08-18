@@ -16,5 +16,5 @@ class AddBlindPaymentResponse
      *
      * @var Response
      */
-    public $AddBlindPaymentResult;
+    public $AddBlindPaymentResult = null;
 }

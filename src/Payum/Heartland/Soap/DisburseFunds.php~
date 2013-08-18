@@ -16,5 +16,5 @@ class DisburseFunds
      *
      * @var DisburseFundsRequest
      */
-    public $DisburseFundsRequest;
+    public $DisburseFundsRequest = null;
 }

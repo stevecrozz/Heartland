@@ -26,7 +26,7 @@ class SecurePayBill
      *
      * @var string
      */
-    public $BillTypeName;
+    public $BillTypeName = null;
 
     /**
      * Identifier1
@@ -36,7 +36,7 @@ class SecurePayBill
      *
      * @var string
      */
-    public $Identifier1;
+    public $Identifier1 = null;
 
     /**
      * Identifier2
@@ -46,7 +46,7 @@ class SecurePayBill
      *
      * @var string
      */
-    public $Identifier2;
+    public $Identifier2 = null;
 
     /**
      * Identifier3
@@ -56,7 +56,7 @@ class SecurePayBill
      *
      * @var string
      */
-    public $Identifier3;
+    public $Identifier3 = null;
 
     /**
      * Identifier4
@@ -66,5 +66,5 @@ class SecurePayBill
      *
      * @var string
      */
-    public $Identifier4;
+    public $Identifier4 = null;
 }

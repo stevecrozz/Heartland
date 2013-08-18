@@ -16,5 +16,5 @@ class ActivateBillRequest extends MerchantRequest
      *
      * @var BillIdentifier
      */
-    public $BillIdentifier;
+    public $BillIdentifier = null;
 }

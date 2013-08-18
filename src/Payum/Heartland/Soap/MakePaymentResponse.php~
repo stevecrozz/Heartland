@@ -16,5 +16,5 @@ class MakePaymentResponse
      *
      * @var MakePaymentResponse
      */
-    public $MakePaymentResult;
+    public $MakePaymentResult = null;
 }

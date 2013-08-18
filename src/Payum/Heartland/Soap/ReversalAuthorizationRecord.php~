@@ -26,5 +26,5 @@ class ReversalAuthorizationRecord extends AuthorizationRecord
      *
      * @var string
      */
-    public $ReversalReferenceNumber;
+    public $ReversalReferenceNumber = null;
 }

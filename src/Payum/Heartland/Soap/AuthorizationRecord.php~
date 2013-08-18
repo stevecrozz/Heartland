@@ -36,5 +36,5 @@ class AuthorizationRecord extends Authorization
      *
      * @var int
      */
-    public $OriginalAuthorizationID;
+    public $OriginalAuthorizationID = null;
 }

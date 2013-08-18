@@ -16,5 +16,5 @@ class GetConvenienceFee
      *
      * @var GetConvenienceFeeRequest
      */
-    public $GetConvenienceFeeRequest;
+    public $GetConvenienceFeeRequest = null;
 }

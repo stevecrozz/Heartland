@@ -16,7 +16,7 @@ class PreAuthorizePaymentRequest extends MerchantRequest
      *
      * @var AESCardToCharge
      */
-    public $AESCreditCardToAuthorize;
+    public $AESCreditCardToAuthorize = null;
 
     /**
      * Amount
@@ -36,7 +36,7 @@ class PreAuthorizePaymentRequest extends MerchantRequest
      *
      * @var ClearTextCardToCharge
      */
-    public $ClearTextCreditCardToAuthorize;
+    public $ClearTextCreditCardToAuthorize = null;
 
     /**
      * E3CreditCardToAuthorize
@@ -46,7 +46,7 @@ class PreAuthorizePaymentRequest extends MerchantRequest
      *
      * @var E3CardToCharge
      */
-    public $E3CreditCardToAuthorize;
+    public $E3CreditCardToAuthorize = null;
 
     /**
      * FeeAmount
@@ -56,5 +56,5 @@ class PreAuthorizePaymentRequest extends MerchantRequest
      *
      * @var float
      */
-    public $FeeAmount;
+    public $FeeAmount = null;
 }

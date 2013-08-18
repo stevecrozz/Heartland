@@ -158,7 +158,7 @@ class Client extends BaseSoapClient
         'LogTermsAcceptanceResponse' => '\Payum\Heartland\Soap\LogTermsAcceptanceResponse',
         'DisburseFunds' => '\Payum\Heartland\Soap\DisburseFunds',
     );
-    
+
     /**
      * Constructor.
      *
@@ -177,5 +177,425 @@ class Client extends BaseSoapClient
     public function getClassMap()
     {
         return $this->classMap;
+    }
+
+    /**
+     * AddBlindPayment
+     *
+     * @param AddBlindPaymentRequest $AddBlindPaymentRequest
+     *
+     * @return AddBlindPaymentResponse
+     */
+    public function AddBlindPayment(AddBlindPaymentRequest $AddBlindPaymentRequest)
+    {
+        $parameters = new AddBlindPayment();
+        $parameters->AddBlindPaymentRequest = $AddBlindPaymentRequest;
+
+        return $this->__soapCall('AddBlindPayment', array('parameters' => $parameters));
+    }
+
+    /**
+     * AddPayment
+     *
+     * @param AddPaymentRequest $AddPaymentRequest
+     *
+     * @return AddPaymentResponse
+     */
+    public function AddPayment(AddPaymentRequest $AddPaymentRequest)
+    {
+        $parameters = new AddPayment();
+        $parameters->AddPaymentRequest = $AddPaymentRequest;
+
+        return $this->__soapCall('AddPayment', array('parameters' => $parameters));
+    }
+
+    /**
+     * AddReversal
+     *
+     * @param AddReversalRequest $AddReversalRequest
+     *
+     * @return AddReversalResponse
+     */
+    public function AddReversal(AddReversalRequest $AddReversalRequest)
+    {
+        $parameters = new AddReversal();
+        $parameters->AddReversalRequest = $AddReversalRequest;
+
+        return $this->__soapCall('AddReversal', array('parameters' => $parameters));
+    }
+
+    /**
+     * ActivateMachine
+     *
+     * @param ActivateMachineRequest $ActivateMachineRequest
+     *
+     * @return ActivateMachineResponse
+     */
+    public function ActivateMachine(ActivateMachineRequest $ActivateMachineRequest)
+    {
+        $parameters = new ActivateMachine();
+        $parameters->ActivateMachineRequest = $ActivateMachineRequest;
+
+        return $this->__soapCall('ActivateMachine', array('parameters' => $parameters));
+    }
+
+    /**
+     * ChangePassword
+     *
+     * @param ChangePasswordRequest $ChangePasswordRequest
+     *
+     * @return ChangePasswordResponse
+     */
+    public function ChangePassword(ChangePasswordRequest $ChangePasswordRequest)
+    {
+        $parameters = new ChangePassword();
+        $parameters->ChangePasswordRequest = $ChangePasswordRequest;
+
+        return $this->__soapCall('ChangePassword', array('parameters' => $parameters));
+    }
+
+    /**
+     * AddBill
+     *
+     * @param AddBillRequest $AddBillRequest
+     *
+     * @return AddBillResponse
+     */
+    public function AddBill(AddBillRequest $AddBillRequest)
+    {
+        $parameters = new AddBill();
+        $parameters->AddBillRequest = $AddBillRequest;
+
+        return $this->__soapCall('AddBill', array('parameters' => $parameters));
+    }
+
+    /**
+     * UpdateBill
+     *
+     * @param UpdateBillRequest $UpdateBillRequest
+     *
+     * @return UpdateBillResponse
+     */
+    public function UpdateBill(UpdateBillRequest $UpdateBillRequest)
+    {
+        $parameters = new UpdateBill();
+        $parameters->UpdateBillRequest = $UpdateBillRequest;
+
+        return $this->__soapCall('UpdateBill', array('parameters' => $parameters));
+    }
+
+    /**
+     * ActivateBill
+     *
+     * @param ActivateBillRequest $ActivateBillRequest
+     *
+     * @return ActivateBillResponse
+     */
+    public function ActivateBill(ActivateBillRequest $ActivateBillRequest)
+    {
+        $parameters = new ActivateBill();
+        $parameters->ActivateBillRequest = $ActivateBillRequest;
+
+        return $this->__soapCall('ActivateBill', array('parameters' => $parameters));
+    }
+
+    /**
+     * InactivateBill
+     *
+     * @param InactivateBillRequest $InactivateBillRequest
+     *
+     * @return InactivateBillResponse
+     */
+    public function InactivateBill(InactivateBillRequest $InactivateBillRequest)
+    {
+        $parameters = new InactivateBill();
+        $parameters->InactivateBillRequest = $InactivateBillRequest;
+
+        return $this->__soapCall('InactivateBill', array('parameters' => $parameters));
+    }
+
+    /**
+     * EndOfDayReport
+     *
+     * @param EndOfDayReportRequest $EndOfDayReportRequest
+     *
+     * @return EndOfDayReportResponse
+     */
+    public function EndOfDayReport(EndOfDayReportRequest $EndOfDayReportRequest)
+    {
+        $parameters = new EndOfDayReport();
+        $parameters->EndOfDayReportRequest = $EndOfDayReportRequest;
+
+        return $this->__soapCall('EndOfDayReport', array('parameters' => $parameters));
+    }
+
+    /**
+     * MakePayment
+     *
+     * @param MakePaymentRequest $MakeE3PaymentRequest
+     *
+     * @return MakePaymentResponse
+     */
+    public function MakePayment(MakePaymentRequest $MakeE3PaymentRequest)
+    {
+        $parameters = new MakePayment();
+        $parameters->MakeE3PaymentRequest = $MakeE3PaymentRequest;
+
+        return $this->__soapCall('MakePayment', array('parameters' => $parameters));
+    }
+
+    /**
+     * MakeBlindPayment
+     *
+     * @param MakePaymentRequest $MakeE3PaymentRequest
+     *
+     * @return MakeBlindPaymentResponse
+     */
+    public function MakeBlindPayment(MakePaymentRequest $MakeE3PaymentRequest)
+    {
+        $parameters = new MakeBlindPayment();
+        $parameters->MakeE3PaymentRequest = $MakeE3PaymentRequest;
+
+        return $this->__soapCall('MakeBlindPayment', array('parameters' => $parameters));
+    }
+
+    /**
+     * ReversePayment
+     *
+     * @param ReversePaymentRequest $ReversePaymentRequest
+     *
+     * @return ReversePaymentResponse
+     */
+    public function ReversePayment(ReversePaymentRequest $ReversePaymentRequest)
+    {
+        $parameters = new ReversePayment();
+        $parameters->ReversePaymentRequest = $ReversePaymentRequest;
+
+        return $this->__soapCall('ReversePayment', array('parameters' => $parameters));
+    }
+
+    /**
+     * GetReceipt
+     *
+     * @param GetReceiptRequest $GetReceiptRequest
+     *
+     * @return GetReceiptResponse
+     */
+    public function GetReceipt(GetReceiptRequest $GetReceiptRequest)
+    {
+        $parameters = new GetReceipt();
+        $parameters->GetReceiptRequest = $GetReceiptRequest;
+
+        return $this->__soapCall('GetReceipt', array('parameters' => $parameters));
+    }
+
+    /**
+     * GetReversalType
+     *
+     * @param GetReversalTypeRequest $GetReversalTypeRequest
+     *
+     * @return GetReversalTypeResponse
+     */
+    public function GetReversalType(GetReversalTypeRequest $GetReversalTypeRequest)
+    {
+        $parameters = new GetReversalType();
+        $parameters->GetReversalTypeRequest = $GetReversalTypeRequest;
+
+        return $this->__soapCall('GetReversalType', array('parameters' => $parameters));
+    }
+
+    /**
+     * GetConvenienceFee
+     *
+     * @param GetConvenienceFeeRequest $GetConvenienceFeeRequest
+     *
+     * @return GetConvenienceFeeResponse
+     */
+    public function GetConvenienceFee(GetConvenienceFeeRequest $GetConvenienceFeeRequest)
+    {
+        $parameters = new GetConvenienceFee();
+        $parameters->GetConvenienceFeeRequest = $GetConvenienceFeeRequest;
+
+        return $this->__soapCall('GetConvenienceFee', array('parameters' => $parameters));
+    }
+
+    /**
+     * GetToken
+     *
+     * @param GetTokenRequest $GetTokenRequest
+     *
+     * @return GetTokenResponse
+     */
+    public function GetToken(GetTokenRequest $GetTokenRequest)
+    {
+        $parameters = new GetToken();
+        $parameters->GetTokenRequest = $GetTokenRequest;
+
+        return $this->__soapCall('GetToken', array('parameters' => $parameters));
+    }
+
+    /**
+     * LoadSecurePayBillData
+     *
+     * @param LoadSecurePayBillDataRequest $request
+     *
+     * @return LoadSecurePayBillDataResponse
+     */
+    public function LoadSecurePayBillData(LoadSecurePayBillDataRequest $request)
+    {
+        $parameters = new LoadSecurePayBillData();
+        $parameters->request = $request;
+
+        return $this->__soapCall('LoadSecurePayBillData', array('parameters' => $parameters));
+    }
+
+    /**
+     * LoadSecurePayMerchantBillData
+     *
+     * @param LoadSecurePayMerchantBillDataRequest $request
+     *
+     * @return LoadSecurePayMerchantBillDataResponse
+     */
+    public function LoadSecurePayMerchantBillData(LoadSecurePayMerchantBillDataRequest $request)
+    {
+        $parameters = new LoadSecurePayMerchantBillData();
+        $parameters->request = $request;
+
+        return $this->__soapCall('LoadSecurePayMerchantBillData', array('parameters' => $parameters));
+    }
+
+    /**
+     * LoadSecurePayDataExtended
+     *
+     * @param LoadSecurePayDataExtendedRequest $request
+     *
+     * @return LoadSecurePayDataExtendedResponse
+     */
+    public function LoadSecurePayDataExtended(LoadSecurePayDataExtendedRequest $request)
+    {
+        $parameters = new LoadSecurePayDataExtended();
+        $parameters->request = $request;
+
+        return $this->__soapCall('LoadSecurePayDataExtended', array('parameters' => $parameters));
+    }
+
+    /**
+     * GetSecurePayBillData
+     *
+     * @param GetSecurePayBillDataRequest $request
+     *
+     * @return GetSecurePayBillDataResponse
+     */
+    public function GetSecurePayBillData(GetSecurePayBillDataRequest $request)
+    {
+        $parameters = new GetSecurePayBillData();
+        $parameters->request = $request;
+
+        return $this->__soapCall('GetSecurePayBillData', array('parameters' => $parameters));
+    }
+
+    /**
+     * UpdateSecurePayPayment
+     *
+     * @param UpdateSecurePayPaymentRequest $request
+     *
+     * @return UpdateSecurePayPaymentResponse
+     */
+    public function UpdateSecurePayPayment(UpdateSecurePayPaymentRequest $request)
+    {
+        $parameters = new UpdateSecurePayPayment();
+        $parameters->request = $request;
+
+        return $this->__soapCall('UpdateSecurePayPayment', array('parameters' => $parameters));
+    }
+
+    /**
+     * SetupFutureDatedPayment
+     *
+     * @param SetupFutureDatedPaymentRequest $SetupFutureDatedPaymentRequest
+     *
+     * @return SetupFutureDatedPaymentResponse
+     */
+    public function SetupFutureDatedPayment(SetupFutureDatedPaymentRequest $SetupFutureDatedPaymentRequest)
+    {
+        $parameters = new SetupFutureDatedPayment();
+        $parameters->SetupFutureDatedPaymentRequest = $SetupFutureDatedPaymentRequest;
+
+        return $this->__soapCall('SetupFutureDatedPayment', array('parameters' => $parameters));
+    }
+
+    /**
+     * PreAuthorizePayment
+     *
+     * @param PreAuthorizePaymentRequest $PreAuthorizePaymentRequest
+     *
+     * @return PreAuthorizePaymentResponse
+     */
+    public function PreAuthorizePayment(PreAuthorizePaymentRequest $PreAuthorizePaymentRequest)
+    {
+        $parameters = new PreAuthorizePayment();
+        $parameters->PreAuthorizePaymentRequest = $PreAuthorizePaymentRequest;
+
+        return $this->__soapCall('PreAuthorizePayment', array('parameters' => $parameters));
+    }
+
+    /**
+     * CapturePreAuthorizedPayment
+     *
+     * @param CapturePreAuthorizedPaymentRequest $CapturePreAuthorizedPaymentRequest
+     *
+     * @return CapturePreAuthorizedPaymentResponse
+     */
+    public function CapturePreAuthorizedPayment(CapturePreAuthorizedPaymentRequest $CapturePreAuthorizedPaymentRequest)
+    {
+        $parameters = new CapturePreAuthorizedPayment();
+        $parameters->CapturePreAuthorizedPaymentRequest = $CapturePreAuthorizedPaymentRequest;
+
+        return $this->__soapCall('CapturePreAuthorizedPayment', array('parameters' => $parameters));
+    }
+
+    /**
+     * AddSignature
+     *
+     * @param AddSignatureRequest $AddSignatureRequest
+     *
+     * @return AddSignatureResponse
+     */
+    public function AddSignature(AddSignatureRequest $AddSignatureRequest)
+    {
+        $parameters = new AddSignature();
+        $parameters->AddSignatureRequest = $AddSignatureRequest;
+
+        return $this->__soapCall('AddSignature', array('parameters' => $parameters));
+    }
+
+    /**
+     * LogTermsAcceptance
+     *
+     * @param LogTermsAcceptanceRequest $LogTermsAcceptanceRequest
+     *
+     * @return LogTermsAcceptanceResponse
+     */
+    public function LogTermsAcceptance(LogTermsAcceptanceRequest $LogTermsAcceptanceRequest)
+    {
+        $parameters = new LogTermsAcceptance();
+        $parameters->LogTermsAcceptanceRequest = $LogTermsAcceptanceRequest;
+
+        return $this->__soapCall('LogTermsAcceptance', array('parameters' => $parameters));
+    }
+
+    /**
+     * DisburseFunds
+     *
+     * @param DisburseFundsRequest $DisburseFundsRequest
+     *
+     * @return DisburseFundsResponse
+     */
+    public function DisburseFunds(DisburseFundsRequest $DisburseFundsRequest)
+    {
+        $parameters = new DisburseFunds();
+        $parameters->DisburseFundsRequest = $DisburseFundsRequest;
+
+        return $this->__soapCall('DisburseFunds', array('parameters' => $parameters));
     }
 }

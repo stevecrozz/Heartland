@@ -26,7 +26,7 @@ class Transaction
      *
      * @var float
      */
-    public $FeeAmount;
+    public $FeeAmount = null;
 
     /**
      * MerchantInvoiceNumber
@@ -36,7 +36,7 @@ class Transaction
      *
      * @var string
      */
-    public $MerchantInvoiceNumber;
+    public $MerchantInvoiceNumber = null;
 
     /**
      * MerchantPONumber
@@ -46,7 +46,7 @@ class Transaction
      *
      * @var string
      */
-    public $MerchantPONumber;
+    public $MerchantPONumber = null;
 
     /**
      * MerchantTransactionDescription
@@ -56,7 +56,7 @@ class Transaction
      *
      * @var string
      */
-    public $MerchantTransactionDescription;
+    public $MerchantTransactionDescription = null;
 
     /**
      * MerchantTransactionID
@@ -66,7 +66,7 @@ class Transaction
      *
      * @var string
      */
-    public $MerchantTransactionID;
+    public $MerchantTransactionID = null;
 
     /**
      * PayorAddress
@@ -76,7 +76,7 @@ class Transaction
      *
      * @var string
      */
-    public $PayorAddress;
+    public $PayorAddress = null;
 
     /**
      * PayorCity
@@ -86,7 +86,7 @@ class Transaction
      *
      * @var string
      */
-    public $PayorCity;
+    public $PayorCity = null;
 
     /**
      * PayorCountry
@@ -96,7 +96,7 @@ class Transaction
      *
      * @var string
      */
-    public $PayorCountry;
+    public $PayorCountry = null;
 
     /**
      * PayorEmailAddress
@@ -106,7 +106,7 @@ class Transaction
      *
      * @var string
      */
-    public $PayorEmailAddress;
+    public $PayorEmailAddress = null;
 
     /**
      * PayorFirstName
@@ -116,7 +116,7 @@ class Transaction
      *
      * @var string
      */
-    public $PayorFirstName;
+    public $PayorFirstName = null;
 
     /**
      * PayorLastName
@@ -126,7 +126,7 @@ class Transaction
      *
      * @var string
      */
-    public $PayorLastName;
+    public $PayorLastName = null;
 
     /**
      * PayorMiddleName
@@ -136,7 +136,7 @@ class Transaction
      *
      * @var string
      */
-    public $PayorMiddleName;
+    public $PayorMiddleName = null;
 
     /**
      * PayorPhoneNumber
@@ -146,7 +146,7 @@ class Transaction
      *
      * @var string
      */
-    public $PayorPhoneNumber;
+    public $PayorPhoneNumber = null;
 
     /**
      * PayorPostalCode
@@ -156,7 +156,7 @@ class Transaction
      *
      * @var string
      */
-    public $PayorPostalCode;
+    public $PayorPostalCode = null;
 
     /**
      * PayorState
@@ -166,7 +166,7 @@ class Transaction
      *
      * @var string
      */
-    public $PayorState;
+    public $PayorState = null;
 
     /**
      * ReferenceTransactionID
@@ -176,7 +176,7 @@ class Transaction
      *
      * @var int
      */
-    public $ReferenceTransactionID;
+    public $ReferenceTransactionID = null;
 
     /**
      * TransactionDate

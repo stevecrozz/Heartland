@@ -16,7 +16,7 @@ class UpdateBillRequest extends MerchantRequest
      *
      * @var Bill
      */
-    public $Bill;
+    public $Bill = null;
 
     /**
      * TimeZone

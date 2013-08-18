@@ -13,6 +13,7 @@ class guid
      *
      * The property has the following characteristics/restrictions:
      * - SchemaType: xs:string
+     * - pattern: [\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}
      *
      * @var string
      */

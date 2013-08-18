@@ -26,7 +26,7 @@ class EndOfDayReportHeader
      *
      * @var string
      */
-    public $MerchantName;
+    public $MerchantName = null;
 
     /**
      * StartDateTime
@@ -46,5 +46,5 @@ class EndOfDayReportHeader
      *
      * @var string
      */
-    public $Title;
+    public $Title = null;
 }

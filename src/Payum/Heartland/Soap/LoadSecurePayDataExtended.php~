@@ -16,5 +16,5 @@ class LoadSecurePayDataExtended
      *
      * @var LoadSecurePayDataExtendedRequest
      */
-    public $request;
+    public $request = null;
 }

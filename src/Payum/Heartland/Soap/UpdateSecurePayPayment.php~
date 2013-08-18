@@ -16,5 +16,5 @@ class UpdateSecurePayPayment
      *
      * @var UpdateSecurePayPaymentRequest
      */
-    public $request;
+    public $request = null;
 }

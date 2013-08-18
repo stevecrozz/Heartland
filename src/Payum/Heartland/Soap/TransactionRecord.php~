@@ -26,7 +26,7 @@ class TransactionRecord extends Transaction
      *
      * @var array<BillTransactionRecord>
      */
-    public $BillTransactions;
+    public $BillTransactions = null;
 
     /**
      * NetAmount
@@ -56,7 +56,7 @@ class TransactionRecord extends Transaction
      *
      * @var int
      */
-    public $OriginalTransactionID;
+    public $OriginalTransactionID = null;
 
     /**
      * ReversalCode
@@ -96,5 +96,5 @@ class TransactionRecord extends Transaction
      *
      * @var string
      */
-    public $UserName;
+    public $UserName = null;
 }

@@ -16,5 +16,5 @@ class AddReversalResponse
      *
      * @var Response
      */
-    public $AddReversalResult;
+    public $AddReversalResult = null;
 }

@@ -16,7 +16,7 @@ class Authorization
      *
      * @var string
      */
-    public $AddToBatchReferenceNumber;
+    public $AddToBatchReferenceNumber = null;
 
     /**
      * Amount
@@ -36,7 +36,7 @@ class Authorization
      *
      * @var string
      */
-    public $AuthCode;
+    public $AuthCode = null;
 
     /**
      * AuthorizationType
@@ -66,7 +66,7 @@ class Authorization
      *
      * @var string
      */
-    public $GatewayBatchID;
+    public $GatewayBatchID = null;
 
     /**
      * GatewayDescription
@@ -76,7 +76,7 @@ class Authorization
      *
      * @var string
      */
-    public $GatewayDescription;
+    public $GatewayDescription = null;
 
     /**
      * MaskedAccountNumber
@@ -86,7 +86,7 @@ class Authorization
      *
      * @var string
      */
-    public $MaskedAccountNumber;
+    public $MaskedAccountNumber = null;
 
     /**
      * MaskedRoutingNumber
@@ -96,7 +96,7 @@ class Authorization
      *
      * @var string
      */
-    public $MaskedRoutingNumber;
+    public $MaskedRoutingNumber = null;
 
     /**
      * PaymentMethod
@@ -116,7 +116,7 @@ class Authorization
      *
      * @var int
      */
-    public $ReferenceAuthorizationID;
+    public $ReferenceAuthorizationID = null;
 
     /**
      * ReferenceNumber
@@ -126,5 +126,5 @@ class Authorization
      *
      * @var string
      */
-    public $ReferenceNumber;
+    public $ReferenceNumber = null;
 }

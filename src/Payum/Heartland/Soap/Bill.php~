@@ -16,7 +16,7 @@ class Bill extends BillData
      *
      * @var boolean
      */
-    public $BillIsPayable;
+    public $BillIsPayable = null;
 
     /**
      * RequiredAmount
@@ -26,5 +26,5 @@ class Bill extends BillData
      *
      * @var float
      */
-    public $RequiredAmount;
+    public $RequiredAmount = null;
 }

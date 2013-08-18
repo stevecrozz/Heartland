@@ -16,5 +16,5 @@ class AESCardToCharge extends CardToCharge
      *
      * @var AESCardData
      */
-    public $AESCreditCard;
+    public $AESCreditCard = null;
 }

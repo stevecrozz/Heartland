@@ -16,5 +16,5 @@ class MerchantRequest
      *
      * @var MerchantCredentials
      */
-    public $Credential;
+    public $Credential = null;
 }

@@ -16,5 +16,5 @@ class Request
      *
      * @var Credentials
      */
-    public $Credential;
+    public $Credential = null;
 }

@@ -16,5 +16,5 @@ class E3CardToCharge extends CardToCharge
      *
      * @var E3CardData
      */
-    public $E3CreditCard;
+    public $E3CreditCard = null;
 }

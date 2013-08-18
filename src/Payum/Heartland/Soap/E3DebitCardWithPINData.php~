@@ -16,7 +16,7 @@ class E3DebitCardWithPINData extends E3CardData
      *
      * @var string
      */
-    public $KeySerialNumber;
+    public $KeySerialNumber = null;
 
     /**
      * PINBlock
@@ -26,5 +26,5 @@ class E3DebitCardWithPINData extends E3CardData
      *
      * @var string
      */
-    public $PINBlock;
+    public $PINBlock = null;
 }

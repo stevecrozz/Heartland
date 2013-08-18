@@ -16,7 +16,7 @@ class Response
      *
      * @var array<Message>
      */
-    public $Messages;
+    public $Messages = null;
 
     /**
      * isSuccessful

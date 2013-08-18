@@ -16,7 +16,7 @@ class DisburseFundsRequest extends MerchantRequest
      *
      * @var ACHAccountToCharge
      */
-    public $ACHAccountToDisburseTo;
+    public $ACHAccountToDisburseTo = null;
 
     /**
      * BillTransactions
@@ -26,7 +26,7 @@ class DisburseFundsRequest extends MerchantRequest
      *
      * @var array<BillTransaction>
      */
-    public $BillTransactions;
+    public $BillTransactions = null;
 
     /**
      * Transaction
@@ -36,5 +36,5 @@ class DisburseFundsRequest extends MerchantRequest
      *
      * @var Transaction
      */
-    public $Transaction;
+    public $Transaction = null;
 }

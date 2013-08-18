@@ -16,5 +16,5 @@ class E3DebitCardWithPINToCharge extends CardToCharge
      *
      * @var E3DebitCardWithPINData
      */
-    public $E3DebitCardWithPIN;
+    public $E3DebitCardWithPIN = null;
 }

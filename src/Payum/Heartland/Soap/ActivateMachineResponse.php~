@@ -16,5 +16,5 @@ class ActivateMachineResponse
      *
      * @var Response
      */
-    public $ActivateMachineResult;
+    public $ActivateMachineResult = null;
 }

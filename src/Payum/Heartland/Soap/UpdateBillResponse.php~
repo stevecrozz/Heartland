@@ -16,5 +16,5 @@ class UpdateBillResponse
      *
      * @var Response
      */
-    public $UpdateBillResult;
+    public $UpdateBillResult = null;
 }

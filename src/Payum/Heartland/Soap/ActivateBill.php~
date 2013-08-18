@@ -16,5 +16,5 @@ class ActivateBill
      *
      * @var ActivateBillRequest
      */
-    public $ActivateBillRequest;
+    public $ActivateBillRequest = null;
 }

@@ -16,7 +16,7 @@ class ClearTextCardData
      *
      * @var CardHolderData
      */
-    public $CardHolderData;
+    public $CardHolderData = null;
 
     /**
      * CardNumber
@@ -26,7 +26,7 @@ class ClearTextCardData
      *
      * @var string
      */
-    public $CardNumber;
+    public $CardNumber = null;
 
     /**
      * ExpirationMonth
@@ -56,5 +56,5 @@ class ClearTextCardData
      *
      * @var string
      */
-    public $VerificationCode;
+    public $VerificationCode = null;
 }

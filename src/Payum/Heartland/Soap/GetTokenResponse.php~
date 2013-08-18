@@ -16,5 +16,5 @@ class GetTokenResponse
      *
      * @var GetTokenResponse
      */
-    public $GetTokenResult;
+    public $GetTokenResult = null;
 }

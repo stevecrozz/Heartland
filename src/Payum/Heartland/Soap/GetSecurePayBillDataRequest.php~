@@ -16,5 +16,5 @@ class GetSecurePayBillDataRequest extends MerchantRequest
      *
      * @var string
      */
-    public $GUID;
+    public $GUID = null;
 }

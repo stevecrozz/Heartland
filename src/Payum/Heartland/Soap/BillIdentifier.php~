@@ -16,7 +16,7 @@ class BillIdentifier
      *
      * @var string
      */
-    public $BillType;
+    public $BillType = null;
 
     /**
      * ID1
@@ -26,7 +26,7 @@ class BillIdentifier
      *
      * @var string
      */
-    public $ID1;
+    public $ID1 = null;
 
     /**
      * ID2
@@ -36,7 +36,7 @@ class BillIdentifier
      *
      * @var string
      */
-    public $ID2;
+    public $ID2 = null;
 
     /**
      * ID3
@@ -46,7 +46,7 @@ class BillIdentifier
      *
      * @var string
      */
-    public $ID3;
+    public $ID3 = null;
 
     /**
      * ID4
@@ -56,5 +56,5 @@ class BillIdentifier
      *
      * @var string
      */
-    public $ID4;
+    public $ID4 = null;
 }

@@ -16,7 +16,7 @@ class ReversePaymentRequest extends MerchantRequest
      *
      * @var float
      */
-    public $BaseAmountToRefund;
+    public $BaseAmountToRefund = null;
 
     /**
      * E3DebitCardsWithPINToCharge
@@ -26,7 +26,7 @@ class ReversePaymentRequest extends MerchantRequest
      *
      * @var array<E3DebitCardWithPINToCharge>
      */
-    public $E3DebitCardsWithPINToCharge;
+    public $E3DebitCardsWithPINToCharge = null;
 
     /**
      * ExpectedFeeAmountToRefund
@@ -36,7 +36,7 @@ class ReversePaymentRequest extends MerchantRequest
      *
      * @var float
      */
-    public $ExpectedFeeAmountToRefund;
+    public $ExpectedFeeAmountToRefund = null;
 
     /**
      * IncludeReceiptInResponse

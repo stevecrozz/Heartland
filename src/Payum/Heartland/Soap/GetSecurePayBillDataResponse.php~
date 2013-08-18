@@ -16,5 +16,5 @@ class GetSecurePayBillDataResponse
      *
      * @var GetSecurePayBillDataResponse
      */
-    public $GetSecurePayBillDataResult;
+    public $GetSecurePayBillDataResult = null;
 }

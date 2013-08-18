@@ -16,5 +16,5 @@ class LogTermsAcceptanceResponse
      *
      * @var Response
      */
-    public $LogTermsAcceptanceResult;
+    public $LogTermsAcceptanceResult = null;
 }

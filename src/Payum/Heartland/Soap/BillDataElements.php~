@@ -16,7 +16,7 @@ class BillDataElements
      *
      * @var BillDataElement
      */
-    public $DataElement1;
+    public $DataElement1 = null;
 
     /**
      * DataElement2
@@ -26,7 +26,7 @@ class BillDataElements
      *
      * @var BillDataElement
      */
-    public $DataElement2;
+    public $DataElement2 = null;
 
     /**
      * DataElement3
@@ -36,7 +36,7 @@ class BillDataElements
      *
      * @var BillDataElement
      */
-    public $DataElement3;
+    public $DataElement3 = null;
 
     /**
      * DataElement4
@@ -46,7 +46,7 @@ class BillDataElements
      *
      * @var BillDataElement
      */
-    public $DataElement4;
+    public $DataElement4 = null;
 
     /**
      * DataElement5
@@ -56,7 +56,7 @@ class BillDataElements
      *
      * @var BillDataElement
      */
-    public $DataElement5;
+    public $DataElement5 = null;
 
     /**
      * DataElement6
@@ -66,7 +66,7 @@ class BillDataElements
      *
      * @var BillDataElement
      */
-    public $DataElement6;
+    public $DataElement6 = null;
 
     /**
      * DataElement7
@@ -76,7 +76,7 @@ class BillDataElements
      *
      * @var BillDataElement
      */
-    public $DataElement7;
+    public $DataElement7 = null;
 
     /**
      * DataElement8
@@ -86,7 +86,7 @@ class BillDataElements
      *
      * @var BillDataElement
      */
-    public $DataElement8;
+    public $DataElement8 = null;
 
     /**
      * DataElement9
@@ -96,5 +96,5 @@ class BillDataElements
      *
      * @var BillDataElement
      */
-    public $DataElement9;
+    public $DataElement9 = null;
 }

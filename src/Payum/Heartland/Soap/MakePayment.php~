@@ -16,5 +16,5 @@ class MakePayment
      *
      * @var MakePaymentRequest
      */
-    public $MakeE3PaymentRequest;
+    public $MakeE3PaymentRequest = null;
 }

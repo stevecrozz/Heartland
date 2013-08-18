@@ -16,5 +16,5 @@ class TokenToCharge extends CardToCharge
      *
      * @var string
      */
-    public $Token;
+    public $Token = null;
 }

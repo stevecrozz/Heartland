@@ -16,7 +16,7 @@ class ActivateMachineRequest extends AuthenticateRequest
      *
      * @var string
      */
-    public $ActivationKey;
+    public $ActivationKey = null;
 
     /**
      * MachineName
@@ -26,5 +26,5 @@ class ActivateMachineRequest extends AuthenticateRequest
      *
      * @var string
      */
-    public $MachineName;
+    public $MachineName = null;
 }

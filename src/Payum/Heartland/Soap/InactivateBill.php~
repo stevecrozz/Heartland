@@ -16,5 +16,5 @@ class InactivateBill
      *
      * @var InactivateBillRequest
      */
-    public $InactivateBillRequest;
+    public $InactivateBillRequest = null;
 }

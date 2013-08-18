@@ -16,7 +16,7 @@ class AddSignatureRequest extends MerchantRequest
      *
      * @var string
      */
-    public $SignatureImageInBase64;
+    public $SignatureImageInBase64 = null;
 
     /**
      * Transaction_ID

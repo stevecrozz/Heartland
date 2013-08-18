@@ -16,5 +16,5 @@ class ActivateMachine
      *
      * @var ActivateMachineRequest
      */
-    public $ActivateMachineRequest;
+    public $ActivateMachineRequest = null;
 }

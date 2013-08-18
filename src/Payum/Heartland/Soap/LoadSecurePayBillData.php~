@@ -16,5 +16,5 @@ class LoadSecurePayBillData
      *
      * @var LoadSecurePayBillDataRequest
      */
-    public $request;
+    public $request = null;
 }

@@ -16,5 +16,5 @@ class AddSignature
      *
      * @var AddSignatureRequest
      */
-    public $AddSignatureRequest;
+    public $AddSignatureRequest = null;
 }

@@ -16,5 +16,5 @@ class UpdateSecurePayPaymentResponse
      *
      * @var Response
      */
-    public $UpdateSecurePayPaymentResult;
+    public $UpdateSecurePayPaymentResult = null;
 }

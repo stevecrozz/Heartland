@@ -16,7 +16,7 @@ class GetFileResponse extends Response
      *
      * @var string
      */
-    public $FileContent;
+    public $FileContent = null;
 
     /**
      * FileName
@@ -26,5 +26,5 @@ class GetFileResponse extends Response
      *
      * @var string
      */
-    public $FileName;
+    public $FileName = null;
 }

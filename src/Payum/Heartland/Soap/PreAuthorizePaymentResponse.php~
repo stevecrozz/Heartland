@@ -16,5 +16,5 @@ class PreAuthorizePaymentResponse
      *
      * @var PreAuthorizePaymentResponse
      */
-    public $PreAuthorizePaymentResult;
+    public $PreAuthorizePaymentResult = null;
 }

@@ -16,7 +16,7 @@ class LoadSecurePayBillDataRequest extends Request
      *
      * @var array<SecurePayBill>
      */
-    public $BillData;
+    public $BillData = null;
 
     /**
      * MaxFuturePaymentDays

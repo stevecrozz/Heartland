@@ -16,5 +16,5 @@ class InactivateBillResponse
      *
      * @var Response
      */
-    public $InactivateBillResult;
+    public $InactivateBillResult = null;
 }

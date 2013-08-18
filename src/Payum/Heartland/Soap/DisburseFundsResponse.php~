@@ -16,5 +16,5 @@ class DisburseFundsResponse
      *
      * @var DisburseFundsResponse
      */
-    public $DisburseFundsResult;
+    public $DisburseFundsResult = null;
 }

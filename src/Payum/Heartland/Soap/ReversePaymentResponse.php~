@@ -16,5 +16,5 @@ class ReversePaymentResponse
      *
      * @var ReversePaymentResponse
      */
-    public $ReversePaymentResult;
+    public $ReversePaymentResult = null;
 }

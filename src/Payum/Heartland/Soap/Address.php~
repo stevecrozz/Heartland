@@ -16,7 +16,7 @@ class Address
      *
      * @var string
      */
-    public $AddressLineOne;
+    public $AddressLineOne = null;
 
     /**
      * City
@@ -26,7 +26,7 @@ class Address
      *
      * @var string
      */
-    public $City;
+    public $City = null;
 
     /**
      * Country
@@ -36,7 +36,7 @@ class Address
      *
      * @var string
      */
-    public $Country;
+    public $Country = null;
 
     /**
      * PostalCode
@@ -46,7 +46,7 @@ class Address
      *
      * @var string
      */
-    public $PostalCode;
+    public $PostalCode = null;
 
     /**
      * State
@@ -56,5 +56,5 @@ class Address
      *
      * @var string
      */
-    public $State;
+    public $State = null;
 }

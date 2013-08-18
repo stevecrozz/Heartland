@@ -16,7 +16,7 @@ class BillTransactionRecord extends BillTransaction
      *
      * @var BillTypeLabels
      */
-    public $BillTypeLabels;
+    public $BillTypeLabels = null;
 
     /**
      * DataElement1
@@ -26,7 +26,7 @@ class BillTransactionRecord extends BillTransaction
      *
      * @var string
      */
-    public $DataElement1;
+    public $DataElement1 = null;
 
     /**
      * DataElement2
@@ -36,7 +36,7 @@ class BillTransactionRecord extends BillTransaction
      *
      * @var string
      */
-    public $DataElement2;
+    public $DataElement2 = null;
 
     /**
      * DataElement3
@@ -46,7 +46,7 @@ class BillTransactionRecord extends BillTransaction
      *
      * @var string
      */
-    public $DataElement3;
+    public $DataElement3 = null;
 
     /**
      * DataElement4
@@ -56,7 +56,7 @@ class BillTransactionRecord extends BillTransaction
      *
      * @var string
      */
-    public $DataElement4;
+    public $DataElement4 = null;
 
     /**
      * DataElement5
@@ -66,7 +66,7 @@ class BillTransactionRecord extends BillTransaction
      *
      * @var string
      */
-    public $DataElement5;
+    public $DataElement5 = null;
 
     /**
      * DataElement6
@@ -76,7 +76,7 @@ class BillTransactionRecord extends BillTransaction
      *
      * @var string
      */
-    public $DataElement6;
+    public $DataElement6 = null;
 
     /**
      * DataElement7
@@ -86,7 +86,7 @@ class BillTransactionRecord extends BillTransaction
      *
      * @var string
      */
-    public $DataElement7;
+    public $DataElement7 = null;
 
     /**
      * DataElement8
@@ -96,7 +96,7 @@ class BillTransactionRecord extends BillTransaction
      *
      * @var string
      */
-    public $DataElement8;
+    public $DataElement8 = null;
 
     /**
      * DataElement9
@@ -106,7 +106,7 @@ class BillTransactionRecord extends BillTransaction
      *
      * @var string
      */
-    public $DataElement9;
+    public $DataElement9 = null;
 
     /**
      * NetAmountToApplyToBill

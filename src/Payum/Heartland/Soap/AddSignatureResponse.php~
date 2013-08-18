@@ -16,5 +16,5 @@ class AddSignatureResponse
      *
      * @var Response
      */
-    public $AddSignatureResult;
+    public $AddSignatureResult = null;
 }

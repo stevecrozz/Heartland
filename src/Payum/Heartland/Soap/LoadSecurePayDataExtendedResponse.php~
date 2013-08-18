@@ -16,5 +16,5 @@ class LoadSecurePayDataExtendedResponse
      *
      * @var LoadSecurePayBillDataResponse
      */
-    public $LoadSecurePayDataExtendedResult;
+    public $LoadSecurePayDataExtendedResult = null;
 }

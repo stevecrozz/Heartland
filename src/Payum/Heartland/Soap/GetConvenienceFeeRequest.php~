@@ -26,7 +26,7 @@ class GetConvenienceFeeRequest extends MerchantRequest
      *
      * @var string
      */
-    public $CardNumber;
+    public $CardNumber = null;
 
     /**
      * CardProcessingMethod

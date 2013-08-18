@@ -16,7 +16,7 @@ class LogTermsAcceptanceRequest extends Request
      *
      * @var string
      */
-    public $DeviceID;
+    public $DeviceID = null;
 
     /**
      * Version
@@ -26,5 +26,5 @@ class LogTermsAcceptanceRequest extends Request
      *
      * @var string
      */
-    public $Version;
+    public $Version = null;
 }

@@ -16,5 +16,5 @@ class CapturePreAuthorizedPayment
      *
      * @var CapturePreAuthorizedPaymentRequest
      */
-    public $CapturePreAuthorizedPaymentRequest;
+    public $CapturePreAuthorizedPaymentRequest = null;
 }

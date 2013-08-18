@@ -16,5 +16,5 @@ class GetSecurePayBillData
      *
      * @var GetSecurePayBillDataRequest
      */
-    public $request;
+    public $request = null;
 }

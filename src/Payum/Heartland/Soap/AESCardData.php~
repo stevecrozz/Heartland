@@ -16,7 +16,7 @@ class AESCardData
      *
      * @var CardHolderData
      */
-    public $CardHolderData;
+    public $CardHolderData = null;
 
     /**
      * EncryptedTrackData
@@ -26,7 +26,7 @@ class AESCardData
      *
      * @var string
      */
-    public $EncryptedTrackData;
+    public $EncryptedTrackData = null;
 
     /**
      * ExpirationMonth
@@ -56,7 +56,7 @@ class AESCardData
      *
      * @var string
      */
-    public $KeySerialNumber;
+    public $KeySerialNumber = null;
 
     /**
      * ObfuscatedCardNumber
@@ -66,5 +66,5 @@ class AESCardData
      *
      * @var string
      */
-    public $ObfuscatedCardNumber;
+    public $ObfuscatedCardNumber = null;
 }

@@ -26,5 +26,5 @@ class BillDataElement
      *
      * @var string
      */
-    public $Value;
+    public $Value = null;
 }

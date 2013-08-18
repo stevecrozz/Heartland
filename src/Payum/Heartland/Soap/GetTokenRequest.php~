@@ -36,7 +36,7 @@ class GetTokenRequest extends MerchantRequest
      *
      * @var CardHolderData
      */
-    public $AccountHolderData;
+    public $AccountHolderData = null;
 
     /**
      * AccountNumber
@@ -46,7 +46,7 @@ class GetTokenRequest extends MerchantRequest
      *
      * @var string
      */
-    public $AccountNumber;
+    public $AccountNumber = null;
 
     /**
      * ExpirationMonth
@@ -86,7 +86,7 @@ class GetTokenRequest extends MerchantRequest
      *
      * @var string
      */
-    public $RoutingNumber;
+    public $RoutingNumber = null;
 
     /**
      * SkipAccountVerify

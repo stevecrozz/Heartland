@@ -16,5 +16,5 @@ class AddReversal
      *
      * @var AddReversalRequest
      */
-    public $AddReversalRequest;
+    public $AddReversalRequest = null;
 }

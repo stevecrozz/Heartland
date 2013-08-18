@@ -16,5 +16,5 @@ class GetToken
      *
      * @var GetTokenRequest
      */
-    public $GetTokenRequest;
+    public $GetTokenRequest = null;
 }

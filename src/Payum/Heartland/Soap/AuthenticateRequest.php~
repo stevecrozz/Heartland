@@ -16,7 +16,7 @@ class AuthenticateRequest
      *
      * @var int
      */
-    public $ApplicationID;
+    public $ApplicationID = null;
 
     /**
      * MacAddress
@@ -26,7 +26,7 @@ class AuthenticateRequest
      *
      * @var string
      */
-    public $MacAddress;
+    public $MacAddress = null;
 
     /**
      * Password
@@ -36,7 +36,7 @@ class AuthenticateRequest
      *
      * @var string
      */
-    public $Password;
+    public $Password = null;
 
     /**
      * UserName
@@ -46,5 +46,5 @@ class AuthenticateRequest
      *
      * @var string
      */
-    public $UserName;
+    public $UserName = null;
 }

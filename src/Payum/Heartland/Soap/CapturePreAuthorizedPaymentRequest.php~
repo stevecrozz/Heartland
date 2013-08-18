@@ -16,7 +16,7 @@ class CapturePreAuthorizedPaymentRequest extends MerchantRequest
      *
      * @var array<BillTransaction>
      */
-    public $BillTransactions;
+    public $BillTransactions = null;
 
     /**
      * IncludeReceiptInResponse
@@ -36,7 +36,7 @@ class CapturePreAuthorizedPaymentRequest extends MerchantRequest
      *
      * @var Transaction
      */
-    public $Transaction;
+    public $Transaction = null;
 
     /**
      * TransactionAuthorization_ID

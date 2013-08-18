@@ -16,7 +16,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
      *
      * @var string
      */
-    public $BINRangesToDeny;
+    public $BINRangesToDeny = null;
 
     /**
      * BillData
@@ -26,7 +26,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
      *
      * @var array<SecurePayBill>
      */
-    public $BillData;
+    public $BillData = null;
 
     /**
      * MaxFuturePaymentDays
@@ -46,7 +46,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
      *
      * @var string
      */
-    public $PaymentMethodsToDeny;
+    public $PaymentMethodsToDeny = null;
 
     /**
      * PayorAddress
@@ -56,7 +56,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
      *
      * @var string
      */
-    public $PayorAddress;
+    public $PayorAddress = null;
 
     /**
      * PayorAddressIsEditable
@@ -76,7 +76,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
      *
      * @var string
      */
-    public $PayorCity;
+    public $PayorCity = null;
 
     /**
      * PayorCityIsEditable
@@ -96,7 +96,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
      *
      * @var string
      */
-    public $PayorCountry;
+    public $PayorCountry = null;
 
     /**
      * PayorCountryIsEditable
@@ -116,7 +116,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
      *
      * @var string
      */
-    public $PayorEmailAddress;
+    public $PayorEmailAddress = null;
 
     /**
      * PayorEmailAddressIsEditable
@@ -136,7 +136,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
      *
      * @var string
      */
-    public $PayorFirstName;
+    public $PayorFirstName = null;
 
     /**
      * PayorFirstNameIsEditable
@@ -156,7 +156,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
      *
      * @var string
      */
-    public $PayorLastName;
+    public $PayorLastName = null;
 
     /**
      * PayorLastNameIsEditable
@@ -176,7 +176,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
      *
      * @var string
      */
-    public $PayorMiddleName;
+    public $PayorMiddleName = null;
 
     /**
      * PayorMiddleNameIsEditable
@@ -196,7 +196,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
      *
      * @var string
      */
-    public $PayorPhoneNumber;
+    public $PayorPhoneNumber = null;
 
     /**
      * PayorPhoneNumberIsEditable
@@ -216,7 +216,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
      *
      * @var string
      */
-    public $PayorPostalCode;
+    public $PayorPostalCode = null;
 
     /**
      * PayorPostalCodeIsEditable
@@ -236,7 +236,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
      *
      * @var string
      */
-    public $PayorState;
+    public $PayorState = null;
 
     /**
      * PayorStateIsEditable
