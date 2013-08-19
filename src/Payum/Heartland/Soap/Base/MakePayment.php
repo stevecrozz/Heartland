@@ -19,16 +19,6 @@ class MakePayment
     protected $MakeE3PaymentRequest = null;
 
     /**
-     * Constructor.
-     *
-     * @param MakePaymentRequest $makeE3PaymentRequest
-     */
-    public function __construct(MakePaymentRequest $makeE3PaymentRequest = null)
-    {
-        $this->MakeE3PaymentRequest = $makeE3PaymentRequest;
-    }
-
-    /**
      * @param MakePaymentRequest $makeE3PaymentRequest
      *
      * @return MakePayment

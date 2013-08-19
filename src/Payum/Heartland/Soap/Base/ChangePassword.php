@@ -19,16 +19,6 @@ class ChangePassword
     protected $ChangePasswordRequest = null;
 
     /**
-     * Constructor.
-     *
-     * @param ChangePasswordRequest $changePasswordRequest
-     */
-    public function __construct(ChangePasswordRequest $changePasswordRequest = null)
-    {
-        $this->ChangePasswordRequest = $changePasswordRequest;
-    }
-
-    /**
      * @param ChangePasswordRequest $changePasswordRequest
      *
      * @return ChangePassword

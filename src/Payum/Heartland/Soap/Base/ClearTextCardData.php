@@ -59,24 +59,6 @@ class ClearTextCardData
     protected $VerificationCode = null;
 
     /**
-     * Constructor.
-     *
-     * @param int $expirationMonth
-     * @param int $expirationYear
-     * @param CardHolderData $cardHolderData
-     * @param string $cardNumber
-     * @param string $verificationCode
-     */
-    public function __construct($expirationMonth, $expirationYear, CardHolderData $cardHolderData = null, $cardNumber = null, $verificationCode = null)
-    {
-        $this->ExpirationMonth = $expirationMonth;
-        $this->ExpirationYear = $expirationYear;
-        $this->CardHolderData = $cardHolderData;
-        $this->CardNumber = $cardNumber;
-        $this->VerificationCode = $verificationCode;
-    }
-
-    /**
      * @param CardHolderData $cardHolderData
      *
      * @return ClearTextCardData

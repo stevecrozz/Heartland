@@ -19,16 +19,6 @@ class UserGroupRequest
     protected $Credential = null;
 
     /**
-     * Constructor.
-     *
-     * @param UserGroupCredentials $credential
-     */
-    public function __construct(UserGroupCredentials $credential = null)
-    {
-        $this->Credential = $credential;
-    }
-
-    /**
      * @param UserGroupCredentials $credential
      *
      * @return UserGroupRequest

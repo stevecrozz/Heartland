@@ -19,21 +19,11 @@ class ArrayOfBillTransactionRecord
     protected $BillTransactionRecord = null;
 
     /**
-     * Constructor.
-     *
-     * @param array(BillTransactionRecord) $billTransactionRecord
-     */
-    public function __construct(array(BillTransactionRecord) $billTransactionRecord = null)
-    {
-        $this->BillTransactionRecord = $billTransactionRecord;
-    }
-
-    /**
      * @param array(BillTransactionRecord) $billTransactionRecord
      *
      * @return ArrayOfBillTransactionRecord
      */
-    public function setBillTransactionRecord(array(BillTransactionRecord) $billTransactionRecord)
+    public function setBillTransactionRecord($billTransactionRecord)
     {
         $this->BillTransactionRecord = $billTransactionRecord;
         return $this;
@@ -44,9 +34,6 @@ class ArrayOfBillTransactionRecord
      */
     public function getBillTransactionRecord()
     {
-        if (null === $this->BillTransactionRecord) {
-            $this->BillTransactionRecord = new array(BillTransactionRecord)();
-        }
         return $this->BillTransactionRecord;
     }
 }

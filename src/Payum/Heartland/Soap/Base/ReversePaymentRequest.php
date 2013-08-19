@@ -59,24 +59,6 @@ class ReversePaymentRequest extends MerchantRequest
     protected $Transaction_ID;
 
     /**
-     * Constructor.
-     *
-     * @param boolean $includeReceiptInResponse
-     * @param int $transaction_ID
-     * @param float $baseAmountToRefund
-     * @param ArrayOfE3DebitCardWithPINToCharge $e3DebitCardsWithPINToCharge
-     * @param float $expectedFeeAmountToRefund
-     */
-    public function __construct($includeReceiptInResponse, $transaction_ID, $baseAmountToRefund = null, ArrayOfE3DebitCardWithPINToCharge $e3DebitCardsWithPINToCharge = null, $expectedFeeAmountToRefund = null)
-    {
-        $this->IncludeReceiptInResponse = $includeReceiptInResponse;
-        $this->Transaction_ID = $transaction_ID;
-        $this->BaseAmountToRefund = $baseAmountToRefund;
-        $this->E3DebitCardsWithPINToCharge = $e3DebitCardsWithPINToCharge;
-        $this->ExpectedFeeAmountToRefund = $expectedFeeAmountToRefund;
-    }
-
-    /**
      * @param float $baseAmountToRefund
      *
      * @return ReversePaymentRequest

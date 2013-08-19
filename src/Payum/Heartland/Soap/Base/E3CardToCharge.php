@@ -19,16 +19,6 @@ class E3CardToCharge extends CardToCharge
     protected $E3CreditCard = null;
 
     /**
-     * Constructor.
-     *
-     * @param E3CardData $e3CreditCard
-     */
-    public function __construct(E3CardData $e3CreditCard = null)
-    {
-        $this->E3CreditCard = $e3CreditCard;
-    }
-
-    /**
      * @param E3CardData $e3CreditCard
      *
      * @return E3CardToCharge

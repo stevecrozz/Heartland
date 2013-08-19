@@ -49,22 +49,6 @@ class BillTypeLabels
     protected $Identifier4Label = null;
 
     /**
-     * Constructor.
-     *
-     * @param string $identifier1Label
-     * @param string $identifier2Label
-     * @param string $identifier3Label
-     * @param string $identifier4Label
-     */
-    public function __construct($identifier1Label = null, $identifier2Label = null, $identifier3Label = null, $identifier4Label = null)
-    {
-        $this->Identifier1Label = $identifier1Label;
-        $this->Identifier2Label = $identifier2Label;
-        $this->Identifier3Label = $identifier3Label;
-        $this->Identifier4Label = $identifier4Label;
-    }
-
-    /**
      * @param string $identifier1Label
      *
      * @return BillTypeLabels

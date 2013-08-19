@@ -19,16 +19,6 @@ class GetSecurePayBillDataRequest extends MerchantRequest
     protected $GUID = null;
 
     /**
-     * Constructor.
-     *
-     * @param string $gUID
-     */
-    public function __construct($gUID = null)
-    {
-        $this->GUID = $gUID;
-    }
-
-    /**
      * @param string $gUID
      *
      * @return GetSecurePayBillDataRequest

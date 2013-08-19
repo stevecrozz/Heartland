@@ -12,10 +12,4 @@ class ReceiptFileType
     const PDF = 'PDF';
     const PNG = 'PNG';
     const TXT = 'TXT';
-
-
-
-
-
-
 }

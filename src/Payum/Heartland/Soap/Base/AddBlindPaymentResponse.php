@@ -19,16 +19,6 @@ class AddBlindPaymentResponse
     protected $AddBlindPaymentResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param Response $addBlindPaymentResult
-     */
-    public function __construct(Response $addBlindPaymentResult = null)
-    {
-        $this->AddBlindPaymentResult = $addBlindPaymentResult;
-    }
-
-    /**
      * @param Response $addBlindPaymentResult
      *
      * @return AddBlindPaymentResponse

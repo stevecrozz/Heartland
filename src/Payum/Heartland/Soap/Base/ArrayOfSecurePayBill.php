@@ -19,21 +19,11 @@ class ArrayOfSecurePayBill
     protected $SecurePayBill = null;
 
     /**
-     * Constructor.
-     *
-     * @param array(SecurePayBill) $securePayBill
-     */
-    public function __construct(array(SecurePayBill) $securePayBill = null)
-    {
-        $this->SecurePayBill = $securePayBill;
-    }
-
-    /**
      * @param array(SecurePayBill) $securePayBill
      *
      * @return ArrayOfSecurePayBill
      */
-    public function setSecurePayBill(array(SecurePayBill) $securePayBill)
+    public function setSecurePayBill($securePayBill)
     {
         $this->SecurePayBill = $securePayBill;
         return $this;
@@ -44,9 +34,6 @@ class ArrayOfSecurePayBill
      */
     public function getSecurePayBill()
     {
-        if (null === $this->SecurePayBill) {
-            $this->SecurePayBill = new array(SecurePayBill)();
-        }
         return $this->SecurePayBill;
     }
 }

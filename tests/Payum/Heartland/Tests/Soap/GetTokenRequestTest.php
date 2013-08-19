@@ -17,27 +17,26 @@ class GetTokenRequestTest extends \PHPUnit_Framework_TestCase
         );
 
         $request = new Soap\GetTokenRequest();
-        $request->Credential = new Soap\MerchantCredentials();
-        $request->Credential->ApplicationID = 3;
-        $request->Credential->Password = '{$RJ_PASSWORD}';
-        $request->Credential->UserName = '{$RJ_USER}';
-        $request->Credential->MerchantName = '{$MERCHANT_NAME}';
-        $request->ACHAccountType = Soap\ACHAccountType::UNASSIGNED;
-        $request->ACHDepositType = Soap\ACHDepositType::UNASSIGNED;
-        $request->AccountHolderData = new Soap\CardHolderData();
-        $request->AccountHolderData->Address = '{$T_ADDRESS}';
-        $request->AccountHolderData->City = '{$T_CITY}';
-        $request->AccountHolderData->FirstName = '{$T_FIRST_NAME}';
-        $request->AccountHolderData->LastName = '{$T_LAST_NAME}';
-        $request->AccountHolderData->State = '{$T_STATE}';
-        $request->AccountHolderData->Zip = '{$T_ZIP}';
-        $request->AccountNumber = '{$T_CREDIT_CARD_NUMBER}';
-        $request->ExpirationMonth = '{$T_CREDIT_CARD_EXPIRATION_MONTH}';
-        $request->ExpirationYear = '{$T_CREDIT_CARD_EXPIRATION_MONTH}';
-        $request->PaymentMethod = Soap\TokenPaymentMethod::CREDIT;
+        $request->getCredential()->setApplicationID(3);
+        $request->getCredential()->setPassword('{$RJ_PASSWORD}');
+        $request->getCredential()->setUserName('{$RJ_USER}');
+        $request->getCredential()->setMerchantName('{$MERCHANT_NAME}');
+        $request->setACHAccountType(Soap\ACHAccountType::UNASSIGNED);
+        $request->setACHDepositType(Soap\ACHDepositType::UNASSIGNED);
+        $request->getAccountHolderData()->setAddress('{$T_ADDRESS}');
+        $request->getAccountHolderData()->setCity('{$T_CITY}');
+        $request->getAccountHolderData()->setFirstName('{$T_FIRST_NAME}');
+        $request->getAccountHolderData()->setLastName('{$T_LAST_NAME}');
+        $request->getAccountHolderData()->setState('{$T_STATE}');
+        $request->getAccountHolderData()->setZip('{$T_ZIP}');
+        $request->setAccountNumber('{$T_CREDIT_CARD_NUMBER}');
+        $request->setExpirationMonth('{$T_CREDIT_CARD_EXPIRATION_MONTH}');
+        $request->setExpirationYear('{$T_CREDIT_CARD_EXPIRATION_MONTH}');
+        $request->setPaymentMethod(Soap\TokenPaymentMethod::CREDIT);
 
         try {
-            var_dump($client->GetToken($request));
+            $response = $client->GetToken($request);
+//            var_dump($response);
 //            var_dump($client->__getLastResponse());
         } catch (\SoapFault $e) {
             $this->fail($e->__toString());

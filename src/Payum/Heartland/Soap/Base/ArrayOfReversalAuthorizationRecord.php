@@ -19,21 +19,11 @@ class ArrayOfReversalAuthorizationRecord
     protected $ReversalAuthorizationRecord = null;
 
     /**
-     * Constructor.
-     *
-     * @param array(ReversalAuthorizationRecord) $reversalAuthorizationRecord
-     */
-    public function __construct(array(ReversalAuthorizationRecord) $reversalAuthorizationRecord = null)
-    {
-        $this->ReversalAuthorizationRecord = $reversalAuthorizationRecord;
-    }
-
-    /**
      * @param array(ReversalAuthorizationRecord) $reversalAuthorizationRecord
      *
      * @return ArrayOfReversalAuthorizationRecord
      */
-    public function setReversalAuthorizationRecord(array(ReversalAuthorizationRecord) $reversalAuthorizationRecord)
+    public function setReversalAuthorizationRecord($reversalAuthorizationRecord)
     {
         $this->ReversalAuthorizationRecord = $reversalAuthorizationRecord;
         return $this;
@@ -44,9 +34,6 @@ class ArrayOfReversalAuthorizationRecord
      */
     public function getReversalAuthorizationRecord()
     {
-        if (null === $this->ReversalAuthorizationRecord) {
-            $this->ReversalAuthorizationRecord = new array(ReversalAuthorizationRecord)();
-        }
         return $this->ReversalAuthorizationRecord;
     }
 }

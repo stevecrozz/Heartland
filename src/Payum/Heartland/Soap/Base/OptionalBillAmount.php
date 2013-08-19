@@ -29,18 +29,6 @@ class OptionalBillAmount
     protected $Value;
 
     /**
-     * Constructor.
-     *
-     * @param boolean $isPayable
-     * @param float $value
-     */
-    public function __construct($isPayable, $value)
-    {
-        $this->IsPayable = $isPayable;
-        $this->Value = $value;
-    }
-
-    /**
      * @param boolean $isPayable
      *
      * @return OptionalBillAmount

@@ -11,10 +11,4 @@ class ReversalType
     const VOID = 'Void';
     const RETURN = 'Return';
     const NONE = 'None';
-
-
-
-
-
-
 }

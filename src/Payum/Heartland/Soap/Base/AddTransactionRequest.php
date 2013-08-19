@@ -59,24 +59,6 @@ class AddTransactionRequest extends MerchantRequest
     protected $UseSystemDateForTransactionDateTime;
 
     /**
-     * Constructor.
-     *
-     * @param Timezone $timeZone
-     * @param boolean $useSystemDateForTransactionDateTime
-     * @param ArrayOfAuthorization $authorizations
-     * @param ArrayOfBillTransaction $billTransactions
-     * @param Transaction $transaction
-     */
-    public function __construct(Timezone $timeZone, $useSystemDateForTransactionDateTime, ArrayOfAuthorization $authorizations = null, ArrayOfBillTransaction $billTransactions = null, Transaction $transaction = null)
-    {
-        $this->TimeZone = $timeZone;
-        $this->UseSystemDateForTransactionDateTime = $useSystemDateForTransactionDateTime;
-        $this->Authorizations = $authorizations;
-        $this->BillTransactions = $billTransactions;
-        $this->Transaction = $transaction;
-    }
-
-    /**
      * @param ArrayOfAuthorization $authorizations
      *
      * @return AddTransactionRequest
@@ -125,7 +107,7 @@ class AddTransactionRequest extends MerchantRequest
      *
      * @return AddTransactionRequest
      */
-    public function setTimeZone(Timezone $timeZone)
+    public function setTimeZone($timeZone)
     {
         $this->TimeZone = $timeZone;
         return $this;
@@ -136,9 +118,6 @@ class AddTransactionRequest extends MerchantRequest
      */
     public function getTimeZone()
     {
-        if (null === $this->TimeZone) {
-            $this->TimeZone = new Timezone();
-        }
         return $this->TimeZone;
     }
 

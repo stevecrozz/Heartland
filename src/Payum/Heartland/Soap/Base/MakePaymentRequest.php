@@ -99,32 +99,6 @@ class MakePaymentRequest extends MerchantRequest
     protected $Transaction = null;
 
     /**
-     * Constructor.
-     *
-     * @param boolean $includeReceiptInResponse
-     * @param ArrayOfACHAccountToCharge $aCHAccountsToCharge
-     * @param ArrayOfAESCardToCharge $aESCreditCardsToCharge
-     * @param ArrayOfBillTransaction $billTransactions
-     * @param ArrayOfClearTextCardToCharge $clearTextCreditCardsToCharge
-     * @param ArrayOfE3CardToCharge $e3CreditCardsToCharge
-     * @param ArrayOfE3DebitCardWithPINToCharge $e3DebitCardsWithPINToCharge
-     * @param ArrayOfTokenToCharge $tokensToCharge
-     * @param Transaction $transaction
-     */
-    public function __construct($includeReceiptInResponse, ArrayOfACHAccountToCharge $aCHAccountsToCharge = null, ArrayOfAESCardToCharge $aESCreditCardsToCharge = null, ArrayOfBillTransaction $billTransactions = null, ArrayOfClearTextCardToCharge $clearTextCreditCardsToCharge = null, ArrayOfE3CardToCharge $e3CreditCardsToCharge = null, ArrayOfE3DebitCardWithPINToCharge $e3DebitCardsWithPINToCharge = null, ArrayOfTokenToCharge $tokensToCharge = null, Transaction $transaction = null)
-    {
-        $this->IncludeReceiptInResponse = $includeReceiptInResponse;
-        $this->ACHAccountsToCharge = $aCHAccountsToCharge;
-        $this->AESCreditCardsToCharge = $aESCreditCardsToCharge;
-        $this->BillTransactions = $billTransactions;
-        $this->ClearTextCreditCardsToCharge = $clearTextCreditCardsToCharge;
-        $this->E3CreditCardsToCharge = $e3CreditCardsToCharge;
-        $this->E3DebitCardsWithPINToCharge = $e3DebitCardsWithPINToCharge;
-        $this->TokensToCharge = $tokensToCharge;
-        $this->Transaction = $transaction;
-    }
-
-    /**
      * @param ArrayOfACHAccountToCharge $aCHAccountsToCharge
      *
      * @return MakePaymentRequest

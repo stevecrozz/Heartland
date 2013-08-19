@@ -39,20 +39,6 @@ class AuthorizationRecord extends Authorization
     protected $OriginalAuthorizationID = null;
 
     /**
-     * Constructor.
-     *
-     * @param int $authorizationID
-     * @param float $netAmount
-     * @param int $originalAuthorizationID
-     */
-    public function __construct($authorizationID, $netAmount, $originalAuthorizationID = null)
-    {
-        $this->AuthorizationID = $authorizationID;
-        $this->NetAmount = $netAmount;
-        $this->OriginalAuthorizationID = $originalAuthorizationID;
-    }
-
-    /**
      * @param int $authorizationID
      *
      * @return AuthorizationRecord

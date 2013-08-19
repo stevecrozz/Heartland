@@ -19,16 +19,6 @@ class ActivateBill
     protected $ActivateBillRequest = null;
 
     /**
-     * Constructor.
-     *
-     * @param ActivateBillRequest $activateBillRequest
-     */
-    public function __construct(ActivateBillRequest $activateBillRequest = null)
-    {
-        $this->ActivateBillRequest = $activateBillRequest;
-    }
-
-    /**
      * @param ActivateBillRequest $activateBillRequest
      *
      * @return ActivateBill

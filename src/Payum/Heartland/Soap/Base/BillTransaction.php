@@ -109,34 +109,6 @@ class BillTransaction extends BillIdentifier
     protected $CustomerEnteredElement9 = null;
 
     /**
-     * Constructor.
-     *
-     * @param float $amountToApplyToBill
-     * @param string $customerEnteredElement1
-     * @param string $customerEnteredElement2
-     * @param string $customerEnteredElement3
-     * @param string $customerEnteredElement4
-     * @param string $customerEnteredElement5
-     * @param string $customerEnteredElement6
-     * @param string $customerEnteredElement7
-     * @param string $customerEnteredElement8
-     * @param string $customerEnteredElement9
-     */
-    public function __construct($amountToApplyToBill, $customerEnteredElement1 = null, $customerEnteredElement2 = null, $customerEnteredElement3 = null, $customerEnteredElement4 = null, $customerEnteredElement5 = null, $customerEnteredElement6 = null, $customerEnteredElement7 = null, $customerEnteredElement8 = null, $customerEnteredElement9 = null)
-    {
-        $this->AmountToApplyToBill = $amountToApplyToBill;
-        $this->CustomerEnteredElement1 = $customerEnteredElement1;
-        $this->CustomerEnteredElement2 = $customerEnteredElement2;
-        $this->CustomerEnteredElement3 = $customerEnteredElement3;
-        $this->CustomerEnteredElement4 = $customerEnteredElement4;
-        $this->CustomerEnteredElement5 = $customerEnteredElement5;
-        $this->CustomerEnteredElement6 = $customerEnteredElement6;
-        $this->CustomerEnteredElement7 = $customerEnteredElement7;
-        $this->CustomerEnteredElement8 = $customerEnteredElement8;
-        $this->CustomerEnteredElement9 = $customerEnteredElement9;
-    }
-
-    /**
      * @param float $amountToApplyToBill
      *
      * @return BillTransaction

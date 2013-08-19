@@ -29,18 +29,6 @@ class E3DebitCardWithPINData extends E3CardData
     protected $PINBlock = null;
 
     /**
-     * Constructor.
-     *
-     * @param string $keySerialNumber
-     * @param string $pINBlock
-     */
-    public function __construct($keySerialNumber = null, $pINBlock = null)
-    {
-        $this->KeySerialNumber = $keySerialNumber;
-        $this->PINBlock = $pINBlock;
-    }
-
-    /**
      * @param string $keySerialNumber
      *
      * @return E3DebitCardWithPINData

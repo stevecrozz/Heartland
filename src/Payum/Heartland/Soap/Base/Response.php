@@ -29,18 +29,6 @@ class Response
     protected $isSuccessful;
 
     /**
-     * Constructor.
-     *
-     * @param boolean $isSuccessful
-     * @param ArrayOfMessage $messages
-     */
-    public function __construct($isSuccessful, ArrayOfMessage $messages = null)
-    {
-        $this->isSuccessful = $isSuccessful;
-        $this->Messages = $messages;
-    }
-
-    /**
      * @param ArrayOfMessage $messages
      *
      * @return Response

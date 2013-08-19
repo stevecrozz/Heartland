@@ -19,21 +19,11 @@ class ArrayOfE3CardToCharge
     protected $E3CardToCharge = null;
 
     /**
-     * Constructor.
-     *
-     * @param array(E3CardToCharge) $e3CardToCharge
-     */
-    public function __construct(array(E3CardToCharge) $e3CardToCharge = null)
-    {
-        $this->E3CardToCharge = $e3CardToCharge;
-    }
-
-    /**
      * @param array(E3CardToCharge) $e3CardToCharge
      *
      * @return ArrayOfE3CardToCharge
      */
-    public function setE3CardToCharge(array(E3CardToCharge) $e3CardToCharge)
+    public function setE3CardToCharge($e3CardToCharge)
     {
         $this->E3CardToCharge = $e3CardToCharge;
         return $this;
@@ -44,9 +34,6 @@ class ArrayOfE3CardToCharge
      */
     public function getE3CardToCharge()
     {
-        if (null === $this->E3CardToCharge) {
-            $this->E3CardToCharge = new array(E3CardToCharge)();
-        }
         return $this->E3CardToCharge;
     }
 }

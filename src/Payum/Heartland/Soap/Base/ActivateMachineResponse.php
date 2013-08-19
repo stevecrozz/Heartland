@@ -19,16 +19,6 @@ class ActivateMachineResponse
     protected $ActivateMachineResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param Response $activateMachineResult
-     */
-    public function __construct(Response $activateMachineResult = null)
-    {
-        $this->ActivateMachineResult = $activateMachineResult;
-    }
-
-    /**
      * @param Response $activateMachineResult
      *
      * @return ActivateMachineResponse

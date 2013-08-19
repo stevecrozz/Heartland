@@ -189,50 +189,6 @@ class Transaction
     protected $TransactionDate;
 
     /**
-     * Constructor.
-     *
-     * @param float $amount
-     * @param string $transactionDate
-     * @param float $feeAmount
-     * @param string $merchantInvoiceNumber
-     * @param string $merchantPONumber
-     * @param string $merchantTransactionDescription
-     * @param string $merchantTransactionID
-     * @param string $payorAddress
-     * @param string $payorCity
-     * @param string $payorCountry
-     * @param string $payorEmailAddress
-     * @param string $payorFirstName
-     * @param string $payorLastName
-     * @param string $payorMiddleName
-     * @param string $payorPhoneNumber
-     * @param string $payorPostalCode
-     * @param string $payorState
-     * @param int $referenceTransactionID
-     */
-    public function __construct($amount, $transactionDate, $feeAmount = null, $merchantInvoiceNumber = null, $merchantPONumber = null, $merchantTransactionDescription = null, $merchantTransactionID = null, $payorAddress = null, $payorCity = null, $payorCountry = null, $payorEmailAddress = null, $payorFirstName = null, $payorLastName = null, $payorMiddleName = null, $payorPhoneNumber = null, $payorPostalCode = null, $payorState = null, $referenceTransactionID = null)
-    {
-        $this->Amount = $amount;
-        $this->TransactionDate = $transactionDate;
-        $this->FeeAmount = $feeAmount;
-        $this->MerchantInvoiceNumber = $merchantInvoiceNumber;
-        $this->MerchantPONumber = $merchantPONumber;
-        $this->MerchantTransactionDescription = $merchantTransactionDescription;
-        $this->MerchantTransactionID = $merchantTransactionID;
-        $this->PayorAddress = $payorAddress;
-        $this->PayorCity = $payorCity;
-        $this->PayorCountry = $payorCountry;
-        $this->PayorEmailAddress = $payorEmailAddress;
-        $this->PayorFirstName = $payorFirstName;
-        $this->PayorLastName = $payorLastName;
-        $this->PayorMiddleName = $payorMiddleName;
-        $this->PayorPhoneNumber = $payorPhoneNumber;
-        $this->PayorPostalCode = $payorPostalCode;
-        $this->PayorState = $payorState;
-        $this->ReferenceTransactionID = $referenceTransactionID;
-    }
-
-    /**
      * @param float $amount
      *
      * @return Transaction

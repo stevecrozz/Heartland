@@ -119,36 +119,6 @@ class BillData
     protected $OptionalAmounts = null;
 
     /**
-     * Constructor.
-     *
-     * @param BillPresentment $billPresentment
-     * @param string $dueDate
-     * @param BillIdentifier $billIdentifier
-     * @param Address $customerAddress
-     * @param BillDataElements $dataElements
-     * @param string $obligorEmailAddress
-     * @param string $obligorFirstName
-     * @param string $obligorLastName
-     * @param string $obligorMiddleName
-     * @param string $obligorPhoneNumber
-     * @param OptionalBillAmounts $optionalAmounts
-     */
-    public function __construct(BillPresentment $billPresentment, $dueDate, BillIdentifier $billIdentifier = null, Address $customerAddress = null, BillDataElements $dataElements = null, $obligorEmailAddress = null, $obligorFirstName = null, $obligorLastName = null, $obligorMiddleName = null, $obligorPhoneNumber = null, OptionalBillAmounts $optionalAmounts = null)
-    {
-        $this->BillPresentment = $billPresentment;
-        $this->DueDate = $dueDate;
-        $this->BillIdentifier = $billIdentifier;
-        $this->CustomerAddress = $customerAddress;
-        $this->DataElements = $dataElements;
-        $this->ObligorEmailAddress = $obligorEmailAddress;
-        $this->ObligorFirstName = $obligorFirstName;
-        $this->ObligorLastName = $obligorLastName;
-        $this->ObligorMiddleName = $obligorMiddleName;
-        $this->ObligorPhoneNumber = $obligorPhoneNumber;
-        $this->OptionalAmounts = $optionalAmounts;
-    }
-
-    /**
      * @param BillIdentifier $billIdentifier
      *
      * @return BillData
@@ -175,7 +145,7 @@ class BillData
      *
      * @return BillData
      */
-    public function setBillPresentment(BillPresentment $billPresentment)
+    public function setBillPresentment($billPresentment)
     {
         $this->BillPresentment = $billPresentment;
         return $this;
@@ -186,9 +156,6 @@ class BillData
      */
     public function getBillPresentment()
     {
-        if (null === $this->BillPresentment) {
-            $this->BillPresentment = new BillPresentment();
-        }
         return $this->BillPresentment;
     }
 

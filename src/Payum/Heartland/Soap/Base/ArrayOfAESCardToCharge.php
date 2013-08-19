@@ -19,21 +19,11 @@ class ArrayOfAESCardToCharge
     protected $AESCardToCharge = null;
 
     /**
-     * Constructor.
-     *
-     * @param array(AESCardToCharge) $aESCardToCharge
-     */
-    public function __construct(array(AESCardToCharge) $aESCardToCharge = null)
-    {
-        $this->AESCardToCharge = $aESCardToCharge;
-    }
-
-    /**
      * @param array(AESCardToCharge) $aESCardToCharge
      *
      * @return ArrayOfAESCardToCharge
      */
-    public function setAESCardToCharge(array(AESCardToCharge) $aESCardToCharge)
+    public function setAESCardToCharge($aESCardToCharge)
     {
         $this->AESCardToCharge = $aESCardToCharge;
         return $this;
@@ -44,9 +34,6 @@ class ArrayOfAESCardToCharge
      */
     public function getAESCardToCharge()
     {
-        if (null === $this->AESCardToCharge) {
-            $this->AESCardToCharge = new array(AESCardToCharge)();
-        }
         return $this->AESCardToCharge;
     }
 }

@@ -19,21 +19,11 @@ class AddPayment
     protected $AddPaymentRequest = null;
 
     /**
-     * Constructor.
-     *
-     * @param AddPaymentRequest $addPaymentRequest
-     */
-    public function __construct(AddPaymentRequest $addPaymentRequest = null)
-    {
-        $this->AddPaymentRequest = $addPaymentRequest;
-    }
-
-    /**
      * @param AddPaymentRequest $addPaymentRequest
      *
      * @return AddPayment
      */
-    public function setAddPaymentRequest(AddPaymentRequest $addPaymentRequest)
+    public function setAddPaymentRequest($addPaymentRequest)
     {
         $this->AddPaymentRequest = $addPaymentRequest;
         return $this;
@@ -44,9 +34,6 @@ class AddPayment
      */
     public function getAddPaymentRequest()
     {
-        if (null === $this->AddPaymentRequest) {
-            $this->AddPaymentRequest = new AddPaymentRequest();
-        }
         return $this->AddPaymentRequest;
     }
 }

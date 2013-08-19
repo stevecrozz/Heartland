@@ -99,37 +99,11 @@ class GetTokenRequest extends MerchantRequest
     protected $SkipAccountVerify;
 
     /**
-     * Constructor.
-     *
-     * @param ACHAccountType $aCHAccountType
-     * @param ACHDepositType $aCHDepositType
-     * @param int $expirationMonth
-     * @param int $expirationYear
-     * @param TokenPaymentMethod $paymentMethod
-     * @param boolean $skipAccountVerify
-     * @param CardHolderData $accountHolderData
-     * @param string $accountNumber
-     * @param string $routingNumber
-     */
-    public function __construct(ACHAccountType $aCHAccountType, ACHDepositType $aCHDepositType, $expirationMonth, $expirationYear, TokenPaymentMethod $paymentMethod, $skipAccountVerify, CardHolderData $accountHolderData = null, $accountNumber = null, $routingNumber = null)
-    {
-        $this->ACHAccountType = $aCHAccountType;
-        $this->ACHDepositType = $aCHDepositType;
-        $this->ExpirationMonth = $expirationMonth;
-        $this->ExpirationYear = $expirationYear;
-        $this->PaymentMethod = $paymentMethod;
-        $this->SkipAccountVerify = $skipAccountVerify;
-        $this->AccountHolderData = $accountHolderData;
-        $this->AccountNumber = $accountNumber;
-        $this->RoutingNumber = $routingNumber;
-    }
-
-    /**
      * @param ACHAccountType $aCHAccountType
      *
      * @return GetTokenRequest
      */
-    public function setACHAccountType(ACHAccountType $aCHAccountType)
+    public function setACHAccountType($aCHAccountType)
     {
         $this->ACHAccountType = $aCHAccountType;
         return $this;
@@ -140,9 +114,6 @@ class GetTokenRequest extends MerchantRequest
      */
     public function getACHAccountType()
     {
-        if (null === $this->ACHAccountType) {
-            $this->ACHAccountType = new ACHAccountType();
-        }
         return $this->ACHAccountType;
     }
 
@@ -151,7 +122,7 @@ class GetTokenRequest extends MerchantRequest
      *
      * @return GetTokenRequest
      */
-    public function setACHDepositType(ACHDepositType $aCHDepositType)
+    public function setACHDepositType($aCHDepositType)
     {
         $this->ACHDepositType = $aCHDepositType;
         return $this;
@@ -162,9 +133,6 @@ class GetTokenRequest extends MerchantRequest
      */
     public function getACHDepositType()
     {
-        if (null === $this->ACHDepositType) {
-            $this->ACHDepositType = new ACHDepositType();
-        }
         return $this->ACHDepositType;
     }
 
@@ -252,7 +220,7 @@ class GetTokenRequest extends MerchantRequest
      *
      * @return GetTokenRequest
      */
-    public function setPaymentMethod(TokenPaymentMethod $paymentMethod)
+    public function setPaymentMethod($paymentMethod)
     {
         $this->PaymentMethod = $paymentMethod;
         return $this;
@@ -263,9 +231,6 @@ class GetTokenRequest extends MerchantRequest
      */
     public function getPaymentMethod()
     {
-        if (null === $this->PaymentMethod) {
-            $this->PaymentMethod = new TokenPaymentMethod();
-        }
         return $this->PaymentMethod;
     }
 

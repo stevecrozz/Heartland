@@ -12,10 +12,4 @@ class CardProcessingMethod
     const CREDIT = 'Credit';
     const DEBIT = 'Debit';
     const PINDEBIT = 'PINDebit';
-
-
-
-
-
-
 }

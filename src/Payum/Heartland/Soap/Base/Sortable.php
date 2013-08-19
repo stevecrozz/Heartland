@@ -12,10 +12,4 @@ class Sortable
     const DATETIMEADDED = 'DateTimeAdded';
     const CASHIER = 'Cashier';
     const CHANNEL = 'Channel';
-
-
-
-
-
-
 }

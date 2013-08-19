@@ -39,20 +39,6 @@ class UpdateSecurePayPaymentRequest extends Request
     protected $TransactionID;
 
     /**
-     * Constructor.
-     *
-     * @param int $futureDatedTransactionID
-     * @param int $transactionID
-     * @param string $gUID
-     */
-    public function __construct($futureDatedTransactionID, $transactionID, $gUID = null)
-    {
-        $this->FutureDatedTransactionID = $futureDatedTransactionID;
-        $this->TransactionID = $transactionID;
-        $this->GUID = $gUID;
-    }
-
-    /**
      * @param int $futureDatedTransactionID
      *
      * @return UpdateSecurePayPaymentRequest

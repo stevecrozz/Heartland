@@ -14,10 +14,4 @@ class Timezone
     const CENTRAL = 'Central';
     const EASTERN = 'Eastern';
     const UTC = 'UTC';
-
-
-
-
-
-
 }

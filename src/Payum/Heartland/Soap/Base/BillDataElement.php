@@ -29,18 +29,6 @@ class BillDataElement
     protected $Value = null;
 
     /**
-     * Constructor.
-     *
-     * @param boolean $isVisible
-     * @param string $value
-     */
-    public function __construct($isVisible, $value = null)
-    {
-        $this->IsVisible = $isVisible;
-        $this->Value = $value;
-    }
-
-    /**
      * @param boolean $isVisible
      *
      * @return BillDataElement

@@ -19,16 +19,6 @@ class ReversalTransactionRecordWithReversalAuthorizations extends TransactionRec
     protected $ReversalAuthorizations = null;
 
     /**
-     * Constructor.
-     *
-     * @param ArrayOfReversalAuthorizationRecord $reversalAuthorizations
-     */
-    public function __construct(ArrayOfReversalAuthorizationRecord $reversalAuthorizations = null)
-    {
-        $this->ReversalAuthorizations = $reversalAuthorizations;
-    }
-
-    /**
      * @param ArrayOfReversalAuthorizationRecord $reversalAuthorizations
      *
      * @return ReversalTransactionRecordWithReversalAuthorizations

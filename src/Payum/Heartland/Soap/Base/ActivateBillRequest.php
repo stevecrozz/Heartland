@@ -19,16 +19,6 @@ class ActivateBillRequest extends MerchantRequest
     protected $BillIdentifier = null;
 
     /**
-     * Constructor.
-     *
-     * @param BillIdentifier $billIdentifier
-     */
-    public function __construct(BillIdentifier $billIdentifier = null)
-    {
-        $this->BillIdentifier = $billIdentifier;
-    }
-
-    /**
      * @param BillIdentifier $billIdentifier
      *
      * @return ActivateBillRequest

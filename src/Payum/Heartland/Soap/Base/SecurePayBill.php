@@ -69,26 +69,6 @@ class SecurePayBill
     protected $Identifier4 = null;
 
     /**
-     * Constructor.
-     *
-     * @param float $amount
-     * @param string $billTypeName
-     * @param string $identifier1
-     * @param string $identifier2
-     * @param string $identifier3
-     * @param string $identifier4
-     */
-    public function __construct($amount, $billTypeName = null, $identifier1 = null, $identifier2 = null, $identifier3 = null, $identifier4 = null)
-    {
-        $this->Amount = $amount;
-        $this->BillTypeName = $billTypeName;
-        $this->Identifier1 = $identifier1;
-        $this->Identifier2 = $identifier2;
-        $this->Identifier3 = $identifier3;
-        $this->Identifier4 = $identifier4;
-    }
-
-    /**
      * @param float $amount
      *
      * @return SecurePayBill

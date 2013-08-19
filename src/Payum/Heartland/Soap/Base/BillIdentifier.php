@@ -59,24 +59,6 @@ class BillIdentifier
     protected $ID4 = null;
 
     /**
-     * Constructor.
-     *
-     * @param string $billType
-     * @param string $iD1
-     * @param string $iD2
-     * @param string $iD3
-     * @param string $iD4
-     */
-    public function __construct($billType = null, $iD1 = null, $iD2 = null, $iD3 = null, $iD4 = null)
-    {
-        $this->BillType = $billType;
-        $this->ID1 = $iD1;
-        $this->ID2 = $iD2;
-        $this->ID3 = $iD3;
-        $this->ID4 = $iD4;
-    }
-
-    /**
      * @param string $billType
      *
      * @return BillIdentifier

@@ -10,10 +10,4 @@ class BillPresentment
 {
     const UNASSIGNED = 'Unassigned';
     const FULL = 'Full';
-
-
-
-
-
-
 }

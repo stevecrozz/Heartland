@@ -19,16 +19,6 @@ class EndOfDayReportResponse
     protected $EndOfDayReportResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param EndOfDayReportResponse $endOfDayReportResult
-     */
-    public function __construct(EndOfDayReportResponse $endOfDayReportResult = null)
-    {
-        $this->EndOfDayReportResult = $endOfDayReportResult;
-    }
-
-    /**
      * @param EndOfDayReportResponse $endOfDayReportResult
      *
      * @return EndOfDayReportResponse

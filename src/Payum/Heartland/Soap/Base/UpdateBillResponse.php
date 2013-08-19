@@ -19,16 +19,6 @@ class UpdateBillResponse
     protected $UpdateBillResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param Response $updateBillResult
-     */
-    public function __construct(Response $updateBillResult = null)
-    {
-        $this->UpdateBillResult = $updateBillResult;
-    }
-
-    /**
      * @param Response $updateBillResult
      *
      * @return UpdateBillResponse

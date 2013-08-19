@@ -59,24 +59,6 @@ class EndOfDayReportTotalForCashier
     protected $Username = null;
 
     /**
-     * Constructor.
-     *
-     * @param int $rowID
-     * @param string $firstname
-     * @param string $lastname
-     * @param EndOfDayReportTotals $totals
-     * @param string $username
-     */
-    public function __construct($rowID, $firstname = null, $lastname = null, EndOfDayReportTotals $totals = null, $username = null)
-    {
-        $this->RowID = $rowID;
-        $this->Firstname = $firstname;
-        $this->Lastname = $lastname;
-        $this->Totals = $totals;
-        $this->Username = $username;
-    }
-
-    /**
      * @param string $firstname
      *
      * @return EndOfDayReportTotalForCashier

@@ -19,16 +19,6 @@ class LogTermsAcceptanceResponse
     protected $LogTermsAcceptanceResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param Response $logTermsAcceptanceResult
-     */
-    public function __construct(Response $logTermsAcceptanceResult = null)
-    {
-        $this->LogTermsAcceptanceResult = $logTermsAcceptanceResult;
-    }
-
-    /**
      * @param Response $logTermsAcceptanceResult
      *
      * @return LogTermsAcceptanceResponse

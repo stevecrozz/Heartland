@@ -29,18 +29,6 @@ class AddSignatureRequest extends MerchantRequest
     protected $Transaction_ID;
 
     /**
-     * Constructor.
-     *
-     * @param int $transaction_ID
-     * @param string $signatureImageInBase64
-     */
-    public function __construct($transaction_ID, $signatureImageInBase64 = null)
-    {
-        $this->Transaction_ID = $transaction_ID;
-        $this->SignatureImageInBase64 = $signatureImageInBase64;
-    }
-
-    /**
      * @param string $signatureImageInBase64
      *
      * @return AddSignatureRequest

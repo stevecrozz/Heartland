@@ -29,18 +29,6 @@ class LogTermsAcceptanceRequest extends Request
     protected $Version = null;
 
     /**
-     * Constructor.
-     *
-     * @param string $deviceID
-     * @param string $version
-     */
-    public function __construct($deviceID = null, $version = null)
-    {
-        $this->DeviceID = $deviceID;
-        $this->Version = $version;
-    }
-
-    /**
      * @param string $deviceID
      *
      * @return LogTermsAcceptanceRequest

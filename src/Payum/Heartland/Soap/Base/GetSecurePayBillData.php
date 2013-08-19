@@ -19,16 +19,6 @@ class GetSecurePayBillData
     protected $request = null;
 
     /**
-     * Constructor.
-     *
-     * @param GetSecurePayBillDataRequest $request
-     */
-    public function __construct(GetSecurePayBillDataRequest $request = null)
-    {
-        $this->request = $request;
-    }
-
-    /**
      * @param GetSecurePayBillDataRequest $request
      *
      * @return GetSecurePayBillData

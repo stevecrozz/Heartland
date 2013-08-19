@@ -9,8 +9,4 @@ namespace Payum\Heartland\Soap\Base;
 class AddPaymentRequest extends AddTransactionRequest
 {
 
-
-
-
-
 }

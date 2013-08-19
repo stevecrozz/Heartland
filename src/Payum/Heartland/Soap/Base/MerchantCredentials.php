@@ -19,16 +19,6 @@ class MerchantCredentials extends Credentials
     protected $MerchantName = null;
 
     /**
-     * Constructor.
-     *
-     * @param string $merchantName
-     */
-    public function __construct($merchantName = null)
-    {
-        $this->MerchantName = $merchantName;
-    }
-
-    /**
      * @param string $merchantName
      *
      * @return MerchantCredentials

@@ -19,16 +19,6 @@ class AddBlindPaymentRequest extends AddPaymentRequest
     protected $DuplicatesAllowed;
 
     /**
-     * Constructor.
-     *
-     * @param boolean $duplicatesAllowed
-     */
-    public function __construct($duplicatesAllowed)
-    {
-        $this->DuplicatesAllowed = $duplicatesAllowed;
-    }
-
-    /**
      * @param boolean $duplicatesAllowed
      *
      * @return AddBlindPaymentRequest

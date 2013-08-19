@@ -39,20 +39,6 @@ class LoadSecurePayMerchantBillDataRequest extends MerchantRequest
     protected $ReturnTokenWithResponse;
 
     /**
-     * Constructor.
-     *
-     * @param int $maxFuturePaymentDays
-     * @param boolean $returnTokenWithResponse
-     * @param ArrayOfSecurePayBill $billData
-     */
-    public function __construct($maxFuturePaymentDays, $returnTokenWithResponse, ArrayOfSecurePayBill $billData = null)
-    {
-        $this->MaxFuturePaymentDays = $maxFuturePaymentDays;
-        $this->ReturnTokenWithResponse = $returnTokenWithResponse;
-        $this->BillData = $billData;
-    }
-
-    /**
      * @param ArrayOfSecurePayBill $billData
      *
      * @return LoadSecurePayMerchantBillDataRequest

@@ -129,38 +129,6 @@ class Authorization
     protected $ReferenceNumber = null;
 
     /**
-     * Constructor.
-     *
-     * @param float $amount
-     * @param AuthorizationType $authorizationType
-     * @param Gateway $gateway
-     * @param PaymentMethod $paymentMethod
-     * @param string $addToBatchReferenceNumber
-     * @param string $authCode
-     * @param string $gatewayBatchID
-     * @param string $gatewayDescription
-     * @param string $maskedAccountNumber
-     * @param string $maskedRoutingNumber
-     * @param int $referenceAuthorizationID
-     * @param string $referenceNumber
-     */
-    public function __construct($amount, AuthorizationType $authorizationType, Gateway $gateway, PaymentMethod $paymentMethod, $addToBatchReferenceNumber = null, $authCode = null, $gatewayBatchID = null, $gatewayDescription = null, $maskedAccountNumber = null, $maskedRoutingNumber = null, $referenceAuthorizationID = null, $referenceNumber = null)
-    {
-        $this->Amount = $amount;
-        $this->AuthorizationType = $authorizationType;
-        $this->Gateway = $gateway;
-        $this->PaymentMethod = $paymentMethod;
-        $this->AddToBatchReferenceNumber = $addToBatchReferenceNumber;
-        $this->AuthCode = $authCode;
-        $this->GatewayBatchID = $gatewayBatchID;
-        $this->GatewayDescription = $gatewayDescription;
-        $this->MaskedAccountNumber = $maskedAccountNumber;
-        $this->MaskedRoutingNumber = $maskedRoutingNumber;
-        $this->ReferenceAuthorizationID = $referenceAuthorizationID;
-        $this->ReferenceNumber = $referenceNumber;
-    }
-
-    /**
      * @param string $addToBatchReferenceNumber
      *
      * @return Authorization
@@ -222,7 +190,7 @@ class Authorization
      *
      * @return Authorization
      */
-    public function setAuthorizationType(AuthorizationType $authorizationType)
+    public function setAuthorizationType($authorizationType)
     {
         $this->AuthorizationType = $authorizationType;
         return $this;
@@ -233,9 +201,6 @@ class Authorization
      */
     public function getAuthorizationType()
     {
-        if (null === $this->AuthorizationType) {
-            $this->AuthorizationType = new AuthorizationType();
-        }
         return $this->AuthorizationType;
     }
 
@@ -244,7 +209,7 @@ class Authorization
      *
      * @return Authorization
      */
-    public function setGateway(Gateway $gateway)
+    public function setGateway($gateway)
     {
         $this->Gateway = $gateway;
         return $this;
@@ -255,9 +220,6 @@ class Authorization
      */
     public function getGateway()
     {
-        if (null === $this->Gateway) {
-            $this->Gateway = new Gateway();
-        }
         return $this->Gateway;
     }
 
@@ -342,7 +304,7 @@ class Authorization
      *
      * @return Authorization
      */
-    public function setPaymentMethod(PaymentMethod $paymentMethod)
+    public function setPaymentMethod($paymentMethod)
     {
         $this->PaymentMethod = $paymentMethod;
         return $this;
@@ -353,9 +315,6 @@ class Authorization
      */
     public function getPaymentMethod()
     {
-        if (null === $this->PaymentMethod) {
-            $this->PaymentMethod = new PaymentMethod();
-        }
         return $this->PaymentMethod;
     }
 

@@ -59,24 +59,6 @@ class Address
     protected $State = null;
 
     /**
-     * Constructor.
-     *
-     * @param string $addressLineOne
-     * @param string $city
-     * @param string $country
-     * @param string $postalCode
-     * @param string $state
-     */
-    public function __construct($addressLineOne = null, $city = null, $country = null, $postalCode = null, $state = null)
-    {
-        $this->AddressLineOne = $addressLineOne;
-        $this->City = $city;
-        $this->Country = $country;
-        $this->PostalCode = $postalCode;
-        $this->State = $state;
-    }
-
-    /**
      * @param string $addressLineOne
      *
      * @return Address

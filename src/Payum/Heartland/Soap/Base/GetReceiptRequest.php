@@ -29,23 +29,11 @@ class GetReceiptRequest extends MerchantRequest
     protected $Transaction_ID;
 
     /**
-     * Constructor.
-     *
-     * @param ReceiptFileType $receiptFileType
-     * @param int $transaction_ID
-     */
-    public function __construct(ReceiptFileType $receiptFileType, $transaction_ID)
-    {
-        $this->ReceiptFileType = $receiptFileType;
-        $this->Transaction_ID = $transaction_ID;
-    }
-
-    /**
      * @param ReceiptFileType $receiptFileType
      *
      * @return GetReceiptRequest
      */
-    public function setReceiptFileType(ReceiptFileType $receiptFileType)
+    public function setReceiptFileType($receiptFileType)
     {
         $this->ReceiptFileType = $receiptFileType;
         return $this;
@@ -56,9 +44,6 @@ class GetReceiptRequest extends MerchantRequest
      */
     public function getReceiptFileType()
     {
-        if (null === $this->ReceiptFileType) {
-            $this->ReceiptFileType = new ReceiptFileType();
-        }
         return $this->ReceiptFileType;
     }
 

@@ -10,10 +10,4 @@ class AuthorizationType
 {
     const BASE = 'Base';
     const CONVENIENCEFEE = 'ConvenienceFee';
-
-
-
-
-
-
 }

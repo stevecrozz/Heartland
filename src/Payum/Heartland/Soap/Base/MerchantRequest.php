@@ -19,16 +19,6 @@ class MerchantRequest
     protected $Credential = null;
 
     /**
-     * Constructor.
-     *
-     * @param MerchantCredentials $credential
-     */
-    public function __construct(MerchantCredentials $credential = null)
-    {
-        $this->Credential = $credential;
-    }
-
-    /**
      * @param MerchantCredentials $credential
      *
      * @return MerchantRequest

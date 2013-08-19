@@ -39,20 +39,6 @@ class DisburseFundsRequest extends MerchantRequest
     protected $Transaction = null;
 
     /**
-     * Constructor.
-     *
-     * @param ACHAccountToCharge $aCHAccountToDisburseTo
-     * @param ArrayOfBillTransaction $billTransactions
-     * @param Transaction $transaction
-     */
-    public function __construct(ACHAccountToCharge $aCHAccountToDisburseTo = null, ArrayOfBillTransaction $billTransactions = null, Transaction $transaction = null)
-    {
-        $this->ACHAccountToDisburseTo = $aCHAccountToDisburseTo;
-        $this->BillTransactions = $billTransactions;
-        $this->Transaction = $transaction;
-    }
-
-    /**
      * @param ACHAccountToCharge $aCHAccountToDisburseTo
      *
      * @return DisburseFundsRequest

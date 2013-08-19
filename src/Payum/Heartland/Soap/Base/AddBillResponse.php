@@ -19,16 +19,6 @@ class AddBillResponse
     protected $AddBillResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param Response $addBillResult
-     */
-    public function __construct(Response $addBillResult = null)
-    {
-        $this->AddBillResult = $addBillResult;
-    }
-
-    /**
      * @param Response $addBillResult
      *
      * @return AddBillResponse

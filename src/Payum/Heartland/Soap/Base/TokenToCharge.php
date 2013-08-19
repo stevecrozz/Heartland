@@ -19,16 +19,6 @@ class TokenToCharge extends CardToCharge
     protected $Token = null;
 
     /**
-     * Constructor.
-     *
-     * @param string $token
-     */
-    public function __construct($token = null)
-    {
-        $this->Token = $token;
-    }
-
-    /**
      * @param string $token
      *
      * @return TokenToCharge

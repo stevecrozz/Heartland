@@ -49,22 +49,6 @@ class CapturePreAuthorizedPaymentRequest extends MerchantRequest
     protected $TransactionAuthorization_ID;
 
     /**
-     * Constructor.
-     *
-     * @param boolean $includeReceiptInResponse
-     * @param int $transactionAuthorization_ID
-     * @param ArrayOfBillTransaction $billTransactions
-     * @param Transaction $transaction
-     */
-    public function __construct($includeReceiptInResponse, $transactionAuthorization_ID, ArrayOfBillTransaction $billTransactions = null, Transaction $transaction = null)
-    {
-        $this->IncludeReceiptInResponse = $includeReceiptInResponse;
-        $this->TransactionAuthorization_ID = $transactionAuthorization_ID;
-        $this->BillTransactions = $billTransactions;
-        $this->Transaction = $transaction;
-    }
-
-    /**
      * @param ArrayOfBillTransaction $billTransactions
      *
      * @return CapturePreAuthorizedPaymentRequest

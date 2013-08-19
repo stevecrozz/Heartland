@@ -19,16 +19,6 @@ class GetReversalTypeResponse
     protected $GetReversalTypeResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param GetReversalTypeResponse $getReversalTypeResult
-     */
-    public function __construct(GetReversalTypeResponse $getReversalTypeResult = null)
-    {
-        $this->GetReversalTypeResult = $getReversalTypeResult;
-    }
-
-    /**
      * @param GetReversalTypeResponse $getReversalTypeResult
      *
      * @return GetReversalTypeResponse

@@ -19,16 +19,6 @@ class UpdateSecurePayPayment
     protected $request = null;
 
     /**
-     * Constructor.
-     *
-     * @param UpdateSecurePayPaymentRequest $request
-     */
-    public function __construct(UpdateSecurePayPaymentRequest $request = null)
-    {
-        $this->request = $request;
-    }
-
-    /**
      * @param UpdateSecurePayPaymentRequest $request
      *
      * @return UpdateSecurePayPayment

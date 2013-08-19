@@ -49,22 +49,6 @@ class GetConvenienceFeeRequest extends MerchantRequest
     protected $PaymentMethod;
 
     /**
-     * Constructor.
-     *
-     * @param float $baseAmount
-     * @param CardProcessingMethod $cardProcessingMethod
-     * @param PaymentMethod $paymentMethod
-     * @param string $cardNumber
-     */
-    public function __construct($baseAmount, CardProcessingMethod $cardProcessingMethod, PaymentMethod $paymentMethod, $cardNumber = null)
-    {
-        $this->BaseAmount = $baseAmount;
-        $this->CardProcessingMethod = $cardProcessingMethod;
-        $this->PaymentMethod = $paymentMethod;
-        $this->CardNumber = $cardNumber;
-    }
-
-    /**
      * @param float $baseAmount
      *
      * @return GetConvenienceFeeRequest
@@ -107,7 +91,7 @@ class GetConvenienceFeeRequest extends MerchantRequest
      *
      * @return GetConvenienceFeeRequest
      */
-    public function setCardProcessingMethod(CardProcessingMethod $cardProcessingMethod)
+    public function setCardProcessingMethod($cardProcessingMethod)
     {
         $this->CardProcessingMethod = $cardProcessingMethod;
         return $this;
@@ -118,9 +102,6 @@ class GetConvenienceFeeRequest extends MerchantRequest
      */
     public function getCardProcessingMethod()
     {
-        if (null === $this->CardProcessingMethod) {
-            $this->CardProcessingMethod = new CardProcessingMethod();
-        }
         return $this->CardProcessingMethod;
     }
 
@@ -129,7 +110,7 @@ class GetConvenienceFeeRequest extends MerchantRequest
      *
      * @return GetConvenienceFeeRequest
      */
-    public function setPaymentMethod(PaymentMethod $paymentMethod)
+    public function setPaymentMethod($paymentMethod)
     {
         $this->PaymentMethod = $paymentMethod;
         return $this;
@@ -140,9 +121,6 @@ class GetConvenienceFeeRequest extends MerchantRequest
      */
     public function getPaymentMethod()
     {
-        if (null === $this->PaymentMethod) {
-            $this->PaymentMethod = new PaymentMethod();
-        }
         return $this->PaymentMethod;
     }
 }

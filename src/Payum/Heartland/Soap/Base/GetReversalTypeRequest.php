@@ -19,16 +19,6 @@ class GetReversalTypeRequest extends MerchantRequest
     protected $Transaction_ID;
 
     /**
-     * Constructor.
-     *
-     * @param int $transaction_ID
-     */
-    public function __construct($transaction_ID)
-    {
-        $this->Transaction_ID = $transaction_ID;
-    }
-
-    /**
      * @param int $transaction_ID
      *
      * @return GetReversalTypeRequest

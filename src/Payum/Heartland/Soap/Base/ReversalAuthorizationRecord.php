@@ -29,18 +29,6 @@ class ReversalAuthorizationRecord extends AuthorizationRecord
     protected $ReversalReferenceNumber = null;
 
     /**
-     * Constructor.
-     *
-     * @param float $reversalAmount
-     * @param string $reversalReferenceNumber
-     */
-    public function __construct($reversalAmount, $reversalReferenceNumber = null)
-    {
-        $this->ReversalAmount = $reversalAmount;
-        $this->ReversalReferenceNumber = $reversalReferenceNumber;
-    }
-
-    /**
      * @param float $reversalAmount
      *
      * @return ReversalAuthorizationRecord

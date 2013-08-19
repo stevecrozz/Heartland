@@ -19,21 +19,11 @@ class ArrayOfClearTextCardToCharge
     protected $ClearTextCardToCharge = null;
 
     /**
-     * Constructor.
-     *
-     * @param array(ClearTextCardToCharge) $clearTextCardToCharge
-     */
-    public function __construct(array(ClearTextCardToCharge) $clearTextCardToCharge = null)
-    {
-        $this->ClearTextCardToCharge = $clearTextCardToCharge;
-    }
-
-    /**
      * @param array(ClearTextCardToCharge) $clearTextCardToCharge
      *
      * @return ArrayOfClearTextCardToCharge
      */
-    public function setClearTextCardToCharge(array(ClearTextCardToCharge) $clearTextCardToCharge)
+    public function setClearTextCardToCharge($clearTextCardToCharge)
     {
         $this->ClearTextCardToCharge = $clearTextCardToCharge;
         return $this;
@@ -44,9 +34,6 @@ class ArrayOfClearTextCardToCharge
      */
     public function getClearTextCardToCharge()
     {
-        if (null === $this->ClearTextCardToCharge) {
-            $this->ClearTextCardToCharge = new array(ClearTextCardToCharge)();
-        }
         return $this->ClearTextCardToCharge;
     }
 }

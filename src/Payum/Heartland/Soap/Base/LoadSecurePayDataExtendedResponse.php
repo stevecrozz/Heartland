@@ -19,16 +19,6 @@ class LoadSecurePayDataExtendedResponse
     protected $LoadSecurePayDataExtendedResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param LoadSecurePayBillDataResponse $loadSecurePayDataExtendedResult
-     */
-    public function __construct(LoadSecurePayBillDataResponse $loadSecurePayDataExtendedResult = null)
-    {
-        $this->LoadSecurePayDataExtendedResult = $loadSecurePayDataExtendedResult;
-    }
-
-    /**
      * @param LoadSecurePayBillDataResponse $loadSecurePayDataExtendedResult
      *
      * @return LoadSecurePayDataExtendedResponse

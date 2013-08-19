@@ -79,28 +79,6 @@ class E3CardData
     protected $ObfuscatedCardNumber = null;
 
     /**
-     * Constructor.
-     *
-     * @param int $expirationMonth
-     * @param int $expirationYear
-     * @param CardHolderData $cardHolderData
-     * @param string $encryptedPanData
-     * @param string $encryptedTrackData
-     * @param string $keyTransmissionBlock
-     * @param string $obfuscatedCardNumber
-     */
-    public function __construct($expirationMonth, $expirationYear, CardHolderData $cardHolderData = null, $encryptedPanData = null, $encryptedTrackData = null, $keyTransmissionBlock = null, $obfuscatedCardNumber = null)
-    {
-        $this->ExpirationMonth = $expirationMonth;
-        $this->ExpirationYear = $expirationYear;
-        $this->CardHolderData = $cardHolderData;
-        $this->EncryptedPanData = $encryptedPanData;
-        $this->EncryptedTrackData = $encryptedTrackData;
-        $this->KeyTransmissionBlock = $keyTransmissionBlock;
-        $this->ObfuscatedCardNumber = $obfuscatedCardNumber;
-    }
-
-    /**
      * @param CardHolderData $cardHolderData
      *
      * @return E3CardData

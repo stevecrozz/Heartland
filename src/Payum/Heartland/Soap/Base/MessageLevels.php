@@ -12,10 +12,4 @@ class MessageLevels
     const WARNING = 'Warning';
     const ERROR = 'Error';
     const UNKNOWN = 'Unknown';
-
-
-
-
-
-
 }

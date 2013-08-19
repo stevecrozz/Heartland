@@ -29,18 +29,6 @@ class AddBillRequest extends MerchantRequest
     protected $TimeZone;
 
     /**
-     * Constructor.
-     *
-     * @param Timezone $timeZone
-     * @param Bill $bill
-     */
-    public function __construct(Timezone $timeZone, Bill $bill = null)
-    {
-        $this->TimeZone = $timeZone;
-        $this->Bill = $bill;
-    }
-
-    /**
      * @param Bill $bill
      *
      * @return AddBillRequest
@@ -67,7 +55,7 @@ class AddBillRequest extends MerchantRequest
      *
      * @return AddBillRequest
      */
-    public function setTimeZone(Timezone $timeZone)
+    public function setTimeZone($timeZone)
     {
         $this->TimeZone = $timeZone;
         return $this;
@@ -78,9 +66,6 @@ class AddBillRequest extends MerchantRequest
      */
     public function getTimeZone()
     {
-        if (null === $this->TimeZone) {
-            $this->TimeZone = new Timezone();
-        }
         return $this->TimeZone;
     }
 }

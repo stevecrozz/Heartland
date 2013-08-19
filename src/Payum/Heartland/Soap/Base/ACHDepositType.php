@@ -11,10 +11,4 @@ class ACHDepositType
     const UNASSIGNED = 'Unassigned';
     const CHECKING = 'Checking';
     const SAVINGS = 'Savings';
-
-
-
-
-
-
 }

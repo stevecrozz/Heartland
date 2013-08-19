@@ -99,32 +99,6 @@ class BillDataElements
     protected $DataElement9 = null;
 
     /**
-     * Constructor.
-     *
-     * @param BillDataElement $dataElement1
-     * @param BillDataElement $dataElement2
-     * @param BillDataElement $dataElement3
-     * @param BillDataElement $dataElement4
-     * @param BillDataElement $dataElement5
-     * @param BillDataElement $dataElement6
-     * @param BillDataElement $dataElement7
-     * @param BillDataElement $dataElement8
-     * @param BillDataElement $dataElement9
-     */
-    public function __construct(BillDataElement $dataElement1 = null, BillDataElement $dataElement2 = null, BillDataElement $dataElement3 = null, BillDataElement $dataElement4 = null, BillDataElement $dataElement5 = null, BillDataElement $dataElement6 = null, BillDataElement $dataElement7 = null, BillDataElement $dataElement8 = null, BillDataElement $dataElement9 = null)
-    {
-        $this->DataElement1 = $dataElement1;
-        $this->DataElement2 = $dataElement2;
-        $this->DataElement3 = $dataElement3;
-        $this->DataElement4 = $dataElement4;
-        $this->DataElement5 = $dataElement5;
-        $this->DataElement6 = $dataElement6;
-        $this->DataElement7 = $dataElement7;
-        $this->DataElement8 = $dataElement8;
-        $this->DataElement9 = $dataElement9;
-    }
-
-    /**
      * @param BillDataElement $dataElement1
      *
      * @return BillDataElements

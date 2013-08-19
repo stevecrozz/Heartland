@@ -19,21 +19,11 @@ class ArrayOfE3DebitCardWithPINToCharge
     protected $E3DebitCardWithPINToCharge = null;
 
     /**
-     * Constructor.
-     *
-     * @param array(E3DebitCardWithPINToCharge) $e3DebitCardWithPINToCharge
-     */
-    public function __construct(array(E3DebitCardWithPINToCharge) $e3DebitCardWithPINToCharge = null)
-    {
-        $this->E3DebitCardWithPINToCharge = $e3DebitCardWithPINToCharge;
-    }
-
-    /**
      * @param array(E3DebitCardWithPINToCharge) $e3DebitCardWithPINToCharge
      *
      * @return ArrayOfE3DebitCardWithPINToCharge
      */
-    public function setE3DebitCardWithPINToCharge(array(E3DebitCardWithPINToCharge) $e3DebitCardWithPINToCharge)
+    public function setE3DebitCardWithPINToCharge($e3DebitCardWithPINToCharge)
     {
         $this->E3DebitCardWithPINToCharge = $e3DebitCardWithPINToCharge;
         return $this;
@@ -44,9 +34,6 @@ class ArrayOfE3DebitCardWithPINToCharge
      */
     public function getE3DebitCardWithPINToCharge()
     {
-        if (null === $this->E3DebitCardWithPINToCharge) {
-            $this->E3DebitCardWithPINToCharge = new array(E3DebitCardWithPINToCharge)();
-        }
         return $this->E3DebitCardWithPINToCharge;
     }
 }

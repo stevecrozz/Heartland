@@ -29,18 +29,6 @@ class Bill extends BillData
     protected $RequiredAmount = null;
 
     /**
-     * Constructor.
-     *
-     * @param boolean $billIsPayable
-     * @param float $requiredAmount
-     */
-    public function __construct($billIsPayable = null, $requiredAmount = null)
-    {
-        $this->BillIsPayable = $billIsPayable;
-        $this->RequiredAmount = $requiredAmount;
-    }
-
-    /**
      * @param boolean $billIsPayable
      *
      * @return Bill

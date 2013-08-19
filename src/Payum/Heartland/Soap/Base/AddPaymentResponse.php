@@ -19,16 +19,6 @@ class AddPaymentResponse
     protected $AddPaymentResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param Response $addPaymentResult
-     */
-    public function __construct(Response $addPaymentResult = null)
-    {
-        $this->AddPaymentResult = $addPaymentResult;
-    }
-
-    /**
      * @param Response $addPaymentResult
      *
      * @return AddPaymentResponse

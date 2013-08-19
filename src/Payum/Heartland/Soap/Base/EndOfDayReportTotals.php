@@ -59,24 +59,6 @@ class EndOfDayReportTotals
     protected $UserGroupName = null;
 
     /**
-     * Constructor.
-     *
-     * @param int $numberOfPayments
-     * @param int $numberOfReversals
-     * @param float $totalPaymentAmount
-     * @param float $totalReversalAmount
-     * @param string $userGroupName
-     */
-    public function __construct($numberOfPayments, $numberOfReversals, $totalPaymentAmount, $totalReversalAmount, $userGroupName = null)
-    {
-        $this->NumberOfPayments = $numberOfPayments;
-        $this->NumberOfReversals = $numberOfReversals;
-        $this->TotalPaymentAmount = $totalPaymentAmount;
-        $this->TotalReversalAmount = $totalReversalAmount;
-        $this->UserGroupName = $userGroupName;
-    }
-
-    /**
      * @param int $numberOfPayments
      *
      * @return EndOfDayReportTotals

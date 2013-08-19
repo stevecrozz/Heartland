@@ -19,21 +19,11 @@ class ArrayOfEndOfDayReportTotalForCashier
     protected $EndOfDayReportTotalForCashier = null;
 
     /**
-     * Constructor.
-     *
-     * @param array(EndOfDayReportTotalForCashier) $endOfDayReportTotalForCashier
-     */
-    public function __construct(array(EndOfDayReportTotalForCashier) $endOfDayReportTotalForCashier = null)
-    {
-        $this->EndOfDayReportTotalForCashier = $endOfDayReportTotalForCashier;
-    }
-
-    /**
      * @param array(EndOfDayReportTotalForCashier) $endOfDayReportTotalForCashier
      *
      * @return ArrayOfEndOfDayReportTotalForCashier
      */
-    public function setEndOfDayReportTotalForCashier(array(EndOfDayReportTotalForCashier) $endOfDayReportTotalForCashier)
+    public function setEndOfDayReportTotalForCashier($endOfDayReportTotalForCashier)
     {
         $this->EndOfDayReportTotalForCashier = $endOfDayReportTotalForCashier;
         return $this;
@@ -44,9 +34,6 @@ class ArrayOfEndOfDayReportTotalForCashier
      */
     public function getEndOfDayReportTotalForCashier()
     {
-        if (null === $this->EndOfDayReportTotalForCashier) {
-            $this->EndOfDayReportTotalForCashier = new array(EndOfDayReportTotalForCashier)();
-        }
         return $this->EndOfDayReportTotalForCashier;
     }
 }

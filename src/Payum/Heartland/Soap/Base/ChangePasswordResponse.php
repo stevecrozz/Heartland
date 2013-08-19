@@ -19,16 +19,6 @@ class ChangePasswordResponse
     protected $ChangePasswordResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param Response $changePasswordResult
-     */
-    public function __construct(Response $changePasswordResult = null)
-    {
-        $this->ChangePasswordResult = $changePasswordResult;
-    }
-
-    /**
      * @param Response $changePasswordResult
      *
      * @return ChangePasswordResponse

@@ -119,36 +119,6 @@ class BillTransactionRecord extends BillTransaction
     protected $NetAmountToApplyToBill;
 
     /**
-     * Constructor.
-     *
-     * @param float $netAmountToApplyToBill
-     * @param BillTypeLabels $billTypeLabels
-     * @param string $dataElement1
-     * @param string $dataElement2
-     * @param string $dataElement3
-     * @param string $dataElement4
-     * @param string $dataElement5
-     * @param string $dataElement6
-     * @param string $dataElement7
-     * @param string $dataElement8
-     * @param string $dataElement9
-     */
-    public function __construct($netAmountToApplyToBill, BillTypeLabels $billTypeLabels = null, $dataElement1 = null, $dataElement2 = null, $dataElement3 = null, $dataElement4 = null, $dataElement5 = null, $dataElement6 = null, $dataElement7 = null, $dataElement8 = null, $dataElement9 = null)
-    {
-        $this->NetAmountToApplyToBill = $netAmountToApplyToBill;
-        $this->BillTypeLabels = $billTypeLabels;
-        $this->DataElement1 = $dataElement1;
-        $this->DataElement2 = $dataElement2;
-        $this->DataElement3 = $dataElement3;
-        $this->DataElement4 = $dataElement4;
-        $this->DataElement5 = $dataElement5;
-        $this->DataElement6 = $dataElement6;
-        $this->DataElement7 = $dataElement7;
-        $this->DataElement8 = $dataElement8;
-        $this->DataElement9 = $dataElement9;
-    }
-
-    /**
      * @param BillTypeLabels $billTypeLabels
      *
      * @return BillTransactionRecord

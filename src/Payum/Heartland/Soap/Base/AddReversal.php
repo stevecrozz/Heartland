@@ -19,16 +19,6 @@ class AddReversal
     protected $AddReversalRequest = null;
 
     /**
-     * Constructor.
-     *
-     * @param AddReversalRequest $addReversalRequest
-     */
-    public function __construct(AddReversalRequest $addReversalRequest = null)
-    {
-        $this->AddReversalRequest = $addReversalRequest;
-    }
-
-    /**
      * @param AddReversalRequest $addReversalRequest
      *
      * @return AddReversal

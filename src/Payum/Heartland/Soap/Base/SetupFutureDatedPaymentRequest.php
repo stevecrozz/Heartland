@@ -59,24 +59,6 @@ class SetupFutureDatedPaymentRequest extends MerchantRequest
     protected $Transaction = null;
 
     /**
-     * Constructor.
-     *
-     * @param ArrayOfACHAccountToCharge $aCHAccountsToCharge
-     * @param ArrayOfBillTransaction $billTransactions
-     * @param ArrayOfClearTextCardToCharge $clearTextCreditCardsToCharge
-     * @param ArrayOfTokenToCharge $tokensToCharge
-     * @param Transaction $transaction
-     */
-    public function __construct(ArrayOfACHAccountToCharge $aCHAccountsToCharge = null, ArrayOfBillTransaction $billTransactions = null, ArrayOfClearTextCardToCharge $clearTextCreditCardsToCharge = null, ArrayOfTokenToCharge $tokensToCharge = null, Transaction $transaction = null)
-    {
-        $this->ACHAccountsToCharge = $aCHAccountsToCharge;
-        $this->BillTransactions = $billTransactions;
-        $this->ClearTextCreditCardsToCharge = $clearTextCreditCardsToCharge;
-        $this->TokensToCharge = $tokensToCharge;
-        $this->Transaction = $transaction;
-    }
-
-    /**
      * @param ArrayOfACHAccountToCharge $aCHAccountsToCharge
      *
      * @return SetupFutureDatedPaymentRequest

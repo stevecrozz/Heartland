@@ -14,10 +14,4 @@ class TransactionType
     const DISBURSEMENT = 'Disbursement';
     const DISBURSEMENTREVERSAL = 'DisbursementReversal';
     const DISBURSEMENTRETURN = 'DisbursementReturn';
-
-
-
-
-
-
 }

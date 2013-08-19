@@ -99,32 +99,6 @@ class ACHAccountToCharge extends CardToCharge
     protected $TrackingNumber;
 
     /**
-     * Constructor.
-     *
-     * @param ACHAccountType $accountType
-     * @param ACHDepositType $depositType
-     * @param int $routingNumber
-     * @param int $trackingNumber
-     * @param string $accountNumber
-     * @param string $documentID
-     * @param string $internalAccountNumber
-     * @param string $payorName
-     * @param string $submitDate
-     */
-    public function __construct(ACHAccountType $accountType, ACHDepositType $depositType, $routingNumber, $trackingNumber, $accountNumber = null, $documentID = null, $internalAccountNumber = null, $payorName = null, $submitDate = null)
-    {
-        $this->AccountType = $accountType;
-        $this->DepositType = $depositType;
-        $this->RoutingNumber = $routingNumber;
-        $this->TrackingNumber = $trackingNumber;
-        $this->AccountNumber = $accountNumber;
-        $this->DocumentID = $documentID;
-        $this->InternalAccountNumber = $internalAccountNumber;
-        $this->PayorName = $payorName;
-        $this->SubmitDate = $submitDate;
-    }
-
-    /**
      * @param string $accountNumber
      *
      * @return ACHAccountToCharge
@@ -148,7 +122,7 @@ class ACHAccountToCharge extends CardToCharge
      *
      * @return ACHAccountToCharge
      */
-    public function setAccountType(ACHAccountType $accountType)
+    public function setAccountType($accountType)
     {
         $this->AccountType = $accountType;
         return $this;
@@ -159,9 +133,6 @@ class ACHAccountToCharge extends CardToCharge
      */
     public function getAccountType()
     {
-        if (null === $this->AccountType) {
-            $this->AccountType = new ACHAccountType();
-        }
         return $this->AccountType;
     }
 
@@ -170,7 +141,7 @@ class ACHAccountToCharge extends CardToCharge
      *
      * @return ACHAccountToCharge
      */
-    public function setDepositType(ACHDepositType $depositType)
+    public function setDepositType($depositType)
     {
         $this->DepositType = $depositType;
         return $this;
@@ -181,9 +152,6 @@ class ACHAccountToCharge extends CardToCharge
      */
     public function getDepositType()
     {
-        if (null === $this->DepositType) {
-            $this->DepositType = new ACHDepositType();
-        }
         return $this->DepositType;
     }
 

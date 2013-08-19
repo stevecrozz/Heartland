@@ -19,16 +19,6 @@ class char
     protected $_;
 
     /**
-     * Constructor.
-     *
-     * @param int $_
-     */
-    public function __construct($_)
-    {
-        $this->_ = $_;
-    }
-
-    /**
      * @param int $_
      *
      * @return char

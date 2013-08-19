@@ -19,21 +19,11 @@ class ArrayOfTokenToCharge
     protected $TokenToCharge = null;
 
     /**
-     * Constructor.
-     *
-     * @param array(TokenToCharge) $tokenToCharge
-     */
-    public function __construct(array(TokenToCharge) $tokenToCharge = null)
-    {
-        $this->TokenToCharge = $tokenToCharge;
-    }
-
-    /**
      * @param array(TokenToCharge) $tokenToCharge
      *
      * @return ArrayOfTokenToCharge
      */
-    public function setTokenToCharge(array(TokenToCharge) $tokenToCharge)
+    public function setTokenToCharge($tokenToCharge)
     {
         $this->TokenToCharge = $tokenToCharge;
         return $this;
@@ -44,9 +34,6 @@ class ArrayOfTokenToCharge
      */
     public function getTokenToCharge()
     {
-        if (null === $this->TokenToCharge) {
-            $this->TokenToCharge = new array(TokenToCharge)();
-        }
         return $this->TokenToCharge;
     }
 }

@@ -19,16 +19,6 @@ class LoadSecurePayMerchantBillDataResponse
     protected $LoadSecurePayMerchantBillDataResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param LoadSecurePayBillDataResponse $loadSecurePayMerchantBillDataResult
-     */
-    public function __construct(LoadSecurePayBillDataResponse $loadSecurePayMerchantBillDataResult = null)
-    {
-        $this->LoadSecurePayMerchantBillDataResult = $loadSecurePayMerchantBillDataResult;
-    }
-
-    /**
      * @param LoadSecurePayBillDataResponse $loadSecurePayMerchantBillDataResult
      *
      * @return LoadSecurePayMerchantBillDataResponse

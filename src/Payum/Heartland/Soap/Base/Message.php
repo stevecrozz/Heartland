@@ -39,20 +39,6 @@ class Message
     protected $MessageDescription = null;
 
     /**
-     * Constructor.
-     *
-     * @param int $code
-     * @param MessageLevels $level
-     * @param string $messageDescription
-     */
-    public function __construct($code, MessageLevels $level, $messageDescription = null)
-    {
-        $this->Code = $code;
-        $this->Level = $level;
-        $this->MessageDescription = $messageDescription;
-    }
-
-    /**
      * @param int $code
      *
      * @return Message
@@ -76,7 +62,7 @@ class Message
      *
      * @return Message
      */
-    public function setLevel(MessageLevels $level)
+    public function setLevel($level)
     {
         $this->Level = $level;
         return $this;
@@ -87,9 +73,6 @@ class Message
      */
     public function getLevel()
     {
-        if (null === $this->Level) {
-            $this->Level = new MessageLevels();
-        }
         return $this->Level;
     }
 

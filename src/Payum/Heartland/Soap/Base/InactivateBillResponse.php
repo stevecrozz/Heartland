@@ -19,16 +19,6 @@ class InactivateBillResponse
     protected $InactivateBillResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param Response $inactivateBillResult
-     */
-    public function __construct(Response $inactivateBillResult = null)
-    {
-        $this->InactivateBillResult = $inactivateBillResult;
-    }
-
-    /**
      * @param Response $inactivateBillResult
      *
      * @return InactivateBillResponse

@@ -99,37 +99,11 @@ class TransactionRecord extends Transaction
     protected $UserName = null;
 
     /**
-     * Constructor.
-     *
-     * @param Application $application
-     * @param float $netAmount
-     * @param float $netFeeAmount
-     * @param ReversalCode $reversalCode
-     * @param int $transactionID
-     * @param TransactionType $transactionType
-     * @param ArrayOfBillTransactionRecord $billTransactions
-     * @param int $originalTransactionID
-     * @param string $userName
-     */
-    public function __construct(Application $application, $netAmount, $netFeeAmount, ReversalCode $reversalCode, $transactionID, TransactionType $transactionType, ArrayOfBillTransactionRecord $billTransactions = null, $originalTransactionID = null, $userName = null)
-    {
-        $this->Application = $application;
-        $this->NetAmount = $netAmount;
-        $this->NetFeeAmount = $netFeeAmount;
-        $this->ReversalCode = $reversalCode;
-        $this->TransactionID = $transactionID;
-        $this->TransactionType = $transactionType;
-        $this->BillTransactions = $billTransactions;
-        $this->OriginalTransactionID = $originalTransactionID;
-        $this->UserName = $userName;
-    }
-
-    /**
      * @param Application $application
      *
      * @return TransactionRecord
      */
-    public function setApplication(Application $application)
+    public function setApplication($application)
     {
         $this->Application = $application;
         return $this;
@@ -140,9 +114,6 @@ class TransactionRecord extends Transaction
      */
     public function getApplication()
     {
-        if (null === $this->Application) {
-            $this->Application = new Application();
-        }
         return $this->Application;
     }
 
@@ -230,7 +201,7 @@ class TransactionRecord extends Transaction
      *
      * @return TransactionRecord
      */
-    public function setReversalCode(ReversalCode $reversalCode)
+    public function setReversalCode($reversalCode)
     {
         $this->ReversalCode = $reversalCode;
         return $this;
@@ -241,9 +212,6 @@ class TransactionRecord extends Transaction
      */
     public function getReversalCode()
     {
-        if (null === $this->ReversalCode) {
-            $this->ReversalCode = new ReversalCode();
-        }
         return $this->ReversalCode;
     }
 
@@ -271,7 +239,7 @@ class TransactionRecord extends Transaction
      *
      * @return TransactionRecord
      */
-    public function setTransactionType(TransactionType $transactionType)
+    public function setTransactionType($transactionType)
     {
         $this->TransactionType = $transactionType;
         return $this;
@@ -282,9 +250,6 @@ class TransactionRecord extends Transaction
      */
     public function getTransactionType()
     {
-        if (null === $this->TransactionType) {
-            $this->TransactionType = new TransactionType();
-        }
         return $this->TransactionType;
     }
 

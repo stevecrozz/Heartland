@@ -203,7 +203,7 @@ class Client extends BaseSoapClient
     public function AddBlindPayment(AddBlindPaymentRequest $AddBlindPaymentRequest)
     {
         $parameters = new AddBlindPayment();
-        $parameters->AddBlindPaymentRequest = $AddBlindPaymentRequest;
+        $parameters->setAddBlindPaymentRequest($AddBlindPaymentRequest);
 
         return $this->__soapCall('AddBlindPayment', array('parameters' => $parameters));
     }
@@ -215,10 +215,10 @@ class Client extends BaseSoapClient
      *
      * @return AddPaymentResponse
      */
-    public function AddPayment(AddPaymentRequest $AddPaymentRequest)
+    public function AddPayment($AddPaymentRequest)
     {
         $parameters = new AddPayment();
-        $parameters->AddPaymentRequest = $AddPaymentRequest;
+        $parameters->setAddPaymentRequest($AddPaymentRequest);
 
         return $this->__soapCall('AddPayment', array('parameters' => $parameters));
     }
@@ -233,7 +233,7 @@ class Client extends BaseSoapClient
     public function AddReversal(AddReversalRequest $AddReversalRequest)
     {
         $parameters = new AddReversal();
-        $parameters->AddReversalRequest = $AddReversalRequest;
+        $parameters->setAddReversalRequest($AddReversalRequest);
 
         return $this->__soapCall('AddReversal', array('parameters' => $parameters));
     }
@@ -248,7 +248,7 @@ class Client extends BaseSoapClient
     public function ActivateMachine(ActivateMachineRequest $ActivateMachineRequest)
     {
         $parameters = new ActivateMachine();
-        $parameters->ActivateMachineRequest = $ActivateMachineRequest;
+        $parameters->setActivateMachineRequest($ActivateMachineRequest);
 
         return $this->__soapCall('ActivateMachine', array('parameters' => $parameters));
     }
@@ -263,7 +263,7 @@ class Client extends BaseSoapClient
     public function ChangePassword(ChangePasswordRequest $ChangePasswordRequest)
     {
         $parameters = new ChangePassword();
-        $parameters->ChangePasswordRequest = $ChangePasswordRequest;
+        $parameters->setChangePasswordRequest($ChangePasswordRequest);
 
         return $this->__soapCall('ChangePassword', array('parameters' => $parameters));
     }
@@ -278,7 +278,7 @@ class Client extends BaseSoapClient
     public function AddBill(AddBillRequest $AddBillRequest)
     {
         $parameters = new AddBill();
-        $parameters->AddBillRequest = $AddBillRequest;
+        $parameters->setAddBillRequest($AddBillRequest);
 
         return $this->__soapCall('AddBill', array('parameters' => $parameters));
     }
@@ -293,7 +293,7 @@ class Client extends BaseSoapClient
     public function UpdateBill(UpdateBillRequest $UpdateBillRequest)
     {
         $parameters = new UpdateBill();
-        $parameters->UpdateBillRequest = $UpdateBillRequest;
+        $parameters->setUpdateBillRequest($UpdateBillRequest);
 
         return $this->__soapCall('UpdateBill', array('parameters' => $parameters));
     }
@@ -308,7 +308,7 @@ class Client extends BaseSoapClient
     public function ActivateBill(ActivateBillRequest $ActivateBillRequest)
     {
         $parameters = new ActivateBill();
-        $parameters->ActivateBillRequest = $ActivateBillRequest;
+        $parameters->setActivateBillRequest($ActivateBillRequest);
 
         return $this->__soapCall('ActivateBill', array('parameters' => $parameters));
     }
@@ -323,7 +323,7 @@ class Client extends BaseSoapClient
     public function InactivateBill(InactivateBillRequest $InactivateBillRequest)
     {
         $parameters = new InactivateBill();
-        $parameters->InactivateBillRequest = $InactivateBillRequest;
+        $parameters->setInactivateBillRequest($InactivateBillRequest);
 
         return $this->__soapCall('InactivateBill', array('parameters' => $parameters));
     }
@@ -338,7 +338,7 @@ class Client extends BaseSoapClient
     public function EndOfDayReport(EndOfDayReportRequest $EndOfDayReportRequest)
     {
         $parameters = new EndOfDayReport();
-        $parameters->EndOfDayReportRequest = $EndOfDayReportRequest;
+        $parameters->setEndOfDayReportRequest($EndOfDayReportRequest);
 
         return $this->__soapCall('EndOfDayReport', array('parameters' => $parameters));
     }
@@ -353,7 +353,7 @@ class Client extends BaseSoapClient
     public function MakePayment(MakePaymentRequest $MakeE3PaymentRequest)
     {
         $parameters = new MakePayment();
-        $parameters->MakeE3PaymentRequest = $MakeE3PaymentRequest;
+        $parameters->setMakeE3PaymentRequest($MakeE3PaymentRequest);
 
         return $this->__soapCall('MakePayment', array('parameters' => $parameters));
     }
@@ -368,7 +368,7 @@ class Client extends BaseSoapClient
     public function MakeBlindPayment(MakePaymentRequest $MakeE3PaymentRequest)
     {
         $parameters = new MakeBlindPayment();
-        $parameters->MakeE3PaymentRequest = $MakeE3PaymentRequest;
+        $parameters->setMakeE3PaymentRequest($MakeE3PaymentRequest);
 
         return $this->__soapCall('MakeBlindPayment', array('parameters' => $parameters));
     }
@@ -383,7 +383,7 @@ class Client extends BaseSoapClient
     public function ReversePayment(ReversePaymentRequest $ReversePaymentRequest)
     {
         $parameters = new ReversePayment();
-        $parameters->ReversePaymentRequest = $ReversePaymentRequest;
+        $parameters->setReversePaymentRequest($ReversePaymentRequest);
 
         return $this->__soapCall('ReversePayment', array('parameters' => $parameters));
     }
@@ -398,7 +398,7 @@ class Client extends BaseSoapClient
     public function GetReceipt(GetReceiptRequest $GetReceiptRequest)
     {
         $parameters = new GetReceipt();
-        $parameters->GetReceiptRequest = $GetReceiptRequest;
+        $parameters->setGetReceiptRequest($GetReceiptRequest);
 
         return $this->__soapCall('GetReceipt', array('parameters' => $parameters));
     }
@@ -413,7 +413,7 @@ class Client extends BaseSoapClient
     public function GetReversalType(GetReversalTypeRequest $GetReversalTypeRequest)
     {
         $parameters = new GetReversalType();
-        $parameters->GetReversalTypeRequest = $GetReversalTypeRequest;
+        $parameters->setGetReversalTypeRequest($GetReversalTypeRequest);
 
         return $this->__soapCall('GetReversalType', array('parameters' => $parameters));
     }
@@ -428,7 +428,7 @@ class Client extends BaseSoapClient
     public function GetConvenienceFee(GetConvenienceFeeRequest $GetConvenienceFeeRequest)
     {
         $parameters = new GetConvenienceFee();
-        $parameters->GetConvenienceFeeRequest = $GetConvenienceFeeRequest;
+        $parameters->setGetConvenienceFeeRequest($GetConvenienceFeeRequest);
 
         return $this->__soapCall('GetConvenienceFee', array('parameters' => $parameters));
     }
@@ -443,7 +443,7 @@ class Client extends BaseSoapClient
     public function GetToken(GetTokenRequest $GetTokenRequest)
     {
         $parameters = new GetToken();
-        $parameters->GetTokenRequest = $GetTokenRequest;
+        $parameters->setGetTokenRequest($GetTokenRequest);
 
         return $this->__soapCall('GetToken', array('parameters' => $parameters));
     }
@@ -458,7 +458,7 @@ class Client extends BaseSoapClient
     public function LoadSecurePayBillData(LoadSecurePayBillDataRequest $request)
     {
         $parameters = new LoadSecurePayBillData();
-        $parameters->request = $request;
+        $parameters->setRequest($request);
 
         return $this->__soapCall('LoadSecurePayBillData', array('parameters' => $parameters));
     }
@@ -473,7 +473,7 @@ class Client extends BaseSoapClient
     public function LoadSecurePayMerchantBillData(LoadSecurePayMerchantBillDataRequest $request)
     {
         $parameters = new LoadSecurePayMerchantBillData();
-        $parameters->request = $request;
+        $parameters->setRequest($request);
 
         return $this->__soapCall('LoadSecurePayMerchantBillData', array('parameters' => $parameters));
     }
@@ -488,7 +488,7 @@ class Client extends BaseSoapClient
     public function LoadSecurePayDataExtended(LoadSecurePayDataExtendedRequest $request)
     {
         $parameters = new LoadSecurePayDataExtended();
-        $parameters->request = $request;
+        $parameters->setRequest($request);
 
         return $this->__soapCall('LoadSecurePayDataExtended', array('parameters' => $parameters));
     }
@@ -503,7 +503,7 @@ class Client extends BaseSoapClient
     public function GetSecurePayBillData(GetSecurePayBillDataRequest $request)
     {
         $parameters = new GetSecurePayBillData();
-        $parameters->request = $request;
+        $parameters->setRequest($request);
 
         return $this->__soapCall('GetSecurePayBillData', array('parameters' => $parameters));
     }
@@ -518,7 +518,7 @@ class Client extends BaseSoapClient
     public function UpdateSecurePayPayment(UpdateSecurePayPaymentRequest $request)
     {
         $parameters = new UpdateSecurePayPayment();
-        $parameters->request = $request;
+        $parameters->setRequest($request);
 
         return $this->__soapCall('UpdateSecurePayPayment', array('parameters' => $parameters));
     }
@@ -533,7 +533,7 @@ class Client extends BaseSoapClient
     public function SetupFutureDatedPayment(SetupFutureDatedPaymentRequest $SetupFutureDatedPaymentRequest)
     {
         $parameters = new SetupFutureDatedPayment();
-        $parameters->SetupFutureDatedPaymentRequest = $SetupFutureDatedPaymentRequest;
+        $parameters->setSetupFutureDatedPaymentRequest($SetupFutureDatedPaymentRequest);
 
         return $this->__soapCall('SetupFutureDatedPayment', array('parameters' => $parameters));
     }
@@ -548,7 +548,7 @@ class Client extends BaseSoapClient
     public function PreAuthorizePayment(PreAuthorizePaymentRequest $PreAuthorizePaymentRequest)
     {
         $parameters = new PreAuthorizePayment();
-        $parameters->PreAuthorizePaymentRequest = $PreAuthorizePaymentRequest;
+        $parameters->setPreAuthorizePaymentRequest($PreAuthorizePaymentRequest);
 
         return $this->__soapCall('PreAuthorizePayment', array('parameters' => $parameters));
     }
@@ -563,7 +563,7 @@ class Client extends BaseSoapClient
     public function CapturePreAuthorizedPayment(CapturePreAuthorizedPaymentRequest $CapturePreAuthorizedPaymentRequest)
     {
         $parameters = new CapturePreAuthorizedPayment();
-        $parameters->CapturePreAuthorizedPaymentRequest = $CapturePreAuthorizedPaymentRequest;
+        $parameters->setCapturePreAuthorizedPaymentRequest($CapturePreAuthorizedPaymentRequest);
 
         return $this->__soapCall('CapturePreAuthorizedPayment', array('parameters' => $parameters));
     }
@@ -578,7 +578,7 @@ class Client extends BaseSoapClient
     public function AddSignature(AddSignatureRequest $AddSignatureRequest)
     {
         $parameters = new AddSignature();
-        $parameters->AddSignatureRequest = $AddSignatureRequest;
+        $parameters->setAddSignatureRequest($AddSignatureRequest);
 
         return $this->__soapCall('AddSignature', array('parameters' => $parameters));
     }
@@ -593,7 +593,7 @@ class Client extends BaseSoapClient
     public function LogTermsAcceptance(LogTermsAcceptanceRequest $LogTermsAcceptanceRequest)
     {
         $parameters = new LogTermsAcceptance();
-        $parameters->LogTermsAcceptanceRequest = $LogTermsAcceptanceRequest;
+        $parameters->setLogTermsAcceptanceRequest($LogTermsAcceptanceRequest);
 
         return $this->__soapCall('LogTermsAcceptance', array('parameters' => $parameters));
     }
@@ -608,7 +608,7 @@ class Client extends BaseSoapClient
     public function DisburseFunds(DisburseFundsRequest $DisburseFundsRequest)
     {
         $parameters = new DisburseFunds();
-        $parameters->DisburseFundsRequest = $DisburseFundsRequest;
+        $parameters->setDisburseFundsRequest($DisburseFundsRequest);
 
         return $this->__soapCall('DisburseFunds', array('parameters' => $parameters));
     }

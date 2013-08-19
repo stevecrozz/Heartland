@@ -19,16 +19,6 @@ class GetReceipt
     protected $GetReceiptRequest = null;
 
     /**
-     * Constructor.
-     *
-     * @param GetReceiptRequest $getReceiptRequest
-     */
-    public function __construct(GetReceiptRequest $getReceiptRequest = null)
-    {
-        $this->GetReceiptRequest = $getReceiptRequest;
-    }
-
-    /**
      * @param GetReceiptRequest $getReceiptRequest
      *
      * @return GetReceipt

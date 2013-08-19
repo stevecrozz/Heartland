@@ -19,16 +19,6 @@ class E3DebitCardWithPINToCharge extends CardToCharge
     protected $E3DebitCardWithPIN = null;
 
     /**
-     * Constructor.
-     *
-     * @param E3DebitCardWithPINData $e3DebitCardWithPIN
-     */
-    public function __construct(E3DebitCardWithPINData $e3DebitCardWithPIN = null)
-    {
-        $this->E3DebitCardWithPIN = $e3DebitCardWithPIN;
-    }
-
-    /**
      * @param E3DebitCardWithPINData $e3DebitCardWithPIN
      *
      * @return E3DebitCardWithPINToCharge

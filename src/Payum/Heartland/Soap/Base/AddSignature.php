@@ -19,16 +19,6 @@ class AddSignature
     protected $AddSignatureRequest = null;
 
     /**
-     * Constructor.
-     *
-     * @param AddSignatureRequest $addSignatureRequest
-     */
-    public function __construct(AddSignatureRequest $addSignatureRequest = null)
-    {
-        $this->AddSignatureRequest = $addSignatureRequest;
-    }
-
-    /**
      * @param AddSignatureRequest $addSignatureRequest
      *
      * @return AddSignature

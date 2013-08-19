@@ -19,16 +19,6 @@ class DisburseFunds
     protected $DisburseFundsRequest = null;
 
     /**
-     * Constructor.
-     *
-     * @param DisburseFundsRequest $disburseFundsRequest
-     */
-    public function __construct(DisburseFundsRequest $disburseFundsRequest = null)
-    {
-        $this->DisburseFundsRequest = $disburseFundsRequest;
-    }
-
-    /**
      * @param DisburseFundsRequest $disburseFundsRequest
      *
      * @return DisburseFunds

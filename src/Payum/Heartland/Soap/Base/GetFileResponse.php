@@ -29,18 +29,6 @@ class GetFileResponse extends Response
     protected $FileName = null;
 
     /**
-     * Constructor.
-     *
-     * @param string $fileContent
-     * @param string $fileName
-     */
-    public function __construct($fileContent = null, $fileName = null)
-    {
-        $this->FileContent = $fileContent;
-        $this->FileName = $fileName;
-    }
-
-    /**
      * @param string $fileContent
      *
      * @return GetFileResponse

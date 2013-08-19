@@ -49,22 +49,6 @@ class EndOfDayReportHeader
     protected $Title = null;
 
     /**
-     * Constructor.
-     *
-     * @param string $endDateTime
-     * @param string $startDateTime
-     * @param string $merchantName
-     * @param string $title
-     */
-    public function __construct($endDateTime, $startDateTime, $merchantName = null, $title = null)
-    {
-        $this->EndDateTime = $endDateTime;
-        $this->StartDateTime = $startDateTime;
-        $this->MerchantName = $merchantName;
-        $this->Title = $title;
-    }
-
-    /**
      * @param string $endDateTime
      *
      * @return EndOfDayReportHeader

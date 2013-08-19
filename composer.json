@@ -2,7 +2,7 @@
     "name": "payum/heartland",
     "type": "library",
     "description": "Heartland pro checkout",
-    "keywords": ["payment", "heartland"],
+    "keywords": ["payment", "heartland", "src", "library", "open source"],
     "homepage": "",
     "license": "MIT",
     "authors": [

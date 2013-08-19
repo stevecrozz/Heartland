@@ -89,30 +89,6 @@ class CardHolderData
     protected $Zip = null;
 
     /**
-     * Constructor.
-     *
-     * @param string $address
-     * @param string $city
-     * @param string $email
-     * @param string $firstName
-     * @param string $lastName
-     * @param string $phone
-     * @param string $state
-     * @param string $zip
-     */
-    public function __construct($address = null, $city = null, $email = null, $firstName = null, $lastName = null, $phone = null, $state = null, $zip = null)
-    {
-        $this->Address = $address;
-        $this->City = $city;
-        $this->Email = $email;
-        $this->FirstName = $firstName;
-        $this->LastName = $lastName;
-        $this->Phone = $phone;
-        $this->State = $state;
-        $this->Zip = $zip;
-    }
-
-    /**
      * @param string $address
      *
      * @return CardHolderData

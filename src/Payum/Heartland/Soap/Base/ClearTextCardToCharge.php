@@ -19,16 +19,6 @@ class ClearTextCardToCharge extends CardToCharge
     protected $ClearTextCreditCard = null;
 
     /**
-     * Constructor.
-     *
-     * @param ClearTextCardData $clearTextCreditCard
-     */
-    public function __construct(ClearTextCardData $clearTextCreditCard = null)
-    {
-        $this->ClearTextCreditCard = $clearTextCreditCard;
-    }
-
-    /**
      * @param ClearTextCardData $clearTextCreditCard
      *
      * @return ClearTextCardToCharge

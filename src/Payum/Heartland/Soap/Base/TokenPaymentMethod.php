@@ -12,10 +12,4 @@ class TokenPaymentMethod
     const CREDIT = 'Credit';
     const DEBIT = 'Debit';
     const ACH = 'ACH';
-
-
-
-
-
-
 }

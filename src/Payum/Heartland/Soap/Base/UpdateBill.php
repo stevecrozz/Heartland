@@ -19,16 +19,6 @@ class UpdateBill
     protected $UpdateBillRequest = null;
 
     /**
-     * Constructor.
-     *
-     * @param UpdateBillRequest $updateBillRequest
-     */
-    public function __construct(UpdateBillRequest $updateBillRequest = null)
-    {
-        $this->UpdateBillRequest = $updateBillRequest;
-    }
-
-    /**
      * @param UpdateBillRequest $updateBillRequest
      *
      * @return UpdateBill

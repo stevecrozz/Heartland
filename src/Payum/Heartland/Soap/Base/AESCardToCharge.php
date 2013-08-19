@@ -19,16 +19,6 @@ class AESCardToCharge extends CardToCharge
     protected $AESCreditCard = null;
 
     /**
-     * Constructor.
-     *
-     * @param AESCardData $aESCreditCard
-     */
-    public function __construct(AESCardData $aESCreditCard = null)
-    {
-        $this->AESCreditCard = $aESCreditCard;
-    }
-
-    /**
      * @param AESCardData $aESCreditCard
      *
      * @return AESCardToCharge

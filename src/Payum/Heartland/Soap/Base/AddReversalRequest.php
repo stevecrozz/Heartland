@@ -19,21 +19,11 @@ class AddReversalRequest extends AddTransactionRequest
     protected $ReversalCode;
 
     /**
-     * Constructor.
-     *
-     * @param ReversalCode $reversalCode
-     */
-    public function __construct(ReversalCode $reversalCode)
-    {
-        $this->ReversalCode = $reversalCode;
-    }
-
-    /**
      * @param ReversalCode $reversalCode
      *
      * @return AddReversalRequest
      */
-    public function setReversalCode(ReversalCode $reversalCode)
+    public function setReversalCode($reversalCode)
     {
         $this->ReversalCode = $reversalCode;
         return $this;
@@ -44,9 +34,6 @@ class AddReversalRequest extends AddTransactionRequest
      */
     public function getReversalCode()
     {
-        if (null === $this->ReversalCode) {
-            $this->ReversalCode = new ReversalCode();
-        }
         return $this->ReversalCode;
     }
 }

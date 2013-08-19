@@ -19,16 +19,6 @@ class ActivateMachine
     protected $ActivateMachineRequest = null;
 
     /**
-     * Constructor.
-     *
-     * @param ActivateMachineRequest $activateMachineRequest
-     */
-    public function __construct(ActivateMachineRequest $activateMachineRequest = null)
-    {
-        $this->ActivateMachineRequest = $activateMachineRequest;
-    }
-
-    /**
      * @param ActivateMachineRequest $activateMachineRequest
      *
      * @return ActivateMachine

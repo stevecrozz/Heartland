@@ -99,32 +99,6 @@ class OptionalBillAmounts
     protected $OptionalAmount9 = null;
 
     /**
-     * Constructor.
-     *
-     * @param OptionalBillAmount $optionalAmount1
-     * @param OptionalBillAmount $optionalAmount2
-     * @param OptionalBillAmount $optionalAmount3
-     * @param OptionalBillAmount $optionalAmount4
-     * @param OptionalBillAmount $optionalAmount5
-     * @param OptionalBillAmount $optionalAmount6
-     * @param OptionalBillAmount $optionalAmount7
-     * @param OptionalBillAmount $optionalAmount8
-     * @param OptionalBillAmount $optionalAmount9
-     */
-    public function __construct(OptionalBillAmount $optionalAmount1 = null, OptionalBillAmount $optionalAmount2 = null, OptionalBillAmount $optionalAmount3 = null, OptionalBillAmount $optionalAmount4 = null, OptionalBillAmount $optionalAmount5 = null, OptionalBillAmount $optionalAmount6 = null, OptionalBillAmount $optionalAmount7 = null, OptionalBillAmount $optionalAmount8 = null, OptionalBillAmount $optionalAmount9 = null)
-    {
-        $this->OptionalAmount1 = $optionalAmount1;
-        $this->OptionalAmount2 = $optionalAmount2;
-        $this->OptionalAmount3 = $optionalAmount3;
-        $this->OptionalAmount4 = $optionalAmount4;
-        $this->OptionalAmount5 = $optionalAmount5;
-        $this->OptionalAmount6 = $optionalAmount6;
-        $this->OptionalAmount7 = $optionalAmount7;
-        $this->OptionalAmount8 = $optionalAmount8;
-        $this->OptionalAmount9 = $optionalAmount9;
-    }
-
-    /**
      * @param OptionalBillAmount $optionalAmount1
      *
      * @return OptionalBillAmounts

@@ -19,16 +19,6 @@ class GetConvenienceFeeResponse
     protected $GetConvenienceFeeResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param GetConvenienceFeeResponse $getConvenienceFeeResult
-     */
-    public function __construct(GetConvenienceFeeResponse $getConvenienceFeeResult = null)
-    {
-        $this->GetConvenienceFeeResult = $getConvenienceFeeResult;
-    }
-
-    /**
      * @param GetConvenienceFeeResponse $getConvenienceFeeResult
      *
      * @return GetConvenienceFeeResponse

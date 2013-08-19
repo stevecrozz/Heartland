@@ -19,16 +19,6 @@ class GetTokenResponse
     protected $GetTokenResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param GetTokenResponse $getTokenResult
-     */
-    public function __construct(GetTokenResponse $getTokenResult = null)
-    {
-        $this->GetTokenResult = $getTokenResult;
-    }
-
-    /**
      * @param GetTokenResponse $getTokenResult
      *
      * @return GetTokenResponse

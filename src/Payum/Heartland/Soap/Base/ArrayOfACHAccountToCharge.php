@@ -19,21 +19,11 @@ class ArrayOfACHAccountToCharge
     protected $ACHAccountToCharge = null;
 
     /**
-     * Constructor.
-     *
-     * @param array(ACHAccountToCharge) $aCHAccountToCharge
-     */
-    public function __construct(array(ACHAccountToCharge) $aCHAccountToCharge = null)
-    {
-        $this->ACHAccountToCharge = $aCHAccountToCharge;
-    }
-
-    /**
      * @param array(ACHAccountToCharge) $aCHAccountToCharge
      *
      * @return ArrayOfACHAccountToCharge
      */
-    public function setACHAccountToCharge(array(ACHAccountToCharge) $aCHAccountToCharge)
+    public function setACHAccountToCharge($aCHAccountToCharge)
     {
         $this->ACHAccountToCharge = $aCHAccountToCharge;
         return $this;
@@ -44,9 +34,6 @@ class ArrayOfACHAccountToCharge
      */
     public function getACHAccountToCharge()
     {
-        if (null === $this->ACHAccountToCharge) {
-            $this->ACHAccountToCharge = new array(ACHAccountToCharge)();
-        }
         return $this->ACHAccountToCharge;
     }
 }

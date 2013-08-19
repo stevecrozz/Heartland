@@ -19,16 +19,6 @@ class AddBlindPayment
     protected $AddBlindPaymentRequest = null;
 
     /**
-     * Constructor.
-     *
-     * @param AddBlindPaymentRequest $addBlindPaymentRequest
-     */
-    public function __construct(AddBlindPaymentRequest $addBlindPaymentRequest = null)
-    {
-        $this->AddBlindPaymentRequest = $addBlindPaymentRequest;
-    }
-
-    /**
      * @param AddBlindPaymentRequest $addBlindPaymentRequest
      *
      * @return AddBlindPayment

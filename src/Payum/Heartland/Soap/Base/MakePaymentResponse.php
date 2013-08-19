@@ -19,16 +19,6 @@ class MakePaymentResponse
     protected $MakePaymentResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param MakePaymentResponse $makePaymentResult
-     */
-    public function __construct(MakePaymentResponse $makePaymentResult = null)
-    {
-        $this->MakePaymentResult = $makePaymentResult;
-    }
-
-    /**
      * @param MakePaymentResponse $makePaymentResult
      *
      * @return MakePaymentResponse

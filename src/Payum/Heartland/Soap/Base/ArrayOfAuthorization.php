@@ -19,21 +19,11 @@ class ArrayOfAuthorization
     protected $Authorization = null;
 
     /**
-     * Constructor.
-     *
-     * @param array(Authorization) $authorization
-     */
-    public function __construct(array(Authorization) $authorization = null)
-    {
-        $this->Authorization = $authorization;
-    }
-
-    /**
      * @param array(Authorization) $authorization
      *
      * @return ArrayOfAuthorization
      */
-    public function setAuthorization(array(Authorization) $authorization)
+    public function setAuthorization($authorization)
     {
         $this->Authorization = $authorization;
         return $this;
@@ -44,9 +34,6 @@ class ArrayOfAuthorization
      */
     public function getAuthorization()
     {
-        if (null === $this->Authorization) {
-            $this->Authorization = new array(Authorization)();
-        }
         return $this->Authorization;
     }
 }

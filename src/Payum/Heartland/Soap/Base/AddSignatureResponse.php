@@ -19,16 +19,6 @@ class AddSignatureResponse
     protected $AddSignatureResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param Response $addSignatureResult
-     */
-    public function __construct(Response $addSignatureResult = null)
-    {
-        $this->AddSignatureResult = $addSignatureResult;
-    }
-
-    /**
      * @param Response $addSignatureResult
      *
      * @return AddSignatureResponse

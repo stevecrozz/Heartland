@@ -11,10 +11,4 @@ class SecurePayPaymentType
     const MAKEPAYMENT = 'MakePayment';
     const MAKEPAYMENTRETURNTOKEN = 'MakePaymentReturnToken';
     const RETURNTOKENONLY = 'ReturnTokenOnly';
-
-
-
-
-
-
 }

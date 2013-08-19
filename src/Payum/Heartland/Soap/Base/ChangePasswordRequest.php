@@ -19,16 +19,6 @@ class ChangePasswordRequest extends UserGroupRequest
     protected $NewPassword = null;
 
     /**
-     * Constructor.
-     *
-     * @param string $newPassword
-     */
-    public function __construct($newPassword = null)
-    {
-        $this->NewPassword = $newPassword;
-    }
-
-    /**
      * @param string $newPassword
      *
      * @return ChangePasswordRequest

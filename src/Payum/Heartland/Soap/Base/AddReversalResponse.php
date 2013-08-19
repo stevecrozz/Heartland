@@ -19,16 +19,6 @@ class AddReversalResponse
     protected $AddReversalResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param Response $addReversalResult
-     */
-    public function __construct(Response $addReversalResult = null)
-    {
-        $this->AddReversalResult = $addReversalResult;
-    }
-
-    /**
      * @param Response $addReversalResult
      *
      * @return AddReversalResponse

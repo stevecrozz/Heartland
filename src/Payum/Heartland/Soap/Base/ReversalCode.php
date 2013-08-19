@@ -88,10 +88,4 @@ class ReversalCode
     const R84 = 'R84';
     const RNVLS = 'Rnvls';
     const VOID = 'Void';
-
-
-
-
-
-
 }

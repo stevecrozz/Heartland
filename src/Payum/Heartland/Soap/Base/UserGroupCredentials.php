@@ -19,16 +19,6 @@ class UserGroupCredentials extends Credentials
     protected $UserGroupName = null;
 
     /**
-     * Constructor.
-     *
-     * @param string $userGroupName
-     */
-    public function __construct($userGroupName = null)
-    {
-        $this->UserGroupName = $userGroupName;
-    }
-
-    /**
      * @param string $userGroupName
      *
      * @return UserGroupCredentials

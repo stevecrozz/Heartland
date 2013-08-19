@@ -149,47 +149,11 @@ class EndOfDayReportRequest extends MerchantRequest
     protected $TimeZone;
 
     /**
-     * Constructor.
-     *
-     * @param Application $application
-     * @param int $endDay
-     * @param int $endHour
-     * @param int $endMinute
-     * @param int $endMonth
-     * @param int $endYear
-     * @param boolean $includePDFInResponse
-     * @param Sortable $sortBy
-     * @param int $startDay
-     * @param int $startHour
-     * @param int $startMinute
-     * @param int $startMonth
-     * @param int $startYear
-     * @param Timezone $timeZone
-     */
-    public function __construct(Application $application, $endDay, $endHour, $endMinute, $endMonth, $endYear, $includePDFInResponse, Sortable $sortBy, $startDay, $startHour, $startMinute, $startMonth, $startYear, Timezone $timeZone)
-    {
-        $this->Application = $application;
-        $this->EndDay = $endDay;
-        $this->EndHour = $endHour;
-        $this->EndMinute = $endMinute;
-        $this->EndMonth = $endMonth;
-        $this->EndYear = $endYear;
-        $this->IncludePDFInResponse = $includePDFInResponse;
-        $this->SortBy = $sortBy;
-        $this->StartDay = $startDay;
-        $this->StartHour = $startHour;
-        $this->StartMinute = $startMinute;
-        $this->StartMonth = $startMonth;
-        $this->StartYear = $startYear;
-        $this->TimeZone = $timeZone;
-    }
-
-    /**
      * @param Application $application
      *
      * @return EndOfDayReportRequest
      */
-    public function setApplication(Application $application)
+    public function setApplication($application)
     {
         $this->Application = $application;
         return $this;
@@ -200,9 +164,6 @@ class EndOfDayReportRequest extends MerchantRequest
      */
     public function getApplication()
     {
-        if (null === $this->Application) {
-            $this->Application = new Application();
-        }
         return $this->Application;
     }
 
@@ -325,7 +286,7 @@ class EndOfDayReportRequest extends MerchantRequest
      *
      * @return EndOfDayReportRequest
      */
-    public function setSortBy(Sortable $sortBy)
+    public function setSortBy($sortBy)
     {
         $this->SortBy = $sortBy;
         return $this;
@@ -336,9 +297,6 @@ class EndOfDayReportRequest extends MerchantRequest
      */
     public function getSortBy()
     {
-        if (null === $this->SortBy) {
-            $this->SortBy = new Sortable();
-        }
         return $this->SortBy;
     }
 
@@ -442,7 +400,7 @@ class EndOfDayReportRequest extends MerchantRequest
      *
      * @return EndOfDayReportRequest
      */
-    public function setTimeZone(Timezone $timeZone)
+    public function setTimeZone($timeZone)
     {
         $this->TimeZone = $timeZone;
         return $this;
@@ -453,9 +411,6 @@ class EndOfDayReportRequest extends MerchantRequest
      */
     public function getTimeZone()
     {
-        if (null === $this->TimeZone) {
-            $this->TimeZone = new Timezone();
-        }
         return $this->TimeZone;
     }
 }

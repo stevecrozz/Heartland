@@ -19,21 +19,11 @@ class ArrayOfTransactionRecord
     protected $TransactionRecord = null;
 
     /**
-     * Constructor.
-     *
-     * @param array(TransactionRecord) $transactionRecord
-     */
-    public function __construct(array(TransactionRecord) $transactionRecord = null)
-    {
-        $this->TransactionRecord = $transactionRecord;
-    }
-
-    /**
      * @param array(TransactionRecord) $transactionRecord
      *
      * @return ArrayOfTransactionRecord
      */
-    public function setTransactionRecord(array(TransactionRecord) $transactionRecord)
+    public function setTransactionRecord($transactionRecord)
     {
         $this->TransactionRecord = $transactionRecord;
         return $this;
@@ -44,9 +34,6 @@ class ArrayOfTransactionRecord
      */
     public function getTransactionRecord()
     {
-        if (null === $this->TransactionRecord) {
-            $this->TransactionRecord = new array(TransactionRecord)();
-        }
         return $this->TransactionRecord;
     }
 }

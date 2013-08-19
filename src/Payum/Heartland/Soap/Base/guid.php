@@ -20,16 +20,6 @@ class guid
     protected $_;
 
     /**
-     * Constructor.
-     *
-     * @param string $_
-     */
-    public function __construct($_)
-    {
-        $this->_ = $_;
-    }
-
-    /**
      * @param string $_
      *
      * @return guid

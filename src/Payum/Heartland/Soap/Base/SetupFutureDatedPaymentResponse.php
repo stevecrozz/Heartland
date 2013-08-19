@@ -19,16 +19,6 @@ class SetupFutureDatedPaymentResponse
     protected $SetupFutureDatedPaymentResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param SetupFutureDatedPaymentResponse $setupFutureDatedPaymentResult
-     */
-    public function __construct(SetupFutureDatedPaymentResponse $setupFutureDatedPaymentResult = null)
-    {
-        $this->SetupFutureDatedPaymentResult = $setupFutureDatedPaymentResult;
-    }
-
-    /**
      * @param SetupFutureDatedPaymentResponse $setupFutureDatedPaymentResult
      *
      * @return SetupFutureDatedPaymentResponse

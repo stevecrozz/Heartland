@@ -19,16 +19,6 @@ class Request
     protected $Credential = null;
 
     /**
-     * Constructor.
-     *
-     * @param Credentials $credential
-     */
-    public function __construct(Credentials $credential = null)
-    {
-        $this->Credential = $credential;
-    }
-
-    /**
      * @param Credentials $credential
      *
      * @return Request

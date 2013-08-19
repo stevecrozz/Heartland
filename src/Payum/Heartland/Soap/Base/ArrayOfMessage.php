@@ -19,21 +19,11 @@ class ArrayOfMessage
     protected $Message = null;
 
     /**
-     * Constructor.
-     *
-     * @param array(Message) $message
-     */
-    public function __construct(array(Message) $message = null)
-    {
-        $this->Message = $message;
-    }
-
-    /**
      * @param array(Message) $message
      *
      * @return ArrayOfMessage
      */
-    public function setMessage(array(Message) $message)
+    public function setMessage($message)
     {
         $this->Message = $message;
         return $this;
@@ -44,9 +34,6 @@ class ArrayOfMessage
      */
     public function getMessage()
     {
-        if (null === $this->Message) {
-            $this->Message = new array(Message)();
-        }
         return $this->Message;
     }
 }

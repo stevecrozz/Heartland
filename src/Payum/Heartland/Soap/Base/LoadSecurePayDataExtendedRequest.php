@@ -259,64 +259,6 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     protected $SecurePayPaymentType_ID;
 
     /**
-     * Constructor.
-     *
-     * @param int $maxFuturePaymentDays
-     * @param boolean $payorAddressIsEditable
-     * @param boolean $payorCityIsEditable
-     * @param boolean $payorCountryIsEditable
-     * @param boolean $payorEmailAddressIsEditable
-     * @param boolean $payorFirstNameIsEditable
-     * @param boolean $payorLastNameIsEditable
-     * @param boolean $payorMiddleNameIsEditable
-     * @param boolean $payorPhoneNumberIsEditable
-     * @param boolean $payorPostalCodeIsEditable
-     * @param boolean $payorStateIsEditable
-     * @param int $securePayPaymentType_ID
-     * @param string $bINRangesToDeny
-     * @param ArrayOfSecurePayBill $billData
-     * @param string $paymentMethodsToDeny
-     * @param string $payorAddress
-     * @param string $payorCity
-     * @param string $payorCountry
-     * @param string $payorEmailAddress
-     * @param string $payorFirstName
-     * @param string $payorLastName
-     * @param string $payorMiddleName
-     * @param string $payorPhoneNumber
-     * @param string $payorPostalCode
-     * @param string $payorState
-     */
-    public function __construct($maxFuturePaymentDays, $payorAddressIsEditable, $payorCityIsEditable, $payorCountryIsEditable, $payorEmailAddressIsEditable, $payorFirstNameIsEditable, $payorLastNameIsEditable, $payorMiddleNameIsEditable, $payorPhoneNumberIsEditable, $payorPostalCodeIsEditable, $payorStateIsEditable, $securePayPaymentType_ID, $bINRangesToDeny = null, ArrayOfSecurePayBill $billData = null, $paymentMethodsToDeny = null, $payorAddress = null, $payorCity = null, $payorCountry = null, $payorEmailAddress = null, $payorFirstName = null, $payorLastName = null, $payorMiddleName = null, $payorPhoneNumber = null, $payorPostalCode = null, $payorState = null)
-    {
-        $this->MaxFuturePaymentDays = $maxFuturePaymentDays;
-        $this->PayorAddressIsEditable = $payorAddressIsEditable;
-        $this->PayorCityIsEditable = $payorCityIsEditable;
-        $this->PayorCountryIsEditable = $payorCountryIsEditable;
-        $this->PayorEmailAddressIsEditable = $payorEmailAddressIsEditable;
-        $this->PayorFirstNameIsEditable = $payorFirstNameIsEditable;
-        $this->PayorLastNameIsEditable = $payorLastNameIsEditable;
-        $this->PayorMiddleNameIsEditable = $payorMiddleNameIsEditable;
-        $this->PayorPhoneNumberIsEditable = $payorPhoneNumberIsEditable;
-        $this->PayorPostalCodeIsEditable = $payorPostalCodeIsEditable;
-        $this->PayorStateIsEditable = $payorStateIsEditable;
-        $this->SecurePayPaymentType_ID = $securePayPaymentType_ID;
-        $this->BINRangesToDeny = $bINRangesToDeny;
-        $this->BillData = $billData;
-        $this->PaymentMethodsToDeny = $paymentMethodsToDeny;
-        $this->PayorAddress = $payorAddress;
-        $this->PayorCity = $payorCity;
-        $this->PayorCountry = $payorCountry;
-        $this->PayorEmailAddress = $payorEmailAddress;
-        $this->PayorFirstName = $payorFirstName;
-        $this->PayorLastName = $payorLastName;
-        $this->PayorMiddleName = $payorMiddleName;
-        $this->PayorPhoneNumber = $payorPhoneNumber;
-        $this->PayorPostalCode = $payorPostalCode;
-        $this->PayorState = $payorState;
-    }
-
-    /**
      * @param string $bINRangesToDeny
      *
      * @return LoadSecurePayDataExtendedRequest

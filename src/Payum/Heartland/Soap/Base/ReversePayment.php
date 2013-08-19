@@ -19,16 +19,6 @@ class ReversePayment
     protected $ReversePaymentRequest = null;
 
     /**
-     * Constructor.
-     *
-     * @param ReversePaymentRequest $reversePaymentRequest
-     */
-    public function __construct(ReversePaymentRequest $reversePaymentRequest = null)
-    {
-        $this->ReversePaymentRequest = $reversePaymentRequest;
-    }
-
-    /**
      * @param ReversePaymentRequest $reversePaymentRequest
      *
      * @return ReversePayment

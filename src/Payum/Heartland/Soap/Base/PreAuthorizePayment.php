@@ -19,16 +19,6 @@ class PreAuthorizePayment
     protected $PreAuthorizePaymentRequest = null;
 
     /**
-     * Constructor.
-     *
-     * @param PreAuthorizePaymentRequest $preAuthorizePaymentRequest
-     */
-    public function __construct(PreAuthorizePaymentRequest $preAuthorizePaymentRequest = null)
-    {
-        $this->PreAuthorizePaymentRequest = $preAuthorizePaymentRequest;
-    }
-
-    /**
      * @param PreAuthorizePaymentRequest $preAuthorizePaymentRequest
      *
      * @return PreAuthorizePayment

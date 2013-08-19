@@ -29,18 +29,6 @@ class ActivateMachineRequest extends AuthenticateRequest
     protected $MachineName = null;
 
     /**
-     * Constructor.
-     *
-     * @param string $activationKey
-     * @param string $machineName
-     */
-    public function __construct($activationKey = null, $machineName = null)
-    {
-        $this->ActivationKey = $activationKey;
-        $this->MachineName = $machineName;
-    }
-
-    /**
      * @param string $activationKey
      *
      * @return ActivateMachineRequest

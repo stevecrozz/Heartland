@@ -11,10 +11,4 @@ class ACHAccountType
     const UNASSIGNED = 'Unassigned';
     const PERSONAL = 'Personal';
     const BUSINESS = 'Business';
-
-
-
-
-
-
 }

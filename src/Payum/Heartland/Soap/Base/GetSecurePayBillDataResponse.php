@@ -19,16 +19,6 @@ class GetSecurePayBillDataResponse
     protected $GetSecurePayBillDataResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param GetSecurePayBillDataResponse $getSecurePayBillDataResult
-     */
-    public function __construct(GetSecurePayBillDataResponse $getSecurePayBillDataResult = null)
-    {
-        $this->GetSecurePayBillDataResult = $getSecurePayBillDataResult;
-    }
-
-    /**
      * @param GetSecurePayBillDataResponse $getSecurePayBillDataResult
      *
      * @return GetSecurePayBillDataResponse

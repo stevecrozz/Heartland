@@ -19,16 +19,6 @@ class GetReversalType
     protected $GetReversalTypeRequest = null;
 
     /**
-     * Constructor.
-     *
-     * @param GetReversalTypeRequest $getReversalTypeRequest
-     */
-    public function __construct(GetReversalTypeRequest $getReversalTypeRequest = null)
-    {
-        $this->GetReversalTypeRequest = $getReversalTypeRequest;
-    }
-
-    /**
      * @param GetReversalTypeRequest $getReversalTypeRequest
      *
      * @return GetReversalType

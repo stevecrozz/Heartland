@@ -19,16 +19,6 @@ class UpdateSecurePayPaymentResponse
     protected $UpdateSecurePayPaymentResult = null;
 
     /**
-     * Constructor.
-     *
-     * @param Response $updateSecurePayPaymentResult
-     */
-    public function __construct(Response $updateSecurePayPaymentResult = null)
-    {
-        $this->UpdateSecurePayPaymentResult = $updateSecurePayPaymentResult;
-    }
-
-    /**
      * @param Response $updateSecurePayPaymentResult
      *
      * @return UpdateSecurePayPaymentResponse

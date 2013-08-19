@@ -19,16 +19,6 @@ class LoadSecurePayMerchantBillData
     protected $request = null;
 
     /**
-     * Constructor.
-     *
-     * @param LoadSecurePayMerchantBillDataRequest $request
-     */
-    public function __construct(LoadSecurePayMerchantBillDataRequest $request = null)
-    {
-        $this->request = $request;
-    }
-
-    /**
      * @param LoadSecurePayMerchantBillDataRequest $request
      *
      * @return LoadSecurePayMerchantBillData

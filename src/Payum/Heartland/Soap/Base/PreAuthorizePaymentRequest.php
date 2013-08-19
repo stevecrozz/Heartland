@@ -59,24 +59,6 @@ class PreAuthorizePaymentRequest extends MerchantRequest
     protected $FeeAmount = null;
 
     /**
-     * Constructor.
-     *
-     * @param float $amount
-     * @param AESCardToCharge $aESCreditCardToAuthorize
-     * @param ClearTextCardToCharge $clearTextCreditCardToAuthorize
-     * @param E3CardToCharge $e3CreditCardToAuthorize
-     * @param float $feeAmount
-     */
-    public function __construct($amount, AESCardToCharge $aESCreditCardToAuthorize = null, ClearTextCardToCharge $clearTextCreditCardToAuthorize = null, E3CardToCharge $e3CreditCardToAuthorize = null, $feeAmount = null)
-    {
-        $this->Amount = $amount;
-        $this->AESCreditCardToAuthorize = $aESCreditCardToAuthorize;
-        $this->ClearTextCreditCardToAuthorize = $clearTextCreditCardToAuthorize;
-        $this->E3CreditCardToAuthorize = $e3CreditCardToAuthorize;
-        $this->FeeAmount = $feeAmount;
-    }
-
-    /**
      * @param AESCardToCharge $aESCreditCardToAuthorize
      *
      * @return PreAuthorizePaymentRequest

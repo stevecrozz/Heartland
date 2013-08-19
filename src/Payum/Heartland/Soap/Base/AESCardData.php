@@ -69,26 +69,6 @@ class AESCardData
     protected $ObfuscatedCardNumber = null;
 
     /**
-     * Constructor.
-     *
-     * @param int $expirationMonth
-     * @param int $expirationYear
-     * @param CardHolderData $cardHolderData
-     * @param string $encryptedTrackData
-     * @param string $keySerialNumber
-     * @param string $obfuscatedCardNumber
-     */
-    public function __construct($expirationMonth, $expirationYear, CardHolderData $cardHolderData = null, $encryptedTrackData = null, $keySerialNumber = null, $obfuscatedCardNumber = null)
-    {
-        $this->ExpirationMonth = $expirationMonth;
-        $this->ExpirationYear = $expirationYear;
-        $this->CardHolderData = $cardHolderData;
-        $this->EncryptedTrackData = $encryptedTrackData;
-        $this->KeySerialNumber = $keySerialNumber;
-        $this->ObfuscatedCardNumber = $obfuscatedCardNumber;
-    }
-
-    /**
      * @param CardHolderData $cardHolderData
      *
      * @return AESCardData

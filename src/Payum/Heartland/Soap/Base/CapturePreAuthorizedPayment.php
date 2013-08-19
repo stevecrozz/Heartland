@@ -19,16 +19,6 @@ class CapturePreAuthorizedPayment
     protected $CapturePreAuthorizedPaymentRequest = null;
 
     /**
-     * Constructor.
-     *
-     * @param CapturePreAuthorizedPaymentRequest $capturePreAuthorizedPaymentRequest
-     */
-    public function __construct(CapturePreAuthorizedPaymentRequest $capturePreAuthorizedPaymentRequest = null)
-    {
-        $this->CapturePreAuthorizedPaymentRequest = $capturePreAuthorizedPaymentRequest;
-    }
-
-    /**
      * @param CapturePreAuthorizedPaymentRequest $capturePreAuthorizedPaymentRequest
      *
      * @return CapturePreAuthorizedPayment

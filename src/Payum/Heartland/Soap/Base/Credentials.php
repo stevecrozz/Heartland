@@ -39,20 +39,6 @@ class Credentials
     protected $UserName = null;
 
     /**
-     * Constructor.
-     *
-     * @param int $applicationID
-     * @param string $password
-     * @param string $userName
-     */
-    public function __construct($applicationID = null, $password = null, $userName = null)
-    {
-        $this->ApplicationID = $applicationID;
-        $this->Password = $password;
-        $this->UserName = $userName;
-    }
-
-    /**
      * @param int $applicationID
      *
      * @return Credentials

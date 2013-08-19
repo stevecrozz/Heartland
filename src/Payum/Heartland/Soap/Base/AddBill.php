@@ -19,16 +19,6 @@ class AddBill
     protected $AddBillRequest = null;
 
     /**
-     * Constructor.
-     *
-     * @param AddBillRequest $addBillRequest
-     */
-    public function __construct(AddBillRequest $addBillRequest = null)
-    {
-        $this->AddBillRequest = $addBillRequest;
-    }
-
-    /**
      * @param AddBillRequest $addBillRequest
      *
      * @return AddBill

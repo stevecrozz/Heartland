@@ -39,20 +39,6 @@ class CardToCharge
     protected $ExpectedFeeAmount;
 
     /**
-     * Constructor.
-     *
-     * @param float $amount
-     * @param CardProcessingMethod $cardProcessingMethod
-     * @param float $expectedFeeAmount
-     */
-    public function __construct($amount, CardProcessingMethod $cardProcessingMethod, $expectedFeeAmount)
-    {
-        $this->Amount = $amount;
-        $this->CardProcessingMethod = $cardProcessingMethod;
-        $this->ExpectedFeeAmount = $expectedFeeAmount;
-    }
-
-    /**
      * @param float $amount
      *
      * @return CardToCharge
@@ -76,7 +62,7 @@ class CardToCharge
      *
      * @return CardToCharge
      */
-    public function setCardProcessingMethod(CardProcessingMethod $cardProcessingMethod)
+    public function setCardProcessingMethod($cardProcessingMethod)
     {
         $this->CardProcessingMethod = $cardProcessingMethod;
         return $this;
@@ -87,9 +73,6 @@ class CardToCharge
      */
     public function getCardProcessingMethod()
     {
-        if (null === $this->CardProcessingMethod) {
-            $this->CardProcessingMethod = new CardProcessingMethod();
-        }
         return $this->CardProcessingMethod;
     }
 

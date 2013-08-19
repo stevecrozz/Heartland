@@ -49,22 +49,6 @@ class AuthenticateRequest
     protected $UserName = null;
 
     /**
-     * Constructor.
-     *
-     * @param int $applicationID
-     * @param string $macAddress
-     * @param string $password
-     * @param string $userName
-     */
-    public function __construct($applicationID = null, $macAddress = null, $password = null, $userName = null)
-    {
-        $this->ApplicationID = $applicationID;
-        $this->MacAddress = $macAddress;
-        $this->Password = $password;
-        $this->UserName = $userName;
-    }
-
-    /**
      * @param int $applicationID
      *
      * @return AuthenticateRequest

@@ -19,16 +19,6 @@ class LoadSecurePayDataExtended
     protected $request = null;
 
     /**
-     * Constructor.
-     *
-     * @param LoadSecurePayDataExtendedRequest $request
-     */
-    public function __construct(LoadSecurePayDataExtendedRequest $request = null)
-    {
-        $this->request = $request;
-    }
-
-    /**
      * @param LoadSecurePayDataExtendedRequest $request
      *
      * @return LoadSecurePayDataExtended
