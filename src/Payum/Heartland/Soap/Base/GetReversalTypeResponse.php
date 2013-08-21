@@ -6,8 +6,18 @@ namespace Payum\Heartland\Soap\Base;
  * This class is generated from the following WSDL:
  * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
  */
-class GetReversalTypeResponse
+class GetReversalTypeResponse extends Response
 {
+    /**
+     * ReversalType
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: tns:ReversalType
+     *
+     * @var ReversalType
+     */
+    protected $ReversalType;
+
     /**
      * GetReversalTypeResult
      *
@@ -17,6 +27,25 @@ class GetReversalTypeResponse
      * @var GetReversalTypeResponse
      */
     protected $GetReversalTypeResult = null;
+
+    /**
+     * @param ReversalType $reversalType
+     *
+     * @return GetReversalTypeResponse
+     */
+    public function setReversalType($reversalType)
+    {
+        $this->ReversalType = $reversalType;
+        return $this;
+    }
+
+    /**
+     * @return ReversalType
+     */
+    public function getReversalType()
+    {
+        return $this->ReversalType;
+    }
 
     /**
      * @param GetReversalTypeResponse $getReversalTypeResult
