@@ -20,7 +20,6 @@ class MakeBlindPaymentTest extends BaseTestCase
         $payment = $this->getPayment();
 
         $request = new MakePaymentRequest();
-        $request->setCredential($this->api->getMerchantCredentials($GLOBALS['__PAYUM_HEARTLAND_MERCHANT_NAME']));
         $billTransaction = new BillTransaction();
 //        $billTransaction->setBillType('Bill Payment');
         $billTransaction->setID1(1);
@@ -43,6 +42,7 @@ class MakeBlindPaymentTest extends BaseTestCase
         $request->getTransaction()->setTransactionDate(null);
 
         $paymentDetails = new PaymentDetails();
+        $paymentDetails->setMerchantName($GLOBALS['__PAYUM_HEARTLAND_MERCHANT_NAME']);
         $paymentDetails->setRequest($request);
 
         $captureRequest = new CaptureRequest($paymentDetails);

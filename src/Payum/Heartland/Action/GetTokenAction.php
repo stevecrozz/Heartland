@@ -5,6 +5,7 @@ use Payum\Action\ActionInterface;
 use Payum\ApiAwareInterface;
 use Payum\Bridge\Spl\ArrayObject;
 use Payum\Exception\UnsupportedApiException;
+use Payum\Heartland\Model\PaymentDetails;
 use Payum\Heartland\Soap\Base\GetTokenRequest;
 use Payum\Request\CaptureRequest;
 use Payum\Request\UserInputRequiredInteractiveRequest;
@@ -22,6 +23,7 @@ class GetTokenAction extends BaseAction
             throw RequestNotSupportedException::createActionNotSupported($this, $request);
         }
 
+        /** @var PaymentDetails $model */
         $model = $request->getModel();
 //
 //        if (null != $model['response_code']) {
@@ -32,7 +34,11 @@ class GetTokenAction extends BaseAction
 //            throw new UserInputRequiredInteractiveRequest(array('amount', 'card_num', 'exp_date'));
 //        }
 
-        $response = $this->api->getSoapClient()->GetToken($model->getRequest());
+        /** @var GetTokenRequest $soapRequest */
+        $soapRequest = $model->getRequest();
+        $soapRequest->setCredential($this->api->getMerchantCredentials($model->getMerchantName()));
+
+        $response = $this->api->getSoapClient()->GetToken($soapRequest);
         $model->setResponse($response->getGetTokenResult());
     }
 

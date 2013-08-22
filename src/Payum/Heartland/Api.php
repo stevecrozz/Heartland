@@ -21,7 +21,6 @@ class Api
         'application_id' => null,
         'username' => null,
         'password' => null,
-//        'merchant_name' => null,
     );
 
     /**

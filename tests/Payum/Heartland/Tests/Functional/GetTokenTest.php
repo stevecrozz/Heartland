@@ -21,7 +21,6 @@ class GetTokenTest extends BaseTestCase
         $payment = $this->getPayment();
 
         $request = new GetTokenRequest();
-        $request->setCredential($this->api->getMerchantCredentials($GLOBALS['__PAYUM_HEARTLAND_MERCHANT_NAME']));
         $request->setACHAccountType(ACHAccountType::PERSONAL);
         $request->setACHDepositType(ACHDepositType::CHECKING);
         $request->getAccountHolderData()->setAddress('123 Main Street');
@@ -40,6 +39,7 @@ class GetTokenTest extends BaseTestCase
         $request->setRoutingNumber('062202574');
 
         $paymentDetails = new PaymentDetails();
+        $paymentDetails->setMerchantName($GLOBALS['__PAYUM_HEARTLAND_MERCHANT_NAME']);
         $paymentDetails->setRequest($request);
 
         $captureRequest = new CaptureRequest($paymentDetails);

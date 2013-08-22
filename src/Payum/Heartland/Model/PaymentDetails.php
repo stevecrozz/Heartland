@@ -34,6 +34,11 @@ class PaymentDetails implements \ArrayAccess, \IteratorAggregate
     protected $transactionId;
 
     /**
+     * @var string
+     */
+    protected $merchantName;
+
+    /**
      * Set request
      *
      * @param mixed $request
@@ -185,6 +190,28 @@ class PaymentDetails implements \ArrayAccess, \IteratorAggregate
     }
 
     /**
+     * Set merchantName
+     *
+     * @param string $merchantName
+     * @return PaymentDetails
+     */
+    public function setMerchantName($merchantName)
+    {
+        $this->merchantName = $merchantName;
+        return $this;
+    }
+
+    /**
+     * Get merchantName
+     *
+     * @return string
+     */
+    public function getMerchantName()
+    {
+        return $this->merchantName;
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function offsetExists($offset)
@@ -192,7 +219,7 @@ class PaymentDetails implements \ArrayAccess, \IteratorAggregate
         return
             in_array($offset, $this->getSupportedArrayFields()) &&
             property_exists($this, $offset)
-        ;
+            ;
     }
 
     /**

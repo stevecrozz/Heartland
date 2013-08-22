@@ -5,6 +5,7 @@ use Payum\Action\ActionInterface;
 use Payum\ApiAwareInterface;
 use Payum\Bridge\Spl\ArrayObject;
 use Payum\Exception\UnsupportedApiException;
+use Payum\Heartland\Model\PaymentDetails;
 use Payum\Heartland\Soap\Base\MakePaymentRequest;
 use Payum\Request\CaptureRequest;
 use Payum\Request\UserInputRequiredInteractiveRequest;
@@ -22,6 +23,7 @@ class MakeBlindPaymentAction extends BaseAction
             throw RequestNotSupportedException::createActionNotSupported($this, $request);
         }
 
+        /** @var PaymentDetails $model */
         $model = $request->getModel();
 //
 //        if (null != $model['response_code']) {
@@ -31,8 +33,12 @@ class MakeBlindPaymentAction extends BaseAction
 //        if (false == ($model['amount'] && $model['card_num'] && $model['exp_date'])) {
 //            throw new UserInputRequiredInteractiveRequest(array('amount', 'card_num', 'exp_date'));
 //        }
+        /** @var MakePaymentRequest $soapRequest */
+        $soapRequest = $model->getRequest();
 
-        $response = $this->api->getSoapClient()->MakeBlindPayment($model->getRequest());
+        $soapRequest->setCredential($this->api->getMerchantCredentials($model->getMerchantName()));
+
+        $response = $this->api->getSoapClient()->MakeBlindPayment($soapRequest);
         $model->setResponse($response->getMakeBlindPaymentResult());
     }
 
