@@ -4,6 +4,14 @@ Heartland
 
 Its provide API connection to http://www.heartlandpaymentsystems.com
 
+Install Dependencies
+--------------------
+
+``` bash
+$> curl http://getcomposer.org/installer | php
+$> php composer.phar install # --dev # for dev dependencies
+```
+
 To regenerate SOAP classes
 
 ```
