@@ -1,9 +1,9 @@
 <?php
 namespace Payum\Heartland\Tests\Action;
 
-use Payum\AuthorizeNet\Aim\Action\StatusAction;
-use Payum\AuthorizeNet\Aim\Bridge\AuthorizeNet\AuthorizeNetAIM;
-use Payum\AuthorizeNet\Aim\Model\PaymentDetails;
+use Payum\Heartland\Action\StatusAction;
+use Payum\Heartland\Bridge\AuthorizeNet\AuthorizeNetAIM;
+use Payum\Heartland\Model\PaymentDetails;
 use Payum\Bridge\Spl\ArrayObject;
 use Payum\Request\BinaryMaskStatusRequest;
 use Payum\Request\StatusRequestInterface;
@@ -15,7 +15,7 @@ class StatusActionTest extends \PHPUnit_Framework_TestCase
      */
     public function shouldImplementActionInterface()
     {
-        $rc = new \ReflectionClass('Payum\AuthorizeNet\Aim\Action\StatusAction');
+        $rc = new \ReflectionClass('Payum\Heartland\Action\StatusAction');
         
         $this->assertTrue($rc->implementsInterface('Payum\Action\ActionInterface'));
     }
@@ -105,29 +105,12 @@ class StatusActionTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function shouldMarkUnknownIfResponseCodeUnknown()
-    {
-        $action = new StatusAction();
-
-        $model = new ArrayObject();
-        $model['response_code'] = 'foobarbaz';
-
-        $request = new BinaryMaskStatusRequest($model);
-
-        $action->execute($request);
-
-        $this->assertTrue($request->isUnknown());
-    }
-
-    /**
-     * @test
-     */
     public function shouldMarkSuccessStatusIfArrayObjectHasResponseCodeApproved()
     {
         $action = new StatusAction();
 
         $model = new ArrayObject();
-        $model['response_code'] = \AuthorizeNetAIM_Response::APPROVED;
+        $model['isSuccessful'] = true;
 
         $request = new BinaryMaskStatusRequest($model);
 
@@ -144,47 +127,13 @@ class StatusActionTest extends \PHPUnit_Framework_TestCase
         $action = new StatusAction();
 
         $model = new ArrayObject();
-        $model['response_code'] = \AuthorizeNetAIM_Response::ERROR;
+        $model['isSuccessful'] = false;
 
         $request = new BinaryMaskStatusRequest($model);
 
         $action->execute($request);
 
         $this->assertTrue($request->isFailed());
-    }
-
-    /**
-     * @test
-     */
-    public function shouldMarkPendingStatusIfArrayObjectHasResponseCodeHeld()
-    {
-        $action = new StatusAction();
-
-        $model = new ArrayObject();
-        $model['response_code'] = \AuthorizeNetAIM_Response::HELD;
-
-        $request = new BinaryMaskStatusRequest($model);
-
-        $action->execute($request);
-
-        $this->assertTrue($request->isPending());
-    }
-
-    /**
-     * @test
-     */
-    public function shouldMarkCanceledStatusIfArrayObjectHasResponseCodeDeclined()
-    {
-        $action = new StatusAction();
-
-        $model = new ArrayObject();
-        $model['response_code'] = \AuthorizeNetAIM_Response::DECLINED;
-
-        $request = new BinaryMaskStatusRequest($model);
-
-        $action->execute($request);
-
-        $this->assertTrue($request->isCanceled());
     }
     
     /**

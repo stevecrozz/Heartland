@@ -1,8 +1,7 @@
 <?php
 namespace Payum\Heartland\Tests;
 
-use Payum\AuthorizeNet\Aim\Bridge\AuthorizeNet\AuthorizeNetAIM;
-use Payum\AuthorizeNet\Aim\PaymentFactory;
+use Payum\Heartland\PaymentFactory;
 
 class PaymentFactoryTest extends \PHPUnit_Framework_TestCase
 {
@@ -16,29 +15,29 @@ class PaymentFactoryTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($rc->isInstantiable());
     }
 
-//    /**
-//     * @test
-//     */
-//    public function shouldAllowCreatePaymentWithStandardActionsAdded()
-//    {
-//        $apiMock = $this->createAuthorizeNetAIMMock();
-//
-//        $payment = PaymentFactory::create($apiMock);
-//
-//        $this->assertInstanceOf('Payum\Payment', $payment);
-//
-//        $this->assertAttributeCount(1, 'apis', $payment);
-//
-//        $actions = $this->readAttribute($payment, 'actions');
-//        $this->assertInternalType('array', $actions);
-//        $this->assertNotEmpty($actions);
-//    }
-//
-//    /**
-//     * @return \PHPUnit_Framework_MockObject_MockObject|AuthorizeNetAIM
-//     */
-//    protected function createAuthorizeNetAIMMock()
-//    {
-//        return $this->getMock('Payum\AuthorizeNet\Aim\Bridge\AuthorizeNet\AuthorizeNetAIM', array(), array(), '', false);
-//    }
+    /**
+     * @test
+     */
+    public function shouldAllowCreatePaymentWithStandardActionsAdded()
+    {
+        $apiMock = $this->createApiMock();
+
+        $payment = PaymentFactory::create($apiMock);
+
+        $this->assertInstanceOf('Payum\Payment', $payment);
+
+        $this->assertAttributeCount(1, 'apis', $payment);
+
+        $actions = $this->readAttribute($payment, 'actions');
+        $this->assertInternalType('array', $actions);
+        $this->assertNotEmpty($actions);
+    }
+
+    /**
+     * @return \PHPUnit_Framework_MockObject_MockObject | \Payum\Heartland\Api
+     */
+    protected function createApiMock()
+    {
+        return $this->getMock('Payum\Heartland\Api', array(), array(), '', false);
+    }
 }

@@ -9,8 +9,7 @@ class SoapClient extends Client
     public function getClassMap()
     {
         $map = parent::getClassMap();
-        $map['GetTokenResult'] = '\Payum\Heartland\Soap\GetTokenResult';
-        $map['GetTokenResponse'] = '\Payum\Heartland\Soap\GetTokenResponse';
+//        $map['GetTokenResult'] = '\Payum\Heartland\Soap\GetTokenResult';
         return $map;
     }
 }

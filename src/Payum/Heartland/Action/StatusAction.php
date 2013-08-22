@@ -17,40 +17,20 @@ class StatusAction implements ActionInterface
         if (false == $this->supports($request)) {
             throw RequestNotSupportedException::createActionNotSupported($this, $request);
         }
-        
+
         $model = ArrayObject::ensureArrayObject($request->getModel());
 
-        if (null === $model['response_code']) {
+        if (null === $model['isSuccessful']) {
             $request->markNew();
-
             return;
         }
         
-        if (\AuthorizeNetAIM_Response::APPROVED == $model['response_code']) {
+        if ($model['isSuccessful']) {
             $request->markSuccess();
-            
-            return;
-        }
-
-        if (\AuthorizeNetAIM_Response::DECLINED == $model['response_code']) {
-            $request->markCanceled();
-
-            return;
-        }
-
-        if (\AuthorizeNetAIM_Response::ERROR == $model['response_code']) {
+        } else {
             $request->markFailed();
-
-            return;
         }
-
-        if (\AuthorizeNetAIM_Response::HELD == $model['response_code']) {
-            $request->markPending();
-
-            return;
-        }
-        
-        $request->markUnknown();
+        return;
     }
 
     /**

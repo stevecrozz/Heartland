@@ -5,6 +5,15 @@ namespace Payum\Heartland\Model;
 class PaymentDetails implements \ArrayAccess, \IteratorAggregate
 {
     /**
+     * @var mixed
+     */
+    protected $request;
+
+    /**
+     * @var mixed
+     */
+    protected $response;
+    /**
      * @var string
      */
     protected $messages;
@@ -23,6 +32,69 @@ class PaymentDetails implements \ArrayAccess, \IteratorAggregate
      * @var int
      */
     protected $transactionId;
+
+    /**
+     * Set request
+     *
+     * @param mixed $request
+     * @return PaymentDetails
+     */
+    public function setRequest($request)
+    {
+        $this->request = $request;
+
+        return $this;
+    }
+
+    /**
+     * Get request
+     *
+     * @return mixed
+     */
+    public function getRequest()
+    {
+        return $this->request;
+    }
+
+    /**
+     * Set response
+     *
+     * @param mixed $response
+     * @return PaymentDetails
+     */
+    public function setResponse($response)
+    {
+        $this->response = $response;
+        $this->setIsSuccessful($response->getIsSuccessful());
+        // TODO fix it
+        $messagesArr = array();
+        if ($messages = $response->getMessages()) {
+            if ($message = $messages->getMessage()) {
+                /** @var \Payum\Heartland\Soap\Base\Message $message */
+//                foreach ($messages->getMessage() as $message) {
+                    $messagesArr[] = $message->getCode() . ' - ' . $message->getMessageDescription();
+//                }
+            }
+        }
+
+        $this->setMessages(implode(' | ', $messagesArr));
+
+        if (method_exists($response, 'getTransaction_ID')) {
+            $this->setTransactionId($response->getTransaction_ID());
+        }
+
+        return $this;
+    }
+
+    /**
+     * Get response
+     *
+     * @return mixed
+     */
+    public function getResponse()
+    {
+        return $this->response;
+    }
 
     /**
      * Set messages

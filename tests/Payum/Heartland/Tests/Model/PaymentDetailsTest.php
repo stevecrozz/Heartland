@@ -1,7 +1,7 @@
 <?php
 namespace Payum\Heartland\Tests\Model;
 
-use Payum\AuthorizeNet\Aim\Model\PaymentDetails;
+use Payum\Heartland\Model\PaymentDetails;
 
 class PaymentDetailsTest extends \PHPUnit_Framework_TestCase
 {
@@ -10,7 +10,7 @@ class PaymentDetailsTest extends \PHPUnit_Framework_TestCase
      */
     public function shouldImplementArrayAccessInterface()
     {
-        $rc = new \ReflectionClass('Payum\AuthorizeNet\Aim\Model\PaymentDetails');
+        $rc = new \ReflectionClass('Payum\Heartland\Model\PaymentDetails');
         
         $this->assertTrue($rc->implementsInterface('ArrayAccess'));
     }
@@ -20,7 +20,7 @@ class PaymentDetailsTest extends \PHPUnit_Framework_TestCase
      */
     public function shouldImplementIteratorAggregateInterface()
     {
-        $rc = new \ReflectionClass('Payum\AuthorizeNet\Aim\Model\PaymentDetails');
+        $rc = new \ReflectionClass('Payum\Heartland\Model\PaymentDetails');
 
         $this->assertTrue($rc->implementsInterface('IteratorAggregate'));
     }
@@ -40,9 +40,10 @@ class PaymentDetailsTest extends \PHPUnit_Framework_TestCase
     {
         $paymentDetails = new PaymentDetails;
 
-        $paymentDetails['response_code'] = 'foo';
-        $this->assertEquals('foo', $paymentDetails['response_code']);
-        $this->assertEquals('foo', $paymentDetails->getResponseCode());
+        $paymentDetails['isSuccessful'] = true;
+        $paymentDetails['messages'] = 'sdfgsdfgdgf';
+        $this->assertEquals('sdfgsdfgdgf', $paymentDetails['messages']);
+        $this->assertTrue($paymentDetails->getIsSuccessful());
 
         $paymentDetails->setAmount('baz');
         $this->assertEquals('baz', $paymentDetails->getAmount());
@@ -68,9 +69,9 @@ class PaymentDetailsTest extends \PHPUnit_Framework_TestCase
     {
         $paymentDetails = new PaymentDetails;
 
-        $paymentDetails['response_code'] = 'foo';
+        $paymentDetails['messages'] = 'foo';
         $paymentDetails->setAmount('baz');
         
-        $this->assertEquals(array('response_code' => 'foo', 'amount' => 'baz'), iterator_to_array($paymentDetails));
+        $this->assertEquals(array('messages' => 'foo', 'amount' => 'baz'), iterator_to_array($paymentDetails));
     }
 }

@@ -4,6 +4,9 @@ namespace Payum\Heartland;
 use Buzz\Client\ClientInterface;
 use Payum\Exception\Http\HttpException;
 use Payum\Exception\InvalidArgumentException;
+use Payum\Exception\LogicException;
+use Payum\Heartland\Soap\Base\Credentials;
+use Payum\Heartland\Soap\Base\MerchantCredentials;
 
 /**
  * @author Ton Sharp <Forma-PRO@66ton99.org.ua>
@@ -15,37 +18,52 @@ class Api
      */
     protected $options = array(
         'env' => '',
+        'application_id' => null,
         'username' => null,
         'password' => null,
-        'partner' => null,
-        'vendor' => null,
-        'tender' => 'C',
-        'trxtype' => 'S',
+//        'merchant_name' => null,
     );
 
     /**
+     * @var string
+     */
+    protected $soapClientClassName;
+
+    /**
+     * @var array
+     */
+    protected $soapOptions = array();
+
+    /**
+     * @var \Payum\Heartland\SoapClient
+     */
+    protected $soapClient = null;
+
+    /**
      * @param array $options
+     * @param string $soapClientClassName
      *
      * @throw InvalidArgumentException
      */
-    public function __construct(array $options)
+    public function __construct(array $options, $soapClientClassName = 'Payum\Heartland\SoapClient')
     {
         $this->options = array_replace($this->options, $options);
+        $this->soapClientClassName = $soapClientClassName;
 
-        if (true == empty($this->options['username'])) {
+        if (empty($this->options['application_id'])) {
+            throw new InvalidArgumentException('The application ID option must be set.');
+        }
+        if (empty($this->options['username'])) {
             throw new InvalidArgumentException('The username option must be set.');
         }
-        if (true == empty($this->options['password'])) {
+        if (empty($this->options['password'])) {
             throw new InvalidArgumentException('The password option must be set.');
         }
-        if (true == empty($this->options['partner'])) {
-            throw new InvalidArgumentException('The partner option must be set.');
-        }
-        if (true == empty($this->options['vendor'])) {
-            throw new InvalidArgumentException('The vendor option must be set.');
-        }
-        if (!in_array($this->options['env'], array('', 'testing.', 'staging.'))) {
-            throw new InvalidArgumentException('The env option invalid: ' . var_export($this->options['env'], true));
+        if (!in_array($this->options['env'], array('', 'testing', 'staging'))) {
+            throw new InvalidArgumentException(
+                "The env option '{$this->options['env']}' is invalid, possible variants: " .
+                    var_export($this->options['env'], true)
+            );
         }
     }
 
@@ -54,13 +72,80 @@ class Api
      */
     protected function getApiEndpoint()
     {
-        $host = 'heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc';
-        $env = $this->options['env'];
+        $host = 'heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?wsdl';
+        $env = empty($this->options['env'])?'':$this->options['env'].'.';
 
         return sprintf(
             'https://%s%s',
             $env,
             $host
         );
+    }
+
+    /**
+     * @param array $options
+     *
+     * @return Api $this
+     */
+    public function setSoapOptions(array $options)
+    {
+        $this->soapOptions = $options;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getSoapOptions()
+    {
+        return $this->soapOptions;
+    }
+
+    /**
+     * @param Credentials $credential
+     * @return Credentials
+     */
+    protected function fillCredential(Credentials $credential)
+    {
+        $credential->setApplicationID($this->options['application_id']);
+        $credential->setUserName($this->options['username']);
+        $credential->setPassword($this->options['password']);
+        return $credential;
+    }
+
+    /**
+     * @return Credentials
+     */
+    public function getCredentials()
+    {
+        $credential = new Credentials();
+        return $this->fillCredential($credential);
+    }
+
+    /**
+     * @param string $merchantName
+     *
+     * @return Credentials
+     */
+    public function getMerchantCredentials($merchantName)
+    {
+        $credential = new MerchantCredentials();
+        $credential->setMerchantName($merchantName);
+        return $this->fillCredential($credential);
+    }
+
+    /**
+     * @return \Payum\Heartland\SoapClient
+     */
+    public function getSoapClient()
+    {
+        if (null === $this->soapClient) {
+            $class = $this->soapClientClassName;
+            $this->soapClient = new $class($this->getApiEndpoint(), $this->getSoapOptions());
+        }
+        if (!($this->soapClient instanceof \SoapClient)) {
+            throw new LogicException('Client should extend \SoapClient');
+        }
+        return $this->soapClient;
     }
 }
