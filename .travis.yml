@@ -5,5 +5,7 @@ php:
   - 5.4
 
 before_script:
+  - ssh-keyscan -t rsa,dsa github.com 2>&1 | sort -u - ~/.ssh/known_hosts > ~/.ssh/tmp_hosts
+  - cat ~/.ssh/tmp_hosts >> ~/.ssh/known_hosts
   - curl http://getcomposer.org/installer | php
   - php composer.phar install --prefer-source --dev -n
