@@ -15,7 +15,5 @@
         <field name="transactionId" column="transaction_id" type="integer" nullable="true" />
 
         <field name="merchantName" column="merchant_name" type="string" nullable="true" />
-
-        <field name="createdAt" column="created_at" type="datetime" nullable="false" />
     </mapped-superclass>
 </doctrine-mapping>
