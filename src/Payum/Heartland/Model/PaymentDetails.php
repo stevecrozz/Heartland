@@ -2,6 +2,8 @@
 
 namespace Payum\Heartland\Model;
 
+use Payum\Heartland\Soap\Base\ArrayOfMessage;
+
 class PaymentDetails implements \ArrayAccess, \IteratorAggregate
 {
     /**
@@ -74,11 +76,17 @@ class PaymentDetails implements \ArrayAccess, \IteratorAggregate
         // TODO fix it
         $messagesArr = array();
         if ($messages = $response->getMessages()) {
-            if ($message = $messages->getMessage()) {
+            if ($sebMessages = $messages->getMessage()) {
+                if (!is_array($sebMessages)) {
+                    $sebMessages = array($sebMessages);
+                }
                 /** @var \Payum\Heartland\Soap\Base\Message $message */
-//                foreach ($messages->getMessage() as $message) {
+                foreach ($sebMessages as $message) {
+                    if ($message instanceof ArrayOfMessage) {
+                        $message = $message->getMessage();
+                    }
                     $messagesArr[] = $message->getCode() . ' - ' . $message->getMessageDescription();
-//                }
+                }
             }
         }
 

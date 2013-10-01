@@ -80,7 +80,7 @@ class MakeBlindPaymentTest extends BaseTestCase
         $model = $statusRequest->getModel();
 
         $this->assertFalse($statusRequest->isSuccess());
-        $this->assertNotEmpty($model['transactionId']);
+        $this->assertEmpty($model['transactionId']);
         $this->assertNotEmpty($model['messages']);
         $this->assertTrue(is_string($model['messages']));
 

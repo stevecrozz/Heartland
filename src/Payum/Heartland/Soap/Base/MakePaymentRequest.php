@@ -254,7 +254,7 @@ class MakePaymentRequest extends MerchantRequest
      *
      * @return MakePaymentRequest
      */
-    public function setTokensToCharge(ArrayOfTokenToCharge $tokensToCharge)
+    public function setTokensToCharge( $tokensToCharge)
     {
         $this->TokensToCharge = $tokensToCharge;
         return $this;
