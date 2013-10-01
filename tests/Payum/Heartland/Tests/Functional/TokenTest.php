@@ -26,7 +26,7 @@ class TokenTest extends BaseTestCase
     /**
      * @var double
      */
-    protected static $amount = 1.00;
+    protected static $amount = 10.00;
 
     /**
      * @var double
