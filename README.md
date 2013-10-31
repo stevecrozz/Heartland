@@ -12,7 +12,7 @@ $> curl http://getcomposer.org/installer | php
 $> php composer.phar install # --dev # for dev dependencies
 ```
 
-To regenerate SOAP classes
+To regenerate SOAP classes. Dev dependencies must be installed first.
 
 ```
 php vendor/besimple/wsdl2php/bin/wsdl2php.php \

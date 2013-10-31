@@ -25,14 +25,6 @@ class GetTokenAction extends BaseAction
 
         /** @var PaymentDetails $model */
         $model = $request->getModel();
-//
-//        if (null != $model['response_code']) {
-//            return;
-//        }
-//
-//        if (false == ($model['amount'] && $model['card_num'] && $model['exp_date'])) {
-//            throw new UserInputRequiredInteractiveRequest(array('amount', 'card_num', 'exp_date'));
-//        }
 
         /** @var GetTokenRequest $soapRequest */
         $soapRequest = $model->getRequest();

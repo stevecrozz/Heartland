@@ -25,17 +25,9 @@ class MakeBlindPaymentAction extends BaseAction
 
         /** @var PaymentDetails $model */
         $model = $request->getModel();
-//
-//        if (null != $model['response_code']) {
-//            return;
-//        }
-//
-//        if (false == ($model['amount'] && $model['card_num'] && $model['exp_date'])) {
-//            throw new UserInputRequiredInteractiveRequest(array('amount', 'card_num', 'exp_date'));
-//        }
+
         /** @var MakePaymentRequest $soapRequest */
         $soapRequest = $model->getRequest();
-
         $soapRequest->setCredential($this->api->getMerchantCredentials($model->getMerchantName()));
 
         $response = $this->api->getSoapClient()->MakeBlindPayment($soapRequest);
