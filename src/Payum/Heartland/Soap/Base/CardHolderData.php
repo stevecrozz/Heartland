@@ -59,6 +59,16 @@ class CardHolderData
     protected $LastName = null;
 
     /**
+     * NameOnCard
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $NameOnCard = null;
+
+    /**
      * Phone
      *
      * The property has the following characteristics/restrictions:
@@ -96,6 +106,7 @@ class CardHolderData
     public function setAddress($address)
     {
         $this->Address = $address;
+
         return $this;
     }
 
@@ -115,6 +126,7 @@ class CardHolderData
     public function setCity($city)
     {
         $this->City = $city;
+
         return $this;
     }
 
@@ -134,6 +146,7 @@ class CardHolderData
     public function setEmail($email)
     {
         $this->Email = $email;
+
         return $this;
     }
 
@@ -153,6 +166,7 @@ class CardHolderData
     public function setFirstName($firstName)
     {
         $this->FirstName = $firstName;
+
         return $this;
     }
 
@@ -172,6 +186,7 @@ class CardHolderData
     public function setLastName($lastName)
     {
         $this->LastName = $lastName;
+
         return $this;
     }
 
@@ -184,6 +199,26 @@ class CardHolderData
     }
 
     /**
+     * @param string $nameOnCard
+     *
+     * @return CardHolderData
+     */
+    public function setNameOnCard($nameOnCard)
+    {
+        $this->NameOnCard = $nameOnCard;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNameOnCard()
+    {
+        return $this->NameOnCard;
+    }
+
+    /**
      * @param string $phone
      *
      * @return CardHolderData
@@ -191,6 +226,7 @@ class CardHolderData
     public function setPhone($phone)
     {
         $this->Phone = $phone;
+
         return $this;
     }
 
@@ -210,6 +246,7 @@ class CardHolderData
     public function setState($state)
     {
         $this->State = $state;
+
         return $this;
     }
 
@@ -229,6 +266,7 @@ class CardHolderData
     public function setZip($zip)
     {
         $this->Zip = $zip;
+
         return $this;
     }
 

@@ -26,6 +26,7 @@ class ArrayOfMessage
     public function setMessage($message)
     {
         $this->Message = $message;
+
         return $this;
     }
 

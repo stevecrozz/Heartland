@@ -26,6 +26,7 @@ class ChangePasswordResponse
     public function setChangePasswordResult(Response $changePasswordResult)
     {
         $this->ChangePasswordResult = $changePasswordResult;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class ChangePasswordResponse
         if (null === $this->ChangePasswordResult) {
             $this->ChangePasswordResult = new Response();
         }
+
         return $this->ChangePasswordResult;
     }
 }

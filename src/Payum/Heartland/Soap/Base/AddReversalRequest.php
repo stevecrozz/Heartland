@@ -26,6 +26,7 @@ class AddReversalRequest extends AddTransactionRequest
     public function setReversalCode($reversalCode)
     {
         $this->ReversalCode = $reversalCode;
+
         return $this;
     }
 

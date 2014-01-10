@@ -26,6 +26,7 @@ class UserGroupCredentials extends Credentials
     public function setUserGroupName($userGroupName)
     {
         $this->UserGroupName = $userGroupName;
+
         return $this;
     }
 

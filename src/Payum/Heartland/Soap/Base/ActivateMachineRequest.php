@@ -36,6 +36,7 @@ class ActivateMachineRequest extends AuthenticateRequest
     public function setActivationKey($activationKey)
     {
         $this->ActivationKey = $activationKey;
+
         return $this;
     }
 
@@ -55,6 +56,7 @@ class ActivateMachineRequest extends AuthenticateRequest
     public function setMachineName($machineName)
     {
         $this->MachineName = $machineName;
+
         return $this;
     }
 

@@ -136,6 +136,7 @@ class Authorization
     public function setAddToBatchReferenceNumber($addToBatchReferenceNumber)
     {
         $this->AddToBatchReferenceNumber = $addToBatchReferenceNumber;
+
         return $this;
     }
 
@@ -155,6 +156,7 @@ class Authorization
     public function setAmount($amount)
     {
         $this->Amount = $amount;
+
         return $this;
     }
 
@@ -174,6 +176,7 @@ class Authorization
     public function setAuthCode($authCode)
     {
         $this->AuthCode = $authCode;
+
         return $this;
     }
 
@@ -193,6 +196,7 @@ class Authorization
     public function setAuthorizationType($authorizationType)
     {
         $this->AuthorizationType = $authorizationType;
+
         return $this;
     }
 
@@ -212,6 +216,7 @@ class Authorization
     public function setGateway($gateway)
     {
         $this->Gateway = $gateway;
+
         return $this;
     }
 
@@ -231,6 +236,7 @@ class Authorization
     public function setGatewayBatchID($gatewayBatchID)
     {
         $this->GatewayBatchID = $gatewayBatchID;
+
         return $this;
     }
 
@@ -250,6 +256,7 @@ class Authorization
     public function setGatewayDescription($gatewayDescription)
     {
         $this->GatewayDescription = $gatewayDescription;
+
         return $this;
     }
 
@@ -269,6 +276,7 @@ class Authorization
     public function setMaskedAccountNumber($maskedAccountNumber)
     {
         $this->MaskedAccountNumber = $maskedAccountNumber;
+
         return $this;
     }
 
@@ -288,6 +296,7 @@ class Authorization
     public function setMaskedRoutingNumber($maskedRoutingNumber)
     {
         $this->MaskedRoutingNumber = $maskedRoutingNumber;
+
         return $this;
     }
 
@@ -307,6 +316,7 @@ class Authorization
     public function setPaymentMethod($paymentMethod)
     {
         $this->PaymentMethod = $paymentMethod;
+
         return $this;
     }
 
@@ -326,6 +336,7 @@ class Authorization
     public function setReferenceAuthorizationID($referenceAuthorizationID)
     {
         $this->ReferenceAuthorizationID = $referenceAuthorizationID;
+
         return $this;
     }
 
@@ -345,6 +356,7 @@ class Authorization
     public function setReferenceNumber($referenceNumber)
     {
         $this->ReferenceNumber = $referenceNumber;
+
         return $this;
     }
 

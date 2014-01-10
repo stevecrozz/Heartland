@@ -12,7 +12,7 @@ class AddSignature
      * AddSignatureRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q51:AddSignatureRequest
+     * - SchemaType: q55:AddSignatureRequest
      *
      * @var AddSignatureRequest
      */
@@ -26,6 +26,7 @@ class AddSignature
     public function setAddSignatureRequest(AddSignatureRequest $addSignatureRequest)
     {
         $this->AddSignatureRequest = $addSignatureRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class AddSignature
         if (null === $this->AddSignatureRequest) {
             $this->AddSignatureRequest = new AddSignatureRequest();
         }
+
         return $this->AddSignatureRequest;
     }
 }

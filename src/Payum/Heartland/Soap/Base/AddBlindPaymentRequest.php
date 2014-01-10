@@ -26,6 +26,7 @@ class AddBlindPaymentRequest extends AddPaymentRequest
     public function setDuplicatesAllowed($duplicatesAllowed)
     {
         $this->DuplicatesAllowed = $duplicatesAllowed;
+
         return $this;
     }
 

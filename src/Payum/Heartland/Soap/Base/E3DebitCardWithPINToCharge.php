@@ -26,6 +26,7 @@ class E3DebitCardWithPINToCharge extends CardToCharge
     public function setE3DebitCardWithPIN(E3DebitCardWithPINData $e3DebitCardWithPIN)
     {
         $this->E3DebitCardWithPIN = $e3DebitCardWithPIN;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class E3DebitCardWithPINToCharge extends CardToCharge
         if (null === $this->E3DebitCardWithPIN) {
             $this->E3DebitCardWithPIN = new E3DebitCardWithPINData();
         }
+
         return $this->E3DebitCardWithPIN;
     }
 }

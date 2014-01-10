@@ -26,6 +26,7 @@ class GetReversalTypeRequest extends MerchantRequest
     public function setTransaction_ID($transaction_ID)
     {
         $this->Transaction_ID = $transaction_ID;
+
         return $this;
     }
 

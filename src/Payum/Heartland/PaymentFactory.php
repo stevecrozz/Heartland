@@ -20,14 +20,9 @@ abstract class PaymentFactory
 
         $payment->addApi($api);
 //
-//        $payment->addExtension(new EndlessCycleDetectorExtension);4
-//
         $payment->addAction(new MakeBlindPaymentAction);
         $payment->addAction(new GetTokenAction);
         $payment->addAction(new StatusAction);
-//        $payment->addAction(new CaptureDetailsAggregatedModelAction);
-//        $payment->addAction(new SyncDetailsAggregatedModelAction);
-//        $payment->addAction(new StatusDetailsAggregatedModelAction);
 
         return $payment;
     }

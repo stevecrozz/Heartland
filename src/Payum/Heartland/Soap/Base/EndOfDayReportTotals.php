@@ -66,6 +66,7 @@ class EndOfDayReportTotals
     public function setNumberOfPayments($numberOfPayments)
     {
         $this->NumberOfPayments = $numberOfPayments;
+
         return $this;
     }
 
@@ -85,6 +86,7 @@ class EndOfDayReportTotals
     public function setNumberOfReversals($numberOfReversals)
     {
         $this->NumberOfReversals = $numberOfReversals;
+
         return $this;
     }
 
@@ -104,6 +106,7 @@ class EndOfDayReportTotals
     public function setTotalPaymentAmount($totalPaymentAmount)
     {
         $this->TotalPaymentAmount = $totalPaymentAmount;
+
         return $this;
     }
 
@@ -123,6 +126,7 @@ class EndOfDayReportTotals
     public function setTotalReversalAmount($totalReversalAmount)
     {
         $this->TotalReversalAmount = $totalReversalAmount;
+
         return $this;
     }
 
@@ -142,6 +146,7 @@ class EndOfDayReportTotals
     public function setUserGroupName($userGroupName)
     {
         $this->UserGroupName = $userGroupName;
+
         return $this;
     }
 

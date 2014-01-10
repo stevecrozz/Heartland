@@ -26,6 +26,7 @@ class UserGroupRequest
     public function setCredential(UserGroupCredentials $credential)
     {
         $this->Credential = $credential;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class UserGroupRequest
         if (null === $this->Credential) {
             $this->Credential = new UserGroupCredentials();
         }
+
         return $this->Credential;
     }
 }

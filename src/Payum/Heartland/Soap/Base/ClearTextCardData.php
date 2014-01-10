@@ -66,6 +66,7 @@ class ClearTextCardData
     public function setCardHolderData(CardHolderData $cardHolderData)
     {
         $this->CardHolderData = $cardHolderData;
+
         return $this;
     }
 
@@ -77,6 +78,7 @@ class ClearTextCardData
         if (null === $this->CardHolderData) {
             $this->CardHolderData = new CardHolderData();
         }
+
         return $this->CardHolderData;
     }
 
@@ -88,6 +90,7 @@ class ClearTextCardData
     public function setCardNumber($cardNumber)
     {
         $this->CardNumber = $cardNumber;
+
         return $this;
     }
 
@@ -107,6 +110,7 @@ class ClearTextCardData
     public function setExpirationMonth($expirationMonth)
     {
         $this->ExpirationMonth = $expirationMonth;
+
         return $this;
     }
 
@@ -126,6 +130,7 @@ class ClearTextCardData
     public function setExpirationYear($expirationYear)
     {
         $this->ExpirationYear = $expirationYear;
+
         return $this;
     }
 
@@ -145,6 +150,7 @@ class ClearTextCardData
     public function setVerificationCode($verificationCode)
     {
         $this->VerificationCode = $verificationCode;
+
         return $this;
     }
 

@@ -26,6 +26,7 @@ class ArrayOfEndOfDayReportTotalForCashier
     public function setEndOfDayReportTotalForCashier($endOfDayReportTotalForCashier)
     {
         $this->EndOfDayReportTotalForCashier = $endOfDayReportTotalForCashier;
+
         return $this;
     }
 

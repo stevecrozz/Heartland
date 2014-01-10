@@ -36,6 +36,7 @@ class LogTermsAcceptanceRequest extends Request
     public function setDeviceID($deviceID)
     {
         $this->DeviceID = $deviceID;
+
         return $this;
     }
 
@@ -55,6 +56,7 @@ class LogTermsAcceptanceRequest extends Request
     public function setVersion($version)
     {
         $this->Version = $version;
+
         return $this;
     }
 

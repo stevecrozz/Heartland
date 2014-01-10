@@ -36,6 +36,7 @@ class E3DebitCardWithPINData extends E3CardData
     public function setKeySerialNumber($keySerialNumber)
     {
         $this->KeySerialNumber = $keySerialNumber;
+
         return $this;
     }
 
@@ -55,6 +56,7 @@ class E3DebitCardWithPINData extends E3CardData
     public function setPINBlock($pINBlock)
     {
         $this->PINBlock = $pINBlock;
+
         return $this;
     }
 

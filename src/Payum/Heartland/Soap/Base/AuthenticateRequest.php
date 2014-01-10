@@ -56,6 +56,7 @@ class AuthenticateRequest
     public function setApplicationID($applicationID)
     {
         $this->ApplicationID = $applicationID;
+
         return $this;
     }
 
@@ -75,6 +76,7 @@ class AuthenticateRequest
     public function setMacAddress($macAddress)
     {
         $this->MacAddress = $macAddress;
+
         return $this;
     }
 
@@ -94,6 +96,7 @@ class AuthenticateRequest
     public function setPassword($password)
     {
         $this->Password = $password;
+
         return $this;
     }
 
@@ -113,6 +116,7 @@ class AuthenticateRequest
     public function setUserName($userName)
     {
         $this->UserName = $userName;
+
         return $this;
     }
 

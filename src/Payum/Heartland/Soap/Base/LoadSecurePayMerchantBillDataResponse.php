@@ -12,7 +12,7 @@ class LoadSecurePayMerchantBillDataResponse
      * LoadSecurePayMerchantBillDataResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q38:LoadSecurePayBillDataResponse
+     * - SchemaType: q42:LoadSecurePayBillDataResponse
      *
      * @var LoadSecurePayBillDataResponse
      */
@@ -26,6 +26,7 @@ class LoadSecurePayMerchantBillDataResponse
     public function setLoadSecurePayMerchantBillDataResult(LoadSecurePayBillDataResponse $loadSecurePayMerchantBillDataResult)
     {
         $this->LoadSecurePayMerchantBillDataResult = $loadSecurePayMerchantBillDataResult;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class LoadSecurePayMerchantBillDataResponse
         if (null === $this->LoadSecurePayMerchantBillDataResult) {
             $this->LoadSecurePayMerchantBillDataResult = new LoadSecurePayBillDataResponse();
         }
+
         return $this->LoadSecurePayMerchantBillDataResult;
     }
 }

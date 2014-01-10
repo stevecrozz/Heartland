@@ -26,6 +26,7 @@ class ArrayOfBillTransaction
     public function setBillTransaction($billTransaction)
     {
         $this->BillTransaction = $billTransaction;
+
         return $this;
     }
 

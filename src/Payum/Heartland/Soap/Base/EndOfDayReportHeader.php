@@ -56,6 +56,7 @@ class EndOfDayReportHeader
     public function setEndDateTime($endDateTime)
     {
         $this->EndDateTime = $endDateTime;
+
         return $this;
     }
 
@@ -75,6 +76,7 @@ class EndOfDayReportHeader
     public function setMerchantName($merchantName)
     {
         $this->MerchantName = $merchantName;
+
         return $this;
     }
 
@@ -94,6 +96,7 @@ class EndOfDayReportHeader
     public function setStartDateTime($startDateTime)
     {
         $this->StartDateTime = $startDateTime;
+
         return $this;
     }
 
@@ -113,6 +116,7 @@ class EndOfDayReportHeader
     public function setTitle($title)
     {
         $this->Title = $title;
+
         return $this;
     }
 

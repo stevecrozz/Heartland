@@ -12,7 +12,7 @@ class MakePayment
      * MakeE3PaymentRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q21:MakePaymentRequest
+     * - SchemaType: q23:MakePaymentRequest
      *
      * @var MakePaymentRequest
      */
@@ -26,6 +26,7 @@ class MakePayment
     public function setMakeE3PaymentRequest(MakePaymentRequest $makeE3PaymentRequest)
     {
         $this->MakeE3PaymentRequest = $makeE3PaymentRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class MakePayment
         if (null === $this->MakeE3PaymentRequest) {
             $this->MakeE3PaymentRequest = new MakePaymentRequest();
         }
+
         return $this->MakeE3PaymentRequest;
     }
 }

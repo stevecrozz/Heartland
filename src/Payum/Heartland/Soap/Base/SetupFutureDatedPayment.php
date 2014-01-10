@@ -12,7 +12,7 @@ class SetupFutureDatedPayment
      * SetupFutureDatedPaymentRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q45:SetupFutureDatedPaymentRequest
+     * - SchemaType: q49:SetupFutureDatedPaymentRequest
      *
      * @var SetupFutureDatedPaymentRequest
      */
@@ -26,6 +26,7 @@ class SetupFutureDatedPayment
     public function setSetupFutureDatedPaymentRequest(SetupFutureDatedPaymentRequest $setupFutureDatedPaymentRequest)
     {
         $this->SetupFutureDatedPaymentRequest = $setupFutureDatedPaymentRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class SetupFutureDatedPayment
         if (null === $this->SetupFutureDatedPaymentRequest) {
             $this->SetupFutureDatedPaymentRequest = new SetupFutureDatedPaymentRequest();
         }
+
         return $this->SetupFutureDatedPaymentRequest;
     }
 }

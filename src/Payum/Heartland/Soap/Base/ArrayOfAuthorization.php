@@ -26,6 +26,7 @@ class ArrayOfAuthorization
     public function setAuthorization($authorization)
     {
         $this->Authorization = $authorization;
+
         return $this;
     }
 

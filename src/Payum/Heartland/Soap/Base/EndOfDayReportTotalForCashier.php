@@ -66,6 +66,7 @@ class EndOfDayReportTotalForCashier
     public function setFirstname($firstname)
     {
         $this->Firstname = $firstname;
+
         return $this;
     }
 
@@ -85,6 +86,7 @@ class EndOfDayReportTotalForCashier
     public function setLastname($lastname)
     {
         $this->Lastname = $lastname;
+
         return $this;
     }
 
@@ -104,6 +106,7 @@ class EndOfDayReportTotalForCashier
     public function setRowID($rowID)
     {
         $this->RowID = $rowID;
+
         return $this;
     }
 
@@ -123,6 +126,7 @@ class EndOfDayReportTotalForCashier
     public function setTotals(EndOfDayReportTotals $totals)
     {
         $this->Totals = $totals;
+
         return $this;
     }
 
@@ -134,6 +138,7 @@ class EndOfDayReportTotalForCashier
         if (null === $this->Totals) {
             $this->Totals = new EndOfDayReportTotals();
         }
+
         return $this->Totals;
     }
 
@@ -145,6 +150,7 @@ class EndOfDayReportTotalForCashier
     public function setUsername($username)
     {
         $this->Username = $username;
+
         return $this;
     }
 

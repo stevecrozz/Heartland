@@ -12,7 +12,7 @@ class DisburseFunds
      * DisburseFundsRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q55:DisburseFundsRequest
+     * - SchemaType: q59:DisburseFundsRequest
      *
      * @var DisburseFundsRequest
      */
@@ -26,6 +26,7 @@ class DisburseFunds
     public function setDisburseFundsRequest(DisburseFundsRequest $disburseFundsRequest)
     {
         $this->DisburseFundsRequest = $disburseFundsRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class DisburseFunds
         if (null === $this->DisburseFundsRequest) {
             $this->DisburseFundsRequest = new DisburseFundsRequest();
         }
+
         return $this->DisburseFundsRequest;
     }
 }

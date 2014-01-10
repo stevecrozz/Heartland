@@ -66,6 +66,7 @@ class BillIdentifier
     public function setBillType($billType)
     {
         $this->BillType = $billType;
+
         return $this;
     }
 
@@ -85,6 +86,7 @@ class BillIdentifier
     public function setID1($iD1)
     {
         $this->ID1 = $iD1;
+
         return $this;
     }
 
@@ -104,6 +106,7 @@ class BillIdentifier
     public function setID2($iD2)
     {
         $this->ID2 = $iD2;
+
         return $this;
     }
 
@@ -123,6 +126,7 @@ class BillIdentifier
     public function setID3($iD3)
     {
         $this->ID3 = $iD3;
+
         return $this;
     }
 
@@ -142,6 +146,7 @@ class BillIdentifier
     public function setID4($iD4)
     {
         $this->ID4 = $iD4;
+
         return $this;
     }
 

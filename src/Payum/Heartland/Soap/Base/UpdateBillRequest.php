@@ -36,6 +36,7 @@ class UpdateBillRequest extends MerchantRequest
     public function setBill(Bill $bill)
     {
         $this->Bill = $bill;
+
         return $this;
     }
 
@@ -47,6 +48,7 @@ class UpdateBillRequest extends MerchantRequest
         if (null === $this->Bill) {
             $this->Bill = new Bill();
         }
+
         return $this->Bill;
     }
 
@@ -58,6 +60,7 @@ class UpdateBillRequest extends MerchantRequest
     public function setTimeZone($timeZone)
     {
         $this->TimeZone = $timeZone;
+
         return $this;
     }
 

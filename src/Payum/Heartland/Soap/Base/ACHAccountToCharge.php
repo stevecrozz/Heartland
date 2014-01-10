@@ -106,6 +106,7 @@ class ACHAccountToCharge extends CardToCharge
     public function setAccountNumber($accountNumber)
     {
         $this->AccountNumber = $accountNumber;
+
         return $this;
     }
 
@@ -125,6 +126,7 @@ class ACHAccountToCharge extends CardToCharge
     public function setAccountType($accountType)
     {
         $this->AccountType = $accountType;
+
         return $this;
     }
 
@@ -144,6 +146,7 @@ class ACHAccountToCharge extends CardToCharge
     public function setDepositType($depositType)
     {
         $this->DepositType = $depositType;
+
         return $this;
     }
 
@@ -163,6 +166,7 @@ class ACHAccountToCharge extends CardToCharge
     public function setDocumentID($documentID)
     {
         $this->DocumentID = $documentID;
+
         return $this;
     }
 
@@ -182,6 +186,7 @@ class ACHAccountToCharge extends CardToCharge
     public function setInternalAccountNumber($internalAccountNumber)
     {
         $this->InternalAccountNumber = $internalAccountNumber;
+
         return $this;
     }
 
@@ -201,6 +206,7 @@ class ACHAccountToCharge extends CardToCharge
     public function setPayorName($payorName)
     {
         $this->PayorName = $payorName;
+
         return $this;
     }
 
@@ -220,6 +226,7 @@ class ACHAccountToCharge extends CardToCharge
     public function setRoutingNumber($routingNumber)
     {
         $this->RoutingNumber = $routingNumber;
+
         return $this;
     }
 
@@ -239,6 +246,7 @@ class ACHAccountToCharge extends CardToCharge
     public function setSubmitDate($submitDate)
     {
         $this->SubmitDate = $submitDate;
+
         return $this;
     }
 
@@ -258,6 +266,7 @@ class ACHAccountToCharge extends CardToCharge
     public function setTrackingNumber($trackingNumber)
     {
         $this->TrackingNumber = $trackingNumber;
+
         return $this;
     }
 

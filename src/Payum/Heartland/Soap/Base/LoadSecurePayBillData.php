@@ -12,7 +12,7 @@ class LoadSecurePayBillData
      * request
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q35:LoadSecurePayBillDataRequest
+     * - SchemaType: q39:LoadSecurePayBillDataRequest
      *
      * @var LoadSecurePayBillDataRequest
      */
@@ -26,6 +26,7 @@ class LoadSecurePayBillData
     public function setRequest(LoadSecurePayBillDataRequest $request)
     {
         $this->request = $request;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class LoadSecurePayBillData
         if (null === $this->request) {
             $this->request = new LoadSecurePayBillDataRequest();
         }
+
         return $this->request;
     }
 }

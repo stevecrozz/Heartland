@@ -32,7 +32,7 @@ class GetConvenienceFeeResponse extends Response
      * GetConvenienceFeeResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q32:GetConvenienceFeeResponse
+     * - SchemaType: q36:GetConvenienceFeeResponse
      *
      * @var GetConvenienceFeeResponse
      */
@@ -46,6 +46,7 @@ class GetConvenienceFeeResponse extends Response
     public function setConvenienceFee($convenienceFee)
     {
         $this->ConvenienceFee = $convenienceFee;
+
         return $this;
     }
 
@@ -65,6 +66,7 @@ class GetConvenienceFeeResponse extends Response
     public function setPaymentMethod($paymentMethod)
     {
         $this->PaymentMethod = $paymentMethod;
+
         return $this;
     }
 
@@ -84,6 +86,7 @@ class GetConvenienceFeeResponse extends Response
     public function setGetConvenienceFeeResult(GetConvenienceFeeResponse $getConvenienceFeeResult)
     {
         $this->GetConvenienceFeeResult = $getConvenienceFeeResult;
+
         return $this;
     }
 
@@ -95,6 +98,7 @@ class GetConvenienceFeeResponse extends Response
         if (null === $this->GetConvenienceFeeResult) {
             $this->GetConvenienceFeeResult = new GetConvenienceFeeResponse();
         }
+
         return $this->GetConvenienceFeeResult;
     }
 }

@@ -106,6 +106,7 @@ class GetTokenRequest extends MerchantRequest
     public function setACHAccountType($aCHAccountType)
     {
         $this->ACHAccountType = $aCHAccountType;
+
         return $this;
     }
 
@@ -125,6 +126,7 @@ class GetTokenRequest extends MerchantRequest
     public function setACHDepositType($aCHDepositType)
     {
         $this->ACHDepositType = $aCHDepositType;
+
         return $this;
     }
 
@@ -144,6 +146,7 @@ class GetTokenRequest extends MerchantRequest
     public function setAccountHolderData(CardHolderData $accountHolderData)
     {
         $this->AccountHolderData = $accountHolderData;
+
         return $this;
     }
 
@@ -155,6 +158,7 @@ class GetTokenRequest extends MerchantRequest
         if (null === $this->AccountHolderData) {
             $this->AccountHolderData = new CardHolderData();
         }
+
         return $this->AccountHolderData;
     }
 
@@ -166,6 +170,7 @@ class GetTokenRequest extends MerchantRequest
     public function setAccountNumber($accountNumber)
     {
         $this->AccountNumber = $accountNumber;
+
         return $this;
     }
 
@@ -185,6 +190,7 @@ class GetTokenRequest extends MerchantRequest
     public function setExpirationMonth($expirationMonth)
     {
         $this->ExpirationMonth = $expirationMonth;
+
         return $this;
     }
 
@@ -204,6 +210,7 @@ class GetTokenRequest extends MerchantRequest
     public function setExpirationYear($expirationYear)
     {
         $this->ExpirationYear = $expirationYear;
+
         return $this;
     }
 
@@ -223,6 +230,7 @@ class GetTokenRequest extends MerchantRequest
     public function setPaymentMethod($paymentMethod)
     {
         $this->PaymentMethod = $paymentMethod;
+
         return $this;
     }
 
@@ -242,6 +250,7 @@ class GetTokenRequest extends MerchantRequest
     public function setRoutingNumber($routingNumber)
     {
         $this->RoutingNumber = $routingNumber;
+
         return $this;
     }
 
@@ -261,6 +270,7 @@ class GetTokenRequest extends MerchantRequest
     public function setSkipAccountVerify($skipAccountVerify)
     {
         $this->SkipAccountVerify = $skipAccountVerify;
+
         return $this;
     }
 

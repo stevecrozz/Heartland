@@ -46,6 +46,7 @@ class CardToCharge
     public function setAmount($amount)
     {
         $this->Amount = $amount;
+
         return $this;
     }
 
@@ -65,6 +66,7 @@ class CardToCharge
     public function setCardProcessingMethod($cardProcessingMethod)
     {
         $this->CardProcessingMethod = $cardProcessingMethod;
+
         return $this;
     }
 
@@ -84,6 +86,7 @@ class CardToCharge
     public function setExpectedFeeAmount($expectedFeeAmount)
     {
         $this->ExpectedFeeAmount = $expectedFeeAmount;
+
         return $this;
     }
 

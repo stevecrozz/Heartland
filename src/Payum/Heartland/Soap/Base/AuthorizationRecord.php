@@ -46,6 +46,7 @@ class AuthorizationRecord extends Authorization
     public function setAuthorizationID($authorizationID)
     {
         $this->AuthorizationID = $authorizationID;
+
         return $this;
     }
 
@@ -65,6 +66,7 @@ class AuthorizationRecord extends Authorization
     public function setNetAmount($netAmount)
     {
         $this->NetAmount = $netAmount;
+
         return $this;
     }
 
@@ -84,6 +86,7 @@ class AuthorizationRecord extends Authorization
     public function setOriginalAuthorizationID($originalAuthorizationID)
     {
         $this->OriginalAuthorizationID = $originalAuthorizationID;
+
         return $this;
     }
 

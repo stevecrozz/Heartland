@@ -23,5 +23,7 @@ php vendor/besimple/wsdl2php/bin/wsdl2php.php \
     -osrc \
     --backup \
     --instance_on_getter \
-    --access=protected
+    --access=protected \
+    --empty_parameter_name \
+    --wsdl2java_style
 ```

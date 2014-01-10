@@ -36,6 +36,7 @@ class BillDataElement
     public function setIsVisible($isVisible)
     {
         $this->IsVisible = $isVisible;
+
         return $this;
     }
 
@@ -55,6 +56,7 @@ class BillDataElement
     public function setValue($value)
     {
         $this->Value = $value;
+
         return $this;
     }
 

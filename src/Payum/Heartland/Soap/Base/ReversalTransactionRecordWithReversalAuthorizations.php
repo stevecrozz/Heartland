@@ -26,6 +26,7 @@ class ReversalTransactionRecordWithReversalAuthorizations extends TransactionRec
     public function setReversalAuthorizations(ArrayOfReversalAuthorizationRecord $reversalAuthorizations)
     {
         $this->ReversalAuthorizations = $reversalAuthorizations;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class ReversalTransactionRecordWithReversalAuthorizations extends TransactionRec
         if (null === $this->ReversalAuthorizations) {
             $this->ReversalAuthorizations = new ArrayOfReversalAuthorizationRecord();
         }
+
         return $this->ReversalAuthorizations;
     }
 }

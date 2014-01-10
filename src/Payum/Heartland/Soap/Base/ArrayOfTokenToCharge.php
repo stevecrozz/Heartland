@@ -26,6 +26,7 @@ class ArrayOfTokenToCharge
     public function setTokenToCharge($tokenToCharge)
     {
         $this->TokenToCharge = $tokenToCharge;
+
         return $this;
     }
 

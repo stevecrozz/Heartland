@@ -7,6 +7,7 @@ use Payum\Exception\InvalidArgumentException;
 use Payum\Exception\LogicException;
 use Payum\Heartland\Soap\Base\Credentials;
 use Payum\Heartland\Soap\Base\MerchantCredentials;
+use \SoapClient;
 
 /**
  * @author Ton Sharp <Forma-PRO@66ton99.org.ua>
@@ -142,8 +143,8 @@ class Api
             $class = $this->soapClientClassName;
             $this->soapClient = new $class($this->getApiEndpoint(), $this->getSoapOptions());
         }
-        if (!($this->soapClient instanceof \SoapClient)) {
-            throw new LogicException('Client should extend \SoapClient');
+        if (!($this->soapClient instanceof SoapClient)) {
+            throw new LogicException('Client should extend SoapClient class');
         }
         return $this->soapClient;
     }

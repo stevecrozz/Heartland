@@ -12,7 +12,7 @@ class GetReceiptResponse extends GetFileResponse
      * GetReceiptResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q28:GetReceiptResponse
+     * - SchemaType: q32:GetReceiptResponse
      *
      * @var GetReceiptResponse
      */
@@ -26,6 +26,7 @@ class GetReceiptResponse extends GetFileResponse
     public function setGetReceiptResult($getReceiptResult)
     {
         $this->GetReceiptResult = $getReceiptResult;
+
         return $this;
     }
 

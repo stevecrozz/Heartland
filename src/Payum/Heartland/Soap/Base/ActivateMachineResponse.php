@@ -26,6 +26,7 @@ class ActivateMachineResponse
     public function setActivateMachineResult(Response $activateMachineResult)
     {
         $this->ActivateMachineResult = $activateMachineResult;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class ActivateMachineResponse
         if (null === $this->ActivateMachineResult) {
             $this->ActivateMachineResult = new Response();
         }
+
         return $this->ActivateMachineResult;
     }
 }

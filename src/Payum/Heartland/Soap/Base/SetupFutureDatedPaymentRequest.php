@@ -39,6 +39,26 @@ class SetupFutureDatedPaymentRequest extends MerchantRequest
     protected $ClearTextCreditCardsToCharge = null;
 
     /**
+     * EndUserBrowserType
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $EndUserBrowserType = null;
+
+    /**
+     * EndUserIPAddress
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $EndUserIPAddress = null;
+
+    /**
      * TokensToCharge
      *
      * The property has the following characteristics/restrictions:
@@ -66,6 +86,7 @@ class SetupFutureDatedPaymentRequest extends MerchantRequest
     public function setACHAccountsToCharge(ArrayOfACHAccountToCharge $aCHAccountsToCharge)
     {
         $this->ACHAccountsToCharge = $aCHAccountsToCharge;
+
         return $this;
     }
 
@@ -77,6 +98,7 @@ class SetupFutureDatedPaymentRequest extends MerchantRequest
         if (null === $this->ACHAccountsToCharge) {
             $this->ACHAccountsToCharge = new ArrayOfACHAccountToCharge();
         }
+
         return $this->ACHAccountsToCharge;
     }
 
@@ -88,6 +110,7 @@ class SetupFutureDatedPaymentRequest extends MerchantRequest
     public function setBillTransactions(ArrayOfBillTransaction $billTransactions)
     {
         $this->BillTransactions = $billTransactions;
+
         return $this;
     }
 
@@ -99,6 +122,7 @@ class SetupFutureDatedPaymentRequest extends MerchantRequest
         if (null === $this->BillTransactions) {
             $this->BillTransactions = new ArrayOfBillTransaction();
         }
+
         return $this->BillTransactions;
     }
 
@@ -110,6 +134,7 @@ class SetupFutureDatedPaymentRequest extends MerchantRequest
     public function setClearTextCreditCardsToCharge(ArrayOfClearTextCardToCharge $clearTextCreditCardsToCharge)
     {
         $this->ClearTextCreditCardsToCharge = $clearTextCreditCardsToCharge;
+
         return $this;
     }
 
@@ -121,7 +146,48 @@ class SetupFutureDatedPaymentRequest extends MerchantRequest
         if (null === $this->ClearTextCreditCardsToCharge) {
             $this->ClearTextCreditCardsToCharge = new ArrayOfClearTextCardToCharge();
         }
+
         return $this->ClearTextCreditCardsToCharge;
+    }
+
+    /**
+     * @param string $endUserBrowserType
+     *
+     * @return SetupFutureDatedPaymentRequest
+     */
+    public function setEndUserBrowserType($endUserBrowserType)
+    {
+        $this->EndUserBrowserType = $endUserBrowserType;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEndUserBrowserType()
+    {
+        return $this->EndUserBrowserType;
+    }
+
+    /**
+     * @param string $endUserIPAddress
+     *
+     * @return SetupFutureDatedPaymentRequest
+     */
+    public function setEndUserIPAddress($endUserIPAddress)
+    {
+        $this->EndUserIPAddress = $endUserIPAddress;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEndUserIPAddress()
+    {
+        return $this->EndUserIPAddress;
     }
 
     /**
@@ -132,6 +198,7 @@ class SetupFutureDatedPaymentRequest extends MerchantRequest
     public function setTokensToCharge(ArrayOfTokenToCharge $tokensToCharge)
     {
         $this->TokensToCharge = $tokensToCharge;
+
         return $this;
     }
 
@@ -143,6 +210,7 @@ class SetupFutureDatedPaymentRequest extends MerchantRequest
         if (null === $this->TokensToCharge) {
             $this->TokensToCharge = new ArrayOfTokenToCharge();
         }
+
         return $this->TokensToCharge;
     }
 
@@ -154,6 +222,7 @@ class SetupFutureDatedPaymentRequest extends MerchantRequest
     public function setTransaction(Transaction $transaction)
     {
         $this->Transaction = $transaction;
+
         return $this;
     }
 
@@ -165,6 +234,7 @@ class SetupFutureDatedPaymentRequest extends MerchantRequest
         if (null === $this->Transaction) {
             $this->Transaction = new Transaction();
         }
+
         return $this->Transaction;
     }
 }

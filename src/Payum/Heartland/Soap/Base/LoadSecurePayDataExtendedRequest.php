@@ -259,6 +259,16 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     protected $SecurePayPaymentType_ID;
 
     /**
+     * SelectedLanguage
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: tns:Language
+     *
+     * @var Language
+     */
+    protected $SelectedLanguage;
+
+    /**
      * @param string $bINRangesToDeny
      *
      * @return LoadSecurePayDataExtendedRequest
@@ -266,6 +276,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setBINRangesToDeny($bINRangesToDeny)
     {
         $this->BINRangesToDeny = $bINRangesToDeny;
+
         return $this;
     }
 
@@ -285,6 +296,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setBillData(ArrayOfSecurePayBill $billData)
     {
         $this->BillData = $billData;
+
         return $this;
     }
 
@@ -296,6 +308,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
         if (null === $this->BillData) {
             $this->BillData = new ArrayOfSecurePayBill();
         }
+
         return $this->BillData;
     }
 
@@ -307,6 +320,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setMaxFuturePaymentDays($maxFuturePaymentDays)
     {
         $this->MaxFuturePaymentDays = $maxFuturePaymentDays;
+
         return $this;
     }
 
@@ -326,6 +340,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPaymentMethodsToDeny($paymentMethodsToDeny)
     {
         $this->PaymentMethodsToDeny = $paymentMethodsToDeny;
+
         return $this;
     }
 
@@ -345,6 +360,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorAddress($payorAddress)
     {
         $this->PayorAddress = $payorAddress;
+
         return $this;
     }
 
@@ -364,6 +380,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorAddressIsEditable($payorAddressIsEditable)
     {
         $this->PayorAddressIsEditable = $payorAddressIsEditable;
+
         return $this;
     }
 
@@ -383,6 +400,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorCity($payorCity)
     {
         $this->PayorCity = $payorCity;
+
         return $this;
     }
 
@@ -402,6 +420,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorCityIsEditable($payorCityIsEditable)
     {
         $this->PayorCityIsEditable = $payorCityIsEditable;
+
         return $this;
     }
 
@@ -421,6 +440,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorCountry($payorCountry)
     {
         $this->PayorCountry = $payorCountry;
+
         return $this;
     }
 
@@ -440,6 +460,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorCountryIsEditable($payorCountryIsEditable)
     {
         $this->PayorCountryIsEditable = $payorCountryIsEditable;
+
         return $this;
     }
 
@@ -459,6 +480,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorEmailAddress($payorEmailAddress)
     {
         $this->PayorEmailAddress = $payorEmailAddress;
+
         return $this;
     }
 
@@ -478,6 +500,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorEmailAddressIsEditable($payorEmailAddressIsEditable)
     {
         $this->PayorEmailAddressIsEditable = $payorEmailAddressIsEditable;
+
         return $this;
     }
 
@@ -497,6 +520,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorFirstName($payorFirstName)
     {
         $this->PayorFirstName = $payorFirstName;
+
         return $this;
     }
 
@@ -516,6 +540,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorFirstNameIsEditable($payorFirstNameIsEditable)
     {
         $this->PayorFirstNameIsEditable = $payorFirstNameIsEditable;
+
         return $this;
     }
 
@@ -535,6 +560,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorLastName($payorLastName)
     {
         $this->PayorLastName = $payorLastName;
+
         return $this;
     }
 
@@ -554,6 +580,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorLastNameIsEditable($payorLastNameIsEditable)
     {
         $this->PayorLastNameIsEditable = $payorLastNameIsEditable;
+
         return $this;
     }
 
@@ -573,6 +600,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorMiddleName($payorMiddleName)
     {
         $this->PayorMiddleName = $payorMiddleName;
+
         return $this;
     }
 
@@ -592,6 +620,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorMiddleNameIsEditable($payorMiddleNameIsEditable)
     {
         $this->PayorMiddleNameIsEditable = $payorMiddleNameIsEditable;
+
         return $this;
     }
 
@@ -611,6 +640,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorPhoneNumber($payorPhoneNumber)
     {
         $this->PayorPhoneNumber = $payorPhoneNumber;
+
         return $this;
     }
 
@@ -630,6 +660,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorPhoneNumberIsEditable($payorPhoneNumberIsEditable)
     {
         $this->PayorPhoneNumberIsEditable = $payorPhoneNumberIsEditable;
+
         return $this;
     }
 
@@ -649,6 +680,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorPostalCode($payorPostalCode)
     {
         $this->PayorPostalCode = $payorPostalCode;
+
         return $this;
     }
 
@@ -668,6 +700,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorPostalCodeIsEditable($payorPostalCodeIsEditable)
     {
         $this->PayorPostalCodeIsEditable = $payorPostalCodeIsEditable;
+
         return $this;
     }
 
@@ -687,6 +720,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorState($payorState)
     {
         $this->PayorState = $payorState;
+
         return $this;
     }
 
@@ -706,6 +740,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setPayorStateIsEditable($payorStateIsEditable)
     {
         $this->PayorStateIsEditable = $payorStateIsEditable;
+
         return $this;
     }
 
@@ -725,6 +760,7 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function setSecurePayPaymentType_ID($securePayPaymentType_ID)
     {
         $this->SecurePayPaymentType_ID = $securePayPaymentType_ID;
+
         return $this;
     }
 
@@ -734,5 +770,25 @@ class LoadSecurePayDataExtendedRequest extends MerchantRequest
     public function getSecurePayPaymentType_ID()
     {
         return $this->SecurePayPaymentType_ID;
+    }
+
+    /**
+     * @param Language $selectedLanguage
+     *
+     * @return LoadSecurePayDataExtendedRequest
+     */
+    public function setSelectedLanguage($selectedLanguage)
+    {
+        $this->SelectedLanguage = $selectedLanguage;
+
+        return $this;
+    }
+
+    /**
+     * @return Language
+     */
+    public function getSelectedLanguage()
+    {
+        return $this->SelectedLanguage;
     }
 }

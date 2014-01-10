@@ -26,6 +26,7 @@ class ArrayOfClearTextCardToCharge
     public function setClearTextCardToCharge($clearTextCardToCharge)
     {
         $this->ClearTextCardToCharge = $clearTextCardToCharge;
+
         return $this;
     }
 

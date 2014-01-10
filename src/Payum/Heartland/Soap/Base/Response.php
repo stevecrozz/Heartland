@@ -36,6 +36,7 @@ class Response
     public function setMessages(ArrayOfMessage $messages)
     {
         $this->Messages = $messages;
+
         return $this;
     }
 
@@ -47,6 +48,7 @@ class Response
         if (null === $this->Messages) {
             $this->Messages = new ArrayOfMessage();
         }
+
         return $this->Messages;
     }
 
@@ -58,6 +60,7 @@ class Response
     public function setIsSuccessful($isSuccessful)
     {
         $this->isSuccessful = $isSuccessful;
+
         return $this;
     }
 

@@ -26,6 +26,7 @@ class Request
     public function setCredential(Credentials $credential)
     {
         $this->Credential = $credential;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class Request
         if (null === $this->Credential) {
             $this->Credential = new Credentials();
         }
+
         return $this->Credential;
     }
 }

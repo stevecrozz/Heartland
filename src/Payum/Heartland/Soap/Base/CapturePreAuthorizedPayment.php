@@ -12,7 +12,7 @@ class CapturePreAuthorizedPayment
      * CapturePreAuthorizedPaymentRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q49:CapturePreAuthorizedPaymentRequest
+     * - SchemaType: q53:CapturePreAuthorizedPaymentRequest
      *
      * @var CapturePreAuthorizedPaymentRequest
      */
@@ -26,6 +26,7 @@ class CapturePreAuthorizedPayment
     public function setCapturePreAuthorizedPaymentRequest(CapturePreAuthorizedPaymentRequest $capturePreAuthorizedPaymentRequest)
     {
         $this->CapturePreAuthorizedPaymentRequest = $capturePreAuthorizedPaymentRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class CapturePreAuthorizedPayment
         if (null === $this->CapturePreAuthorizedPaymentRequest) {
             $this->CapturePreAuthorizedPaymentRequest = new CapturePreAuthorizedPaymentRequest();
         }
+
         return $this->CapturePreAuthorizedPaymentRequest;
     }
 }

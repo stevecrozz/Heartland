@@ -26,6 +26,7 @@ class ClearTextCardToCharge extends CardToCharge
     public function setClearTextCreditCard(ClearTextCardData $clearTextCreditCard)
     {
         $this->ClearTextCreditCard = $clearTextCreditCard;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class ClearTextCardToCharge extends CardToCharge
         if (null === $this->ClearTextCreditCard) {
             $this->ClearTextCreditCard = new ClearTextCardData();
         }
+
         return $this->ClearTextCreditCard;
     }
 }

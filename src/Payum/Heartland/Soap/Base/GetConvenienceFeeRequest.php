@@ -56,6 +56,7 @@ class GetConvenienceFeeRequest extends MerchantRequest
     public function setBaseAmount($baseAmount)
     {
         $this->BaseAmount = $baseAmount;
+
         return $this;
     }
 
@@ -75,6 +76,7 @@ class GetConvenienceFeeRequest extends MerchantRequest
     public function setCardNumber($cardNumber)
     {
         $this->CardNumber = $cardNumber;
+
         return $this;
     }
 
@@ -94,6 +96,7 @@ class GetConvenienceFeeRequest extends MerchantRequest
     public function setCardProcessingMethod($cardProcessingMethod)
     {
         $this->CardProcessingMethod = $cardProcessingMethod;
+
         return $this;
     }
 
@@ -113,6 +116,7 @@ class GetConvenienceFeeRequest extends MerchantRequest
     public function setPaymentMethod($paymentMethod)
     {
         $this->PaymentMethod = $paymentMethod;
+
         return $this;
     }
 

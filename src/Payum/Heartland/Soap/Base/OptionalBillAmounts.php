@@ -106,6 +106,7 @@ class OptionalBillAmounts
     public function setOptionalAmount1(OptionalBillAmount $optionalAmount1)
     {
         $this->OptionalAmount1 = $optionalAmount1;
+
         return $this;
     }
 
@@ -117,6 +118,7 @@ class OptionalBillAmounts
         if (null === $this->OptionalAmount1) {
             $this->OptionalAmount1 = new OptionalBillAmount();
         }
+
         return $this->OptionalAmount1;
     }
 
@@ -128,6 +130,7 @@ class OptionalBillAmounts
     public function setOptionalAmount2(OptionalBillAmount $optionalAmount2)
     {
         $this->OptionalAmount2 = $optionalAmount2;
+
         return $this;
     }
 
@@ -139,6 +142,7 @@ class OptionalBillAmounts
         if (null === $this->OptionalAmount2) {
             $this->OptionalAmount2 = new OptionalBillAmount();
         }
+
         return $this->OptionalAmount2;
     }
 
@@ -150,6 +154,7 @@ class OptionalBillAmounts
     public function setOptionalAmount3(OptionalBillAmount $optionalAmount3)
     {
         $this->OptionalAmount3 = $optionalAmount3;
+
         return $this;
     }
 
@@ -161,6 +166,7 @@ class OptionalBillAmounts
         if (null === $this->OptionalAmount3) {
             $this->OptionalAmount3 = new OptionalBillAmount();
         }
+
         return $this->OptionalAmount3;
     }
 
@@ -172,6 +178,7 @@ class OptionalBillAmounts
     public function setOptionalAmount4(OptionalBillAmount $optionalAmount4)
     {
         $this->OptionalAmount4 = $optionalAmount4;
+
         return $this;
     }
 
@@ -183,6 +190,7 @@ class OptionalBillAmounts
         if (null === $this->OptionalAmount4) {
             $this->OptionalAmount4 = new OptionalBillAmount();
         }
+
         return $this->OptionalAmount4;
     }
 
@@ -194,6 +202,7 @@ class OptionalBillAmounts
     public function setOptionalAmount5(OptionalBillAmount $optionalAmount5)
     {
         $this->OptionalAmount5 = $optionalAmount5;
+
         return $this;
     }
 
@@ -205,6 +214,7 @@ class OptionalBillAmounts
         if (null === $this->OptionalAmount5) {
             $this->OptionalAmount5 = new OptionalBillAmount();
         }
+
         return $this->OptionalAmount5;
     }
 
@@ -216,6 +226,7 @@ class OptionalBillAmounts
     public function setOptionalAmount6(OptionalBillAmount $optionalAmount6)
     {
         $this->OptionalAmount6 = $optionalAmount6;
+
         return $this;
     }
 
@@ -227,6 +238,7 @@ class OptionalBillAmounts
         if (null === $this->OptionalAmount6) {
             $this->OptionalAmount6 = new OptionalBillAmount();
         }
+
         return $this->OptionalAmount6;
     }
 
@@ -238,6 +250,7 @@ class OptionalBillAmounts
     public function setOptionalAmount7(OptionalBillAmount $optionalAmount7)
     {
         $this->OptionalAmount7 = $optionalAmount7;
+
         return $this;
     }
 
@@ -249,6 +262,7 @@ class OptionalBillAmounts
         if (null === $this->OptionalAmount7) {
             $this->OptionalAmount7 = new OptionalBillAmount();
         }
+
         return $this->OptionalAmount7;
     }
 
@@ -260,6 +274,7 @@ class OptionalBillAmounts
     public function setOptionalAmount8(OptionalBillAmount $optionalAmount8)
     {
         $this->OptionalAmount8 = $optionalAmount8;
+
         return $this;
     }
 
@@ -271,6 +286,7 @@ class OptionalBillAmounts
         if (null === $this->OptionalAmount8) {
             $this->OptionalAmount8 = new OptionalBillAmount();
         }
+
         return $this->OptionalAmount8;
     }
 
@@ -282,6 +298,7 @@ class OptionalBillAmounts
     public function setOptionalAmount9(OptionalBillAmount $optionalAmount9)
     {
         $this->OptionalAmount9 = $optionalAmount9;
+
         return $this;
     }
 
@@ -293,6 +310,7 @@ class OptionalBillAmounts
         if (null === $this->OptionalAmount9) {
             $this->OptionalAmount9 = new OptionalBillAmount();
         }
+
         return $this->OptionalAmount9;
     }
 }

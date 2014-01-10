@@ -26,6 +26,7 @@ class InactivateBillResponse
     public function setInactivateBillResult(Response $inactivateBillResult)
     {
         $this->InactivateBillResult = $inactivateBillResult;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class InactivateBillResponse
         if (null === $this->InactivateBillResult) {
             $this->InactivateBillResult = new Response();
         }
+
         return $this->InactivateBillResult;
     }
 }

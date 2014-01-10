@@ -12,7 +12,7 @@ class GetReceipt
      * GetReceiptRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q27:GetReceiptRequest
+     * - SchemaType: q31:GetReceiptRequest
      *
      * @var GetReceiptRequest
      */
@@ -26,6 +26,7 @@ class GetReceipt
     public function setGetReceiptRequest(GetReceiptRequest $getReceiptRequest)
     {
         $this->GetReceiptRequest = $getReceiptRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class GetReceipt
         if (null === $this->GetReceiptRequest) {
             $this->GetReceiptRequest = new GetReceiptRequest();
         }
+
         return $this->GetReceiptRequest;
     }
 }

@@ -116,6 +116,7 @@ class BillTransaction extends BillIdentifier
     public function setAmountToApplyToBill($amountToApplyToBill)
     {
         $this->AmountToApplyToBill = $amountToApplyToBill;
+
         return $this;
     }
 
@@ -135,6 +136,7 @@ class BillTransaction extends BillIdentifier
     public function setCustomerEnteredElement1($customerEnteredElement1)
     {
         $this->CustomerEnteredElement1 = $customerEnteredElement1;
+
         return $this;
     }
 
@@ -154,6 +156,7 @@ class BillTransaction extends BillIdentifier
     public function setCustomerEnteredElement2($customerEnteredElement2)
     {
         $this->CustomerEnteredElement2 = $customerEnteredElement2;
+
         return $this;
     }
 
@@ -173,6 +176,7 @@ class BillTransaction extends BillIdentifier
     public function setCustomerEnteredElement3($customerEnteredElement3)
     {
         $this->CustomerEnteredElement3 = $customerEnteredElement3;
+
         return $this;
     }
 
@@ -192,6 +196,7 @@ class BillTransaction extends BillIdentifier
     public function setCustomerEnteredElement4($customerEnteredElement4)
     {
         $this->CustomerEnteredElement4 = $customerEnteredElement4;
+
         return $this;
     }
 
@@ -211,6 +216,7 @@ class BillTransaction extends BillIdentifier
     public function setCustomerEnteredElement5($customerEnteredElement5)
     {
         $this->CustomerEnteredElement5 = $customerEnteredElement5;
+
         return $this;
     }
 
@@ -230,6 +236,7 @@ class BillTransaction extends BillIdentifier
     public function setCustomerEnteredElement6($customerEnteredElement6)
     {
         $this->CustomerEnteredElement6 = $customerEnteredElement6;
+
         return $this;
     }
 
@@ -249,6 +256,7 @@ class BillTransaction extends BillIdentifier
     public function setCustomerEnteredElement7($customerEnteredElement7)
     {
         $this->CustomerEnteredElement7 = $customerEnteredElement7;
+
         return $this;
     }
 
@@ -268,6 +276,7 @@ class BillTransaction extends BillIdentifier
     public function setCustomerEnteredElement8($customerEnteredElement8)
     {
         $this->CustomerEnteredElement8 = $customerEnteredElement8;
+
         return $this;
     }
 
@@ -287,6 +296,7 @@ class BillTransaction extends BillIdentifier
     public function setCustomerEnteredElement9($customerEnteredElement9)
     {
         $this->CustomerEnteredElement9 = $customerEnteredElement9;
+
         return $this;
     }
 

@@ -12,7 +12,7 @@ class UpdateSecurePayPaymentResponse
      * UpdateSecurePayPaymentResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q44:Response
+     * - SchemaType: q48:Response
      *
      * @var Response
      */
@@ -26,6 +26,7 @@ class UpdateSecurePayPaymentResponse
     public function setUpdateSecurePayPaymentResult(Response $updateSecurePayPaymentResult)
     {
         $this->UpdateSecurePayPaymentResult = $updateSecurePayPaymentResult;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class UpdateSecurePayPaymentResponse
         if (null === $this->UpdateSecurePayPaymentResult) {
             $this->UpdateSecurePayPaymentResult = new Response();
         }
+
         return $this->UpdateSecurePayPaymentResult;
     }
 }

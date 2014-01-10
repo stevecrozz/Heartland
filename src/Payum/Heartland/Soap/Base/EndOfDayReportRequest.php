@@ -156,6 +156,7 @@ class EndOfDayReportRequest extends MerchantRequest
     public function setApplication($application)
     {
         $this->Application = $application;
+
         return $this;
     }
 
@@ -175,6 +176,7 @@ class EndOfDayReportRequest extends MerchantRequest
     public function setEndDay($endDay)
     {
         $this->EndDay = $endDay;
+
         return $this;
     }
 
@@ -194,6 +196,7 @@ class EndOfDayReportRequest extends MerchantRequest
     public function setEndHour($endHour)
     {
         $this->EndHour = $endHour;
+
         return $this;
     }
 
@@ -213,6 +216,7 @@ class EndOfDayReportRequest extends MerchantRequest
     public function setEndMinute($endMinute)
     {
         $this->EndMinute = $endMinute;
+
         return $this;
     }
 
@@ -232,6 +236,7 @@ class EndOfDayReportRequest extends MerchantRequest
     public function setEndMonth($endMonth)
     {
         $this->EndMonth = $endMonth;
+
         return $this;
     }
 
@@ -251,6 +256,7 @@ class EndOfDayReportRequest extends MerchantRequest
     public function setEndYear($endYear)
     {
         $this->EndYear = $endYear;
+
         return $this;
     }
 
@@ -270,6 +276,7 @@ class EndOfDayReportRequest extends MerchantRequest
     public function setIncludePDFInResponse($includePDFInResponse)
     {
         $this->IncludePDFInResponse = $includePDFInResponse;
+
         return $this;
     }
 
@@ -289,6 +296,7 @@ class EndOfDayReportRequest extends MerchantRequest
     public function setSortBy($sortBy)
     {
         $this->SortBy = $sortBy;
+
         return $this;
     }
 
@@ -308,6 +316,7 @@ class EndOfDayReportRequest extends MerchantRequest
     public function setStartDay($startDay)
     {
         $this->StartDay = $startDay;
+
         return $this;
     }
 
@@ -327,6 +336,7 @@ class EndOfDayReportRequest extends MerchantRequest
     public function setStartHour($startHour)
     {
         $this->StartHour = $startHour;
+
         return $this;
     }
 
@@ -346,6 +356,7 @@ class EndOfDayReportRequest extends MerchantRequest
     public function setStartMinute($startMinute)
     {
         $this->StartMinute = $startMinute;
+
         return $this;
     }
 
@@ -365,6 +376,7 @@ class EndOfDayReportRequest extends MerchantRequest
     public function setStartMonth($startMonth)
     {
         $this->StartMonth = $startMonth;
+
         return $this;
     }
 
@@ -384,6 +396,7 @@ class EndOfDayReportRequest extends MerchantRequest
     public function setStartYear($startYear)
     {
         $this->StartYear = $startYear;
+
         return $this;
     }
 
@@ -403,6 +416,7 @@ class EndOfDayReportRequest extends MerchantRequest
     public function setTimeZone($timeZone)
     {
         $this->TimeZone = $timeZone;
+
         return $this;
     }
 

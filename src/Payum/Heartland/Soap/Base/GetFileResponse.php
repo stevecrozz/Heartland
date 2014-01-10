@@ -36,6 +36,7 @@ class GetFileResponse extends Response
     public function setFileContent($fileContent)
     {
         $this->FileContent = $fileContent;
+
         return $this;
     }
 
@@ -55,6 +56,7 @@ class GetFileResponse extends Response
     public function setFileName($fileName)
     {
         $this->FileName = $fileName;
+
         return $this;
     }
 

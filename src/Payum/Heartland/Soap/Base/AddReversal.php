@@ -26,6 +26,7 @@ class AddReversal
     public function setAddReversalRequest(AddReversalRequest $addReversalRequest)
     {
         $this->AddReversalRequest = $addReversalRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class AddReversal
         if (null === $this->AddReversalRequest) {
             $this->AddReversalRequest = new AddReversalRequest();
         }
+
         return $this->AddReversalRequest;
     }
 }

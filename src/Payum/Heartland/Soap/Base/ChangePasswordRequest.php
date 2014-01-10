@@ -26,6 +26,7 @@ class ChangePasswordRequest extends UserGroupRequest
     public function setNewPassword($newPassword)
     {
         $this->NewPassword = $newPassword;
+
         return $this;
     }
 

@@ -26,6 +26,7 @@ class ActivateBill
     public function setActivateBillRequest(ActivateBillRequest $activateBillRequest)
     {
         $this->ActivateBillRequest = $activateBillRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class ActivateBill
         if (null === $this->ActivateBillRequest) {
             $this->ActivateBillRequest = new ActivateBillRequest();
         }
+
         return $this->ActivateBillRequest;
     }
 }

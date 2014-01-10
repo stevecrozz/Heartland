@@ -22,7 +22,7 @@ class SetupFutureDatedPaymentResponse extends Response
      * SetupFutureDatedPaymentResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q46:SetupFutureDatedPaymentResponse
+     * - SchemaType: q50:SetupFutureDatedPaymentResponse
      *
      * @var SetupFutureDatedPaymentResponse
      */
@@ -36,6 +36,7 @@ class SetupFutureDatedPaymentResponse extends Response
     public function setFutureDatedPaymentID($futureDatedPaymentID)
     {
         $this->FutureDatedPaymentID = $futureDatedPaymentID;
+
         return $this;
     }
 
@@ -55,6 +56,7 @@ class SetupFutureDatedPaymentResponse extends Response
     public function setSetupFutureDatedPaymentResult(SetupFutureDatedPaymentResponse $setupFutureDatedPaymentResult)
     {
         $this->SetupFutureDatedPaymentResult = $setupFutureDatedPaymentResult;
+
         return $this;
     }
 
@@ -66,6 +68,7 @@ class SetupFutureDatedPaymentResponse extends Response
         if (null === $this->SetupFutureDatedPaymentResult) {
             $this->SetupFutureDatedPaymentResult = new SetupFutureDatedPaymentResponse();
         }
+
         return $this->SetupFutureDatedPaymentResult;
     }
 }

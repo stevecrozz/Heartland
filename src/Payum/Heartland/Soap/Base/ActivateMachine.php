@@ -26,6 +26,7 @@ class ActivateMachine
     public function setActivateMachineRequest(ActivateMachineRequest $activateMachineRequest)
     {
         $this->ActivateMachineRequest = $activateMachineRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class ActivateMachine
         if (null === $this->ActivateMachineRequest) {
             $this->ActivateMachineRequest = new ActivateMachineRequest();
         }
+
         return $this->ActivateMachineRequest;
     }
 }

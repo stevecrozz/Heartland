@@ -26,6 +26,7 @@ class UpdateBill
     public function setUpdateBillRequest(UpdateBillRequest $updateBillRequest)
     {
         $this->UpdateBillRequest = $updateBillRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class UpdateBill
         if (null === $this->UpdateBillRequest) {
             $this->UpdateBillRequest = new UpdateBillRequest();
         }
+
         return $this->UpdateBillRequest;
     }
 }

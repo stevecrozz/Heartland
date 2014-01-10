@@ -26,6 +26,7 @@ class ArrayOfTransactionRecord
     public function setTransactionRecord($transactionRecord)
     {
         $this->TransactionRecord = $transactionRecord;
+
         return $this;
     }
 

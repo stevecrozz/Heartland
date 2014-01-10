@@ -26,6 +26,7 @@ class AddBlindPaymentResponse
     public function setAddBlindPaymentResult(Response $addBlindPaymentResult)
     {
         $this->AddBlindPaymentResult = $addBlindPaymentResult;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class AddBlindPaymentResponse
         if (null === $this->AddBlindPaymentResult) {
             $this->AddBlindPaymentResult = new Response();
         }
+
         return $this->AddBlindPaymentResult;
     }
 }

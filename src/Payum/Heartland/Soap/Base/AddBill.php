@@ -26,6 +26,7 @@ class AddBill
     public function setAddBillRequest(AddBillRequest $addBillRequest)
     {
         $this->AddBillRequest = $addBillRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class AddBill
         if (null === $this->AddBillRequest) {
             $this->AddBillRequest = new AddBillRequest();
         }
+
         return $this->AddBillRequest;
     }
 }

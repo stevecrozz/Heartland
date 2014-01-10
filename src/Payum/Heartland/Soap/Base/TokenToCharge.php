@@ -26,6 +26,7 @@ class TokenToCharge extends CardToCharge
     public function setToken($token)
     {
         $this->Token = $token;
+
         return $this;
     }
 

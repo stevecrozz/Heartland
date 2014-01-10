@@ -42,7 +42,7 @@ class DisburseFundsResponse extends Response
      * DisburseFundsResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q56:DisburseFundsResponse
+     * - SchemaType: q60:DisburseFundsResponse
      *
      * @var DisburseFundsResponse
      */
@@ -56,6 +56,7 @@ class DisburseFundsResponse extends Response
     public function setAuthorizations(ArrayOfAuthorization $authorizations)
     {
         $this->Authorizations = $authorizations;
+
         return $this;
     }
 
@@ -67,6 +68,7 @@ class DisburseFundsResponse extends Response
         if (null === $this->Authorizations) {
             $this->Authorizations = new ArrayOfAuthorization();
         }
+
         return $this->Authorizations;
     }
 
@@ -78,6 +80,7 @@ class DisburseFundsResponse extends Response
     public function setTransaction(Transaction $transaction)
     {
         $this->Transaction = $transaction;
+
         return $this;
     }
 
@@ -89,6 +92,7 @@ class DisburseFundsResponse extends Response
         if (null === $this->Transaction) {
             $this->Transaction = new Transaction();
         }
+
         return $this->Transaction;
     }
 
@@ -100,6 +104,7 @@ class DisburseFundsResponse extends Response
     public function setTransaction_ID($transaction_ID)
     {
         $this->Transaction_ID = $transaction_ID;
+
         return $this;
     }
 
@@ -119,6 +124,7 @@ class DisburseFundsResponse extends Response
     public function setDisburseFundsResult(DisburseFundsResponse $disburseFundsResult)
     {
         $this->DisburseFundsResult = $disburseFundsResult;
+
         return $this;
     }
 
@@ -130,6 +136,7 @@ class DisburseFundsResponse extends Response
         if (null === $this->DisburseFundsResult) {
             $this->DisburseFundsResult = new DisburseFundsResponse();
         }
+
         return $this->DisburseFundsResult;
     }
 }

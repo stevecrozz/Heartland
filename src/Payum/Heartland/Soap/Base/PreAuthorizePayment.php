@@ -12,7 +12,7 @@ class PreAuthorizePayment
      * PreAuthorizePaymentRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q47:PreAuthorizePaymentRequest
+     * - SchemaType: q51:PreAuthorizePaymentRequest
      *
      * @var PreAuthorizePaymentRequest
      */
@@ -26,6 +26,7 @@ class PreAuthorizePayment
     public function setPreAuthorizePaymentRequest(PreAuthorizePaymentRequest $preAuthorizePaymentRequest)
     {
         $this->PreAuthorizePaymentRequest = $preAuthorizePaymentRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class PreAuthorizePayment
         if (null === $this->PreAuthorizePaymentRequest) {
             $this->PreAuthorizePaymentRequest = new PreAuthorizePaymentRequest();
         }
+
         return $this->PreAuthorizePaymentRequest;
     }
 }

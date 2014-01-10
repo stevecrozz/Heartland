@@ -359,6 +359,16 @@ class GetSecurePayBillDataResponse extends Response
     protected $SecurePayPaymentType;
 
     /**
+     * SelectedLanguage
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: tns:Language
+     *
+     * @var Language
+     */
+    protected $SelectedLanguage;
+
+    /**
      * UserName
      *
      * The property has the following characteristics/restrictions:
@@ -372,7 +382,7 @@ class GetSecurePayBillDataResponse extends Response
      * GetSecurePayBillDataResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q42:GetSecurePayBillDataResponse
+     * - SchemaType: q46:GetSecurePayBillDataResponse
      *
      * @var GetSecurePayBillDataResponse
      */
@@ -386,6 +396,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setAllowAmexCredit($allowAmexCredit)
     {
         $this->AllowAmexCredit = $allowAmexCredit;
+
         return $this;
     }
 
@@ -405,6 +416,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setAllowAmexDebit($allowAmexDebit)
     {
         $this->AllowAmexDebit = $allowAmexDebit;
+
         return $this;
     }
 
@@ -424,6 +436,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setAllowDiscoverCredit($allowDiscoverCredit)
     {
         $this->AllowDiscoverCredit = $allowDiscoverCredit;
+
         return $this;
     }
 
@@ -443,6 +456,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setAllowDiscoverDebit($allowDiscoverDebit)
     {
         $this->AllowDiscoverDebit = $allowDiscoverDebit;
+
         return $this;
     }
 
@@ -462,6 +476,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setAllowECheck($allowECheck)
     {
         $this->AllowECheck = $allowECheck;
+
         return $this;
     }
 
@@ -481,6 +496,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setAllowMastercardCredit($allowMastercardCredit)
     {
         $this->AllowMastercardCredit = $allowMastercardCredit;
+
         return $this;
     }
 
@@ -500,6 +516,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setAllowMastercardDebit($allowMastercardDebit)
     {
         $this->AllowMastercardDebit = $allowMastercardDebit;
+
         return $this;
     }
 
@@ -519,6 +536,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setAllowVisaCredit($allowVisaCredit)
     {
         $this->AllowVisaCredit = $allowVisaCredit;
+
         return $this;
     }
 
@@ -538,6 +556,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setAllowVisaDebit($allowVisaDebit)
     {
         $this->AllowVisaDebit = $allowVisaDebit;
+
         return $this;
     }
 
@@ -557,6 +576,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setApplicationID($applicationID)
     {
         $this->ApplicationID = $applicationID;
+
         return $this;
     }
 
@@ -576,6 +596,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setBINRangesToDeny($bINRangesToDeny)
     {
         $this->BINRangesToDeny = $bINRangesToDeny;
+
         return $this;
     }
 
@@ -595,6 +616,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setBillData(ArrayOfSecurePayBill $billData)
     {
         $this->BillData = $billData;
+
         return $this;
     }
 
@@ -606,6 +628,7 @@ class GetSecurePayBillDataResponse extends Response
         if (null === $this->BillData) {
             $this->BillData = new ArrayOfSecurePayBill();
         }
+
         return $this->BillData;
     }
 
@@ -617,6 +640,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setMaxFuturePaymentDays($maxFuturePaymentDays)
     {
         $this->MaxFuturePaymentDays = $maxFuturePaymentDays;
+
         return $this;
     }
 
@@ -636,6 +660,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPassword($password)
     {
         $this->Password = $password;
+
         return $this;
     }
 
@@ -655,6 +680,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorAddress($payorAddress)
     {
         $this->PayorAddress = $payorAddress;
+
         return $this;
     }
 
@@ -674,6 +700,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorAddressIsEditable($payorAddressIsEditable)
     {
         $this->PayorAddressIsEditable = $payorAddressIsEditable;
+
         return $this;
     }
 
@@ -693,6 +720,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorCity($payorCity)
     {
         $this->PayorCity = $payorCity;
+
         return $this;
     }
 
@@ -712,6 +740,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorCityIsEditable($payorCityIsEditable)
     {
         $this->PayorCityIsEditable = $payorCityIsEditable;
+
         return $this;
     }
 
@@ -731,6 +760,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorCountry($payorCountry)
     {
         $this->PayorCountry = $payorCountry;
+
         return $this;
     }
 
@@ -750,6 +780,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorCountryIsEditable($payorCountryIsEditable)
     {
         $this->PayorCountryIsEditable = $payorCountryIsEditable;
+
         return $this;
     }
 
@@ -769,6 +800,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorEmailAddress($payorEmailAddress)
     {
         $this->PayorEmailAddress = $payorEmailAddress;
+
         return $this;
     }
 
@@ -788,6 +820,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorEmailAddressIsEditable($payorEmailAddressIsEditable)
     {
         $this->PayorEmailAddressIsEditable = $payorEmailAddressIsEditable;
+
         return $this;
     }
 
@@ -807,6 +840,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorFirstName($payorFirstName)
     {
         $this->PayorFirstName = $payorFirstName;
+
         return $this;
     }
 
@@ -826,6 +860,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorFirstNameIsEditable($payorFirstNameIsEditable)
     {
         $this->PayorFirstNameIsEditable = $payorFirstNameIsEditable;
+
         return $this;
     }
 
@@ -845,6 +880,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorLastName($payorLastName)
     {
         $this->PayorLastName = $payorLastName;
+
         return $this;
     }
 
@@ -864,6 +900,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorLastNameIsEditable($payorLastNameIsEditable)
     {
         $this->PayorLastNameIsEditable = $payorLastNameIsEditable;
+
         return $this;
     }
 
@@ -883,6 +920,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorMiddleName($payorMiddleName)
     {
         $this->PayorMiddleName = $payorMiddleName;
+
         return $this;
     }
 
@@ -902,6 +940,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorMiddleNameIsEditable($payorMiddleNameIsEditable)
     {
         $this->PayorMiddleNameIsEditable = $payorMiddleNameIsEditable;
+
         return $this;
     }
 
@@ -921,6 +960,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorPhoneNumber($payorPhoneNumber)
     {
         $this->PayorPhoneNumber = $payorPhoneNumber;
+
         return $this;
     }
 
@@ -940,6 +980,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorPhoneNumberIsEditable($payorPhoneNumberIsEditable)
     {
         $this->PayorPhoneNumberIsEditable = $payorPhoneNumberIsEditable;
+
         return $this;
     }
 
@@ -959,6 +1000,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorPostalCode($payorPostalCode)
     {
         $this->PayorPostalCode = $payorPostalCode;
+
         return $this;
     }
 
@@ -978,6 +1020,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorPostalCodeIsEditable($payorPostalCodeIsEditable)
     {
         $this->PayorPostalCodeIsEditable = $payorPostalCodeIsEditable;
+
         return $this;
     }
 
@@ -997,6 +1040,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorState($payorState)
     {
         $this->PayorState = $payorState;
+
         return $this;
     }
 
@@ -1016,6 +1060,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setPayorStateIsEditable($payorStateIsEditable)
     {
         $this->PayorStateIsEditable = $payorStateIsEditable;
+
         return $this;
     }
 
@@ -1035,6 +1080,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setSecurePayPaymentType($securePayPaymentType)
     {
         $this->SecurePayPaymentType = $securePayPaymentType;
+
         return $this;
     }
 
@@ -1047,6 +1093,26 @@ class GetSecurePayBillDataResponse extends Response
     }
 
     /**
+     * @param Language $selectedLanguage
+     *
+     * @return GetSecurePayBillDataResponse
+     */
+    public function setSelectedLanguage($selectedLanguage)
+    {
+        $this->SelectedLanguage = $selectedLanguage;
+
+        return $this;
+    }
+
+    /**
+     * @return Language
+     */
+    public function getSelectedLanguage()
+    {
+        return $this->SelectedLanguage;
+    }
+
+    /**
      * @param string $userName
      *
      * @return GetSecurePayBillDataResponse
@@ -1054,6 +1120,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setUserName($userName)
     {
         $this->UserName = $userName;
+
         return $this;
     }
 
@@ -1073,6 +1140,7 @@ class GetSecurePayBillDataResponse extends Response
     public function setGetSecurePayBillDataResult(GetSecurePayBillDataResponse $getSecurePayBillDataResult)
     {
         $this->GetSecurePayBillDataResult = $getSecurePayBillDataResult;
+
         return $this;
     }
 
@@ -1084,6 +1152,7 @@ class GetSecurePayBillDataResponse extends Response
         if (null === $this->GetSecurePayBillDataResult) {
             $this->GetSecurePayBillDataResult = new GetSecurePayBillDataResponse();
         }
+
         return $this->GetSecurePayBillDataResult;
     }
 }

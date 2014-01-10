@@ -26,6 +26,7 @@ class MerchantRequest
     public function setCredential(MerchantCredentials $credential)
     {
         $this->Credential = $credential;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class MerchantRequest
         if (null === $this->Credential) {
             $this->Credential = new MerchantCredentials();
         }
+
         return $this->Credential;
     }
 }

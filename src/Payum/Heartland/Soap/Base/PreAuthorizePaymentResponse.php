@@ -32,7 +32,7 @@ class PreAuthorizePaymentResponse extends Response
      * PreAuthorizePaymentResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q48:PreAuthorizePaymentResponse
+     * - SchemaType: q52:PreAuthorizePaymentResponse
      *
      * @var PreAuthorizePaymentResponse
      */
@@ -46,6 +46,7 @@ class PreAuthorizePaymentResponse extends Response
     public function setPreAuthorizations(ArrayOfAuthorization $preAuthorizations)
     {
         $this->PreAuthorizations = $preAuthorizations;
+
         return $this;
     }
 
@@ -57,6 +58,7 @@ class PreAuthorizePaymentResponse extends Response
         if (null === $this->PreAuthorizations) {
             $this->PreAuthorizations = new ArrayOfAuthorization();
         }
+
         return $this->PreAuthorizations;
     }
 
@@ -68,6 +70,7 @@ class PreAuthorizePaymentResponse extends Response
     public function setPreAuthorizedTransaction_ID($preAuthorizedTransaction_ID)
     {
         $this->PreAuthorizedTransaction_ID = $preAuthorizedTransaction_ID;
+
         return $this;
     }
 
@@ -87,6 +90,7 @@ class PreAuthorizePaymentResponse extends Response
     public function setPreAuthorizePaymentResult(PreAuthorizePaymentResponse $preAuthorizePaymentResult)
     {
         $this->PreAuthorizePaymentResult = $preAuthorizePaymentResult;
+
         return $this;
     }
 
@@ -98,6 +102,7 @@ class PreAuthorizePaymentResponse extends Response
         if (null === $this->PreAuthorizePaymentResult) {
             $this->PreAuthorizePaymentResult = new PreAuthorizePaymentResponse();
         }
+
         return $this->PreAuthorizePaymentResult;
     }
 }

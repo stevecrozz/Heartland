@@ -26,6 +26,7 @@ class E3CardToCharge extends CardToCharge
     public function setE3CreditCard(E3CardData $e3CreditCard)
     {
         $this->E3CreditCard = $e3CreditCard;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class E3CardToCharge extends CardToCharge
         if (null === $this->E3CreditCard) {
             $this->E3CreditCard = new E3CardData();
         }
+
         return $this->E3CreditCard;
     }
 }

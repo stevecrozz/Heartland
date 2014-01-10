@@ -26,6 +26,7 @@ class AESCardToCharge extends CardToCharge
     public function setAESCreditCard(AESCardData $aESCreditCard)
     {
         $this->AESCreditCard = $aESCreditCard;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class AESCardToCharge extends CardToCharge
         if (null === $this->AESCreditCard) {
             $this->AESCreditCard = new AESCardData();
         }
+
         return $this->AESCreditCard;
     }
 }

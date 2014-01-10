@@ -56,6 +56,7 @@ class BillTypeLabels
     public function setIdentifier1Label($identifier1Label)
     {
         $this->Identifier1Label = $identifier1Label;
+
         return $this;
     }
 
@@ -75,6 +76,7 @@ class BillTypeLabels
     public function setIdentifier2Label($identifier2Label)
     {
         $this->Identifier2Label = $identifier2Label;
+
         return $this;
     }
 
@@ -94,6 +96,7 @@ class BillTypeLabels
     public function setIdentifier3Label($identifier3Label)
     {
         $this->Identifier3Label = $identifier3Label;
+
         return $this;
     }
 
@@ -113,6 +116,7 @@ class BillTypeLabels
     public function setIdentifier4Label($identifier4Label)
     {
         $this->Identifier4Label = $identifier4Label;
+
         return $this;
     }
 

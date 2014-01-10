@@ -26,6 +26,7 @@ class MerchantCredentials extends Credentials
     public function setMerchantName($merchantName)
     {
         $this->MerchantName = $merchantName;
+
         return $this;
     }
 

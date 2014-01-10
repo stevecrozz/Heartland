@@ -26,6 +26,7 @@ class ActivateBillRequest extends MerchantRequest
     public function setBillIdentifier(BillIdentifier $billIdentifier)
     {
         $this->BillIdentifier = $billIdentifier;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class ActivateBillRequest extends MerchantRequest
         if (null === $this->BillIdentifier) {
             $this->BillIdentifier = new BillIdentifier();
         }
+
         return $this->BillIdentifier;
     }
 }

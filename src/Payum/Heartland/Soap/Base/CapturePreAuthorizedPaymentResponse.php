@@ -12,7 +12,7 @@ class CapturePreAuthorizedPaymentResponse
      * CapturePreAuthorizedPaymentResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q50:MakePaymentResponse
+     * - SchemaType: q54:MakePaymentResponse
      *
      * @var MakePaymentResponse
      */
@@ -26,6 +26,7 @@ class CapturePreAuthorizedPaymentResponse
     public function setCapturePreAuthorizedPaymentResult(MakePaymentResponse $capturePreAuthorizedPaymentResult)
     {
         $this->CapturePreAuthorizedPaymentResult = $capturePreAuthorizedPaymentResult;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class CapturePreAuthorizedPaymentResponse
         if (null === $this->CapturePreAuthorizedPaymentResult) {
             $this->CapturePreAuthorizedPaymentResult = new MakePaymentResponse();
         }
+
         return $this->CapturePreAuthorizedPaymentResult;
     }
 }

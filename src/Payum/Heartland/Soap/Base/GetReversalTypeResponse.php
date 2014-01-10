@@ -22,7 +22,7 @@ class GetReversalTypeResponse extends Response
      * GetReversalTypeResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q30:GetReversalTypeResponse
+     * - SchemaType: q34:GetReversalTypeResponse
      *
      * @var GetReversalTypeResponse
      */
@@ -36,6 +36,7 @@ class GetReversalTypeResponse extends Response
     public function setReversalType($reversalType)
     {
         $this->ReversalType = $reversalType;
+
         return $this;
     }
 
@@ -55,6 +56,7 @@ class GetReversalTypeResponse extends Response
     public function setGetReversalTypeResult(GetReversalTypeResponse $getReversalTypeResult)
     {
         $this->GetReversalTypeResult = $getReversalTypeResult;
+
         return $this;
     }
 
@@ -66,6 +68,7 @@ class GetReversalTypeResponse extends Response
         if (null === $this->GetReversalTypeResult) {
             $this->GetReversalTypeResult = new GetReversalTypeResponse();
         }
+
         return $this->GetReversalTypeResult;
     }
 }

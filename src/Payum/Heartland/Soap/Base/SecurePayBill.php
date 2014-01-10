@@ -76,6 +76,7 @@ class SecurePayBill
     public function setAmount($amount)
     {
         $this->Amount = $amount;
+
         return $this;
     }
 
@@ -95,6 +96,7 @@ class SecurePayBill
     public function setBillTypeName($billTypeName)
     {
         $this->BillTypeName = $billTypeName;
+
         return $this;
     }
 
@@ -114,6 +116,7 @@ class SecurePayBill
     public function setIdentifier1($identifier1)
     {
         $this->Identifier1 = $identifier1;
+
         return $this;
     }
 
@@ -133,6 +136,7 @@ class SecurePayBill
     public function setIdentifier2($identifier2)
     {
         $this->Identifier2 = $identifier2;
+
         return $this;
     }
 
@@ -152,6 +156,7 @@ class SecurePayBill
     public function setIdentifier3($identifier3)
     {
         $this->Identifier3 = $identifier3;
+
         return $this;
     }
 
@@ -171,6 +176,7 @@ class SecurePayBill
     public function setIdentifier4($identifier4)
     {
         $this->Identifier4 = $identifier4;
+
         return $this;
     }
 

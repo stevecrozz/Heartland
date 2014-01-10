@@ -29,6 +29,26 @@ class ReversePaymentRequest extends MerchantRequest
     protected $E3DebitCardsWithPINToCharge = null;
 
     /**
+     * EndUserBrowserType
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $EndUserBrowserType = null;
+
+    /**
+     * EndUserIPAddress
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $EndUserIPAddress = null;
+
+    /**
      * ExpectedFeeAmountToRefund
      *
      * The property has the following characteristics/restrictions:
@@ -66,6 +86,7 @@ class ReversePaymentRequest extends MerchantRequest
     public function setBaseAmountToRefund($baseAmountToRefund)
     {
         $this->BaseAmountToRefund = $baseAmountToRefund;
+
         return $this;
     }
 
@@ -85,6 +106,7 @@ class ReversePaymentRequest extends MerchantRequest
     public function setE3DebitCardsWithPINToCharge(ArrayOfE3DebitCardWithPINToCharge $e3DebitCardsWithPINToCharge)
     {
         $this->E3DebitCardsWithPINToCharge = $e3DebitCardsWithPINToCharge;
+
         return $this;
     }
 
@@ -96,7 +118,48 @@ class ReversePaymentRequest extends MerchantRequest
         if (null === $this->E3DebitCardsWithPINToCharge) {
             $this->E3DebitCardsWithPINToCharge = new ArrayOfE3DebitCardWithPINToCharge();
         }
+
         return $this->E3DebitCardsWithPINToCharge;
+    }
+
+    /**
+     * @param string $endUserBrowserType
+     *
+     * @return ReversePaymentRequest
+     */
+    public function setEndUserBrowserType($endUserBrowserType)
+    {
+        $this->EndUserBrowserType = $endUserBrowserType;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEndUserBrowserType()
+    {
+        return $this->EndUserBrowserType;
+    }
+
+    /**
+     * @param string $endUserIPAddress
+     *
+     * @return ReversePaymentRequest
+     */
+    public function setEndUserIPAddress($endUserIPAddress)
+    {
+        $this->EndUserIPAddress = $endUserIPAddress;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEndUserIPAddress()
+    {
+        return $this->EndUserIPAddress;
     }
 
     /**
@@ -107,6 +170,7 @@ class ReversePaymentRequest extends MerchantRequest
     public function setExpectedFeeAmountToRefund($expectedFeeAmountToRefund)
     {
         $this->ExpectedFeeAmountToRefund = $expectedFeeAmountToRefund;
+
         return $this;
     }
 
@@ -126,6 +190,7 @@ class ReversePaymentRequest extends MerchantRequest
     public function setIncludeReceiptInResponse($includeReceiptInResponse)
     {
         $this->IncludeReceiptInResponse = $includeReceiptInResponse;
+
         return $this;
     }
 
@@ -145,6 +210,7 @@ class ReversePaymentRequest extends MerchantRequest
     public function setTransaction_ID($transaction_ID)
     {
         $this->Transaction_ID = $transaction_ID;
+
         return $this;
     }
 

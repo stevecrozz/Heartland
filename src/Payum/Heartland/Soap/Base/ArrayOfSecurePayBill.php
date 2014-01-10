@@ -26,6 +26,7 @@ class ArrayOfSecurePayBill
     public function setSecurePayBill($securePayBill)
     {
         $this->SecurePayBill = $securePayBill;
+
         return $this;
     }
 

@@ -126,6 +126,7 @@ class BillTransactionRecord extends BillTransaction
     public function setBillTypeLabels(BillTypeLabels $billTypeLabels)
     {
         $this->BillTypeLabels = $billTypeLabels;
+
         return $this;
     }
 
@@ -137,6 +138,7 @@ class BillTransactionRecord extends BillTransaction
         if (null === $this->BillTypeLabels) {
             $this->BillTypeLabels = new BillTypeLabels();
         }
+
         return $this->BillTypeLabels;
     }
 
@@ -148,6 +150,7 @@ class BillTransactionRecord extends BillTransaction
     public function setDataElement1($dataElement1)
     {
         $this->DataElement1 = $dataElement1;
+
         return $this;
     }
 
@@ -167,6 +170,7 @@ class BillTransactionRecord extends BillTransaction
     public function setDataElement2($dataElement2)
     {
         $this->DataElement2 = $dataElement2;
+
         return $this;
     }
 
@@ -186,6 +190,7 @@ class BillTransactionRecord extends BillTransaction
     public function setDataElement3($dataElement3)
     {
         $this->DataElement3 = $dataElement3;
+
         return $this;
     }
 
@@ -205,6 +210,7 @@ class BillTransactionRecord extends BillTransaction
     public function setDataElement4($dataElement4)
     {
         $this->DataElement4 = $dataElement4;
+
         return $this;
     }
 
@@ -224,6 +230,7 @@ class BillTransactionRecord extends BillTransaction
     public function setDataElement5($dataElement5)
     {
         $this->DataElement5 = $dataElement5;
+
         return $this;
     }
 
@@ -243,6 +250,7 @@ class BillTransactionRecord extends BillTransaction
     public function setDataElement6($dataElement6)
     {
         $this->DataElement6 = $dataElement6;
+
         return $this;
     }
 
@@ -262,6 +270,7 @@ class BillTransactionRecord extends BillTransaction
     public function setDataElement7($dataElement7)
     {
         $this->DataElement7 = $dataElement7;
+
         return $this;
     }
 
@@ -281,6 +290,7 @@ class BillTransactionRecord extends BillTransaction
     public function setDataElement8($dataElement8)
     {
         $this->DataElement8 = $dataElement8;
+
         return $this;
     }
 
@@ -300,6 +310,7 @@ class BillTransactionRecord extends BillTransaction
     public function setDataElement9($dataElement9)
     {
         $this->DataElement9 = $dataElement9;
+
         return $this;
     }
 
@@ -319,6 +330,7 @@ class BillTransactionRecord extends BillTransaction
     public function setNetAmountToApplyToBill($netAmountToApplyToBill)
     {
         $this->NetAmountToApplyToBill = $netAmountToApplyToBill;
+
         return $this;
     }
 

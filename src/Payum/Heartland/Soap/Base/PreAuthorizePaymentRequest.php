@@ -49,6 +49,26 @@ class PreAuthorizePaymentRequest extends MerchantRequest
     protected $E3CreditCardToAuthorize = null;
 
     /**
+     * EndUserBrowserType
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $EndUserBrowserType = null;
+
+    /**
+     * EndUserIPAddress
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $EndUserIPAddress = null;
+
+    /**
      * FeeAmount
      *
      * The property has the following characteristics/restrictions:
@@ -66,6 +86,7 @@ class PreAuthorizePaymentRequest extends MerchantRequest
     public function setAESCreditCardToAuthorize(AESCardToCharge $aESCreditCardToAuthorize)
     {
         $this->AESCreditCardToAuthorize = $aESCreditCardToAuthorize;
+
         return $this;
     }
 
@@ -77,6 +98,7 @@ class PreAuthorizePaymentRequest extends MerchantRequest
         if (null === $this->AESCreditCardToAuthorize) {
             $this->AESCreditCardToAuthorize = new AESCardToCharge();
         }
+
         return $this->AESCreditCardToAuthorize;
     }
 
@@ -88,6 +110,7 @@ class PreAuthorizePaymentRequest extends MerchantRequest
     public function setAmount($amount)
     {
         $this->Amount = $amount;
+
         return $this;
     }
 
@@ -107,6 +130,7 @@ class PreAuthorizePaymentRequest extends MerchantRequest
     public function setClearTextCreditCardToAuthorize(ClearTextCardToCharge $clearTextCreditCardToAuthorize)
     {
         $this->ClearTextCreditCardToAuthorize = $clearTextCreditCardToAuthorize;
+
         return $this;
     }
 
@@ -118,6 +142,7 @@ class PreAuthorizePaymentRequest extends MerchantRequest
         if (null === $this->ClearTextCreditCardToAuthorize) {
             $this->ClearTextCreditCardToAuthorize = new ClearTextCardToCharge();
         }
+
         return $this->ClearTextCreditCardToAuthorize;
     }
 
@@ -129,6 +154,7 @@ class PreAuthorizePaymentRequest extends MerchantRequest
     public function setE3CreditCardToAuthorize(E3CardToCharge $e3CreditCardToAuthorize)
     {
         $this->E3CreditCardToAuthorize = $e3CreditCardToAuthorize;
+
         return $this;
     }
 
@@ -140,7 +166,48 @@ class PreAuthorizePaymentRequest extends MerchantRequest
         if (null === $this->E3CreditCardToAuthorize) {
             $this->E3CreditCardToAuthorize = new E3CardToCharge();
         }
+
         return $this->E3CreditCardToAuthorize;
+    }
+
+    /**
+     * @param string $endUserBrowserType
+     *
+     * @return PreAuthorizePaymentRequest
+     */
+    public function setEndUserBrowserType($endUserBrowserType)
+    {
+        $this->EndUserBrowserType = $endUserBrowserType;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEndUserBrowserType()
+    {
+        return $this->EndUserBrowserType;
+    }
+
+    /**
+     * @param string $endUserIPAddress
+     *
+     * @return PreAuthorizePaymentRequest
+     */
+    public function setEndUserIPAddress($endUserIPAddress)
+    {
+        $this->EndUserIPAddress = $endUserIPAddress;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEndUserIPAddress()
+    {
+        return $this->EndUserIPAddress;
     }
 
     /**
@@ -151,6 +218,7 @@ class PreAuthorizePaymentRequest extends MerchantRequest
     public function setFeeAmount($feeAmount)
     {
         $this->FeeAmount = $feeAmount;
+
         return $this;
     }
 

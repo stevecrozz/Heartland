@@ -46,6 +46,7 @@ class Message
     public function setCode($code)
     {
         $this->Code = $code;
+
         return $this;
     }
 
@@ -65,6 +66,7 @@ class Message
     public function setLevel($level)
     {
         $this->Level = $level;
+
         return $this;
     }
 
@@ -84,6 +86,7 @@ class Message
     public function setMessageDescription($messageDescription)
     {
         $this->MessageDescription = $messageDescription;
+
         return $this;
     }
 

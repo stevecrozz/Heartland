@@ -26,6 +26,7 @@ class UpdateBillResponse
     public function setUpdateBillResult(Response $updateBillResult)
     {
         $this->UpdateBillResult = $updateBillResult;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class UpdateBillResponse
         if (null === $this->UpdateBillResult) {
             $this->UpdateBillResult = new Response();
         }
+
         return $this->UpdateBillResult;
     }
 }

@@ -12,7 +12,7 @@ class LoadSecurePayDataExtendedResponse
      * LoadSecurePayDataExtendedResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q40:LoadSecurePayBillDataResponse
+     * - SchemaType: q44:LoadSecurePayBillDataResponse
      *
      * @var LoadSecurePayBillDataResponse
      */
@@ -26,6 +26,7 @@ class LoadSecurePayDataExtendedResponse
     public function setLoadSecurePayDataExtendedResult(LoadSecurePayBillDataResponse $loadSecurePayDataExtendedResult)
     {
         $this->LoadSecurePayDataExtendedResult = $loadSecurePayDataExtendedResult;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class LoadSecurePayDataExtendedResponse
         if (null === $this->LoadSecurePayDataExtendedResult) {
             $this->LoadSecurePayDataExtendedResult = new LoadSecurePayBillDataResponse();
         }
+
         return $this->LoadSecurePayDataExtendedResult;
     }
 }

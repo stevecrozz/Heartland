@@ -12,7 +12,7 @@ class AddSignatureResponse
      * AddSignatureResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q52:Response
+     * - SchemaType: q56:Response
      *
      * @var Response
      */
@@ -26,6 +26,7 @@ class AddSignatureResponse
     public function setAddSignatureResult(Response $addSignatureResult)
     {
         $this->AddSignatureResult = $addSignatureResult;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class AddSignatureResponse
         if (null === $this->AddSignatureResult) {
             $this->AddSignatureResult = new Response();
         }
+
         return $this->AddSignatureResult;
     }
 }

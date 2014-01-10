@@ -26,6 +26,7 @@ class ArrayOfReversalAuthorizationRecord
     public function setReversalAuthorizationRecord($reversalAuthorizationRecord)
     {
         $this->ReversalAuthorizationRecord = $reversalAuthorizationRecord;
+
         return $this;
     }
 

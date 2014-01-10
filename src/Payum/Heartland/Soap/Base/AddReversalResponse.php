@@ -26,6 +26,7 @@ class AddReversalResponse
     public function setAddReversalResult(Response $addReversalResult)
     {
         $this->AddReversalResult = $addReversalResult;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class AddReversalResponse
         if (null === $this->AddReversalResult) {
             $this->AddReversalResult = new Response();
         }
+
         return $this->AddReversalResult;
     }
 }

@@ -26,6 +26,7 @@ class ArrayOfE3DebitCardWithPINToCharge
     public function setE3DebitCardWithPINToCharge($e3DebitCardWithPINToCharge)
     {
         $this->E3DebitCardWithPINToCharge = $e3DebitCardWithPINToCharge;
+
         return $this;
     }
 

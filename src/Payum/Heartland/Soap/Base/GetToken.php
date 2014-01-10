@@ -12,7 +12,7 @@ class GetToken
      * GetTokenRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q33:GetTokenRequest
+     * - SchemaType: q37:GetTokenRequest
      *
      * @var GetTokenRequest
      */
@@ -26,6 +26,7 @@ class GetToken
     public function setGetTokenRequest(GetTokenRequest $getTokenRequest)
     {
         $this->GetTokenRequest = $getTokenRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class GetToken
         if (null === $this->GetTokenRequest) {
             $this->GetTokenRequest = new GetTokenRequest();
         }
+
         return $this->GetTokenRequest;
     }
 }

@@ -12,7 +12,7 @@ class GetSecurePayBillData
      * request
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q41:GetSecurePayBillDataRequest
+     * - SchemaType: q45:GetSecurePayBillDataRequest
      *
      * @var GetSecurePayBillDataRequest
      */
@@ -26,6 +26,7 @@ class GetSecurePayBillData
     public function setRequest(GetSecurePayBillDataRequest $request)
     {
         $this->request = $request;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class GetSecurePayBillData
         if (null === $this->request) {
             $this->request = new GetSecurePayBillDataRequest();
         }
+
         return $this->request;
     }
 }

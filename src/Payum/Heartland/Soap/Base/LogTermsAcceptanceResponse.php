@@ -12,7 +12,7 @@ class LogTermsAcceptanceResponse
      * LogTermsAcceptanceResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q54:Response
+     * - SchemaType: q58:Response
      *
      * @var Response
      */
@@ -26,6 +26,7 @@ class LogTermsAcceptanceResponse
     public function setLogTermsAcceptanceResult(Response $logTermsAcceptanceResult)
     {
         $this->LogTermsAcceptanceResult = $logTermsAcceptanceResult;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class LogTermsAcceptanceResponse
         if (null === $this->LogTermsAcceptanceResult) {
             $this->LogTermsAcceptanceResult = new Response();
         }
+
         return $this->LogTermsAcceptanceResult;
     }
 }

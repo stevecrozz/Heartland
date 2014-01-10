@@ -12,7 +12,7 @@ class UpdateSecurePayPayment
      * request
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q43:UpdateSecurePayPaymentRequest
+     * - SchemaType: q47:UpdateSecurePayPaymentRequest
      *
      * @var UpdateSecurePayPaymentRequest
      */
@@ -26,6 +26,7 @@ class UpdateSecurePayPayment
     public function setRequest(UpdateSecurePayPaymentRequest $request)
     {
         $this->request = $request;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class UpdateSecurePayPayment
         if (null === $this->request) {
             $this->request = new UpdateSecurePayPaymentRequest();
         }
+
         return $this->request;
     }
 }

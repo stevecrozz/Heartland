@@ -12,7 +12,7 @@ class EndOfDayReport
      * EndOfDayReportRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q19:EndOfDayReportRequest
+     * - SchemaType: q21:EndOfDayReportRequest
      *
      * @var EndOfDayReportRequest
      */
@@ -26,6 +26,7 @@ class EndOfDayReport
     public function setEndOfDayReportRequest(EndOfDayReportRequest $endOfDayReportRequest)
     {
         $this->EndOfDayReportRequest = $endOfDayReportRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class EndOfDayReport
         if (null === $this->EndOfDayReportRequest) {
             $this->EndOfDayReportRequest = new EndOfDayReportRequest();
         }
+
         return $this->EndOfDayReportRequest;
     }
 }

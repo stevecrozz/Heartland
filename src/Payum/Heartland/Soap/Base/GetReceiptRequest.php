@@ -36,6 +36,7 @@ class GetReceiptRequest extends MerchantRequest
     public function setReceiptFileType($receiptFileType)
     {
         $this->ReceiptFileType = $receiptFileType;
+
         return $this;
     }
 
@@ -55,6 +56,7 @@ class GetReceiptRequest extends MerchantRequest
     public function setTransaction_ID($transaction_ID)
     {
         $this->Transaction_ID = $transaction_ID;
+
         return $this;
     }
 

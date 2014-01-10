@@ -72,13 +72,8 @@ class TokenTest extends BaseTestCase
         $this->assertNotEmpty(static::$token = $response->getToken());
     }
 
-    /**
-     * @test
-     * @depends shouldAllowCaptureGetTokenRequestACH
-     */
-    public function shouldAllowMakePayment()
+    public function makePayment()
     {
-
         $payment = $this->getPayment();
 
         $request = new MakePaymentRequest();
@@ -117,6 +112,19 @@ class TokenTest extends BaseTestCase
         $response = $statusRequest->getModel()->getResponse();
 
         $this->assertTrue($statusRequest->isSuccess(), $paymentDetails->getMessages());
+    }
+
+    /**
+     * @test
+     * @depends shouldAllowCaptureGetTokenRequestACH
+     */
+    public function shouldAllowMakePayment()
+    {
+        if (false == isset($GLOBALS['__PAYUM_HEARTLAND_ACH_FEE'])) {
+            $this->markTestSkipped('Please configure __PAYUM_HEARTLAND_ACH_FEE in your phpunit.xml');
+        }
+        static::$feeAmount = $GLOBALS['__PAYUM_HEARTLAND_ACH_FEE'];
+        $this->makePayment();
     }
 
     /**
@@ -166,6 +174,6 @@ class TokenTest extends BaseTestCase
     {
         static::$amount = 1;
         static::$feeAmount = round(static::$amount * (2.95 / 100), 2);
-        $this->shouldAllowMakePayment();
+        $this->makePayment();
     }
 }

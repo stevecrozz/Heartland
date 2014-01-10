@@ -106,6 +106,7 @@ class TransactionRecord extends Transaction
     public function setApplication($application)
     {
         $this->Application = $application;
+
         return $this;
     }
 
@@ -125,6 +126,7 @@ class TransactionRecord extends Transaction
     public function setBillTransactions(ArrayOfBillTransactionRecord $billTransactions)
     {
         $this->BillTransactions = $billTransactions;
+
         return $this;
     }
 
@@ -136,6 +138,7 @@ class TransactionRecord extends Transaction
         if (null === $this->BillTransactions) {
             $this->BillTransactions = new ArrayOfBillTransactionRecord();
         }
+
         return $this->BillTransactions;
     }
 
@@ -147,6 +150,7 @@ class TransactionRecord extends Transaction
     public function setNetAmount($netAmount)
     {
         $this->NetAmount = $netAmount;
+
         return $this;
     }
 
@@ -166,6 +170,7 @@ class TransactionRecord extends Transaction
     public function setNetFeeAmount($netFeeAmount)
     {
         $this->NetFeeAmount = $netFeeAmount;
+
         return $this;
     }
 
@@ -185,6 +190,7 @@ class TransactionRecord extends Transaction
     public function setOriginalTransactionID($originalTransactionID)
     {
         $this->OriginalTransactionID = $originalTransactionID;
+
         return $this;
     }
 
@@ -204,6 +210,7 @@ class TransactionRecord extends Transaction
     public function setReversalCode($reversalCode)
     {
         $this->ReversalCode = $reversalCode;
+
         return $this;
     }
 
@@ -223,6 +230,7 @@ class TransactionRecord extends Transaction
     public function setTransactionID($transactionID)
     {
         $this->TransactionID = $transactionID;
+
         return $this;
     }
 
@@ -242,6 +250,7 @@ class TransactionRecord extends Transaction
     public function setTransactionType($transactionType)
     {
         $this->TransactionType = $transactionType;
+
         return $this;
     }
 
@@ -261,6 +270,7 @@ class TransactionRecord extends Transaction
     public function setUserName($userName)
     {
         $this->UserName = $userName;
+
         return $this;
     }
 

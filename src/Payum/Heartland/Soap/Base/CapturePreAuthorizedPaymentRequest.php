@@ -19,6 +19,26 @@ class CapturePreAuthorizedPaymentRequest extends MerchantRequest
     protected $BillTransactions = null;
 
     /**
+     * EndUserBrowserType
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $EndUserBrowserType = null;
+
+    /**
+     * EndUserIPAddress
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $EndUserIPAddress = null;
+
+    /**
      * IncludeReceiptInResponse
      *
      * The property has the following characteristics/restrictions:
@@ -56,6 +76,7 @@ class CapturePreAuthorizedPaymentRequest extends MerchantRequest
     public function setBillTransactions(ArrayOfBillTransaction $billTransactions)
     {
         $this->BillTransactions = $billTransactions;
+
         return $this;
     }
 
@@ -67,7 +88,48 @@ class CapturePreAuthorizedPaymentRequest extends MerchantRequest
         if (null === $this->BillTransactions) {
             $this->BillTransactions = new ArrayOfBillTransaction();
         }
+
         return $this->BillTransactions;
+    }
+
+    /**
+     * @param string $endUserBrowserType
+     *
+     * @return CapturePreAuthorizedPaymentRequest
+     */
+    public function setEndUserBrowserType($endUserBrowserType)
+    {
+        $this->EndUserBrowserType = $endUserBrowserType;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEndUserBrowserType()
+    {
+        return $this->EndUserBrowserType;
+    }
+
+    /**
+     * @param string $endUserIPAddress
+     *
+     * @return CapturePreAuthorizedPaymentRequest
+     */
+    public function setEndUserIPAddress($endUserIPAddress)
+    {
+        $this->EndUserIPAddress = $endUserIPAddress;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEndUserIPAddress()
+    {
+        return $this->EndUserIPAddress;
     }
 
     /**
@@ -78,6 +140,7 @@ class CapturePreAuthorizedPaymentRequest extends MerchantRequest
     public function setIncludeReceiptInResponse($includeReceiptInResponse)
     {
         $this->IncludeReceiptInResponse = $includeReceiptInResponse;
+
         return $this;
     }
 
@@ -97,6 +160,7 @@ class CapturePreAuthorizedPaymentRequest extends MerchantRequest
     public function setTransaction(Transaction $transaction)
     {
         $this->Transaction = $transaction;
+
         return $this;
     }
 
@@ -108,6 +172,7 @@ class CapturePreAuthorizedPaymentRequest extends MerchantRequest
         if (null === $this->Transaction) {
             $this->Transaction = new Transaction();
         }
+
         return $this->Transaction;
     }
 
@@ -119,6 +184,7 @@ class CapturePreAuthorizedPaymentRequest extends MerchantRequest
     public function setTransactionAuthorization_ID($transactionAuthorization_ID)
     {
         $this->TransactionAuthorization_ID = $transactionAuthorization_ID;
+
         return $this;
     }
 

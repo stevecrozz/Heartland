@@ -196,6 +196,7 @@ class Transaction
     public function setAmount($amount)
     {
         $this->Amount = $amount;
+
         return $this;
     }
 
@@ -215,6 +216,7 @@ class Transaction
     public function setFeeAmount($feeAmount)
     {
         $this->FeeAmount = $feeAmount;
+
         return $this;
     }
 
@@ -234,6 +236,7 @@ class Transaction
     public function setMerchantInvoiceNumber($merchantInvoiceNumber)
     {
         $this->MerchantInvoiceNumber = $merchantInvoiceNumber;
+
         return $this;
     }
 
@@ -253,6 +256,7 @@ class Transaction
     public function setMerchantPONumber($merchantPONumber)
     {
         $this->MerchantPONumber = $merchantPONumber;
+
         return $this;
     }
 
@@ -272,6 +276,7 @@ class Transaction
     public function setMerchantTransactionDescription($merchantTransactionDescription)
     {
         $this->MerchantTransactionDescription = $merchantTransactionDescription;
+
         return $this;
     }
 
@@ -291,6 +296,7 @@ class Transaction
     public function setMerchantTransactionID($merchantTransactionID)
     {
         $this->MerchantTransactionID = $merchantTransactionID;
+
         return $this;
     }
 
@@ -310,6 +316,7 @@ class Transaction
     public function setPayorAddress($payorAddress)
     {
         $this->PayorAddress = $payorAddress;
+
         return $this;
     }
 
@@ -329,6 +336,7 @@ class Transaction
     public function setPayorCity($payorCity)
     {
         $this->PayorCity = $payorCity;
+
         return $this;
     }
 
@@ -348,6 +356,7 @@ class Transaction
     public function setPayorCountry($payorCountry)
     {
         $this->PayorCountry = $payorCountry;
+
         return $this;
     }
 
@@ -367,6 +376,7 @@ class Transaction
     public function setPayorEmailAddress($payorEmailAddress)
     {
         $this->PayorEmailAddress = $payorEmailAddress;
+
         return $this;
     }
 
@@ -386,6 +396,7 @@ class Transaction
     public function setPayorFirstName($payorFirstName)
     {
         $this->PayorFirstName = $payorFirstName;
+
         return $this;
     }
 
@@ -405,6 +416,7 @@ class Transaction
     public function setPayorLastName($payorLastName)
     {
         $this->PayorLastName = $payorLastName;
+
         return $this;
     }
 
@@ -424,6 +436,7 @@ class Transaction
     public function setPayorMiddleName($payorMiddleName)
     {
         $this->PayorMiddleName = $payorMiddleName;
+
         return $this;
     }
 
@@ -443,6 +456,7 @@ class Transaction
     public function setPayorPhoneNumber($payorPhoneNumber)
     {
         $this->PayorPhoneNumber = $payorPhoneNumber;
+
         return $this;
     }
 
@@ -462,6 +476,7 @@ class Transaction
     public function setPayorPostalCode($payorPostalCode)
     {
         $this->PayorPostalCode = $payorPostalCode;
+
         return $this;
     }
 
@@ -481,6 +496,7 @@ class Transaction
     public function setPayorState($payorState)
     {
         $this->PayorState = $payorState;
+
         return $this;
     }
 
@@ -500,6 +516,7 @@ class Transaction
     public function setReferenceTransactionID($referenceTransactionID)
     {
         $this->ReferenceTransactionID = $referenceTransactionID;
+
         return $this;
     }
 
@@ -519,6 +536,7 @@ class Transaction
     public function setTransactionDate($transactionDate)
     {
         $this->TransactionDate = $transactionDate;
+
         return $this;
     }
 

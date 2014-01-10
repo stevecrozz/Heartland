@@ -26,6 +26,7 @@ class ArrayOfACHAccountToCharge
     public function setACHAccountToCharge($aCHAccountToCharge)
     {
         $this->ACHAccountToCharge = $aCHAccountToCharge;
+
         return $this;
     }
 

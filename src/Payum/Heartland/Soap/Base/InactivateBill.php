@@ -26,6 +26,7 @@ class InactivateBill
     public function setInactivateBillRequest(InactivateBillRequest $inactivateBillRequest)
     {
         $this->InactivateBillRequest = $inactivateBillRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class InactivateBill
         if (null === $this->InactivateBillRequest) {
             $this->InactivateBillRequest = new InactivateBillRequest();
         }
+
         return $this->InactivateBillRequest;
     }
 }

@@ -106,6 +106,7 @@ class BillDataElements
     public function setDataElement1(BillDataElement $dataElement1)
     {
         $this->DataElement1 = $dataElement1;
+
         return $this;
     }
 
@@ -117,6 +118,7 @@ class BillDataElements
         if (null === $this->DataElement1) {
             $this->DataElement1 = new BillDataElement();
         }
+
         return $this->DataElement1;
     }
 
@@ -128,6 +130,7 @@ class BillDataElements
     public function setDataElement2(BillDataElement $dataElement2)
     {
         $this->DataElement2 = $dataElement2;
+
         return $this;
     }
 
@@ -139,6 +142,7 @@ class BillDataElements
         if (null === $this->DataElement2) {
             $this->DataElement2 = new BillDataElement();
         }
+
         return $this->DataElement2;
     }
 
@@ -150,6 +154,7 @@ class BillDataElements
     public function setDataElement3(BillDataElement $dataElement3)
     {
         $this->DataElement3 = $dataElement3;
+
         return $this;
     }
 
@@ -161,6 +166,7 @@ class BillDataElements
         if (null === $this->DataElement3) {
             $this->DataElement3 = new BillDataElement();
         }
+
         return $this->DataElement3;
     }
 
@@ -172,6 +178,7 @@ class BillDataElements
     public function setDataElement4(BillDataElement $dataElement4)
     {
         $this->DataElement4 = $dataElement4;
+
         return $this;
     }
 
@@ -183,6 +190,7 @@ class BillDataElements
         if (null === $this->DataElement4) {
             $this->DataElement4 = new BillDataElement();
         }
+
         return $this->DataElement4;
     }
 
@@ -194,6 +202,7 @@ class BillDataElements
     public function setDataElement5(BillDataElement $dataElement5)
     {
         $this->DataElement5 = $dataElement5;
+
         return $this;
     }
 
@@ -205,6 +214,7 @@ class BillDataElements
         if (null === $this->DataElement5) {
             $this->DataElement5 = new BillDataElement();
         }
+
         return $this->DataElement5;
     }
 
@@ -216,6 +226,7 @@ class BillDataElements
     public function setDataElement6(BillDataElement $dataElement6)
     {
         $this->DataElement6 = $dataElement6;
+
         return $this;
     }
 
@@ -227,6 +238,7 @@ class BillDataElements
         if (null === $this->DataElement6) {
             $this->DataElement6 = new BillDataElement();
         }
+
         return $this->DataElement6;
     }
 
@@ -238,6 +250,7 @@ class BillDataElements
     public function setDataElement7(BillDataElement $dataElement7)
     {
         $this->DataElement7 = $dataElement7;
+
         return $this;
     }
 
@@ -249,6 +262,7 @@ class BillDataElements
         if (null === $this->DataElement7) {
             $this->DataElement7 = new BillDataElement();
         }
+
         return $this->DataElement7;
     }
 
@@ -260,6 +274,7 @@ class BillDataElements
     public function setDataElement8(BillDataElement $dataElement8)
     {
         $this->DataElement8 = $dataElement8;
+
         return $this;
     }
 
@@ -271,6 +286,7 @@ class BillDataElements
         if (null === $this->DataElement8) {
             $this->DataElement8 = new BillDataElement();
         }
+
         return $this->DataElement8;
     }
 
@@ -282,6 +298,7 @@ class BillDataElements
     public function setDataElement9(BillDataElement $dataElement9)
     {
         $this->DataElement9 = $dataElement9;
+
         return $this;
     }
 
@@ -293,6 +310,7 @@ class BillDataElements
         if (null === $this->DataElement9) {
             $this->DataElement9 = new BillDataElement();
         }
+
         return $this->DataElement9;
     }
 }

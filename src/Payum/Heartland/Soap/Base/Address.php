@@ -66,6 +66,7 @@ class Address
     public function setAddressLineOne($addressLineOne)
     {
         $this->AddressLineOne = $addressLineOne;
+
         return $this;
     }
 
@@ -85,6 +86,7 @@ class Address
     public function setCity($city)
     {
         $this->City = $city;
+
         return $this;
     }
 
@@ -104,6 +106,7 @@ class Address
     public function setCountry($country)
     {
         $this->Country = $country;
+
         return $this;
     }
 
@@ -123,6 +126,7 @@ class Address
     public function setPostalCode($postalCode)
     {
         $this->PostalCode = $postalCode;
+
         return $this;
     }
 
@@ -142,6 +146,7 @@ class Address
     public function setState($state)
     {
         $this->State = $state;
+
         return $this;
     }
 

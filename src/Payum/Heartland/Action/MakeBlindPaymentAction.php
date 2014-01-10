@@ -10,6 +10,7 @@ use Payum\Heartland\Soap\Base\MakePaymentRequest;
 use Payum\Request\CaptureRequest;
 use Payum\Request\UserInputRequiredInteractiveRequest;
 use Payum\Exception\RequestNotSupportedException;
+use Payum\Heartland\Soap\Base\Response;
 
 class MakeBlindPaymentAction extends BaseAction
 {
@@ -31,7 +32,11 @@ class MakeBlindPaymentAction extends BaseAction
         $soapRequest->setCredential($this->api->getMerchantCredentials($model->getMerchantName()));
 
         $response = $this->api->getSoapClient()->MakeBlindPayment($soapRequest);
-        $model->setResponse($response->getMakeBlindPaymentResult());
+        if ($response instanceof Response) {
+            $model->setResponse($response);
+        } else {
+            $model->setResponse($response->getMakeBlindPaymentResult());
+        }
     }
 
     /**

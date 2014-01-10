@@ -1,7 +1,10 @@
 <?php
 namespace Payum\Heartland;
 
-use Payum\Heartland\Soap\Base\Client;
+use Payum\Heartland\Soap\Client;
+use Payum\Heartland\Soap\Base\Response;
+use Payum\Heartland\Soap\Base\Message;
+use \SoapFault;
 
 class SoapClient extends Client
 {
@@ -16,22 +19,11 @@ class SoapClient extends Client
      */
     public function __construct($wsdl, array $options = array())
     {
+//        $options['trace'] = true;
         if (!empty($options['trace'])) {
             $this->isTrace = true;
         }
         return parent::__construct($wsdl, $options);
-    }
-
-    /**
-     * Custom mapping here
-     *
-     * @return array
-     */
-    public function getClassMap()
-    {
-        $map = parent::getClassMap();
-//        $map['GetTokenResult'] = '\Payum\Heartland\Soap\GetTokenResult'; // Example
-        return $map;
     }
 
     /**
@@ -52,10 +44,28 @@ class SoapClient extends Client
         $input_headers = null,
         &$output_headers = null
     ) {
-        $return = parent::__soapCall($function_name, $arguments, $options, $input_headers, $output_headers);
+        $exception = null;
+        try {
+            $return = parent::__soapCall($function_name, $arguments, $options, $input_headers, $output_headers);
+        } catch (SoapFault $e) {
+            $exception = $e;
+        }
 
         if ($this->isTrace) {
-            echo $this->__getLastRequest(), "\n\n", $this->__getLastResponse();
+            echo sprintf(
+                "Request: \n%s\n\nResponse:\n%s\n---------------------\n",
+                $this->__getLastRequest(),
+                $this->__getLastResponse()
+            );
+        }
+        if ($exception) {
+            $return = new Response();
+            $return->setIsSuccessful(false);
+            $message = new Message();
+            $message->setCode($exception->getCode());
+            $message->setLevel($exception->getCode());
+            $message->setMessageDescription($exception->getMessage());
+            $return->getMessages()->setMessage(array($message));
         }
 
         return $return;

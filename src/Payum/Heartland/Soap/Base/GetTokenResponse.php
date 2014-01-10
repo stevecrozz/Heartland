@@ -22,7 +22,7 @@ class GetTokenResponse extends Response
      * GetTokenResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q34:GetTokenResponse
+     * - SchemaType: q38:GetTokenResponse
      *
      * @var GetTokenResponse
      */
@@ -36,6 +36,7 @@ class GetTokenResponse extends Response
     public function setToken($token)
     {
         $this->Token = $token;
+
         return $this;
     }
 
@@ -55,6 +56,7 @@ class GetTokenResponse extends Response
     public function setGetTokenResult(GetTokenResponse $getTokenResult)
     {
         $this->GetTokenResult = $getTokenResult;
+
         return $this;
     }
 
@@ -66,6 +68,7 @@ class GetTokenResponse extends Response
         if (null === $this->GetTokenResult) {
             $this->GetTokenResult = new GetTokenResponse();
         }
+
         return $this->GetTokenResult;
     }
 }

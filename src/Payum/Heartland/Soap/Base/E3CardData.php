@@ -86,6 +86,7 @@ class E3CardData
     public function setCardHolderData(CardHolderData $cardHolderData)
     {
         $this->CardHolderData = $cardHolderData;
+
         return $this;
     }
 
@@ -97,6 +98,7 @@ class E3CardData
         if (null === $this->CardHolderData) {
             $this->CardHolderData = new CardHolderData();
         }
+
         return $this->CardHolderData;
     }
 
@@ -108,6 +110,7 @@ class E3CardData
     public function setEncryptedPanData($encryptedPanData)
     {
         $this->EncryptedPanData = $encryptedPanData;
+
         return $this;
     }
 
@@ -127,6 +130,7 @@ class E3CardData
     public function setEncryptedTrackData($encryptedTrackData)
     {
         $this->EncryptedTrackData = $encryptedTrackData;
+
         return $this;
     }
 
@@ -146,6 +150,7 @@ class E3CardData
     public function setExpirationMonth($expirationMonth)
     {
         $this->ExpirationMonth = $expirationMonth;
+
         return $this;
     }
 
@@ -165,6 +170,7 @@ class E3CardData
     public function setExpirationYear($expirationYear)
     {
         $this->ExpirationYear = $expirationYear;
+
         return $this;
     }
 
@@ -184,6 +190,7 @@ class E3CardData
     public function setKeyTransmissionBlock($keyTransmissionBlock)
     {
         $this->KeyTransmissionBlock = $keyTransmissionBlock;
+
         return $this;
     }
 
@@ -203,6 +210,7 @@ class E3CardData
     public function setObfuscatedCardNumber($obfuscatedCardNumber)
     {
         $this->ObfuscatedCardNumber = $obfuscatedCardNumber;
+
         return $this;
     }
 

@@ -12,7 +12,7 @@ class LoadSecurePayDataExtended
      * request
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q39:LoadSecurePayDataExtendedRequest
+     * - SchemaType: q43:LoadSecurePayDataExtendedRequest
      *
      * @var LoadSecurePayDataExtendedRequest
      */
@@ -26,6 +26,7 @@ class LoadSecurePayDataExtended
     public function setRequest(LoadSecurePayDataExtendedRequest $request)
     {
         $this->request = $request;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class LoadSecurePayDataExtended
         if (null === $this->request) {
             $this->request = new LoadSecurePayDataExtendedRequest();
         }
+
         return $this->request;
     }
 }

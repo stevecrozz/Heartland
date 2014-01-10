@@ -26,6 +26,7 @@ class ArrayOfAESCardToCharge
     public function setAESCardToCharge($aESCardToCharge)
     {
         $this->AESCardToCharge = $aESCardToCharge;
+
         return $this;
     }
 

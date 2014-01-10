@@ -12,7 +12,7 @@ class GetConvenienceFee
      * GetConvenienceFeeRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q31:GetConvenienceFeeRequest
+     * - SchemaType: q35:GetConvenienceFeeRequest
      *
      * @var GetConvenienceFeeRequest
      */
@@ -26,6 +26,7 @@ class GetConvenienceFee
     public function setGetConvenienceFeeRequest(GetConvenienceFeeRequest $getConvenienceFeeRequest)
     {
         $this->GetConvenienceFeeRequest = $getConvenienceFeeRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class GetConvenienceFee
         if (null === $this->GetConvenienceFeeRequest) {
             $this->GetConvenienceFeeRequest = new GetConvenienceFeeRequest();
         }
+
         return $this->GetConvenienceFeeRequest;
     }
 }

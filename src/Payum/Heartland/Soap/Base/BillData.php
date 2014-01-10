@@ -126,6 +126,7 @@ class BillData
     public function setBillIdentifier(BillIdentifier $billIdentifier)
     {
         $this->BillIdentifier = $billIdentifier;
+
         return $this;
     }
 
@@ -137,6 +138,7 @@ class BillData
         if (null === $this->BillIdentifier) {
             $this->BillIdentifier = new BillIdentifier();
         }
+
         return $this->BillIdentifier;
     }
 
@@ -148,6 +150,7 @@ class BillData
     public function setBillPresentment($billPresentment)
     {
         $this->BillPresentment = $billPresentment;
+
         return $this;
     }
 
@@ -167,6 +170,7 @@ class BillData
     public function setCustomerAddress(Address $customerAddress)
     {
         $this->CustomerAddress = $customerAddress;
+
         return $this;
     }
 
@@ -178,6 +182,7 @@ class BillData
         if (null === $this->CustomerAddress) {
             $this->CustomerAddress = new Address();
         }
+
         return $this->CustomerAddress;
     }
 
@@ -189,6 +194,7 @@ class BillData
     public function setDataElements(BillDataElements $dataElements)
     {
         $this->DataElements = $dataElements;
+
         return $this;
     }
 
@@ -200,6 +206,7 @@ class BillData
         if (null === $this->DataElements) {
             $this->DataElements = new BillDataElements();
         }
+
         return $this->DataElements;
     }
 
@@ -211,6 +218,7 @@ class BillData
     public function setDueDate($dueDate)
     {
         $this->DueDate = $dueDate;
+
         return $this;
     }
 
@@ -230,6 +238,7 @@ class BillData
     public function setObligorEmailAddress($obligorEmailAddress)
     {
         $this->ObligorEmailAddress = $obligorEmailAddress;
+
         return $this;
     }
 
@@ -249,6 +258,7 @@ class BillData
     public function setObligorFirstName($obligorFirstName)
     {
         $this->ObligorFirstName = $obligorFirstName;
+
         return $this;
     }
 
@@ -268,6 +278,7 @@ class BillData
     public function setObligorLastName($obligorLastName)
     {
         $this->ObligorLastName = $obligorLastName;
+
         return $this;
     }
 
@@ -287,6 +298,7 @@ class BillData
     public function setObligorMiddleName($obligorMiddleName)
     {
         $this->ObligorMiddleName = $obligorMiddleName;
+
         return $this;
     }
 
@@ -306,6 +318,7 @@ class BillData
     public function setObligorPhoneNumber($obligorPhoneNumber)
     {
         $this->ObligorPhoneNumber = $obligorPhoneNumber;
+
         return $this;
     }
 
@@ -325,6 +338,7 @@ class BillData
     public function setOptionalAmounts(OptionalBillAmounts $optionalAmounts)
     {
         $this->OptionalAmounts = $optionalAmounts;
+
         return $this;
     }
 
@@ -336,6 +350,7 @@ class BillData
         if (null === $this->OptionalAmounts) {
             $this->OptionalAmounts = new OptionalBillAmounts();
         }
+
         return $this->OptionalAmounts;
     }
 }

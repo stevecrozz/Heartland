@@ -26,6 +26,7 @@ class ChangePassword
     public function setChangePasswordRequest(ChangePasswordRequest $changePasswordRequest)
     {
         $this->ChangePasswordRequest = $changePasswordRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class ChangePassword
         if (null === $this->ChangePasswordRequest) {
             $this->ChangePasswordRequest = new ChangePasswordRequest();
         }
+
         return $this->ChangePasswordRequest;
     }
 }

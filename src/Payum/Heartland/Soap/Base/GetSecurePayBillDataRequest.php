@@ -26,6 +26,7 @@ class GetSecurePayBillDataRequest extends MerchantRequest
     public function setGUID($gUID)
     {
         $this->GUID = $gUID;
+
         return $this;
     }
 

@@ -12,7 +12,7 @@ class MakeBlindPaymentResponse
      * MakeBlindPaymentResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q24:MakePaymentResponse
+     * - SchemaType: q26:MakePaymentResponse
      *
      * @var MakePaymentResponse
      */
@@ -26,6 +26,7 @@ class MakeBlindPaymentResponse
     public function setMakeBlindPaymentResult(MakePaymentResponse $makeBlindPaymentResult)
     {
         $this->MakeBlindPaymentResult = $makeBlindPaymentResult;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class MakeBlindPaymentResponse
         if (null === $this->MakeBlindPaymentResult) {
             $this->MakeBlindPaymentResult = new MakePaymentResponse();
         }
+
         return $this->MakeBlindPaymentResult;
     }
 }

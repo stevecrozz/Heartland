@@ -12,7 +12,7 @@ class LogTermsAcceptance
      * LogTermsAcceptanceRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q53:LogTermsAcceptanceRequest
+     * - SchemaType: q57:LogTermsAcceptanceRequest
      *
      * @var LogTermsAcceptanceRequest
      */
@@ -26,6 +26,7 @@ class LogTermsAcceptance
     public function setLogTermsAcceptanceRequest(LogTermsAcceptanceRequest $logTermsAcceptanceRequest)
     {
         $this->LogTermsAcceptanceRequest = $logTermsAcceptanceRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class LogTermsAcceptance
         if (null === $this->LogTermsAcceptanceRequest) {
             $this->LogTermsAcceptanceRequest = new LogTermsAcceptanceRequest();
         }
+
         return $this->LogTermsAcceptanceRequest;
     }
 }

@@ -46,6 +46,7 @@ class Credentials
     public function setApplicationID($applicationID)
     {
         $this->ApplicationID = $applicationID;
+
         return $this;
     }
 
@@ -65,6 +66,7 @@ class Credentials
     public function setPassword($password)
     {
         $this->Password = $password;
+
         return $this;
     }
 
@@ -84,6 +86,7 @@ class Credentials
     public function setUserName($userName)
     {
         $this->UserName = $userName;
+
         return $this;
     }
 

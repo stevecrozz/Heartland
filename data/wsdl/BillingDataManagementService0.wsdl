@@ -150,39 +150,40 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+    <xs:element name="UpdateTokenExpirationDate">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="UpdateTokenExpirationDateRequest" nillable="true"
+                            type="q19:UpdateTokenExpirationDateRequest"
+                            xmlns:q19="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="UpdateTokenExpirationDateResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="UpdateTokenExpirationDateResult" nillable="true" type="q20:Response"
+                            xmlns:q20="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
     <xs:element name="EndOfDayReport">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="EndOfDayReportRequest" nillable="true" type="q19:EndOfDayReportRequest"
-                            xmlns:q19="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="EndOfDayReportRequest" nillable="true" type="q21:EndOfDayReportRequest"
+                            xmlns:q21="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="EndOfDayReportResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="EndOfDayReportResult" nillable="true" type="q20:EndOfDayReportResponse"
-                            xmlns:q20="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="MakePayment">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element minOccurs="0" name="MakeE3PaymentRequest" nillable="true" type="q21:MakePaymentRequest"
-                            xmlns:q21="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="MakePaymentResponse">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element minOccurs="0" name="MakePaymentResult" nillable="true" type="q22:MakePaymentResponse"
+                <xs:element minOccurs="0" name="EndOfDayReportResult" nillable="true" type="q22:EndOfDayReportResponse"
                             xmlns:q22="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    <xs:element name="MakeBlindPayment">
+    <xs:element name="MakePayment">
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" name="MakeE3PaymentRequest" nillable="true" type="q23:MakePaymentRequest"
@@ -190,43 +191,76 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+    <xs:element name="MakePaymentResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="MakePaymentResult" nillable="true" type="q24:MakePaymentResponse"
+                            xmlns:q24="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="MakeBlindPayment">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="MakeE3PaymentRequest" nillable="true" type="q25:MakePaymentRequest"
+                            xmlns:q25="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
     <xs:element name="MakeBlindPaymentResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="MakeBlindPaymentResult" nillable="true" type="q24:MakePaymentResponse"
-                            xmlns:q24="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="MakeBlindPaymentResult" nillable="true" type="q26:MakePaymentResponse"
+                            xmlns:q26="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="ReversePayment">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="ReversePaymentRequest" nillable="true" type="q25:ReversePaymentRequest"
-                            xmlns:q25="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="ReversePaymentRequest" nillable="true" type="q27:ReversePaymentRequest"
+                            xmlns:q27="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="ReversePaymentResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="ReversePaymentResult" nillable="true" type="q26:ReversePaymentResponse"
-                            xmlns:q26="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="ReversePaymentResult" nillable="true" type="q28:ReversePaymentResponse"
+                            xmlns:q28="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ReversePaymentReturnReversalType">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="ReversePaymentRequest" nillable="true" type="q29:ReversePaymentRequest"
+                            xmlns:q29="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ReversePaymentReturnReversalTypeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="ReversePaymentReturnReversalTypeResult" nillable="true"
+                            type="q30:ReversePaymentWithReversalTypeResponse"
+                            xmlns:q30="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="GetReceipt">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="GetReceiptRequest" nillable="true" type="q27:GetReceiptRequest"
-                            xmlns:q27="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="GetReceiptRequest" nillable="true" type="q31:GetReceiptRequest"
+                            xmlns:q31="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="GetReceiptResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="GetReceiptResult" nillable="true" type="q28:GetReceiptResponse"
-                            xmlns:q28="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="GetReceiptResult" nillable="true" type="q32:GetReceiptResponse"
+                            xmlns:q32="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -234,8 +268,8 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" name="GetReversalTypeRequest" nillable="true"
-                            type="q29:GetReversalTypeRequest"
-                            xmlns:q29="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                            type="q33:GetReversalTypeRequest"
+                            xmlns:q33="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -243,8 +277,8 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" name="GetReversalTypeResult" nillable="true"
-                            type="q30:GetReversalTypeResponse"
-                            xmlns:q30="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                            type="q34:GetReversalTypeResponse"
+                            xmlns:q34="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -252,8 +286,8 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" name="GetConvenienceFeeRequest" nillable="true"
-                            type="q31:GetConvenienceFeeRequest"
-                            xmlns:q31="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                            type="q35:GetConvenienceFeeRequest"
+                            xmlns:q35="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -261,32 +295,32 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" name="GetConvenienceFeeResult" nillable="true"
-                            type="q32:GetConvenienceFeeResponse"
-                            xmlns:q32="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                            type="q36:GetConvenienceFeeResponse"
+                            xmlns:q36="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="GetToken">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="GetTokenRequest" nillable="true" type="q33:GetTokenRequest"
-                            xmlns:q33="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="GetTokenRequest" nillable="true" type="q37:GetTokenRequest"
+                            xmlns:q37="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="GetTokenResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="GetTokenResult" nillable="true" type="q34:GetTokenResponse"
-                            xmlns:q34="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="GetTokenResult" nillable="true" type="q38:GetTokenResponse"
+                            xmlns:q38="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="LoadSecurePayBillData">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="request" nillable="true" type="q35:LoadSecurePayBillDataRequest"
-                            xmlns:q35="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="request" nillable="true" type="q39:LoadSecurePayBillDataRequest"
+                            xmlns:q39="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -294,16 +328,16 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" name="LoadSecurePayBillDataResult" nillable="true"
-                            type="q36:LoadSecurePayBillDataResponse"
-                            xmlns:q36="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                            type="q40:LoadSecurePayBillDataResponse"
+                            xmlns:q40="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="LoadSecurePayMerchantBillData">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="request" nillable="true" type="q37:LoadSecurePayMerchantBillDataRequest"
-                            xmlns:q37="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="request" nillable="true" type="q41:LoadSecurePayMerchantBillDataRequest"
+                            xmlns:q41="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -311,16 +345,16 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" name="LoadSecurePayMerchantBillDataResult" nillable="true"
-                            type="q38:LoadSecurePayBillDataResponse"
-                            xmlns:q38="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                            type="q42:LoadSecurePayBillDataResponse"
+                            xmlns:q42="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="LoadSecurePayDataExtended">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="request" nillable="true" type="q39:LoadSecurePayDataExtendedRequest"
-                            xmlns:q39="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="request" nillable="true" type="q43:LoadSecurePayDataExtendedRequest"
+                            xmlns:q43="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -328,16 +362,16 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" name="LoadSecurePayDataExtendedResult" nillable="true"
-                            type="q40:LoadSecurePayBillDataResponse"
-                            xmlns:q40="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                            type="q44:LoadSecurePayBillDataResponse"
+                            xmlns:q44="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="GetSecurePayBillData">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="request" nillable="true" type="q41:GetSecurePayBillDataRequest"
-                            xmlns:q41="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="request" nillable="true" type="q45:GetSecurePayBillDataRequest"
+                            xmlns:q45="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -345,24 +379,24 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" name="GetSecurePayBillDataResult" nillable="true"
-                            type="q42:GetSecurePayBillDataResponse"
-                            xmlns:q42="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                            type="q46:GetSecurePayBillDataResponse"
+                            xmlns:q46="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="UpdateSecurePayPayment">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="request" nillable="true" type="q43:UpdateSecurePayPaymentRequest"
-                            xmlns:q43="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="request" nillable="true" type="q47:UpdateSecurePayPaymentRequest"
+                            xmlns:q47="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="UpdateSecurePayPaymentResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="UpdateSecurePayPaymentResult" nillable="true" type="q44:Response"
-                            xmlns:q44="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="UpdateSecurePayPaymentResult" nillable="true" type="q48:Response"
+                            xmlns:q48="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -370,8 +404,8 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" name="SetupFutureDatedPaymentRequest" nillable="true"
-                            type="q45:SetupFutureDatedPaymentRequest"
-                            xmlns:q45="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                            type="q49:SetupFutureDatedPaymentRequest"
+                            xmlns:q49="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -379,8 +413,8 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" name="SetupFutureDatedPaymentResult" nillable="true"
-                            type="q46:SetupFutureDatedPaymentResponse"
-                            xmlns:q46="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                            type="q50:SetupFutureDatedPaymentResponse"
+                            xmlns:q50="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -388,8 +422,8 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" name="PreAuthorizePaymentRequest" nillable="true"
-                            type="q47:PreAuthorizePaymentRequest"
-                            xmlns:q47="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                            type="q51:PreAuthorizePaymentRequest"
+                            xmlns:q51="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -397,8 +431,8 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" name="PreAuthorizePaymentResult" nillable="true"
-                            type="q48:PreAuthorizePaymentResponse"
-                            xmlns:q48="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                            type="q52:PreAuthorizePaymentResponse"
+                            xmlns:q52="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -406,8 +440,8 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" name="CapturePreAuthorizedPaymentRequest" nillable="true"
-                            type="q49:CapturePreAuthorizedPaymentRequest"
-                            xmlns:q49="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                            type="q53:CapturePreAuthorizedPaymentRequest"
+                            xmlns:q53="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -415,24 +449,24 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" name="CapturePreAuthorizedPaymentResult" nillable="true"
-                            type="q50:MakePaymentResponse"
-                            xmlns:q50="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                            type="q54:MakePaymentResponse"
+                            xmlns:q54="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="AddSignature">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="AddSignatureRequest" nillable="true" type="q51:AddSignatureRequest"
-                            xmlns:q51="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="AddSignatureRequest" nillable="true" type="q55:AddSignatureRequest"
+                            xmlns:q55="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="AddSignatureResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="AddSignatureResult" nillable="true" type="q52:Response"
-                            xmlns:q52="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="AddSignatureResult" nillable="true" type="q56:Response"
+                            xmlns:q56="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -440,32 +474,50 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" name="LogTermsAcceptanceRequest" nillable="true"
-                            type="q53:LogTermsAcceptanceRequest"
-                            xmlns:q53="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                            type="q57:LogTermsAcceptanceRequest"
+                            xmlns:q57="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="LogTermsAcceptanceResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="LogTermsAcceptanceResult" nillable="true" type="q54:Response"
-                            xmlns:q54="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="LogTermsAcceptanceResult" nillable="true" type="q58:Response"
+                            xmlns:q58="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="DisburseFunds">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="DisburseFundsRequest" nillable="true" type="q55:DisburseFundsRequest"
-                            xmlns:q55="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="DisburseFundsRequest" nillable="true" type="q59:DisburseFundsRequest"
+                            xmlns:q59="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="DisburseFundsResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="0" name="DisburseFundsResult" nillable="true" type="q56:DisburseFundsResponse"
-                            xmlns:q56="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+                <xs:element minOccurs="0" name="DisburseFundsResult" nillable="true" type="q60:DisburseFundsResponse"
+                            xmlns:q60="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetACHReturnsByDate">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="GetACHReturnsByDateRequest" nillable="true"
+                            type="q61:GetACHReturnsByDateRequest"
+                            xmlns:q61="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetACHReturnsByDateResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="GetACHReturnsByDateResult" nillable="true"
+                            type="q62:GetACHReturnsByDateResponse"
+                            xmlns:q62="http://schemas.datacontract.org/2004/07/BDMS.NewModel"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

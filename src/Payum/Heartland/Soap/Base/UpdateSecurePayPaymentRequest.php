@@ -46,6 +46,7 @@ class UpdateSecurePayPaymentRequest extends Request
     public function setFutureDatedTransactionID($futureDatedTransactionID)
     {
         $this->FutureDatedTransactionID = $futureDatedTransactionID;
+
         return $this;
     }
 
@@ -65,6 +66,7 @@ class UpdateSecurePayPaymentRequest extends Request
     public function setGUID($gUID)
     {
         $this->GUID = $gUID;
+
         return $this;
     }
 
@@ -84,6 +86,7 @@ class UpdateSecurePayPaymentRequest extends Request
     public function setTransactionID($transactionID)
     {
         $this->TransactionID = $transactionID;
+
         return $this;
     }
 

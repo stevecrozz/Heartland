@@ -12,7 +12,7 @@ class GetReversalType
      * GetReversalTypeRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q29:GetReversalTypeRequest
+     * - SchemaType: q33:GetReversalTypeRequest
      *
      * @var GetReversalTypeRequest
      */
@@ -26,6 +26,7 @@ class GetReversalType
     public function setGetReversalTypeRequest(GetReversalTypeRequest $getReversalTypeRequest)
     {
         $this->GetReversalTypeRequest = $getReversalTypeRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class GetReversalType
         if (null === $this->GetReversalTypeRequest) {
             $this->GetReversalTypeRequest = new GetReversalTypeRequest();
         }
+
         return $this->GetReversalTypeRequest;
     }
 }

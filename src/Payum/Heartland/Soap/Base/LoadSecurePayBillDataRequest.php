@@ -46,6 +46,7 @@ class LoadSecurePayBillDataRequest extends Request
     public function setBillData(ArrayOfSecurePayBill $billData)
     {
         $this->BillData = $billData;
+
         return $this;
     }
 
@@ -57,6 +58,7 @@ class LoadSecurePayBillDataRequest extends Request
         if (null === $this->BillData) {
             $this->BillData = new ArrayOfSecurePayBill();
         }
+
         return $this->BillData;
     }
 
@@ -68,6 +70,7 @@ class LoadSecurePayBillDataRequest extends Request
     public function setMaxFuturePaymentDays($maxFuturePaymentDays)
     {
         $this->MaxFuturePaymentDays = $maxFuturePaymentDays;
+
         return $this;
     }
 
@@ -87,6 +90,7 @@ class LoadSecurePayBillDataRequest extends Request
     public function setReturnTokenWithResponse($returnTokenWithResponse)
     {
         $this->ReturnTokenWithResponse = $returnTokenWithResponse;
+
         return $this;
     }
 

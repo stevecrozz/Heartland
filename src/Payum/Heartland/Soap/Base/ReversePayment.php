@@ -12,7 +12,7 @@ class ReversePayment
      * ReversePaymentRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q25:ReversePaymentRequest
+     * - SchemaType: q27:ReversePaymentRequest
      *
      * @var ReversePaymentRequest
      */
@@ -26,6 +26,7 @@ class ReversePayment
     public function setReversePaymentRequest(ReversePaymentRequest $reversePaymentRequest)
     {
         $this->ReversePaymentRequest = $reversePaymentRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class ReversePayment
         if (null === $this->ReversePaymentRequest) {
             $this->ReversePaymentRequest = new ReversePaymentRequest();
         }
+
         return $this->ReversePaymentRequest;
     }
 }

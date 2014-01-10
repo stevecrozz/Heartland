@@ -36,6 +36,7 @@ class AddSignatureRequest extends MerchantRequest
     public function setSignatureImageInBase64($signatureImageInBase64)
     {
         $this->SignatureImageInBase64 = $signatureImageInBase64;
+
         return $this;
     }
 
@@ -55,6 +56,7 @@ class AddSignatureRequest extends MerchantRequest
     public function setTransaction_ID($transaction_ID)
     {
         $this->Transaction_ID = $transaction_ID;
+
         return $this;
     }
 

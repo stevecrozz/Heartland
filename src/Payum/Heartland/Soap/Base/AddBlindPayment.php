@@ -26,6 +26,7 @@ class AddBlindPayment
     public function setAddBlindPaymentRequest(AddBlindPaymentRequest $addBlindPaymentRequest)
     {
         $this->AddBlindPaymentRequest = $addBlindPaymentRequest;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class AddBlindPayment
         if (null === $this->AddBlindPaymentRequest) {
             $this->AddBlindPaymentRequest = new AddBlindPaymentRequest();
         }
+
         return $this->AddBlindPaymentRequest;
     }
 }

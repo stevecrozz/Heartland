@@ -22,7 +22,7 @@ class LoadSecurePayBillDataResponse extends Response
      * LoadSecurePayBillDataResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q36:LoadSecurePayBillDataResponse
+     * - SchemaType: q40:LoadSecurePayBillDataResponse
      *
      * @var LoadSecurePayBillDataResponse
      */
@@ -36,6 +36,7 @@ class LoadSecurePayBillDataResponse extends Response
     public function setGUID($gUID)
     {
         $this->GUID = $gUID;
+
         return $this;
     }
 
@@ -55,6 +56,7 @@ class LoadSecurePayBillDataResponse extends Response
     public function setLoadSecurePayBillDataResult(LoadSecurePayBillDataResponse $loadSecurePayBillDataResult)
     {
         $this->LoadSecurePayBillDataResult = $loadSecurePayBillDataResult;
+
         return $this;
     }
 
@@ -66,6 +68,7 @@ class LoadSecurePayBillDataResponse extends Response
         if (null === $this->LoadSecurePayBillDataResult) {
             $this->LoadSecurePayBillDataResult = new LoadSecurePayBillDataResponse();
         }
+
         return $this->LoadSecurePayBillDataResult;
     }
 }

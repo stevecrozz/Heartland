@@ -93,6 +93,12 @@
     <wsdl:message name="IBillingDataManagementService_InactivateBill_OutputMessage">
         <wsdl:part name="parameters" element="tns:InactivateBillResponse"/>
     </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_UpdateTokenExpirationDate_InputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateTokenExpirationDate"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_UpdateTokenExpirationDate_OutputMessage">
+        <wsdl:part name="parameters" element="tns:UpdateTokenExpirationDateResponse"/>
+    </wsdl:message>
     <wsdl:message name="IBillingDataManagementService_EndOfDayReport_InputMessage">
         <wsdl:part name="parameters" element="tns:EndOfDayReport"/>
     </wsdl:message>
@@ -116,6 +122,12 @@
     </wsdl:message>
     <wsdl:message name="IBillingDataManagementService_ReversePayment_OutputMessage">
         <wsdl:part name="parameters" element="tns:ReversePaymentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_ReversePaymentReturnReversalType_InputMessage">
+        <wsdl:part name="parameters" element="tns:ReversePaymentReturnReversalType"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_ReversePaymentReturnReversalType_OutputMessage">
+        <wsdl:part name="parameters" element="tns:ReversePaymentReturnReversalTypeResponse"/>
     </wsdl:message>
     <wsdl:message name="IBillingDataManagementService_GetReceipt_InputMessage">
         <wsdl:part name="parameters" element="tns:GetReceipt"/>
@@ -207,6 +219,12 @@
     <wsdl:message name="IBillingDataManagementService_DisburseFunds_OutputMessage">
         <wsdl:part name="parameters" element="tns:DisburseFundsResponse"/>
     </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_GetACHReturnsByDate_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetACHReturnsByDate"/>
+    </wsdl:message>
+    <wsdl:message name="IBillingDataManagementService_GetACHReturnsByDate_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetACHReturnsByDateResponse"/>
+    </wsdl:message>
     <wsdl:portType name="IBillingDataManagementService">
         <wsdl:operation name="AddBlindPayment">
             <wsdl:input
@@ -280,6 +298,14 @@
                     wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/InactivateBillResponse"
                     message="tns:IBillingDataManagementService_InactivateBill_OutputMessage"/>
         </wsdl:operation>
+        <wsdl:operation name="UpdateTokenExpirationDate">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/UpdateTokenExpirationDate"
+                    message="tns:IBillingDataManagementService_UpdateTokenExpirationDate_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/UpdateTokenExpirationDateResponse"
+                    message="tns:IBillingDataManagementService_UpdateTokenExpirationDate_OutputMessage"/>
+        </wsdl:operation>
         <wsdl:operation name="EndOfDayReport">
             <wsdl:input
                     wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/EndOfDayReport"
@@ -311,6 +337,14 @@
             <wsdl:output
                     wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/ReversePaymentResponse"
                     message="tns:IBillingDataManagementService_ReversePayment_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ReversePaymentReturnReversalType">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/ReversePaymentReturnReversalType"
+                    message="tns:IBillingDataManagementService_ReversePaymentReturnReversalType_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/ReversePaymentReturnReversalTypeResponse"
+                    message="tns:IBillingDataManagementService_ReversePaymentReturnReversalType_OutputMessage"/>
         </wsdl:operation>
         <wsdl:operation name="GetReceipt">
             <wsdl:input
@@ -431,6 +465,14 @@
             <wsdl:output
                     wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/DisburseFundsResponse"
                     message="tns:IBillingDataManagementService_DisburseFunds_OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetACHReturnsByDate">
+            <wsdl:input
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/GetACHReturnsByDate"
+                    message="tns:IBillingDataManagementService_GetACHReturnsByDate_InputMessage"/>
+            <wsdl:output
+                    wsaw:Action="https://test.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService/IBillingDataManagementService/GetACHReturnsByDateResponse"
+                    message="tns:IBillingDataManagementService_GetACHReturnsByDate_OutputMessage"/>
         </wsdl:operation>
     </wsdl:portType>
     <wsdl:service name="BillingDataManagementService">

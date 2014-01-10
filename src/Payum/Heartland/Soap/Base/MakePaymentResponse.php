@@ -42,7 +42,7 @@ class MakePaymentResponse extends GetFileResponse
      * MakePaymentResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q22:MakePaymentResponse
+     * - SchemaType: q24:MakePaymentResponse
      *
      * @var MakePaymentResponse
      */
@@ -56,6 +56,7 @@ class MakePaymentResponse extends GetFileResponse
     public function setAuthorizations(ArrayOfAuthorization $authorizations)
     {
         $this->Authorizations = $authorizations;
+
         return $this;
     }
 
@@ -67,6 +68,7 @@ class MakePaymentResponse extends GetFileResponse
         if (null === $this->Authorizations) {
             $this->Authorizations = new ArrayOfAuthorization();
         }
+
         return $this->Authorizations;
     }
 
@@ -78,6 +80,7 @@ class MakePaymentResponse extends GetFileResponse
     public function setTransaction(Transaction $transaction)
     {
         $this->Transaction = $transaction;
+
         return $this;
     }
 
@@ -89,6 +92,7 @@ class MakePaymentResponse extends GetFileResponse
         if (null === $this->Transaction) {
             $this->Transaction = new Transaction();
         }
+
         return $this->Transaction;
     }
 
@@ -100,6 +104,7 @@ class MakePaymentResponse extends GetFileResponse
     public function setTransaction_ID($transaction_ID)
     {
         $this->Transaction_ID = $transaction_ID;
+
         return $this;
     }
 
@@ -119,6 +124,7 @@ class MakePaymentResponse extends GetFileResponse
     public function setMakePaymentResult(MakePaymentResponse $makePaymentResult)
     {
         $this->MakePaymentResult = $makePaymentResult;
+
         return $this;
     }
 
@@ -130,6 +136,7 @@ class MakePaymentResponse extends GetFileResponse
         if (null === $this->MakePaymentResult) {
             $this->MakePaymentResult = new MakePaymentResponse();
         }
+
         return $this->MakePaymentResult;
     }
 }

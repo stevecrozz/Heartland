@@ -76,6 +76,7 @@ class AESCardData
     public function setCardHolderData(CardHolderData $cardHolderData)
     {
         $this->CardHolderData = $cardHolderData;
+
         return $this;
     }
 
@@ -87,6 +88,7 @@ class AESCardData
         if (null === $this->CardHolderData) {
             $this->CardHolderData = new CardHolderData();
         }
+
         return $this->CardHolderData;
     }
 
@@ -98,6 +100,7 @@ class AESCardData
     public function setEncryptedTrackData($encryptedTrackData)
     {
         $this->EncryptedTrackData = $encryptedTrackData;
+
         return $this;
     }
 
@@ -117,6 +120,7 @@ class AESCardData
     public function setExpirationMonth($expirationMonth)
     {
         $this->ExpirationMonth = $expirationMonth;
+
         return $this;
     }
 
@@ -136,6 +140,7 @@ class AESCardData
     public function setExpirationYear($expirationYear)
     {
         $this->ExpirationYear = $expirationYear;
+
         return $this;
     }
 
@@ -155,6 +160,7 @@ class AESCardData
     public function setKeySerialNumber($keySerialNumber)
     {
         $this->KeySerialNumber = $keySerialNumber;
+
         return $this;
     }
 
@@ -174,6 +180,7 @@ class AESCardData
     public function setObfuscatedCardNumber($obfuscatedCardNumber)
     {
         $this->ObfuscatedCardNumber = $obfuscatedCardNumber;
+
         return $this;
     }
 

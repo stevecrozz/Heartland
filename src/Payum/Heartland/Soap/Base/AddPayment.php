@@ -26,6 +26,7 @@ class AddPayment
     public function setAddPaymentRequest($addPaymentRequest)
     {
         $this->AddPaymentRequest = $addPaymentRequest;
+
         return $this;
     }
 

@@ -52,7 +52,7 @@ class EndOfDayReportResponse extends GetFileResponse
      * EndOfDayReportResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q20:EndOfDayReportResponse
+     * - SchemaType: q22:EndOfDayReportResponse
      *
      * @var EndOfDayReportResponse
      */
@@ -66,6 +66,7 @@ class EndOfDayReportResponse extends GetFileResponse
     public function setCashierTotals(ArrayOfEndOfDayReportTotalForCashier $cashierTotals)
     {
         $this->CashierTotals = $cashierTotals;
+
         return $this;
     }
 
@@ -77,6 +78,7 @@ class EndOfDayReportResponse extends GetFileResponse
         if (null === $this->CashierTotals) {
             $this->CashierTotals = new ArrayOfEndOfDayReportTotalForCashier();
         }
+
         return $this->CashierTotals;
     }
 
@@ -88,6 +90,7 @@ class EndOfDayReportResponse extends GetFileResponse
     public function setHeader(EndOfDayReportHeader $header)
     {
         $this->Header = $header;
+
         return $this;
     }
 
@@ -99,6 +102,7 @@ class EndOfDayReportResponse extends GetFileResponse
         if (null === $this->Header) {
             $this->Header = new EndOfDayReportHeader();
         }
+
         return $this->Header;
     }
 
@@ -110,6 +114,7 @@ class EndOfDayReportResponse extends GetFileResponse
     public function setSummaryTotal(EndOfDayReportTotals $summaryTotal)
     {
         $this->SummaryTotal = $summaryTotal;
+
         return $this;
     }
 
@@ -121,6 +126,7 @@ class EndOfDayReportResponse extends GetFileResponse
         if (null === $this->SummaryTotal) {
             $this->SummaryTotal = new EndOfDayReportTotals();
         }
+
         return $this->SummaryTotal;
     }
 
@@ -132,6 +138,7 @@ class EndOfDayReportResponse extends GetFileResponse
     public function setTransactions(ArrayOfTransactionRecord $transactions)
     {
         $this->Transactions = $transactions;
+
         return $this;
     }
 
@@ -143,6 +150,7 @@ class EndOfDayReportResponse extends GetFileResponse
         if (null === $this->Transactions) {
             $this->Transactions = new ArrayOfTransactionRecord();
         }
+
         return $this->Transactions;
     }
 
@@ -154,6 +162,7 @@ class EndOfDayReportResponse extends GetFileResponse
     public function setEndOfDayReportResult(EndOfDayReportResponse $endOfDayReportResult)
     {
         $this->EndOfDayReportResult = $endOfDayReportResult;
+
         return $this;
     }
 
@@ -165,6 +174,7 @@ class EndOfDayReportResponse extends GetFileResponse
         if (null === $this->EndOfDayReportResult) {
             $this->EndOfDayReportResult = new EndOfDayReportResponse();
         }
+
         return $this->EndOfDayReportResult;
     }
 }

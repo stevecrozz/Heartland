@@ -36,6 +36,7 @@ class Bill extends BillData
     public function setBillIsPayable($billIsPayable)
     {
         $this->BillIsPayable = $billIsPayable;
+
         return $this;
     }
 
@@ -55,6 +56,7 @@ class Bill extends BillData
     public function setRequiredAmount($requiredAmount)
     {
         $this->RequiredAmount = $requiredAmount;
+
         return $this;
     }
 

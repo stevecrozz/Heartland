@@ -36,6 +36,7 @@ class ReversalAuthorizationRecord extends AuthorizationRecord
     public function setReversalAmount($reversalAmount)
     {
         $this->ReversalAmount = $reversalAmount;
+
         return $this;
     }
 
@@ -55,6 +56,7 @@ class ReversalAuthorizationRecord extends AuthorizationRecord
     public function setReversalReferenceNumber($reversalReferenceNumber)
     {
         $this->ReversalReferenceNumber = $reversalReferenceNumber;
+
         return $this;
     }
 

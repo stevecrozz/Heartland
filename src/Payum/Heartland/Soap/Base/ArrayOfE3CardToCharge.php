@@ -26,6 +26,7 @@ class ArrayOfE3CardToCharge
     public function setE3CardToCharge($e3CardToCharge)
     {
         $this->E3CardToCharge = $e3CardToCharge;
+
         return $this;
     }
 

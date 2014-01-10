@@ -22,7 +22,7 @@ class ReversePaymentResponse extends GetFileResponse
      * ReversePaymentResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q26:ReversePaymentResponse
+     * - SchemaType: q28:ReversePaymentResponse
      *
      * @var ReversePaymentResponse
      */
@@ -36,6 +36,7 @@ class ReversePaymentResponse extends GetFileResponse
     public function setReversalTransactionWithReversalAuthorizations(ReversalTransactionRecordWithReversalAuthorizations $reversalTransactionWithReversalAuthorizations)
     {
         $this->ReversalTransactionWithReversalAuthorizations = $reversalTransactionWithReversalAuthorizations;
+
         return $this;
     }
 
@@ -47,6 +48,7 @@ class ReversePaymentResponse extends GetFileResponse
         if (null === $this->ReversalTransactionWithReversalAuthorizations) {
             $this->ReversalTransactionWithReversalAuthorizations = new ReversalTransactionRecordWithReversalAuthorizations();
         }
+
         return $this->ReversalTransactionWithReversalAuthorizations;
     }
 
@@ -58,6 +60,7 @@ class ReversePaymentResponse extends GetFileResponse
     public function setReversePaymentResult(ReversePaymentResponse $reversePaymentResult)
     {
         $this->ReversePaymentResult = $reversePaymentResult;
+
         return $this;
     }
 
@@ -69,6 +72,7 @@ class ReversePaymentResponse extends GetFileResponse
         if (null === $this->ReversePaymentResult) {
             $this->ReversePaymentResult = new ReversePaymentResponse();
         }
+
         return $this->ReversePaymentResult;
     }
 }

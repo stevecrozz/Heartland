@@ -26,6 +26,7 @@ class AddPaymentResponse
     public function setAddPaymentResult(Response $addPaymentResult)
     {
         $this->AddPaymentResult = $addPaymentResult;
+
         return $this;
     }
 
@@ -37,6 +38,7 @@ class AddPaymentResponse
         if (null === $this->AddPaymentResult) {
             $this->AddPaymentResult = new Response();
         }
+
         return $this->AddPaymentResult;
     }
 }

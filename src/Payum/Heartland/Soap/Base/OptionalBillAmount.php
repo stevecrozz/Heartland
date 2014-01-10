@@ -36,6 +36,7 @@ class OptionalBillAmount
     public function setIsPayable($isPayable)
     {
         $this->IsPayable = $isPayable;
+
         return $this;
     }
 
@@ -55,6 +56,7 @@ class OptionalBillAmount
     public function setValue($value)
     {
         $this->Value = $value;
+
         return $this;
     }
 
