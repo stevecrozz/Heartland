@@ -12,7 +12,7 @@ class GetReceipt
      * GetReceiptRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q31:GetReceiptRequest
+     * - SchemaType: q35:GetReceiptRequest
      *
      * @var GetReceiptRequest
      */

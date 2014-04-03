@@ -32,7 +32,7 @@ class GetConvenienceFeeResponse extends Response
      * GetConvenienceFeeResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q36:GetConvenienceFeeResponse
+     * - SchemaType: q40:GetConvenienceFeeResponse
      *
      * @var GetConvenienceFeeResponse
      */

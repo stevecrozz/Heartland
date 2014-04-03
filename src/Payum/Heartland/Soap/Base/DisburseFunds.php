@@ -12,7 +12,7 @@ class DisburseFunds
      * DisburseFundsRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q59:DisburseFundsRequest
+     * - SchemaType: q63:DisburseFundsRequest
      *
      * @var DisburseFundsRequest
      */

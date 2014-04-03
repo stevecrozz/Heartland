@@ -12,7 +12,7 @@ class UpdateSecurePayPayment
      * request
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q47:UpdateSecurePayPaymentRequest
+     * - SchemaType: q51:UpdateSecurePayPaymentRequest
      *
      * @var UpdateSecurePayPaymentRequest
      */

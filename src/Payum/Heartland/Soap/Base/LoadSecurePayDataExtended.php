@@ -12,7 +12,7 @@ class LoadSecurePayDataExtended
      * request
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q43:LoadSecurePayDataExtendedRequest
+     * - SchemaType: q47:LoadSecurePayDataExtendedRequest
      *
      * @var LoadSecurePayDataExtendedRequest
      */

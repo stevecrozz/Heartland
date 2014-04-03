@@ -19,6 +19,16 @@ class CapturePreAuthorizedPaymentRequest extends MerchantRequest
     protected $BillTransactions = null;
 
     /**
+     * CustomerEmailAddress
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $CustomerEmailAddress = null;
+
+    /**
      * EndUserBrowserType
      *
      * The property has the following characteristics/restrictions:
@@ -47,6 +57,26 @@ class CapturePreAuthorizedPaymentRequest extends MerchantRequest
      * @var boolean
      */
     protected $IncludeReceiptInResponse;
+
+    /**
+     * Language
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: tns:Language
+     *
+     * @var Language
+     */
+    protected $Language;
+
+    /**
+     * OrderID
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $OrderID = null;
 
     /**
      * Transaction
@@ -90,6 +120,26 @@ class CapturePreAuthorizedPaymentRequest extends MerchantRequest
         }
 
         return $this->BillTransactions;
+    }
+
+    /**
+     * @param string $customerEmailAddress
+     *
+     * @return CapturePreAuthorizedPaymentRequest
+     */
+    public function setCustomerEmailAddress($customerEmailAddress)
+    {
+        $this->CustomerEmailAddress = $customerEmailAddress;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCustomerEmailAddress()
+    {
+        return $this->CustomerEmailAddress;
     }
 
     /**
@@ -150,6 +200,46 @@ class CapturePreAuthorizedPaymentRequest extends MerchantRequest
     public function getIncludeReceiptInResponse()
     {
         return $this->IncludeReceiptInResponse;
+    }
+
+    /**
+     * @param Language $language
+     *
+     * @return CapturePreAuthorizedPaymentRequest
+     */
+    public function setLanguage($language)
+    {
+        $this->Language = $language;
+
+        return $this;
+    }
+
+    /**
+     * @return Language
+     */
+    public function getLanguage()
+    {
+        return $this->Language;
+    }
+
+    /**
+     * @param string $orderID
+     *
+     * @return CapturePreAuthorizedPaymentRequest
+     */
+    public function setOrderID($orderID)
+    {
+        $this->OrderID = $orderID;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrderID()
+    {
+        return $this->OrderID;
     }
 
     /**

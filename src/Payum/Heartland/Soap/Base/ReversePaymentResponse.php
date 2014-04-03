@@ -22,7 +22,7 @@ class ReversePaymentResponse extends GetFileResponse
      * ReversePaymentResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q28:ReversePaymentResponse
+     * - SchemaType: q32:ReversePaymentResponse
      *
      * @var ReversePaymentResponse
      */

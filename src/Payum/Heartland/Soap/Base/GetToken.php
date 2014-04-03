@@ -12,7 +12,7 @@ class GetToken
      * GetTokenRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q37:GetTokenRequest
+     * - SchemaType: q41:GetTokenRequest
      *
      * @var GetTokenRequest
      */

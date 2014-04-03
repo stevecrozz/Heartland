@@ -39,6 +39,16 @@ class Message
     protected $MessageDescription = null;
 
     /**
+     * SpanishMessageDescription
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $SpanishMessageDescription = null;
+
+    /**
      * @param int $code
      *
      * @return Message
@@ -96,5 +106,25 @@ class Message
     public function getMessageDescription()
     {
         return $this->MessageDescription;
+    }
+
+    /**
+     * @param string $spanishMessageDescription
+     *
+     * @return Message
+     */
+    public function setSpanishMessageDescription($spanishMessageDescription)
+    {
+        $this->SpanishMessageDescription = $spanishMessageDescription;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSpanishMessageDescription()
+    {
+        return $this->SpanishMessageDescription;
     }
 }

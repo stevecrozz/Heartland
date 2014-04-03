@@ -12,7 +12,7 @@ class AddSignatureResponse
      * AddSignatureResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q56:Response
+     * - SchemaType: q60:Response
      *
      * @var Response
      */

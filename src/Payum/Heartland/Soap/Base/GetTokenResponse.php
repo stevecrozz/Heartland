@@ -22,7 +22,7 @@ class GetTokenResponse extends Response
      * GetTokenResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q38:GetTokenResponse
+     * - SchemaType: q42:GetTokenResponse
      *
      * @var GetTokenResponse
      */

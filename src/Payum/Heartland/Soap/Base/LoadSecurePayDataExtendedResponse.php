@@ -12,7 +12,7 @@ class LoadSecurePayDataExtendedResponse
      * LoadSecurePayDataExtendedResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q44:LoadSecurePayBillDataResponse
+     * - SchemaType: q48:LoadSecurePayBillDataResponse
      *
      * @var LoadSecurePayBillDataResponse
      */

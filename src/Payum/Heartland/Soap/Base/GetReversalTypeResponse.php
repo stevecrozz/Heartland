@@ -22,7 +22,7 @@ class GetReversalTypeResponse extends Response
      * GetReversalTypeResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q34:GetReversalTypeResponse
+     * - SchemaType: q38:GetReversalTypeResponse
      *
      * @var GetReversalTypeResponse
      */

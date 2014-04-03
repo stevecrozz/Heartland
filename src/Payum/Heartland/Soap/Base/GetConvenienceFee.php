@@ -12,7 +12,7 @@ class GetConvenienceFee
      * GetConvenienceFeeRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q35:GetConvenienceFeeRequest
+     * - SchemaType: q39:GetConvenienceFeeRequest
      *
      * @var GetConvenienceFeeRequest
      */

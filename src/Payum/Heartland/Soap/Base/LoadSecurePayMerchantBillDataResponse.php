@@ -12,7 +12,7 @@ class LoadSecurePayMerchantBillDataResponse
      * LoadSecurePayMerchantBillDataResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q42:LoadSecurePayBillDataResponse
+     * - SchemaType: q46:LoadSecurePayBillDataResponse
      *
      * @var LoadSecurePayBillDataResponse
      */

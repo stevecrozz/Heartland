@@ -14,7 +14,8 @@
     <php>
         <!--var name="__PAYUM_HEARTLAND_APPLICATION_ID" value=""/>
         <var name="__PAYUM_HEARTLAND_USERNAME" value=""/>
-        <var name="__PAYUM_HEARTLAND_PASSWORD" value="">
+        <var name="__PAYUM_HEARTLAND_PASSWORD" value=""/>
+        <var name="__PAYUM_HEARTLAND_ACH_FEE" value=""/>
         <var name="__PAYUM_HEARTLAND_MERCHANT_NAME" value=""/-->
     </php>
     

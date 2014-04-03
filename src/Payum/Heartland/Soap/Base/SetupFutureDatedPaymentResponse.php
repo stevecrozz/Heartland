@@ -22,7 +22,7 @@ class SetupFutureDatedPaymentResponse extends Response
      * SetupFutureDatedPaymentResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q50:SetupFutureDatedPaymentResponse
+     * - SchemaType: q54:SetupFutureDatedPaymentResponse
      *
      * @var SetupFutureDatedPaymentResponse
      */

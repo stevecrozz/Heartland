@@ -23,7 +23,7 @@ class AddPayment
      *
      * @return AddPayment
      */
-    public function setAddPaymentRequest($addPaymentRequest)
+    public function setAddPaymentRequest(AddPaymentRequest $addPaymentRequest)
     {
         $this->AddPaymentRequest = $addPaymentRequest;
 
@@ -35,6 +35,10 @@ class AddPayment
      */
     public function getAddPaymentRequest()
     {
+        if (null === $this->AddPaymentRequest) {
+            $this->AddPaymentRequest = new AddPaymentRequest();
+        }
+
         return $this->AddPaymentRequest;
     }
 }

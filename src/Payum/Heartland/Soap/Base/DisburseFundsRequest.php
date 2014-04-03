@@ -49,6 +49,26 @@ class DisburseFundsRequest extends MerchantRequest
     protected $EndUserIPAddress = null;
 
     /**
+     * Language
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: tns:Language
+     *
+     * @var Language
+     */
+    protected $Language;
+
+    /**
+     * OrderID
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $OrderID = null;
+
+    /**
      * Transaction
      *
      * The property has the following characteristics/restrictions:
@@ -144,6 +164,46 @@ class DisburseFundsRequest extends MerchantRequest
     public function getEndUserIPAddress()
     {
         return $this->EndUserIPAddress;
+    }
+
+    /**
+     * @param Language $language
+     *
+     * @return DisburseFundsRequest
+     */
+    public function setLanguage($language)
+    {
+        $this->Language = $language;
+
+        return $this;
+    }
+
+    /**
+     * @return Language
+     */
+    public function getLanguage()
+    {
+        return $this->Language;
+    }
+
+    /**
+     * @param string $orderID
+     *
+     * @return DisburseFundsRequest
+     */
+    public function setOrderID($orderID)
+    {
+        $this->OrderID = $orderID;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrderID()
+    {
+        return $this->OrderID;
     }
 
     /**

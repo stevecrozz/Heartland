@@ -9,6 +9,16 @@ namespace Payum\Heartland\Soap\Base;
 class AddReversalRequest extends AddTransactionRequest
 {
     /**
+     * OrderIDOfReversal
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $OrderIDOfReversal = null;
+
+    /**
      * ReversalCode
      *
      * The property has the following characteristics/restrictions:
@@ -17,6 +27,26 @@ class AddReversalRequest extends AddTransactionRequest
      * @var ReversalCode
      */
     protected $ReversalCode;
+
+    /**
+     * @param string $orderIDOfReversal
+     *
+     * @return AddReversalRequest
+     */
+    public function setOrderIDOfReversal($orderIDOfReversal)
+    {
+        $this->OrderIDOfReversal = $orderIDOfReversal;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrderIDOfReversal()
+    {
+        return $this->OrderIDOfReversal;
+    }
 
     /**
      * @param ReversalCode $reversalCode

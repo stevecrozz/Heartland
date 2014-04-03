@@ -90,9 +90,11 @@ class Client extends BaseSoapClient
         'E3CardToCharge' => 'Payum\\Heartland\\Soap\\Base\\E3CardToCharge',
         'ArrayOfE3DebitCardWithPINToCharge' => 'Payum\\Heartland\\Soap\\Base\\ArrayOfE3DebitCardWithPINToCharge',
         'E3DebitCardWithPINToCharge' => 'Payum\\Heartland\\Soap\\Base\\E3DebitCardWithPINToCharge',
+        'Language' => 'Payum\\Heartland\\Soap\\Base\\Language',
         'ArrayOfTokenToCharge' => 'Payum\\Heartland\\Soap\\Base\\ArrayOfTokenToCharge',
         'TokenToCharge' => 'Payum\\Heartland\\Soap\\Base\\TokenToCharge',
         'MakePaymentResponse' => 'Payum\\Heartland\\Soap\\Base\\MakePaymentResponse',
+        'MakePaymentReturnTokenResponse' => 'Payum\\Heartland\\Soap\\Base\\MakePaymentReturnTokenResponse',
         'ReversePaymentRequest' => 'Payum\\Heartland\\Soap\\Base\\ReversePaymentRequest',
         'ReversePaymentResponse' => 'Payum\\Heartland\\Soap\\Base\\ReversePaymentResponse',
         'ReversalTransactionRecordWithReversalAuthorizations' => 'Payum\\Heartland\\Soap\\Base\\ReversalTransactionRecordWithReversalAuthorizations',
@@ -118,7 +120,6 @@ class Client extends BaseSoapClient
         'LoadSecurePayBillDataResponse' => 'Payum\\Heartland\\Soap\\Base\\LoadSecurePayBillDataResponse',
         'LoadSecurePayMerchantBillDataRequest' => 'Payum\\Heartland\\Soap\\Base\\LoadSecurePayMerchantBillDataRequest',
         'LoadSecurePayDataExtendedRequest' => 'Payum\\Heartland\\Soap\\Base\\LoadSecurePayDataExtendedRequest',
-        'Language' => 'Payum\\Heartland\\Soap\\Base\\Language',
         'GetSecurePayBillDataRequest' => 'Payum\\Heartland\\Soap\\Base\\GetSecurePayBillDataRequest',
         'GetSecurePayBillDataResponse' => 'Payum\\Heartland\\Soap\\Base\\GetSecurePayBillDataResponse',
         'SecurePayPaymentType' => 'Payum\\Heartland\\Soap\\Base\\SecurePayPaymentType',
@@ -126,17 +127,37 @@ class Client extends BaseSoapClient
         'SetupFutureDatedPaymentRequest' => 'Payum\\Heartland\\Soap\\Base\\SetupFutureDatedPaymentRequest',
         'SetupFutureDatedPaymentResponse' => 'Payum\\Heartland\\Soap\\Base\\SetupFutureDatedPaymentResponse',
         'PreAuthorizePaymentRequest' => 'Payum\\Heartland\\Soap\\Base\\PreAuthorizePaymentRequest',
+        'PreAuthorizeAccountRequest' => 'Payum\\Heartland\\Soap\\Base\\PreAuthorizeAccountRequest',
         'PreAuthorizePaymentResponse' => 'Payum\\Heartland\\Soap\\Base\\PreAuthorizePaymentResponse',
+        'ArrayOfPreAuthorization' => 'Payum\\Heartland\\Soap\\Base\\ArrayOfPreAuthorization',
+        'PreAuthorization' => 'Payum\\Heartland\\Soap\\Base\\PreAuthorization',
         'CapturePreAuthorizedPaymentRequest' => 'Payum\\Heartland\\Soap\\Base\\CapturePreAuthorizedPaymentRequest',
         'AddSignatureRequest' => 'Payum\\Heartland\\Soap\\Base\\AddSignatureRequest',
         'LogTermsAcceptanceRequest' => 'Payum\\Heartland\\Soap\\Base\\LogTermsAcceptanceRequest',
         'DisburseFundsRequest' => 'Payum\\Heartland\\Soap\\Base\\DisburseFundsRequest',
         'DisburseFundsResponse' => 'Payum\\Heartland\\Soap\\Base\\DisburseFundsResponse',
+        'AddAccountToPreAuthorizedPaymentRequest' => 'Payum\\Heartland\\Soap\\Base\\AddAccountToPreAuthorizedPaymentRequest',
+        'AddAccountToPreAuthorizedPaymentResponse' => 'Payum\\Heartland\\Soap\\Base\\AddAccountToPreAuthorizedPaymentResponse',
         'GetACHReturnsByDateRequest' => 'Payum\\Heartland\\Soap\\Base\\GetACHReturnsByDateRequest',
         'GetACHReturnsByDateResponse' => 'Payum\\Heartland\\Soap\\Base\\GetACHReturnsByDateResponse',
         'ArrayOfACHReturnRecord' => 'Payum\\Heartland\\Soap\\Base\\ArrayOfACHReturnRecord',
         'ACHReturnRecord' => 'Payum\\Heartland\\Soap\\Base\\ACHReturnRecord',
         'ACHReturnTotals' => 'Payum\\Heartland\\Soap\\Base\\ACHReturnTotals',
+        'VoidPreAuthorizedTransactionRequest' => 'Payum\\Heartland\\Soap\\Base\\VoidPreAuthorizedTransactionRequest',
+        'VoidPreAuthorizedTransactionResponse' => 'Payum\\Heartland\\Soap\\Base\\VoidPreAuthorizedTransactionResponse',
+        'RemovePreAuthorizedAccountRequest' => 'Payum\\Heartland\\Soap\\Base\\RemovePreAuthorizedAccountRequest',
+        'RemovePreAuthorizedAccountResponse' => 'Payum\\Heartland\\Soap\\Base\\RemovePreAuthorizedAccountResponse',
+        'CloseCurrentCardBatchRequest' => 'Payum\\Heartland\\Soap\\Base\\CloseCurrentCardBatchRequest',
+        'CloseCurrentCardBatchResponse' => 'Payum\\Heartland\\Soap\\Base\\CloseCurrentCardBatchResponse',
+        'ArrayOfCloseCurrentCardBatchDetail' => 'Payum\\Heartland\\Soap\\Base\\ArrayOfCloseCurrentCardBatchDetail',
+        'CloseCurrentCardBatchDetail' => 'Payum\\Heartland\\Soap\\Base\\CloseCurrentCardBatchDetail',
+        'GetTransactionByOrderIDRequest' => 'Payum\\Heartland\\Soap\\Base\\GetTransactionByOrderIDRequest',
+        'GetTransactionResponse' => 'Payum\\Heartland\\Soap\\Base\\GetTransactionResponse',
+        'TransactionRecordWithAuthorizations' => 'Payum\\Heartland\\Soap\\Base\\TransactionRecordWithAuthorizations',
+        'ArrayOfAuthorizationRecord' => 'Payum\\Heartland\\Soap\\Base\\ArrayOfAuthorizationRecord',
+        'ReversePaymentByOrderIDRequest' => 'Payum\\Heartland\\Soap\\Base\\ReversePaymentByOrderIDRequest',
+        'ReversePaymentByOrderIDResponse' => 'Payum\\Heartland\\Soap\\Base\\ReversePaymentByOrderIDResponse',
+        'VoidPreAuthorizedTransactionByOrderIDRequest' => 'Payum\\Heartland\\Soap\\Base\\VoidPreAuthorizedTransactionByOrderIDRequest',
         'AddBlindPayment' => 'Payum\\Heartland\\Soap\\Base\\AddBlindPayment',
         'AddBlindPaymentResponse' => 'Payum\\Heartland\\Soap\\Base\\AddBlindPaymentResponse',
         'AddPayment' => 'Payum\\Heartland\\Soap\\Base\\AddPayment',
@@ -161,6 +182,9 @@ class Client extends BaseSoapClient
         'MakePayment' => 'Payum\\Heartland\\Soap\\Base\\MakePayment',
         'MakeBlindPayment' => 'Payum\\Heartland\\Soap\\Base\\MakeBlindPayment',
         'MakeBlindPaymentResponse' => 'Payum\\Heartland\\Soap\\Base\\MakeBlindPaymentResponse',
+        'MakePaymentReturnToken' => 'Payum\\Heartland\\Soap\\Base\\MakePaymentReturnToken',
+        'MakeBlindPaymentReturnToken' => 'Payum\\Heartland\\Soap\\Base\\MakeBlindPaymentReturnToken',
+        'MakeBlindPaymentReturnTokenResponse' => 'Payum\\Heartland\\Soap\\Base\\MakeBlindPaymentReturnTokenResponse',
         'ReversePayment' => 'Payum\\Heartland\\Soap\\Base\\ReversePayment',
         'ReversePaymentReturnReversalType' => 'Payum\\Heartland\\Soap\\Base\\ReversePaymentReturnReversalType',
         'ReversePaymentReturnReversalTypeResponse' => 'Payum\\Heartland\\Soap\\Base\\ReversePaymentReturnReversalTypeResponse',
@@ -185,7 +209,16 @@ class Client extends BaseSoapClient
         'LogTermsAcceptance' => 'Payum\\Heartland\\Soap\\Base\\LogTermsAcceptance',
         'LogTermsAcceptanceResponse' => 'Payum\\Heartland\\Soap\\Base\\LogTermsAcceptanceResponse',
         'DisburseFunds' => 'Payum\\Heartland\\Soap\\Base\\DisburseFunds',
+        'AddAccountToPreAuthorizedPayment' => 'Payum\\Heartland\\Soap\\Base\\AddAccountToPreAuthorizedPayment',
         'GetACHReturnsByDate' => 'Payum\\Heartland\\Soap\\Base\\GetACHReturnsByDate',
+        'VoidPreAuthorizedTransaction' => 'Payum\\Heartland\\Soap\\Base\\VoidPreAuthorizedTransaction',
+        'RemovePreAuthorizedAccount' => 'Payum\\Heartland\\Soap\\Base\\RemovePreAuthorizedAccount',
+        'CloseCurrentCardBatch' => 'Payum\\Heartland\\Soap\\Base\\CloseCurrentCardBatch',
+        'GetTransactionByOrderID' => 'Payum\\Heartland\\Soap\\Base\\GetTransactionByOrderID',
+        'GetTransactionByOrderIDResponse' => 'Payum\\Heartland\\Soap\\Base\\GetTransactionByOrderIDResponse',
+        'ReversePaymentByOrderID' => 'Payum\\Heartland\\Soap\\Base\\ReversePaymentByOrderID',
+        'VoidPreAuthorizedTransactionByOrderID' => 'Payum\\Heartland\\Soap\\Base\\VoidPreAuthorizedTransactionByOrderID',
+        'VoidPreAuthorizedTransactionByOrderIDResponse' => 'Payum\\Heartland\\Soap\\Base\\VoidPreAuthorizedTransactionByOrderIDResponse',
     );
 
     /**
@@ -230,7 +263,7 @@ class Client extends BaseSoapClient
      *
      * @return AddPaymentResponse
      */
-    public function AddPayment($AddPaymentRequest)
+    public function AddPayment(AddPaymentRequest $AddPaymentRequest)
     {
         $parameters = new AddPayment();
         $parameters->setAddPaymentRequest($AddPaymentRequest);
@@ -401,6 +434,36 @@ class Client extends BaseSoapClient
         $parameters->setMakeE3PaymentRequest($MakeE3PaymentRequest);
 
         return $this->__soapCall('MakeBlindPayment', array('parameters' => $parameters));
+    }
+
+    /**
+     * MakePaymentReturnToken
+     *
+     * @param MakePaymentRequest $MakePaymentReturnTokenRequest
+     *
+     * @return MakePaymentReturnTokenResponse
+     */
+    public function MakePaymentReturnToken(MakePaymentRequest $MakePaymentReturnTokenRequest)
+    {
+        $parameters = new MakePaymentReturnToken();
+        $parameters->setMakePaymentReturnTokenRequest($MakePaymentReturnTokenRequest);
+
+        return $this->__soapCall('MakePaymentReturnToken', array('parameters' => $parameters));
+    }
+
+    /**
+     * MakeBlindPaymentReturnToken
+     *
+     * @param MakePaymentRequest $MakePaymentReturnTokenRequest
+     *
+     * @return MakeBlindPaymentReturnTokenResponse
+     */
+    public function MakeBlindPaymentReturnToken(MakePaymentRequest $MakePaymentReturnTokenRequest)
+    {
+        $parameters = new MakeBlindPaymentReturnToken();
+        $parameters->setMakePaymentReturnTokenRequest($MakePaymentReturnTokenRequest);
+
+        return $this->__soapCall('MakeBlindPaymentReturnToken', array('parameters' => $parameters));
     }
 
     /**
@@ -659,6 +722,21 @@ class Client extends BaseSoapClient
     }
 
     /**
+     * AddAccountToPreAuthorizedPayment
+     *
+     * @param AddAccountToPreAuthorizedPaymentRequest $AddAccountToPreAuthorizedPaymentRequest
+     *
+     * @return AddAccountToPreAuthorizedPaymentResponse
+     */
+    public function AddAccountToPreAuthorizedPayment(AddAccountToPreAuthorizedPaymentRequest $AddAccountToPreAuthorizedPaymentRequest)
+    {
+        $parameters = new AddAccountToPreAuthorizedPayment();
+        $parameters->setAddAccountToPreAuthorizedPaymentRequest($AddAccountToPreAuthorizedPaymentRequest);
+
+        return $this->__soapCall('AddAccountToPreAuthorizedPayment', array('parameters' => $parameters));
+    }
+
+    /**
      * GetACHReturnsByDate
      *
      * @param GetACHReturnsByDateRequest $GetACHReturnsByDateRequest
@@ -671,5 +749,95 @@ class Client extends BaseSoapClient
         $parameters->setGetACHReturnsByDateRequest($GetACHReturnsByDateRequest);
 
         return $this->__soapCall('GetACHReturnsByDate', array('parameters' => $parameters));
+    }
+
+    /**
+     * VoidPreAuthorizedTransaction
+     *
+     * @param VoidPreAuthorizedTransactionRequest $VoidPreAuthorizedTransactionRequest
+     *
+     * @return VoidPreAuthorizedTransactionResponse
+     */
+    public function VoidPreAuthorizedTransaction(VoidPreAuthorizedTransactionRequest $VoidPreAuthorizedTransactionRequest)
+    {
+        $parameters = new VoidPreAuthorizedTransaction();
+        $parameters->setVoidPreAuthorizedTransactionRequest($VoidPreAuthorizedTransactionRequest);
+
+        return $this->__soapCall('VoidPreAuthorizedTransaction', array('parameters' => $parameters));
+    }
+
+    /**
+     * RemovePreAuthorizedAccount
+     *
+     * @param RemovePreAuthorizedAccountRequest $RemovePreAuthorizedAccountRequest
+     *
+     * @return RemovePreAuthorizedAccountResponse
+     */
+    public function RemovePreAuthorizedAccount(RemovePreAuthorizedAccountRequest $RemovePreAuthorizedAccountRequest)
+    {
+        $parameters = new RemovePreAuthorizedAccount();
+        $parameters->setRemovePreAuthorizedAccountRequest($RemovePreAuthorizedAccountRequest);
+
+        return $this->__soapCall('RemovePreAuthorizedAccount', array('parameters' => $parameters));
+    }
+
+    /**
+     * CloseCurrentCardBatch
+     *
+     * @param CloseCurrentCardBatchRequest $CloseCurrentCardBatchRequest
+     *
+     * @return CloseCurrentCardBatchResponse
+     */
+    public function CloseCurrentCardBatch($CloseCurrentCardBatchRequest)
+    {
+        $parameters = new CloseCurrentCardBatch();
+        $parameters->setCloseCurrentCardBatchRequest($CloseCurrentCardBatchRequest);
+
+        return $this->__soapCall('CloseCurrentCardBatch', array('parameters' => $parameters));
+    }
+
+    /**
+     * GetTransactionByOrderID
+     *
+     * @param GetTransactionByOrderIDRequest $GetTransactionByOrderIDRequest
+     *
+     * @return GetTransactionByOrderIDResponse
+     */
+    public function GetTransactionByOrderID(GetTransactionByOrderIDRequest $GetTransactionByOrderIDRequest)
+    {
+        $parameters = new GetTransactionByOrderID();
+        $parameters->setGetTransactionByOrderIDRequest($GetTransactionByOrderIDRequest);
+
+        return $this->__soapCall('GetTransactionByOrderID', array('parameters' => $parameters));
+    }
+
+    /**
+     * ReversePaymentByOrderID
+     *
+     * @param ReversePaymentByOrderIDRequest $ReversePaymentByOrderIDRequest
+     *
+     * @return ReversePaymentByOrderIDResponse
+     */
+    public function ReversePaymentByOrderID(ReversePaymentByOrderIDRequest $ReversePaymentByOrderIDRequest)
+    {
+        $parameters = new ReversePaymentByOrderID();
+        $parameters->setReversePaymentByOrderIDRequest($ReversePaymentByOrderIDRequest);
+
+        return $this->__soapCall('ReversePaymentByOrderID', array('parameters' => $parameters));
+    }
+
+    /**
+     * VoidPreAuthorizedTransactionByOrderID
+     *
+     * @param VoidPreAuthorizedTransactionByOrderIDRequest $VoidPreAuthorizedTransactionByOrderIDRequest
+     *
+     * @return VoidPreAuthorizedTransactionByOrderIDResponse
+     */
+    public function VoidPreAuthorizedTransactionByOrderID(VoidPreAuthorizedTransactionByOrderIDRequest $VoidPreAuthorizedTransactionByOrderIDRequest)
+    {
+        $parameters = new VoidPreAuthorizedTransactionByOrderID();
+        $parameters->setVoidPreAuthorizedTransactionByOrderIDRequest($VoidPreAuthorizedTransactionByOrderIDRequest);
+
+        return $this->__soapCall('VoidPreAuthorizedTransactionByOrderID', array('parameters' => $parameters));
     }
 }

@@ -9,6 +9,16 @@ namespace Payum\Heartland\Soap\Base;
 class AddSignatureRequest extends MerchantRequest
 {
     /**
+     * Language
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: tns:Language
+     *
+     * @var Language
+     */
+    protected $Language;
+
+    /**
      * SignatureImageInBase64
      *
      * The property has the following characteristics/restrictions:
@@ -27,6 +37,26 @@ class AddSignatureRequest extends MerchantRequest
      * @var int
      */
     protected $Transaction_ID;
+
+    /**
+     * @param Language $language
+     *
+     * @return AddSignatureRequest
+     */
+    public function setLanguage($language)
+    {
+        $this->Language = $language;
+
+        return $this;
+    }
+
+    /**
+     * @return Language
+     */
+    public function getLanguage()
+    {
+        return $this->Language;
+    }
 
     /**
      * @param string $signatureImageInBase64

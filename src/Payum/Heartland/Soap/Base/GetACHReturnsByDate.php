@@ -12,7 +12,7 @@ class GetACHReturnsByDate
      * GetACHReturnsByDateRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q61:GetACHReturnsByDateRequest
+     * - SchemaType: q67:GetACHReturnsByDateRequest
      *
      * @var GetACHReturnsByDateRequest
      */

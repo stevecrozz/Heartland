@@ -12,7 +12,7 @@ class CapturePreAuthorizedPaymentResponse
      * CapturePreAuthorizedPaymentResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q54:MakePaymentResponse
+     * - SchemaType: q58:MakePaymentResponse
      *
      * @var MakePaymentResponse
      */

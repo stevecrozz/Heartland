@@ -9,12 +9,22 @@ namespace Payum\Heartland\Soap\Base;
 class PreAuthorizePaymentResponse extends Response
 {
     /**
+     * PreAuthorizationAccount_ID
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:int
+     *
+     * @var int
+     */
+    protected $PreAuthorizationAccount_ID;
+
+    /**
      * PreAuthorizations
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: tns:ArrayOfAuthorization
+     * - SchemaType: tns:ArrayOfPreAuthorization
      *
-     * @var ArrayOfAuthorization
+     * @var ArrayOfPreAuthorization
      */
     protected $PreAuthorizations = null;
 
@@ -32,18 +42,38 @@ class PreAuthorizePaymentResponse extends Response
      * PreAuthorizePaymentResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q52:PreAuthorizePaymentResponse
+     * - SchemaType: q56:PreAuthorizePaymentResponse
      *
      * @var PreAuthorizePaymentResponse
      */
     protected $PreAuthorizePaymentResult = null;
 
     /**
-     * @param ArrayOfAuthorization $preAuthorizations
+     * @param int $preAuthorizationAccount_ID
      *
      * @return PreAuthorizePaymentResponse
      */
-    public function setPreAuthorizations(ArrayOfAuthorization $preAuthorizations)
+    public function setPreAuthorizationAccount_ID($preAuthorizationAccount_ID)
+    {
+        $this->PreAuthorizationAccount_ID = $preAuthorizationAccount_ID;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPreAuthorizationAccount_ID()
+    {
+        return $this->PreAuthorizationAccount_ID;
+    }
+
+    /**
+     * @param ArrayOfPreAuthorization $preAuthorizations
+     *
+     * @return PreAuthorizePaymentResponse
+     */
+    public function setPreAuthorizations(ArrayOfPreAuthorization $preAuthorizations)
     {
         $this->PreAuthorizations = $preAuthorizations;
 
@@ -51,12 +81,12 @@ class PreAuthorizePaymentResponse extends Response
     }
 
     /**
-     * @return ArrayOfAuthorization
+     * @return ArrayOfPreAuthorization
      */
     public function getPreAuthorizations()
     {
         if (null === $this->PreAuthorizations) {
-            $this->PreAuthorizations = new ArrayOfAuthorization();
+            $this->PreAuthorizations = new ArrayOfPreAuthorization();
         }
 
         return $this->PreAuthorizations;

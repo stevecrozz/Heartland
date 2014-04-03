@@ -12,7 +12,7 @@ class ReversePaymentReturnReversalTypeResponse
      * ReversePaymentReturnReversalTypeResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q30:ReversePaymentWithReversalTypeResponse
+     * - SchemaType: q34:ReversePaymentWithReversalTypeResponse
      *
      * @var ReversePaymentWithReversalTypeResponse
      */

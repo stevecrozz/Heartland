@@ -12,7 +12,7 @@ class ReversePaymentReturnReversalType
      * ReversePaymentRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q29:ReversePaymentRequest
+     * - SchemaType: q33:ReversePaymentRequest
      *
      * @var ReversePaymentRequest
      */

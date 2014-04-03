@@ -12,7 +12,7 @@ class GetReversalType
      * GetReversalTypeRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q33:GetReversalTypeRequest
+     * - SchemaType: q37:GetReversalTypeRequest
      *
      * @var GetReversalTypeRequest
      */

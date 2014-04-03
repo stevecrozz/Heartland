@@ -12,7 +12,7 @@ class ReversePayment
      * ReversePaymentRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q27:ReversePaymentRequest
+     * - SchemaType: q31:ReversePaymentRequest
      *
      * @var ReversePaymentRequest
      */

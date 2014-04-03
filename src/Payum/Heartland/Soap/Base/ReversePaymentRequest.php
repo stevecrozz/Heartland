@@ -69,6 +69,26 @@ class ReversePaymentRequest extends MerchantRequest
     protected $IncludeReceiptInResponse;
 
     /**
+     * Language
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: tns:Language
+     *
+     * @var Language
+     */
+    protected $Language;
+
+    /**
+     * OrderIDOfReversal
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $OrderIDOfReversal = null;
+
+    /**
      * Transaction_ID
      *
      * The property has the following characteristics/restrictions:
@@ -200,6 +220,46 @@ class ReversePaymentRequest extends MerchantRequest
     public function getIncludeReceiptInResponse()
     {
         return $this->IncludeReceiptInResponse;
+    }
+
+    /**
+     * @param Language $language
+     *
+     * @return ReversePaymentRequest
+     */
+    public function setLanguage($language)
+    {
+        $this->Language = $language;
+
+        return $this;
+    }
+
+    /**
+     * @return Language
+     */
+    public function getLanguage()
+    {
+        return $this->Language;
+    }
+
+    /**
+     * @param string $orderIDOfReversal
+     *
+     * @return ReversePaymentRequest
+     */
+    public function setOrderIDOfReversal($orderIDOfReversal)
+    {
+        $this->OrderIDOfReversal = $orderIDOfReversal;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrderIDOfReversal()
+    {
+        return $this->OrderIDOfReversal;
     }
 
     /**

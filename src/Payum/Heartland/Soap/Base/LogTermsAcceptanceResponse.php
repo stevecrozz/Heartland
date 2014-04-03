@@ -12,7 +12,7 @@ class LogTermsAcceptanceResponse
      * LogTermsAcceptanceResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q58:Response
+     * - SchemaType: q62:Response
      *
      * @var Response
      */

@@ -99,6 +99,26 @@ class MakePaymentRequest extends MerchantRequest
     protected $IncludeReceiptInResponse;
 
     /**
+     * Language
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: tns:Language
+     *
+     * @var Language
+     */
+    protected $Language;
+
+    /**
+     * OrderID
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $OrderID = null;
+
+    /**
      * TokensToCharge
      *
      * The property has the following characteristics/restrictions:
@@ -320,6 +340,46 @@ class MakePaymentRequest extends MerchantRequest
     public function getIncludeReceiptInResponse()
     {
         return $this->IncludeReceiptInResponse;
+    }
+
+    /**
+     * @param Language $language
+     *
+     * @return MakePaymentRequest
+     */
+    public function setLanguage($language)
+    {
+        $this->Language = $language;
+
+        return $this;
+    }
+
+    /**
+     * @return Language
+     */
+    public function getLanguage()
+    {
+        return $this->Language;
+    }
+
+    /**
+     * @param string $orderID
+     *
+     * @return MakePaymentRequest
+     */
+    public function setOrderID($orderID)
+    {
+        $this->OrderID = $orderID;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrderID()
+    {
+        return $this->OrderID;
     }
 
     /**

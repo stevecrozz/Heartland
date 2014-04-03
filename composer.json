@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Heartland pro checkout",
     "keywords": ["payment", "heartland", "src", "library", "open source"],
-    "homepage": "",
+    "homepage": "https://github.com/66Ton99/Heartland",
     "license": "MIT",
     "authors": [
         {

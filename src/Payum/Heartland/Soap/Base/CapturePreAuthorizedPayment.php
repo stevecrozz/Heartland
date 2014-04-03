@@ -12,7 +12,7 @@ class CapturePreAuthorizedPayment
      * CapturePreAuthorizedPaymentRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q53:CapturePreAuthorizedPaymentRequest
+     * - SchemaType: q57:CapturePreAuthorizedPaymentRequest
      *
      * @var CapturePreAuthorizedPaymentRequest
      */

@@ -9,6 +9,16 @@ namespace Payum\Heartland\Soap\Base;
 class Request
 {
     /**
+     * BollettaVersion
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:int
+     *
+     * @var int
+     */
+    protected $BollettaVersion;
+
+    /**
      * Credential
      *
      * The property has the following characteristics/restrictions:
@@ -17,6 +27,26 @@ class Request
      * @var Credentials
      */
     protected $Credential = null;
+
+    /**
+     * @param int $bollettaVersion
+     *
+     * @return Request
+     */
+    public function setBollettaVersion($bollettaVersion)
+    {
+        $this->BollettaVersion = $bollettaVersion;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getBollettaVersion()
+    {
+        return $this->BollettaVersion;
+    }
 
     /**
      * @param Credentials $credential

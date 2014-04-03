@@ -12,7 +12,7 @@ class GetReceiptResponse extends GetFileResponse
      * GetReceiptResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q32:GetReceiptResponse
+     * - SchemaType: q36:GetReceiptResponse
      *
      * @var GetReceiptResponse
      */

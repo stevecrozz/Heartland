@@ -8,5 +8,33 @@ namespace Payum\Heartland\Soap\Base;
  */
 class AddPaymentRequest extends AddTransactionRequest
 {
+    /**
+     * OrderID
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $OrderID = null;
 
+    /**
+     * @param string $orderID
+     *
+     * @return AddPaymentRequest
+     */
+    public function setOrderID($orderID)
+    {
+        $this->OrderID = $orderID;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrderID()
+    {
+        return $this->OrderID;
+    }
 }

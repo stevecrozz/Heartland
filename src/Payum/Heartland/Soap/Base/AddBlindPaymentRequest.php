@@ -19,6 +19,16 @@ class AddBlindPaymentRequest extends AddPaymentRequest
     protected $DuplicatesAllowed;
 
     /**
+     * OrderID
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: xs:string
+     *
+     * @var string
+     */
+    protected $OrderID = null;
+
+    /**
      * @param boolean $duplicatesAllowed
      *
      * @return AddBlindPaymentRequest
@@ -36,5 +46,25 @@ class AddBlindPaymentRequest extends AddPaymentRequest
     public function getDuplicatesAllowed()
     {
         return $this->DuplicatesAllowed;
+    }
+
+    /**
+     * @param string $orderID
+     *
+     * @return AddBlindPaymentRequest
+     */
+    public function setOrderID($orderID)
+    {
+        $this->OrderID = $orderID;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrderID()
+    {
+        return $this->OrderID;
     }
 }

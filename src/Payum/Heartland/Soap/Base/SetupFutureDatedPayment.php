@@ -12,7 +12,7 @@ class SetupFutureDatedPayment
      * SetupFutureDatedPaymentRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q49:SetupFutureDatedPaymentRequest
+     * - SchemaType: q53:SetupFutureDatedPaymentRequest
      *
      * @var SetupFutureDatedPaymentRequest
      */
