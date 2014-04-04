@@ -11,16 +11,6 @@
             "email": "Forma-PRO@66ton99.org.ua"
         }
     ],
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@github.com:66Ton99/BeSimpleWsdlToPhp.git"
-        },
-        {
-            "type": "git",
-            "url": "git@github.com:BeSimple/BeSimpleSoapCommon.git"
-        }
-    ],
     "require": {
         "php": ">=5.3.3",
         "payum/payum": "0.5.x-dev",
