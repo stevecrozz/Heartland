@@ -19,7 +19,7 @@
     },
     "require-dev": {
         "ext-curl": "*",
-        "besimple/wsdl2php": "dev-dev"
+        "besimple/wsdl2php": "dev-master"
     },
     "config": {
         "bin-dir": "bin"
