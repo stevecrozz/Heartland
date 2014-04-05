@@ -1,8 +1,8 @@
-Heartland
-=========
+Heartland Bolletta
+==================
 [![Build Status](https://travis-ci.org/66Ton99/Heartland.png?branch=master)](https://travis-ci.org/66Ton99/Heartland)
 
-Its provide API connection to http://www.heartlandpaymentsystems.com
+Its provide API connection to [www.heartlandpaymentsystems.com](http://www.heartlandpaymentsystems.com/Products-Services/Billing-Solutions)
 
 Install Dependencies
 --------------------
