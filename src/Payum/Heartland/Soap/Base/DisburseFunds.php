@@ -4,7 +4,7 @@ namespace Payum\Heartland\Soap\Base;
 
 /**
  * This class is generated from the following WSDL:
- * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
+ * https://testing.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
  */
 class DisburseFunds
 {
@@ -12,7 +12,7 @@ class DisburseFunds
      * DisburseFundsRequest
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q63:DisburseFundsRequest
+     * - SchemaType: q67:DisburseFundsRequest
      *
      * @var DisburseFundsRequest
      */

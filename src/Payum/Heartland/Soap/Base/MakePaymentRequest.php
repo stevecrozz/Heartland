@@ -4,7 +4,7 @@ namespace Payum\Heartland\Soap\Base;
 
 /**
  * This class is generated from the following WSDL:
- * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd2
+ * https://testing.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd2
  */
 class MakePaymentRequest extends MerchantRequest
 {
@@ -17,6 +17,16 @@ class MakePaymentRequest extends MerchantRequest
      * @var ArrayOfACHAccountToCharge
      */
     protected $ACHAccountsToCharge = null;
+
+    /**
+     * ACHCardsToCharge
+     *
+     * The property has the following characteristics/restrictions:
+     * - SchemaType: tns:ArrayOfACHCardToCharge
+     *
+     * @var ArrayOfACHCardToCharge
+     */
+    protected $ACHCardsToCharge = null;
 
     /**
      * AESCreditCardsToCharge
@@ -160,6 +170,30 @@ class MakePaymentRequest extends MerchantRequest
         }
 
         return $this->ACHAccountsToCharge;
+    }
+
+    /**
+     * @param ArrayOfACHCardToCharge $aCHCardsToCharge
+     *
+     * @return MakePaymentRequest
+     */
+    public function setACHCardsToCharge(ArrayOfACHCardToCharge $aCHCardsToCharge)
+    {
+        $this->ACHCardsToCharge = $aCHCardsToCharge;
+
+        return $this;
+    }
+
+    /**
+     * @return ArrayOfACHCardToCharge
+     */
+    public function getACHCardsToCharge()
+    {
+        if (null === $this->ACHCardsToCharge) {
+            $this->ACHCardsToCharge = new ArrayOfACHCardToCharge();
+        }
+
+        return $this->ACHCardsToCharge;
     }
 
     /**

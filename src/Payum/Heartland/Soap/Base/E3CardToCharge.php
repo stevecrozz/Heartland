@@ -4,7 +4,7 @@ namespace Payum\Heartland\Soap\Base;
 
 /**
  * This class is generated from the following WSDL:
- * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd2
+ * https://testing.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd2
  */
 class E3CardToCharge extends CardToCharge
 {
@@ -12,7 +12,7 @@ class E3CardToCharge extends CardToCharge
      * E3CreditCard
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q5:E3CardData
+     * - SchemaType: q6:E3CardData
      *
      * @var E3CardData
      */

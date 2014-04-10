@@ -4,7 +4,7 @@ namespace Payum\Heartland\Soap\Base;
 
 /**
  * This class is generated from the following WSDL:
- * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
+ * https://testing.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
  */
 class LoadSecurePayMerchantBillData
 {
@@ -12,7 +12,7 @@ class LoadSecurePayMerchantBillData
      * request
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q45:LoadSecurePayMerchantBillDataRequest
+     * - SchemaType: q47:LoadSecurePayMerchantBillDataRequest
      *
      * @var LoadSecurePayMerchantBillDataRequest
      */

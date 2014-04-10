@@ -4,7 +4,7 @@ namespace Payum\Heartland\Soap\Base;
 
 /**
  * This class is generated from the following WSDL:
- * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
+ * https://testing.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
  */
 class PreAuthorizePaymentResponse extends Response
 {
@@ -42,7 +42,7 @@ class PreAuthorizePaymentResponse extends Response
      * PreAuthorizePaymentResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q56:PreAuthorizePaymentResponse
+     * - SchemaType: q60:PreAuthorizePaymentResponse
      *
      * @var PreAuthorizePaymentResponse
      */

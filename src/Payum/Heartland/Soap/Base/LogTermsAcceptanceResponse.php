@@ -4,7 +4,7 @@ namespace Payum\Heartland\Soap\Base;
 
 /**
  * This class is generated from the following WSDL:
- * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
+ * https://testing.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
  */
 class LogTermsAcceptanceResponse
 {
@@ -12,7 +12,7 @@ class LogTermsAcceptanceResponse
      * LogTermsAcceptanceResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q62:Response
+     * - SchemaType: q66:Response
      *
      * @var Response
      */

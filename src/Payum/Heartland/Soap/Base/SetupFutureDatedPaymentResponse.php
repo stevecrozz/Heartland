@@ -4,7 +4,7 @@ namespace Payum\Heartland\Soap\Base;
 
 /**
  * This class is generated from the following WSDL:
- * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
+ * https://testing.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
  */
 class SetupFutureDatedPaymentResponse extends Response
 {
@@ -22,7 +22,7 @@ class SetupFutureDatedPaymentResponse extends Response
      * SetupFutureDatedPaymentResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q54:SetupFutureDatedPaymentResponse
+     * - SchemaType: q58:SetupFutureDatedPaymentResponse
      *
      * @var SetupFutureDatedPaymentResponse
      */

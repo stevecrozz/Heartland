@@ -4,7 +4,7 @@ namespace Payum\Heartland\Soap\Base;
 
 /**
  * This class is generated from the following WSDL:
- * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
+ * https://testing.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
  */
 class UpdateSecurePayPaymentResponse
 {
@@ -12,7 +12,7 @@ class UpdateSecurePayPaymentResponse
      * UpdateSecurePayPaymentResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q52:Response
+     * - SchemaType: q56:Response
      *
      * @var Response
      */

@@ -4,7 +4,7 @@ namespace Payum\Heartland\Soap\Base;
 
 /**
  * This class is generated from the following WSDL:
- * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
+ * https://testing.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd0
  */
 class GetSecurePayBillDataResponse extends Response
 {
@@ -382,7 +382,7 @@ class GetSecurePayBillDataResponse extends Response
      * GetSecurePayBillDataResult
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q50:GetSecurePayBillDataResponse
+     * - SchemaType: q54:GetSecurePayBillDataResponse
      *
      * @var GetSecurePayBillDataResponse
      */

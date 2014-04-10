@@ -4,7 +4,7 @@ namespace Payum\Heartland\Soap\Base;
 
 /**
  * This class is generated from the following WSDL:
- * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd2
+ * https://testing.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd2
  */
 class Gateway
 {
@@ -16,4 +16,5 @@ class Gateway
     const TRANSMODUS = 'Transmodus';
     const POSGATEWAYDEBITSALE = 'POSGatewayDebitSale';
     const ACHGATEWAY = 'ACHGateway';
+    const ACHCARDGATEWAY = 'ACHCardGateway';
 }

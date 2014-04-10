@@ -4,7 +4,7 @@ namespace Payum\Heartland\Soap\Base;
 
 /**
  * This class is generated from the following WSDL:
- * https://heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd2
+ * https://testing.heartlandpaymentservices.net/BillingDataManagement/v3/BillingDataManagementService.svc?xsd=xsd2
  */
 class GetTokenRequest extends MerchantRequest
 {
@@ -12,7 +12,7 @@ class GetTokenRequest extends MerchantRequest
      * ACHAccountType
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q7:ACHAccountType
+     * - SchemaType: q8:ACHAccountType
      *
      * @var ACHAccountType
      */
@@ -22,7 +22,7 @@ class GetTokenRequest extends MerchantRequest
      * ACHDepositType
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q8:ACHDepositType
+     * - SchemaType: q9:ACHDepositType
      *
      * @var ACHDepositType
      */
@@ -32,7 +32,7 @@ class GetTokenRequest extends MerchantRequest
      * AccountHolderData
      *
      * The property has the following characteristics/restrictions:
-     * - SchemaType: q9:CardHolderData
+     * - SchemaType: q10:CardHolderData
      *
      * @var CardHolderData
      */
