@@ -19,7 +19,8 @@
     },
     "require-dev": {
         "ext-curl": "*",
-        "besimple/wsdl2php": "dev-master"
+        "besimple/wsdl2php": "dev-master",
+        "satooshi/php-coveralls": "dev-master"
     },
     "config": {
         "bin-dir": "bin"
