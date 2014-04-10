@@ -7,6 +7,7 @@ use Payum\Bridge\Spl\ArrayObject;
 use Payum\Exception\UnsupportedApiException;
 use Payum\Heartland\Model\PaymentDetails;
 use Payum\Heartland\Soap\Base\GetTokenRequest;
+use Payum\Heartland\Soap\Base\Response;
 use Payum\Request\CaptureRequest;
 use Payum\Request\UserInputRequiredInteractiveRequest;
 use Payum\Exception\RequestNotSupportedException;
@@ -31,7 +32,13 @@ class GetTokenAction extends BaseAction
         $soapRequest->setCredential($this->api->getMerchantCredentials($model->getMerchantName()));
 
         $response = $this->api->getSoapClient()->GetToken($soapRequest);
-        $model->setResponse($response->getGetTokenResult());
+
+        //FIXME add new chain
+        if ($response instanceof Response) {
+            $model->setResponse($response);
+        } else {
+            $model->setResponse($response->getMakeBlindPaymentResult());
+        }
     }
 
     /**

@@ -32,6 +32,8 @@ class MakeBlindPaymentAction extends BaseAction
         $soapRequest->setCredential($this->api->getMerchantCredentials($model->getMerchantName()));
 
         $response = $this->api->getSoapClient()->MakeBlindPayment($soapRequest);
+
+        //FIXME add new chain
         if ($response instanceof Response) {
             $model->setResponse($response);
         } else {
