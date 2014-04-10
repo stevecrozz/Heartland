@@ -8,3 +8,6 @@ php:
 before_script:
   - curl http://getcomposer.org/installer | php
   - php composer.phar install --dev -n
+
+after_script:
+  - php vendor/bin/coveralls -v
